@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilan Concerts, L'Été Marseillais 2026, Ville de Marseille</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#021859; --navy-deep:#010d33; --navy-soft:#0a2470;
+  --babyblue:#7bbdff; --babyblue-soft:#eaf4ff;
+  --terracota:#f25430; --terracota-soft:#ffe4d9;
+  --white:#ffffff; --grey:#5b6478; --bg:#f6f8fc;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',-apple-system,sans-serif;color:var(--navy);background:var(--bg);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;color:var(--navy);margin:0;}
+a{color:inherit;text-decoration:none;}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 800px 400px at 80% -5%,rgba(242,84,48,.32),transparent 55%),
+    linear-gradient(155deg,var(--navy) 0%,var(--navy-deep) 100%);
+  color:var(--white);padding:52px 24px 0;
+}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;padding-bottom:80px;}
+.hero-logo{width:104px;height:auto;margin-bottom:32px;display:block;}
+.hero-eyebrow{color:var(--babyblue);font-size:.85rem;font-weight:600;margin-bottom:12px;}
+.hero h1{color:var(--white);font-weight:800;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.02em;line-height:1.1;max-width:720px;margin-bottom:10px;}
+.hero .subtitle{color:rgba(255,255,255,.72);font-size:1rem;max-width:520px;margin-bottom:38px;}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(255,255,255,.15);}
+.hero-stat{padding:20px 32px 0 0;margin-right:28px;min-width:130px;}
+.hero-stat .num{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(1.6rem,3.2vw,2.4rem);color:var(--white);display:block;line-height:1.1;}
+.hero-stat .lbl{font-size:.8rem;color:rgba(255,255,255,.6);margin-top:5px;display:block;}
+.hero-wave{position:relative;z-index:1;display:block;width:100%;height:80px;margin-top:-2px;}
+
+/* NAV TOC */
+nav.toc{background:var(--white);border-bottom:1px solid #e2e8f0;}
+.toc-inner{max-width:1100px;margin:0 auto;padding:13px 24px;font-size:.85rem;color:var(--grey);}
+.toc-inner strong{color:var(--navy);}
+
+main{max-width:1100px;margin:0 auto;padding:40px 24px 60px;}
+
+/* SUMMARY BAND */
+.summary-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin-bottom:24px;}
+.stat{background:var(--white);border-radius:16px;padding:18px 16px 14px;box-shadow:0 1px 3px rgba(2,24,89,.07);border-top:3px solid var(--terracota);display:flex;flex-direction:column;gap:8px;}
+.stat svg{width:20px;height:20px;color:var(--terracota);}
+.stat .label{font-size:.77rem;color:var(--grey);}
+.stat .value{font-size:1.35rem;font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif;}
+
+/* CHART */
+.chart-card{background:var(--white);border-radius:18px;padding:24px 22px 6px;margin:30px 0;box-shadow:0 1px 3px rgba(2,24,89,.07);}
+.chart-card h3{font-size:1.05rem;font-weight:600;margin-bottom:4px;}
+.chart-card p{color:var(--grey);font-size:.84rem;margin:3px 0 8px;}
+.chart-svg{width:100%;height:auto;display:block;}
+.chart-legend{display:flex;gap:18px;font-size:.78rem;color:var(--grey);padding:4px 0 12px;}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px;}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block;}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(2,24,89,.07);}
+thead th{background:var(--navy);color:var(--white);text-align:left;padding:12px 13px;font-size:.77rem;font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;}
+thead th:hover{background:var(--navy-soft);}
+thead th.num,td.num{text-align:right;}
+tbody td{padding:10px 13px;font-size:.84rem;border-bottom:1px solid #eef2f8;}
+tbody tr:hover{background:var(--babyblue-soft);}
+td.col-nom a{font-weight:600;color:var(--navy);}
+td.col-nom a:hover{color:var(--terracota);}
+.table-wrap{overflow-x:auto;}
+.sort-arrow{font-size:.7rem;opacity:.6;margin-left:3px;}
+
+/* OP PANELS */
+.ops-title{margin-top:52px;margin-bottom:4px;}
+.ops-title h2{font-size:1.55rem;}
+.ops-title p{color:var(--grey);font-size:.88rem;margin-top:6px;}
+
+.op-panel{
+  background:var(--white);border-radius:18px;padding:24px 26px 20px;
+  margin-top:18px;border-left:5px solid var(--terracota);
+  box-shadow:0 1px 3px rgba(2,24,89,.06);scroll-margin-top:20px;
+}
+.op-number{font-size:.74rem;font-weight:600;color:var(--terracota);margin-bottom:5px;}
+.op-header{margin-bottom:14px;}
+.op-header h2{margin-bottom:10px;font-size:1.25rem;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;}
+.pill{background:var(--babyblue-soft);color:var(--navy);padding:5px 11px;border-radius:999px;font-size:.77rem;font-weight:500;border:1px solid #d6e3f5;}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:18px 0 12px;}
+.kpi{background:var(--babyblue-soft);border-radius:11px;padding:14px;display:flex;flex-direction:column;gap:5px;}
+.kpi-accent{background:var(--terracota-soft);border:1px solid rgba(242,84,48,.2);}
+.kpi-label{font-size:.73rem;color:var(--grey);}
+.kpi-value{font-size:1.15rem;font-weight:700;color:var(--navy);font-family:'Poppins',sans-serif;}
+
+.sub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:8px;margin-top:8px;}
+.sub{background:#f6f8fc;border-radius:9px;padding:11px 13px;display:flex;justify-content:space-between;align-items:center;font-size:.84rem;}
+.sub span{color:var(--grey);}
+.sub strong{color:var(--navy);}
+
+.reach-bar{height:7px;background:#eef2f8;border-radius:99px;overflow:hidden;margin-top:16px;}
+.reach-bar-fill{height:100%;background:linear-gradient(90deg,var(--babyblue),var(--terracota));border-radius:99px;}
+.reach-bar-label{font-size:.73rem;color:var(--grey);margin-top:5px;}
+
+/* FOOTER */
+footer{background:var(--navy-deep);color:var(--white);padding:48px 24px;margin-top:44px;}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-logo{width:82px;height:auto;margin-bottom:24px;display:block;}
+footer h3{color:var(--white);font-size:1.1rem;font-weight:600;margin-bottom:18px;}
+.contacts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(123,189,255,.2);border-radius:13px;padding:15px;display:block;transition:background .15s;}
+.contact-card:hover{background:rgba(255,255,255,.09);}
+.contact-card .name{font-weight:600;color:var(--white);margin-bottom:3px;}
+.contact-card .role{color:var(--babyblue);font-size:.8rem;margin-bottom:7px;}
+.contact-card .coords{font-size:.78rem;color:rgba(255,255,255,.68);}
+
+section h2{font-size:1.5rem;margin-bottom:18px;}
+.table-section{margin-top:30px;}
+.table-section h3{font-size:1.05rem;font-weight:600;margin-bottom:12px;}
+
+@media(max-width:640px){
+  .hero{padding:38px 16px 0;}
+  .hero-inner{padding-bottom:56px;}
+  main{padding:28px 16px 48px;}
+  thead th,tbody td{padding:8px;font-size:.75rem;}
+  .op-panel{padding:18px 16px 16px;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="214 252 572 496">
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path class="st0" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path class="st0" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path class="st0" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path class="st0" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path class="st0" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path class="st0" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path class="st0" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path class="st0" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path class="st0" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path class="st0" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path class="st0" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path class="st0" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path class="st0" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path class="st0" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g>
+</svg>
+
+    <div class="hero-eyebrow">Ville de Marseille, L'Été Marseillais 2026</div>
+    <h1>Bilan des Concerts</h1>
+    <div class="subtitle">10 concerts promus via Facebook Ads entre juin et août, levier Event Facebook et Social Ads, ciblage HF 18+ Marseille.</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num" data-count="16667" data-suffix=" EUR">16 667 EUR</span><span class="lbl">Budget investis</span></div>
+      <div class="hero-stat"><span class="num" data-count="3922185">3 922 185</span><span class="lbl">Impressions</span></div>
+      <div class="hero-stat"><span class="num" data-count="9406">9 406</span><span class="lbl">Réponses aux événements</span></div>
+      <div class="hero-stat"><span class="num" data-count="50402">50 402</span><span class="lbl">Clics cumulés</span></div>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,60 C240,100 480,20 720,50 C960,80 1200,30 1440,60 L1440,100 L0,100 Z" fill="#7bbdff" opacity="0.2"/>
+  <path d="M0,75 C240,45 480,95 720,70 C960,45 1200,85 1440,65 L1440,100 L0,100 Z" fill="#7bbdff" opacity="0.32"/>
+  <path d="M0,90 C360,70 720,100 1080,80 C1260,70 1380,90 1440,85 L1440,100 L0,100 Z" fill="#f6f8fc"/>
+</svg>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner"><strong>Sommaire :</strong> résumé global, graphique des impressions par concert, tableau triable, puis le détail de chaque concert dans l'ordre chronologique.</div>
+</nav>
+
+<main>
+
+<section>
+  <h2>Vue d'ensemble des 10 concerts</h2>
+  <div class="summary-band">
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      <span class="label">Budget total investi</span><span class="value">16 666,70 EUR</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      <span class="label">Impressions cumulées</span><span class="value">3 922 185</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 9l11-6-6 11-2-4-3-1z"/></svg>
+      <span class="label">Clics cumulés</span><span class="value">50 402</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+      <span class="label">Réponses aux événements</span><span class="value">9 406</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3v18"/></svg>
+      <span class="label">CTR global</span><span class="value">1,29 %</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+      <span class="label">CPM moyen</span><span class="value">4,25 EUR</span>
+    </div>
+    <div class="stat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      <span class="label">Coût moyen par réponse</span><span class="value">1,77 EUR</span>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <h3>Impressions par concert, ordre chronologique</h3>
+    <p>La barre en terracota indique le pic du dispositif. Levier principal : Facebook Ads.</p>
+    <svg viewBox="0 0 1000 340" class="chart-svg" role="img" aria-label="Impressions par concert">
+  <defs>
+    <linearGradient id="bGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bbdff"/><stop offset="100%" stop-color="#021859"/>
+    </linearGradient>
+    <linearGradient id="bMax" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff8a63"/><stop offset="100%" stop-color="#f25430"/>
+    </linearGradient>
+  </defs>
+  <line x1="56" y1="220.0" x2="976" y2="220.0" stroke="#e2e8f0" stroke-width="1"/><text x="48" y="224.0" font-size="11" fill="#5b6478" text-anchor="end">0k</text><line x1="56" y1="170.0" x2="976" y2="170.0" stroke="#e2e8f0" stroke-width="1"/><text x="48" y="174.0" font-size="11" fill="#5b6478" text-anchor="end">371k</text><line x1="56" y1="120.0" x2="976" y2="120.0" stroke="#e2e8f0" stroke-width="1"/><text x="48" y="124.0" font-size="11" fill="#5b6478" text-anchor="end">742k</text><line x1="56" y1="70.0" x2="976" y2="70.0" stroke="#e2e8f0" stroke-width="1"/><text x="48" y="74.0" font-size="11" fill="#5b6478" text-anchor="end">1113k</text><line x1="56" y1="20.0" x2="976" y2="20.0" stroke="#e2e8f0" stroke-width="1"/><text x="48" y="24.0" font-size="11" fill="#5b6478" text-anchor="end">1484k</text>
+  <rect x="56.0" y="150.8" width="86.6" height="69.2" rx="4" fill="url(#bGrad)"><title>Show Pride, 513 572 impressions</title></rect><rect x="148.6" y="148.9" width="86.6" height="71.1" rx="4" fill="url(#bGrad)"><title>Julien Clerc, 527 961 impressions</title></rect><rect x="241.2" y="194.3" width="86.6" height="25.7" rx="4" fill="url(#bGrad)"><title>Sébastien Tellier, 191 161 impressions</title></rect><rect x="333.8" y="192.8" width="86.6" height="27.2" rx="4" fill="url(#bGrad)"><title>Cassius, 202 196 impressions</title></rect><rect x="426.4" y="193.6" width="86.6" height="26.4" rx="4" fill="url(#bGrad)"><title>Folamour, 195 793 impressions</title></rect><rect x="519.0" y="193.2" width="86.6" height="26.8" rx="4" fill="url(#bGrad)"><title>Raï, 199 141 impressions</title></rect><rect x="611.6" y="193.1" width="86.6" height="26.9" rx="4" fill="url(#bGrad)"><title>Mehdi Kerkouche, 199 481 impressions</title></rect><rect x="704.2" y="195.4" width="86.6" height="24.6" rx="4" fill="url(#bGrad)"><title>Jungeli, 182 838 impressions</title></rect><rect x="796.8" y="20.0" width="86.6" height="200.0" rx="4" fill="url(#bMax)"><title>Rap, 1 484 860 impressions</title></rect><rect x="889.4" y="189.7" width="86.6" height="30.3" rx="4" fill="url(#bGrad)"><title>Buena Vista Social Club, 225 182 impressions</title></rect>
+  <text x="99.3" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 99.3 234.0)">Show Pride</text><text x="191.9" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 191.9 234.0)">Julien Clerc</text><text x="284.5" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 284.5 234.0)">Sébastien Tellier</text><text x="377.1" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 377.1 234.0)">Cassius</text><text x="469.7" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 469.7 234.0)">Folamour</text><text x="562.3" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 562.3 234.0)">Raï</text><text x="654.9" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 654.9 234.0)">Mehdi Kerkouche</text><text x="747.5" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 747.5 234.0)">Jungeli</text><text x="840.1" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 840.1 234.0)">Rap</text><text x="932.7" y="234.0" font-size="11.5" fill="#021859" text-anchor="end" font-weight="500" transform="rotate(-38 932.7 234.0)">Buena Vista Social Club</text>
+</svg>
+    <div class="chart-legend">
+      <span><span class="sw" style="background:linear-gradient(90deg,#7bbdff,#021859)"></span>Concerts</span>
+      <span><span class="sw" style="background:linear-gradient(90deg,#ff8a63,#f25430)"></span>Pic de diffusion (Rap, 1 484 860 impressions)</span>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <h3>Comparatif des 10 concerts, triable en cliquant sur les entêtes</h3>
+    <div class="table-wrap">
+      <table id="opstable">
+        <thead>
+          <tr>
+            <th data-key="nom">Concert<span class="sort-arrow"></span></th>
+            <th data-key="debut">Période<span class="sort-arrow"></span></th>
+            <th class="num" data-key="budget">Budget<span class="sort-arrow"></span></th>
+            <th class="num" data-key="impressions">Impressions<span class="sort-arrow"></span></th>
+            <th class="num" data-key="clics">Clics<span class="sort-arrow"></span></th>
+            <th class="num" data-key="ctr">CTR<span class="sort-arrow"></span></th>
+            <th class="num" data-key="cpm">CPM<span class="sort-arrow"></span></th>
+            <th class="num" data-key="réponses">Réponses<span class="sort-arrow"></span></th>
+            <th class="num" data-key="budget">Coût / réponse<span class="sort-arrow"></span></th>
+          </tr>
+        </thead>
+        <tbody id="opstable-body">
+          <tr data-id="pride" data-nom="Show Pride" data-debut="2026-06-27"
+      data-budget="1666.67" data-impressions="513572" data-clics="810"
+      data-ctr="0.001577188788" data-cpm="3.245250909" data-réponses="56">
+  <td class="col-nom"><a href="#op-pride">Show Pride</a></td>
+  <td>Du 27/06 au 04/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">513 572</td>
+  <td class="num">810</td>
+  <td class="num">0,16 %</td>
+  <td class="num">3,25 EUR</td>
+  <td class="num">56</td>
+  <td class="num">29,76 EUR</td>
+</tr>
+<tr data-id="julien_clerc" data-nom="Julien Clerc" data-debut="2026-06-26"
+      data-budget="1666.67" data-impressions="527961" data-clics="1249"
+      data-ctr="0.002365705043" data-cpm="3.156805143" data-réponses="100">
+  <td class="col-nom"><a href="#op-julien_clerc">Julien Clerc</a></td>
+  <td>Du 26/06 au 03/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">527 961</td>
+  <td class="num">1 249</td>
+  <td class="num">0,24 %</td>
+  <td class="num">3,16 EUR</td>
+  <td class="num">100</td>
+  <td class="num">16,67 EUR</td>
+</tr>
+<tr data-id="tellier" data-nom="Sébastien Tellier" data-debut="2026-07-03"
+      data-budget="1666.67" data-impressions="191161" data-clics="4021"
+      data-ctr="0.02103462526" data-cpm="8.718671696" data-réponses="1023">
+  <td class="col-nom"><a href="#op-tellier">Sébastien Tellier</a></td>
+  <td>Du 03/07 au 10/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">191 161</td>
+  <td class="num">4 021</td>
+  <td class="num">2,10 %</td>
+  <td class="num">8,72 EUR</td>
+  <td class="num">1 023</td>
+  <td class="num">1,63 EUR</td>
+</tr>
+<tr data-id="cassius" data-nom="Cassius" data-debut="2026-07-04"
+      data-budget="1666.67" data-impressions="202196" data-clics="3381"
+      data-ctr="0.01672139904" data-cpm="8.242843578" data-réponses="900">
+  <td class="col-nom"><a href="#op-cassius">Cassius</a></td>
+  <td>Du 04/07 au 11/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">202 196</td>
+  <td class="num">3 381</td>
+  <td class="num">1,67 %</td>
+  <td class="num">8,24 EUR</td>
+  <td class="num">900</td>
+  <td class="num">1,85 EUR</td>
+</tr>
+<tr data-id="folamour" data-nom="Folamour" data-debut="2026-07-10"
+      data-budget="1666.67" data-impressions="195793" data-clics="3058"
+      data-ctr="0.0156185359" data-cpm="8.512408513" data-réponses="647">
+  <td class="col-nom"><a href="#op-folamour">Folamour</a></td>
+  <td>Du 10/07 au 17/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">195 793</td>
+  <td class="num">3 058</td>
+  <td class="num">1,56 %</td>
+  <td class="num">8,51 EUR</td>
+  <td class="num">647</td>
+  <td class="num">2,58 EUR</td>
+</tr>
+<tr data-id="rai" data-nom="Raï" data-debut="2026-07-11"
+      data-budget="1666.67" data-impressions="199141" data-clics="5173"
+      data-ctr="0.02597656937" data-cpm="8.369296127" data-réponses="913">
+  <td class="col-nom"><a href="#op-rai">Raï</a></td>
+  <td>Du 11/07 au 18/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">199 141</td>
+  <td class="num">5 173</td>
+  <td class="num">2,60 %</td>
+  <td class="num">8,37 EUR</td>
+  <td class="num">913</td>
+  <td class="num">1,83 EUR</td>
+</tr>
+<tr data-id="kerkouche" data-nom="Mehdi Kerkouche" data-debut="2026-07-17"
+      data-budget="1666.67" data-impressions="199481" data-clics="4002"
+      data-ctr="0.02006206105" data-cpm="8.355031306" data-réponses="848">
+  <td class="col-nom"><a href="#op-kerkouche">Mehdi Kerkouche</a></td>
+  <td>Du 17/07 au 24/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">199 481</td>
+  <td class="num">4 002</td>
+  <td class="num">2,01 %</td>
+  <td class="num">8,36 EUR</td>
+  <td class="num">848</td>
+  <td class="num">1,97 EUR</td>
+</tr>
+<tr data-id="jungeli" data-nom="Jungeli" data-debut="2026-07-18"
+      data-budget="1666.67" data-impressions="182838" data-clics="2825"
+      data-ctr="0.01545083626" data-cpm="9.115555847" data-réponses="744">
+  <td class="col-nom"><a href="#op-jungeli">Jungeli</a></td>
+  <td>Du 18/07 au 25/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">182 838</td>
+  <td class="num">2 825</td>
+  <td class="num">1,55 %</td>
+  <td class="num">9,12 EUR</td>
+  <td class="num">744</td>
+  <td class="num">2,24 EUR</td>
+</tr>
+<tr data-id="rap" data-nom="Rap" data-debut="2026-07-24"
+      data-budget="1666.67" data-impressions="1484860" data-clics="20413"
+      data-ctr="0.013747424" data-cpm="1.12244252" data-réponses="3091">
+  <td class="col-nom"><a href="#op-rap">Rap</a></td>
+  <td>Du 24/07 au 31/07/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">1 484 860</td>
+  <td class="num">20 413</td>
+  <td class="num">1,37 %</td>
+  <td class="num">1,12 EUR</td>
+  <td class="num">3 091</td>
+  <td class="num">0,54 EUR</td>
+</tr>
+<tr data-id="buena_vista" data-nom="Buena Vista Social Club" data-debut="2026-07-25"
+      data-budget="1666.67" data-impressions="225182" data-clics="5470"
+      data-ctr="0.02429146202" data-cpm="7.401435283" data-réponses="1084">
+  <td class="col-nom"><a href="#op-buena_vista">Buena Vista Social Club</a></td>
+  <td>Du 25/07 au 01/08/2026</td>
+  <td class="num">1 666,67 EUR</td>
+  <td class="num">225 182</td>
+  <td class="num">5 470</td>
+  <td class="num">2,43 %</td>
+  <td class="num">7,40 EUR</td>
+  <td class="num">1 084</td>
+  <td class="num">1,54 EUR</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="ops-title">
+  <h2>Détail des 10 concerts</h2>
+  <p>Présentées dans l'ordre chronologique de diffusion.</p>
+</div>
+
+
+<section id="op-pride" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 1 sur 10</div>
+    <h2>Show Pride</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 27/06 au 04/07/2026</span>
+      <span class="pill">Levier : Facebook Event</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">159 843</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">513 572</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">810</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">0,16 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">3,25 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,21</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">56</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">29,76 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>520</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>3,21 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:34.6%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-julien_clerc" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 2 sur 10</div>
+    <h2>Julien Clerc</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 26/06 au 03/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">184 109</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">527 961</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">1 249</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">0,24 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">3,16 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">2,87</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">100</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">16,67 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>762</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>2,19 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:35.6%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-tellier" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 3 sur 10</div>
+    <h2>Sébastien Tellier</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 03/07 au 10/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">184 109</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">191 161</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">4 021</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">2,10 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">8,72 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">1,04</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">1 023</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">1,63 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>2 356</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,71 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:12.9%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-cassius" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 4 sur 10</div>
+    <h2>Cassius</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 04/07 au 11/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">60 846</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">202 196</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">3 381</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">1,67 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">8,24 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,32</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">900</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">1,85 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>1 776</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,94 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:13.6%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-folamour" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 5 sur 10</div>
+    <h2>Folamour</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 10/07 au 17/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">57 963</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">195 793</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">3 058</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">1,56 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">8,51 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,38</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">647</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">2,58 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>1 767</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,94 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:13.2%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-rai" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 6 sur 10</div>
+    <h2>Raï</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 11/07 au 18/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">52 472</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">199 141</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">5 173</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">2,60 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">8,37 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,80</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">913</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">1,83 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>2 985</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,56 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:13.4%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-kerkouche" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 7 sur 10</div>
+    <h2>Mehdi Kerkouche</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 17/07 au 24/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">172 660</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">199 481</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">4 002</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">2,01 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">8,36 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">1,16</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">848</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">1,97 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>2 218</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,75 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:13.4%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-jungeli" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 8 sur 10</div>
+    <h2>Jungeli</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 18/07 au 25/07/2026</span>
+      <span class="pill">Levier : Facebook Event</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">49 978</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">182 838</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">2 825</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">1,55 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">9,12 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,66</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">744</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">2,24 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>1 426</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>1,17 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:12.3%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-rap" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 9 sur 10</div>
+    <h2>Rap</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 24/07 au 31/07/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">284 930</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">1 484 860</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">20 413</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">1,37 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">1,12 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">5,21</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">3 091</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">0,54 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>11 592</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,14 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:100.0%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+<section id="op-buena_vista" class="op-panel" scroll-margin-top="20px">
+  <div class="op-header">
+    <div class="op-number">Concert 10 sur 10</div>
+    <h2>Buena Vista Social Club</h2>
+    <div class="pills">
+      <span class="pill">Période : Du 25/07 au 01/08/2026</span>
+      <span class="pill">Levier : Facebook</span>
+      <span class="pill">Ciblage : HF 18+, Marseille</span>
+      <span class="pill">Budget : 1 666,67 EUR</span>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Audience touchée</span><span class="kpi-value">61 356</span></div>
+    <div class="kpi"><span class="kpi-label">Impressions</span><span class="kpi-value">225 182</span></div>
+    <div class="kpi"><span class="kpi-label">Clics</span><span class="kpi-value">5 470</span></div>
+    <div class="kpi"><span class="kpi-label">Taux de clics</span><span class="kpi-value">2,43 %</span></div>
+    <div class="kpi"><span class="kpi-label">CPM</span><span class="kpi-value">7,40 EUR</span></div>
+    <div class="kpi"><span class="kpi-label">Répétition</span><span class="kpi-value">3,67</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Réponses à l'événement</span><span class="kpi-value">1 084</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Coût par réponse</span><span class="kpi-value">1,54 EUR</span></div>
+  </div>
+  <div class="sub-grid">
+    <div class="sub"><span>Interactions</span><strong>3 888</strong></div>
+    <div class="sub"><span>Coût par interaction</span><strong>0,43 EUR</strong></div>
+  </div>
+  <div class="reach-bar"><div class="reach-bar-fill" style="width:15.2%"></div></div>
+  <div class="reach-bar-label">Part des impressions vs le concert le plus diffuse du dispositif (Rap, pic de participations)</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="214 252 572 496">
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path class="st0" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path class="st0" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path class="st0" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path class="st0" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path class="st0" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path class="st0" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path class="st0" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path class="st0" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path class="st0" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path class="st0" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path class="st0" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path class="st0" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path class="st0" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path class="st0" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g>
+</svg>
+
+    <h3>Une question sur ce bilan</h3>
+    <div class="contacts-grid">
+      <a class="contact-card" href="mailto:jerome@thegoodweb.eu">
+        <div class="name">Jerome Fages</div><div class="role">Directeur commercial</div>
+        <div class="coords">06 18 74 66 75, jerome@thegoodweb.eu</div>
+      </a>
+      <a class="contact-card" href="mailto:mathilde@thegoodweb.eu">
+        <div class="name">Mathilde Coriton</div><div class="role">Directrice de clientele</div>
+        <div class="coords">06 48 61 92 92, mathilde@thegoodweb.eu</div>
+      </a>
+      <a class="contact-card" href="mailto:leslie@thegoodweb.eu">
+        <div class="name">Leslie Roge</div><div class="role">Cheffe de publicite</div>
+        <div class="coords">06 83 73 68 62, leslie@thegoodweb.eu</div>
+      </a>
+      <a class="contact-card" href="mailto:sofien@thegoodweb.eu">
+        <div class="name">Sofien Chaganiou</div><div class="role">Chef de publicite</div>
+        <div class="coords">07 67 84 70 67, sofien@thegoodweb.eu</div>
+      </a>
+      <div class="contact-card">
+        <div class="name">Andrea</div><div class="role">The Good Web</div>
+        <div class="coords">andrea@thegoodweb.eu</div>
+      </div>
+      <div class="contact-card">
+        <div class="name">Pole activation</div><div class="role">The Good Web</div>
+        <div class="coords">activation@thegoodweb.eu</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.hero-stat .num').forEach(function(el){
+  var target=parseFloat(el.getAttribute('data-count'));
+  var suffix=el.getAttribute('data-suffix')||'';
+  var duration=1200;var start=null;
+  function fmt(n){return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');}
+  function step(ts){
+    if(!start)start=ts;
+    var p=Math.min((ts-start)/duration,1);
+    var e=1-Math.pow(1-p,3);
+    el.textContent=fmt(target*e)+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+});
+
+var sortState={key:null,asc:true};
+document.querySelectorAll('#opstable thead th').forEach(function(th){
+  th.addEventListener('click',function(){
+    var key=th.getAttribute('data-key');if(!key)return;
+    var asc=(sortState.key===key)?!sortState.asc:true;
+    sortState={key:key,asc:asc};
+    var tbody=document.getElementById('opstable-body');
+    var rows=Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+    rows.sort(function(a,b){
+      var va=a.getAttribute('data-'+key);var vb=b.getAttribute('data-'+key);
+      var na=parseFloat(va),nb=parseFloat(vb);
+      var cmp=(!isNaN(na)&&!isNaN(nb))?(na-nb):va.localeCompare(vb);
+      return asc?cmp:-cmp;
+    });
+    rows.forEach(function(r){tbody.appendChild(r);});
+    document.querySelectorAll('#opstable thead th .sort-arrow').forEach(function(a){a.textContent='';});
+    th.querySelector('.sort-arrow').textContent=asc?' up':' down';
+  });
+});
+</script>
+</body>
+</html>

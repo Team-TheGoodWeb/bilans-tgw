@@ -500,6 +500,7 @@ function renderCampaignPanel(c){
     html += `<div class="section-title">${levierBadge('YouTube TrueView')}<div class="line"></div></div>`;
     html += `<div class="card">
       <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Budget</div><div class="kpi-value">${fmtEuro(c.youtube.budget)}</div><div class="kpi-note">ht</div></div>
         <div class="kpi-card"><div class="kpi-label">Clics</div><div class="kpi-value">${fmtNum(c.youtube.clics)}</div></div>
         <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">${fmtNum(c.youtube.impressions)}</div></div>
         <div class="kpi-card"><div class="kpi-label">CTR</div><div class="kpi-value">${c.youtube.ctr}%</div></div>
@@ -514,7 +515,7 @@ function renderCampaignPanel(c){
         {l:'Vues à 75%', v:c.youtube.vues[2]},
         {l:'Vues à 100%', v:c.youtube.vues[3]}
       ], c.youtube.vuesUnit==='%' ? '%' : 'abs')}
-      <p class="kpi-note" style="margin-top:6px;">Budget YouTube : ${fmtEuro(c.youtube.budget)} ht${c.youtube.vuesUnit==='abs' ? ' — valeurs ci-dessus en volumes bruts (non en %) sur cette vague, cf. fichier source.' : ''}</p>
+      ${c.youtube.vuesUnit==='abs' ? `<p class="kpi-note" style="margin-top:6px;">Valeurs ci-dessus en volumes bruts (non en %) sur cette vague, cf. fichier source.</p>` : ''}
     </div>`;
 
     // Audience
@@ -532,14 +533,15 @@ function renderCampaignPanel(c){
     html += `<div class="section-title">${levierBadge('Spotify Audio')}<div class="line"></div></div>`;
     html += `<div class="card">
       <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Budget</div><div class="kpi-value">${fmtEuro(c.levers[0].budget)}</div><div class="kpi-note">ht</div></div>
         <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">${fmtNum(c.spotify.impressions)}</div></div>
         <div class="kpi-card"><div class="kpi-label">Écoutes à 100%</div><div class="kpi-value">${fmtNum(c.spotify.ecoute100)}</div></div>
         <div class="kpi-card"><div class="kpi-label">Taux de complétion</div><div class="kpi-value">${c.spotify.completion}%</div></div>
         <div class="kpi-card"><div class="kpi-label">Clics</div><div class="kpi-value">${fmtNum(c.spotify.clics)}</div></div>
         <div class="kpi-card"><div class="kpi-label">Reach</div><div class="kpi-value">${fmtNum(c.spotify.reach)}</div></div>
+        <div class="kpi-card"><div class="kpi-label">CPE</div><div class="kpi-value">${c.spotify.cpe.toString().replace('.',',')} €</div></div>
         <div class="kpi-card"><div class="kpi-label">Répétition</div><div class="kpi-value">${c.spotify.repetition.toString().replace('.',',')}</div></div>
       </div>
-      <p class="summary-text" style="margin-top:16px;">Budget Spotify : <b>${fmtEuro(c.levers[0].budget)} ht</b> — CPE final : <b>${c.spotify.cpe.toString().replace('.',',')} €</b>.</p>
     </div>`;
   }
 

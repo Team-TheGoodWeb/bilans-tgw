@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Les Allées Provençales · Bilan média 2026 – The Good Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#021859;
+  --blue:#7bbdff;
+  --terra:#f25430;
+  --white:#ffffff;
+  --navy-tint:#eef2fb;
+  --terra-tint:#fdece6;
+  --blue-tint:#eaf4ff;
+  --ink:#1a1a2e;
+  --muted:#5a6480;
+  --border:#dde4f0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;color:var(--navy);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+a{color:var(--terra)}
+
+/* Hero */
+header.hero{background:var(--navy);color:var(--white);padding:48px 0 36px}
+.logo{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.logo svg{height:46px;width:auto;display:block;fill:#fff}
+.logo svg .lg{fill:#fff}
+.logo .word{font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;color:var(--white)}
+header.hero h1{color:var(--white)!important;font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;margin-bottom:10px}
+header.hero .sub{color:var(--blue);font-size:16px;font-weight:600;margin-bottom:22px}
+.pastilles{display:flex;flex-wrap:wrap;gap:12px}
+.pastille{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 18px;font-size:13.5px;font-weight:600;color:var(--white)}
+.pastille b{color:var(--blue)}
+
+/* Nav */
+nav.stick{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--border);z-index:50;box-shadow:0 2px 10px rgba(2,24,89,.04)}
+nav.stick .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 32px}
+nav.stick a{white-space:nowrap;display:block;padding:14px 14px;font-size:13.5px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent}
+nav.stick a:hover{color:var(--navy)}
+nav.stick a.active{color:var(--navy);border-bottom-color:var(--terra)}
+
+section{padding:52px 0}
+section.tint{background:var(--navy-tint)}
+.eyebrow{display:inline-block;background:var(--terra-tint);color:var(--terra);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+h2{font-size:26px;margin-bottom:6px}
+.section-intro{color:var(--muted);font-size:15px;max-width:760px;margin-bottom:28px}
+
+/* stat cards */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin:22px 0 30px}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px}
+.stat-card .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;color:var(--navy)}
+.stat-card .lbl{font-size:12.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-top:4px}
+.stat-card.terra .num{color:var(--terra)}
+
+/* distribution bars */
+.dist{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.dist h4{font-size:14px;margin-bottom:14px;color:var(--navy)}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.bar-row .name{width:150px;font-size:12.5px;font-weight:600;color:var(--ink);flex-shrink:0}
+.bar-track{flex:1;height:14px;background:var(--navy-tint);border-radius:7px;overflow:hidden}
+.bar-fill{height:100%;border-radius:7px;background:linear-gradient(90deg,var(--navy),var(--blue))}
+.bar-fill.terra{background:linear-gradient(90deg,var(--terra),#ff8a63)}
+.bar-row .val{width:92px;text-align:right;font-size:12.5px;font-weight:700;color:var(--navy);flex-shrink:0}
+
+/* timeline */
+.timeline{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+.tl-item{flex:1;min-width:200px;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px}
+.tl-item .period{font-size:11.5px;font-weight:700;color:var(--terra);text-transform:uppercase;letter-spacing:.04em}
+.tl-item h4{font-size:15.5px;margin:6px 0 8px}
+.tl-item .mini{font-size:12.5px;color:var(--muted)}
+
+/* campaign header block */
+.camp-head{background:var(--navy);color:var(--white);border-radius:16px;padding:26px 28px;margin-bottom:26px}
+.camp-head h2{color:var(--white)!important;font-size:22px;margin-bottom:8px}
+.camp-head .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.camp-head .meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;font-size:12.5px;font-weight:600}
+.camp-head .meta span b{color:var(--blue)}
+
+/* lever card */
+.lever{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px}
+.lever-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:16px;border-bottom:1px solid var(--border);padding-bottom:14px}
+.lever-top h3{font-size:17px}
+.lever-top .badge{background:var(--blue-tint);color:var(--navy);font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px}
+.metrics-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-bottom:16px}
+.metric{background:var(--navy-tint);border-radius:10px;padding:12px 14px}
+.metric .v{font-family:'Poppins',sans-serif;font-weight:800;font-size:19px;color:var(--navy)}
+.metric .k{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-top:2px}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th{background:var(--navy);color:var(--white);text-align:left;padding:9px 12px;font-weight:600;font-size:12px}
+td{padding:9px 12px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tr.total td{font-weight:700;background:var(--navy-tint)}
+
+.comment{background:var(--terra-tint);border-left:4px solid var(--terra);border-radius:0 10px 10px 0;padding:14px 18px;font-size:13.5px;color:var(--ink);margin-top:16px}
+.comment b{color:var(--terra)}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.two-col{grid-template-columns:1fr}}
+
+.note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:8px}
+
+/* pige / creas */
+.pige-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:10px}
+.pige-item{background:var(--navy-tint);border-radius:10px;padding:14px;text-align:center;font-size:13px;font-weight:600;color:var(--navy)}
+
+.persona-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.persona{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:10px 16px;font-size:13px;display:flex;align-items:center;gap:8px}
+.persona .glyph{color:var(--terra);font-size:16px}
+
+/* footer */
+footer{background:var(--navy);color:var(--white);padding:52px 0 36px}
+footer h2{color:var(--white)!important;font-size:22px;margin-bottom:26px}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.contact{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px}
+.contact .name{font-weight:700;font-size:15px;margin-bottom:2px}
+.contact .role{color:var(--blue);font-size:12.5px;margin-bottom:10px}
+.contact a{display:block;color:var(--white);text-decoration:none;font-size:12.8px;opacity:.9;margin-bottom:3px}
+.contact a:hover{opacity:1;text-decoration:underline}
+footer .foot-logo{margin-top:40px;opacity:.5}
+footer .foot-logo svg{height:34px;width:auto}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo">
+      <svg viewBox="214 252 572 496" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <path class="lg" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+          <path class="lg" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+          <path class="lg" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+          <path class="lg" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+          <path class="lg" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+          <path class="lg" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+          <path class="lg" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+        </g>
+        <path class="lg" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+        <g>
+          <path class="lg" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+          <path class="lg" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+          <path class="lg" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+          <path class="lg" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+          <path class="lg" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+          <path class="lg" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+          <path class="lg" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+          <path class="lg" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+          <path class="lg" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+        </g>
+        <g>
+          <path class="lg" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+          <path class="lg" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+          <path class="lg" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+          <path class="lg" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+          <path class="lg" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+          <path class="lg" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+          <path class="lg" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+          <path class="lg" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+          <path class="lg" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+          <path class="lg" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+          <path class="lg" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+          <path class="lg" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+          <path class="lg" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+          <path class="lg" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+          <path class="lg" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+        </g>
+      </svg>
+      <span class="word">THE GOOD WEB<br/><span style="font-weight:500;font-size:10px;opacity:.75">* THE GOOD AUDIENCE</span></span>
+    </div>
+    <h1>Les Allées Provençales<br/>Bilan média 2026</h1>
+    <div class="sub">Retour sur les campagnes digitales activées depuis le début de l'année 2026</div>
+    <div class="pastilles">
+      <div class="pastille">Période : <b>Mars &rarr; Juillet 2026</b></div>
+      <div class="pastille">Budget connu : <b>5 600 &euro; HT</b></div>
+      <div class="pastille">3 campagnes &middot; <b>7 leviers</b></div>
+      <div class="pastille">Objectif : <b>Notoriété</b></div>
+    </div>
+  </div>
+</header>
+
+<nav class="stick">
+  <div class="wrap">
+    <a href="#ensemble">Vue d'ensemble</a>
+    <a href="#mars">Pouvoir d'achat</a>
+    <a href="#mai">Mai 2026</a>
+    <a href="#juin">Juin 2026</a>
+    <a href="#budget">Budget total</a>
+    <a href="#contacts">Contacts</a>
+  </div>
+</nav>
+<section id="ensemble">
+  <div class="wrap">
+    <div class="eyebrow">Vue d'ensemble</div>
+    <h2>Trois campagnes de notoriété pour démarrer 2026</h2>
+    <p class="section-intro">De mars à juillet 2026, 3 campagnes ont été activées pour Les Allées Provençales : une opération Pouvoir d'achat en mars, puis deux dispositifs Carte cadeau &amp; Parking en mai et juin, combinant Meta Ads, pStory Ads et Spotify Ads.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">1 627 791</div><div class="lbl">Impressions totales</div></div>
+      <div class="stat-card"><div class="num">4 289</div><div class="lbl">Clics totaux</div></div>
+      <div class="stat-card terra"><div class="num">0,26 %</div><div class="lbl">CTR moyen global</div></div>
+      <div class="stat-card"><div class="num">5 600 €</div><div class="lbl">Budget total connu HT</div></div>
+    </div>
+
+    <div class="two-col">
+      <div class="dist">
+        <h4>Répartition du budget par campagne</h4>
+        <div class="bar-row"><div class="name">Pouvoir d'achat</div><div class="bar-track"><div class="bar-fill" style="width:19.6%"></div></div><div class="val">1 100 € · 20 %</div></div>
+        <div class="bar-row"><div class="name">Mai 2026</div><div class="bar-track"><div class="bar-fill" style="width:44.6%"></div></div><div class="val">2 500 € · 45 %</div></div>
+        <div class="bar-row"><div class="name">Juin 2026</div><div class="bar-track"><div class="bar-fill terra" style="width:35.7%"></div></div><div class="val">2 000 € · 36 %</div></div>
+      </div>
+      <div class="dist">
+        <h4>Répartition des impressions par campagne</h4>
+        <div class="bar-row"><div class="name">Pouvoir d'achat</div><div class="bar-track"><div class="bar-fill" style="width:18.9%"></div></div><div class="val">307 718 · 19 %</div></div>
+        <div class="bar-row"><div class="name">Mai 2026</div><div class="bar-track"><div class="bar-fill" style="width:33.3%"></div></div><div class="val">541 997 · 33 %</div></div>
+        <div class="bar-row"><div class="name">Juin 2026</div><div class="bar-track"><div class="bar-fill terra" style="width:47.8%"></div></div><div class="val">778 076 · 48 %</div></div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="period">02 → 07 mars 2026</div>
+        <h4>Pouvoir d'achat</h4>
+        <div class="mini">Meta Ads (FB + IG) · 1 100 € · 307 718 impr.</div>
+      </div>
+      <div class="tl-item">
+        <div class="period">27 avril → 31 mai 2026</div>
+        <h4>Mai 2026 · Carte cadeau &amp; Parking</h4>
+        <div class="mini">pStory + Spotify x2 · 2 500 € · 541 997 impr.</div>
+      </div>
+      <div class="tl-item">
+        <div class="period">01 juin → 12 juillet 2026</div>
+        <h4>Juin 2026 · Carte cadeau &amp; Parking</h4>
+        <div class="mini">pStory x2 + Spotify · 2 000 € · 778 076 impr.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="mars">
+  <div class="wrap">
+    <div class="camp-head">
+      <h2>Opération Pouvoir d'achat</h2>
+      <div>Campagne de notoriété Meta Ads en marque blanche, positionnée sur l'argument pouvoir d'achat.</div>
+      <div class="meta">
+        <span>Diffusion : <b>02/03 → 07/03/2026</b></span>
+        <span>Budget : <b>1 100 € HT</b></span>
+        <span>Levier : <b>Meta Ads (Facebook + Instagram)</b></span>
+        <span>Objectif : <b>Notoriété</b></span>
+      </div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>Meta Ads · Facebook &amp; Instagram</h3>
+        <div class="badge">CPM global 3,57 €</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">307 718</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">91 788</div><div class="k">Audience unique</div></div>
+        <div class="metric"><div class="v">3,35</div><div class="k">Répétition</div></div>
+        <div class="metric"><div class="v">1 962</div><div class="k">Interactions</div></div>
+        <div class="metric"><div class="v">346</div><div class="k">Clics</div></div>
+        <div class="metric"><div class="v">0,11 %</div><div class="k">CTR</div></div>
+      </div>
+      <table>
+        <tr><th>Plateforme</th><th>Audience</th><th>Impressions</th><th>Répétition</th><th>Interactions</th><th>Clics</th><th>CTR</th><th>CPM</th><th>Budget</th></tr>
+        <tr><td>Facebook</td><td>6 811</td><td>14 204</td><td>2,09</td><td>98</td><td>28</td><td>0,20 %</td><td>11,49 €</td><td>163,17 €</td></tr>
+        <tr><td>Instagram</td><td>86 183</td><td>293 514</td><td>3,41</td><td>1 864</td><td>318</td><td>0,11 %</td><td>3,19 €</td><td>936,83 €</td></tr>
+        <tr class="total"><td>Total</td><td>91 788</td><td>307 718</td><td>3,35</td><td>1 962</td><td>346</td><td>0,11 %</td><td>3,57 €</td><td>1 100 €</td></tr>
+      </table>
+      <div class="comment"><b>Instagram</b> a porté l'essentiel de la diffusion : 91,9 % des clics contre 8,1 % pour Facebook. La cible féminine domine largement le reach, avec un taux de femmes qui décroît avec l'âge (87 % chez les 25-34 ans, jusqu'à 76,3 % chez les 65 ans et plus). La tranche <b>25-34 ans</b> concentre 47,5 % de l'audience et génère le plus de clics, tous genres confondus.</div>
+
+      <h4 style="font-size:14px;margin:18px 0 8px">Répartition de l'audience par âge</h4>
+      <table>
+        <tr><th>Tranche d'âge</th><th>Part de l'audience</th><th>% Femmes</th></tr>
+        <tr><td>25-34 ans</td><td>47,5 %</td><td>87,0 %</td></tr>
+        <tr><td>35-44 ans</td><td>21,0 %</td><td>83,0 %</td></tr>
+        <tr><td>45-54 ans</td><td>12,8 %</td><td>79,7 %</td></tr>
+        <tr><td>55-64 ans</td><td>9,7 %</td><td>78,1 %</td></tr>
+        <tr><td>65 ans et +</td><td>9,0 %</td><td>76,3 %</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="mai">
+  <div class="wrap">
+    <div class="camp-head">
+      <h2>Mai 2026 · Carte cadeau &amp; Parking</h2>
+      <div>Dispositif à double message : la carte cadeau portée par pStory Ads, le parking porté par Spotify Ads.</div>
+      <div class="meta">
+        <span>Diffusion : <b>27/04 → 31/05/2026</b></span>
+        <span>Budget : <b>2 500 € HT</b></span>
+        <span>Leviers : <b>pStory Ads, Spotify Ads</b></span>
+        <span>Objectif : <b>Notoriété</b></span>
+      </div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>pStory Ads · Carte cadeau — Facebook, Instagram &amp; TikTok</h3>
+        <div class="badge">CPM global 2,37 €</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">421 595</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">717</div><div class="k">Clics</div></div>
+        <div class="metric"><div class="v">0,17 %</div><div class="k">CTR</div></div>
+        <div class="metric"><div class="v">550</div><div class="k">Vues 100 %</div></div>
+        <div class="metric"><div class="v">1,39 €</div><div class="k">CPC global</div></div>
+      </div>
+      <table>
+        <tr><th>Plateforme</th><th>Reach</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>Vues 100 %</th><th>CPM</th><th>CPC</th><th>Budget</th></tr>
+        <tr><td>Facebook</td><td>21 764</td><td>117 063</td><td>85</td><td>0,07 %</td><td>200</td><td>2,72 €</td><td>3,74 €</td><td>318 €</td></tr>
+        <tr><td>Instagram</td><td>22 134</td><td>68 092</td><td>86</td><td>0,13 %</td><td>6</td><td>4,51 €</td><td>3,57 €</td><td>307 €</td></tr>
+        <tr><td>TikTok</td><td>76 517</td><td>236 440</td><td>546</td><td>0,23 %</td><td>344</td><td>1,59 €</td><td>0,69 €</td><td>375 €</td></tr>
+        <tr class="total"><td>Total</td><td>-</td><td>421 595</td><td>717</td><td>0,17 %</td><td>550</td><td>2,37 €</td><td>1,39 €</td><td>1 000 €</td></tr>
+      </table>
+      <div class="comment"><b>TikTok</b> porte l'essentiel de la performance : 546 clics sur 717 (CTR 0,23 %, le meilleur des trois plateformes) et le CPM le plus bas (1,59 €). Facebook conserve un rôle de volume, Instagram un rôle plus qualitatif mais coûteux (CPM 4,51 €).</div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>Spotify Ads · Carte cadeau</h3>
+        <div class="badge">CPM 8,97 € · Complétion 91,1 %</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">83 583</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">49 270</div><div class="k">Reach</div></div>
+        <div class="metric"><div class="v">91,1 %</div><div class="k">Taux de complétion</div></div>
+        <div class="metric"><div class="v">1,7</div><div class="k">Répétition</div></div>
+        <div class="metric"><div class="v">350</div><div class="k">Clics</div></div>
+      </div>
+      <table>
+        <tr><th>Levier</th><th>Écoutes 100 %</th><th>Impressions</th><th>Complétion</th><th>Clics</th><th>Reach</th><th>CTR</th><th>CPE</th><th>CPM</th><th>Budget</th></tr>
+        <tr class="total"><td>Spotify</td><td>54 646</td><td>83 583</td><td>91,1 %</td><td>350</td><td>49 270</td><td>0,42 %</td><td>0,01 €</td><td>8,97 €</td><td>750 €</td></tr>
+      </table>
+      <div class="comment">Répétition maîtrisée à 1,7, pour toucher un maximum de personnes uniques (49 270). Taux de complétion très élevé (91,1 %) et CPE particulièrement compétitif (0,01 €), confirmant la pertinence du ciblage sur ce message carte cadeau.</div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>Spotify Ads · Parking</h3>
+        <div class="badge">CPM 20,37 € · Complétion 90,6 %</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">36 819</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">17 377</div><div class="k">Reach</div></div>
+        <div class="metric"><div class="v">90,6 %</div><div class="k">Taux de complétion</div></div>
+        <div class="metric"><div class="v">2,12</div><div class="k">Répétition</div></div>
+        <div class="metric"><div class="v">400</div><div class="k">Clics</div></div>
+      </div>
+      <table>
+        <tr><th>Levier</th><th>Écoutes 100 %</th><th>Impressions</th><th>Complétion</th><th>Clics</th><th>Reach</th><th>CPE</th><th>CPM</th><th>Budget</th></tr>
+        <tr class="total"><td>Spotify</td><td>33 354</td><td>36 819</td><td>90,6 %</td><td>400</td><td>17 377</td><td>0,02 €</td><td>20,37 €</td><td>750 €</td></tr>
+      </table>
+      <div class="note">Le CPM de ce volet (20,37 €) est nettement plus élevé que celui du volet Carte cadeau (8,97 €) pour un budget identique : à vérifier auprès du prestataire si un ciblage ou format différent l'explique.</div>
+      <div class="comment">Volume plus modeste mais taux de clics le plus élevé du dispositif Mai (CTR implicite proche de 1,1 % sur les impressions), avec une répétition plus soutenue (2,12) adaptée à un message d'incitation directe (parking gratuit).</div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="juin">
+  <div class="wrap">
+    <div class="camp-head">
+      <h2>Juin 2026 · Carte cadeau &amp; Parking</h2>
+      <div>Poursuite du dispositif à double message sur une période plus longue, avec deux vagues pStory Ads.</div>
+      <div class="meta">
+        <span>Diffusion : <b>01/06 → 12/07/2026</b></span>
+        <span>Budget : <b>2 000 € HT</b></span>
+        <span>Leviers : <b>pStory Ads, Spotify Ads</b></span>
+        <span>Objectif : <b>Notoriété</b></span>
+      </div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>pStory Ads · Carte cadeau — Vague 1 (Facebook, Instagram &amp; TikTok)</h3>
+        <div class="badge">01/06 → 21/06/2026 · CPM 1,79 €</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">418 600</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">633</div><div class="k">Clics</div></div>
+        <div class="metric"><div class="v">0,15 %</div><div class="k">CTR</div></div>
+        <div class="metric"><div class="v">597</div><div class="k">Vues 100 %</div></div>
+        <div class="metric"><div class="v">1,18 €</div><div class="k">CPC global</div></div>
+      </div>
+      <table>
+        <tr><th>Plateforme</th><th>Reach</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>Vues 100 %</th><th>CPM</th><th>CPC</th><th>Budget</th></tr>
+        <tr><td>Facebook</td><td>23 806</td><td>130 494</td><td>111</td><td>0,09 %</td><td>284</td><td>2,54 €</td><td>2,98 €</td><td>331 €</td></tr>
+        <tr><td>Instagram</td><td>5 188</td><td>12 561</td><td>31</td><td>0,25 %</td><td>45</td><td>5,41 €</td><td>2,19 €</td><td>68 €</td></tr>
+        <tr><td>TikTok</td><td>69 657</td><td>275 545</td><td>491</td><td>0,18 %</td><td>268</td><td>1,27 €</td><td>0,71 €</td><td>351 €</td></tr>
+        <tr class="total"><td>Total</td><td>-</td><td>418 600</td><td>633</td><td>0,15 %</td><td>597</td><td>1,79 €</td><td>1,18 €</td><td>750 €</td></tr>
+      </table>
+      <div class="comment">Comme en mai, <b>TikTok</b> reste le moteur du dispositif (275 545 impressions, 491 clics, CPM le plus bas à 1,27 €). Instagram, sur un budget réduit, affiche le meilleur CTR (0,25 %) mais un CPM élevé (5,41 €).</div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>pStory Ads · Carte cadeau — Vague 2 (Facebook &amp; Instagram)</h3>
+        <div class="badge">22/06 → 12/07/2026 · CPM 2,91 €</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">171 655</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">158</div><div class="k">Clics</div></div>
+        <div class="metric"><div class="v">0,09 %</div><div class="k">CTR</div></div>
+        <div class="metric"><div class="v">357</div><div class="k">Vues 100 %</div></div>
+        <div class="metric"><div class="v">3,16 €</div><div class="k">CPC global</div></div>
+      </div>
+      <table>
+        <tr><th>Plateforme</th><th>Reach</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>Vues 100 %</th><th>CPM</th><th>CPC</th><th>Budget</th></tr>
+        <tr><td>Facebook</td><td>24 871</td><td>157 790</td><td>122</td><td>0,08 %</td><td>286</td><td>2,55 €</td><td>3,30 €</td><td>402 €</td></tr>
+        <tr><td>Instagram</td><td>4 880</td><td>13 865</td><td>36</td><td>0,26 %</td><td>71</td><td>7,07 €</td><td>2,72 €</td><td>98 €</td></tr>
+        <tr class="total"><td>Total</td><td>-</td><td>171 655</td><td>158</td><td>0,09 %</td><td>357</td><td>2,91 €</td><td>3,16 €</td><td>500 €</td></tr>
+      </table>
+      <div class="note">TikTok n'apparaît plus sur cette seconde vague (absent du fichier source) : à confirmer si le levier a été désactivé volontairement ou s'il s'agit d'un oubli de reporting.</div>
+      <div class="comment">Sur cette seconde vague, sans TikTok, le volume d'impressions recule logiquement. Le CTR se maintient à un niveau proche de la vague 1 sur Facebook, Instagram conservant le meilleur taux de clics du volet (0,26 %) malgré un CPM élevé (7,07 €).</div>
+    </div>
+
+    <div class="lever">
+      <div class="lever-top">
+        <h3>Spotify Ads · Parking</h3>
+        <div class="badge">22/06 → 12/07/2026 · CPM 4,00 € · Complétion 87,5 %</div>
+      </div>
+      <div class="metrics-row">
+        <div class="metric"><div class="v">187 821</div><div class="k">Impressions</div></div>
+        <div class="metric"><div class="v">85 577</div><div class="k">Reach</div></div>
+        <div class="metric"><div class="v">87,5 %</div><div class="k">Taux de complétion</div></div>
+        <div class="metric"><div class="v">2,2</div><div class="k">Répétition</div></div>
+        <div class="metric"><div class="v">1 685</div><div class="k">Clics</div></div>
+      </div>
+      <table>
+        <tr><th>Levier</th><th>Écoutes 100 %</th><th>Impressions</th><th>Complétion</th><th>Clics</th><th>Reach</th><th>Répétition</th><th>CTR</th><th>CPE</th><th>CPM</th><th>Budget</th></tr>
+        <tr class="total"><td>Spotify</td><td>164 812</td><td>187 821</td><td>87,5 %</td><td>1 685</td><td>85 577</td><td>2,2</td><td>0,89 %</td><td>0,05 €</td><td>4,00 €</td><td>750 €</td></tr>
+      </table>
+      <div class="comment">Le volet Spotify le plus performant du dispositif 2026 : <b>1 685 clics</b> (CTR 0,89 %, largement au-dessus des deux autres volets Spotify de l'année), un CPM maîtrisé à 4,00 € et un CPE très compétitif de 0,05 €. La répétition de 2,2 confirme une bonne imprégnation du message parking sans saturer l'audience.</div>
+    </div>
+  </div>
+</section>
+
+<section class="tint" id="budget">
+  <div class="wrap">
+    <div class="eyebrow">Récapitulatif</div>
+    <h2>Budget total du dispositif 2026 (à date)</h2>
+    <p class="section-intro">Recalculé à partir de la somme des 7 volets activés depuis le début de l'année.</p>
+    <table>
+      <tr><th>Campagne</th><th>Levier</th><th>Période</th><th>Impressions</th><th>Clics</th><th>Budget HT</th></tr>
+      <tr><td>Pouvoir d'achat</td><td>Meta Ads (FB + IG)</td><td>02/03 → 07/03</td><td>307 718</td><td>346</td><td>1 100 €</td></tr>
+      <tr><td>Mai 2026</td><td>pStory Ads · Carte cadeau</td><td>27/04 → 31/05</td><td>421 595</td><td>717</td><td>1 000 €</td></tr>
+      <tr><td>Mai 2026</td><td>Spotify Ads · Carte cadeau</td><td>27/04 → 17/05</td><td>83 583</td><td>350</td><td>750 €</td></tr>
+      <tr><td>Mai 2026</td><td>Spotify Ads · Parking</td><td>11/05 → 31/05</td><td>36 819</td><td>400</td><td>750 €</td></tr>
+      <tr><td>Juin 2026</td><td>pStory Ads · Carte cadeau (vague 1)</td><td>01/06 → 21/06</td><td>418 600</td><td>633</td><td>750 €</td></tr>
+      <tr><td>Juin 2026</td><td>pStory Ads · Carte cadeau (vague 2)</td><td>22/06 → 12/07</td><td>171 655</td><td>158</td><td>500 €</td></tr>
+      <tr><td>Juin 2026</td><td>Spotify Ads · Parking</td><td>22/06 → 12/07</td><td>187 821</td><td>1 685</td><td>750 €</td></tr>
+      <tr class="total"><td colspan="3">Total</td><td>1 627 791</td><td>4 289</td><td>5 600 €</td></tr>
+    </table>
+    <div class="note">Bilan arrêté aux données disponibles au 12/07/2026 (fin du dernier volet pStory de juin). Aucune donnée de budget manquante sur ce périmètre.</div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="wrap">
+    <h2>Contacts</h2>
+    <div class="contacts">
+      <div class="contact">
+        <div class="name">Jérôme Fages</div>
+        <div class="role">Directeur commercial</div>
+        <a href="tel:0618746675">06 18 74 66 75</a>
+        <a href="mailto:jerome@thegoodweb.eu">jerome@thegoodweb.eu</a>
+      </div>
+      <div class="contact">
+        <div class="name">Mathilde Coriton</div>
+        <div class="role">Directrice de clientèle</div>
+        <a href="tel:0648619292">06 48 61 92 92</a>
+        <a href="mailto:mathilde@thegoodweb.eu">mathilde@thegoodweb.eu</a>
+      </div>
+      <div class="contact">
+        <div class="name">Leslie Rogé</div>
+        <div class="role">Cheffe de publicité</div>
+        <a href="tel:0683736862">06 83 73 68 62</a>
+        <a href="mailto:leslie@thegoodweb.eu">leslie@thegoodweb.eu</a>
+      </div>
+      <div class="contact">
+        <div class="name">Sofien Chaganiou</div>
+        <div class="role">Chef de publicité</div>
+        <a href="tel:0767847067">07 67 84 70 67</a>
+        <a href="mailto:sofien@thegoodweb.eu">sofien@thegoodweb.eu</a>
+      </div>
+      <div class="contact">
+        <div class="name">Andrea</div>
+        <div class="role">The Good Web</div>
+        <span style="display:block;font-size:12.8px;opacity:.8">andrea@thegoodweb.eu</span>
+      </div>
+      <div class="contact">
+        <div class="name">Pôle activation</div>
+        <div class="role">The Good Web</div>
+        <span style="display:block;font-size:12.8px;opacity:.8">activation@thegoodweb.eu</span>
+      </div>
+    </div>
+    <div class="foot-logo">
+      <svg viewBox="214 252 572 496" xmlns="http://www.w3.org/2000/svg" style="fill:#fff">
+        <path d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+        <path d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+        <path d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+      </svg>
+    </div>
+  </div>
+</footer>
+
+<script>
+const links = document.querySelectorAll('nav.stick a');
+const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+window.addEventListener('scroll', () => {
+  let idx = 0;
+  sections.forEach((s,i) => { if(s && s.getBoundingClientRect().top < 120) idx = i; });
+  links.forEach(l => l.classList.remove('active'));
+  if(links[idx]) links[idx].classList.add('active');
+});
+</script>
+</body>
+</html>

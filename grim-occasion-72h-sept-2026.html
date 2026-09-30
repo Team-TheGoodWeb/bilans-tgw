@@ -68,14 +68,7 @@ td .bar{display:inline-block;width:90px;vertical-align:middle;margin-right:8px}
 .kv td:first-child{color:var(--muted);width:42%;padding-right:14px}
 .chart{width:100%;height:auto;display:block}
 .chart .ax{font-family:Inter,sans-serif;font-size:12px;fill:#5b6687}
-.chart .terra{fill:#f25430}.chart .b{font-weight:700;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
-.chartbox{position:relative}
-.chart .hit{cursor:pointer}
-.chart .dbar{transition:fill .15s}.chart .dbar.on{fill:#7bbdff}
-.tip{position:absolute;pointer-events:none;background:#021859;color:#fff;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;box-shadow:0 10px 26px rgba(2,24,89,.25);opacity:0;transform:translate(-50%,0);transition:opacity .15s;white-space:nowrap;z-index:5}
-.tip.on{opacity:1}
-.tip b{font-family:Poppins,sans-serif;display:block;margin-bottom:4px;color:#ffb79e}
-.tip span{color:#b9ccf2}
+.chart .terra{fill:#f25430}.chart .b{font-weight:700}
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .donutbox{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
@@ -128,8 +121,6 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
  .stat .v{font-size:24px}
  .contacts{grid-template-columns:1fr 1fr}
  .stats{grid-template-columns:1fr 1fr}
- .tip{position:static;transform:none;display:none;margin-top:12px;white-space:normal}
- .tip.on{display:block}
 }
 </style>
 </head>
@@ -269,7 +260,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
   <h2>Diffusion jour par jour</h2>
   <p class="lead">Un rythme de diffusion régulier sur toute la période, réparti à parts quasi égales entre la phase d'amorce (50,5 % des impressions) et les 72h de l'opération (49,5 %). Le CTR reste stable, entre 0,88 % et 1,03 %, d'un jour à l'autre.</p>
   <div class="card">
-   <div class="chartbox"><svg viewBox="0 0 720 300" class="chart" role="img" aria-label="Impressions et CTR par jour">
+   <svg viewBox="0 0 720 300" class="chart" role="img" aria-label="Impressions et CTR par jour">
 <line x1="56" x2="664" y1="254.0" y2="254.0" stroke="#e3e9f5"/>
 <text x="48" y="258.0" text-anchor="end" class="ax">0k</text>
 <line x1="56" x2="664" y1="196.5" y2="196.5" stroke="#e3e9f5"/>
@@ -283,17 +274,17 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <rect x="360.0" y="24" width="304.0" height="230" fill="#fde6df" opacity=".55"/>
 <text x="512.0" y="38" text-anchor="middle" class="ax terra">Opération 72h · 24 au 26/09</text>
 <text x="208.0" y="38" text-anchor="middle" class="ax">Amorce · 21 au 23/09</text>
-<rect x="78.3" y="53.9" width="56.7" height="200.1" rx="6" fill="#021859" class="dbar" data-i="0"></rect>
+<rect x="78.3" y="53.9" width="56.7" height="200.1" rx="6" fill="#021859"><title>Lun. 21/09 · 69 590 impressions</title></rect>
 <text x="106.7" y="276" text-anchor="middle" class="ax">Lun. 21/09</text>
-<rect x="179.6" y="69.8" width="56.7" height="184.2" rx="6" fill="#021859" class="dbar" data-i="1"></rect>
+<rect x="179.6" y="69.8" width="56.7" height="184.2" rx="6" fill="#021859"><title>Mar. 22/09 · 64 056 impressions</title></rect>
 <text x="208.0" y="276" text-anchor="middle" class="ax">Mar. 22/09</text>
-<rect x="281.0" y="57.7" width="56.7" height="196.3" rx="6" fill="#021859" class="dbar" data-i="2"></rect>
+<rect x="281.0" y="57.7" width="56.7" height="196.3" rx="6" fill="#021859"><title>Mer. 23/09 · 68 262 impressions</title></rect>
 <text x="309.3" y="276" text-anchor="middle" class="ax">Mer. 23/09</text>
-<rect x="382.3" y="67.7" width="56.7" height="186.3" rx="6" fill="#021859" class="dbar" data-i="3"></rect>
+<rect x="382.3" y="67.7" width="56.7" height="186.3" rx="6" fill="#021859"><title>Jeu. 24/09 · 64 810 impressions</title></rect>
 <text x="410.7" y="276" text-anchor="middle" class="ax">Jeu. 24/09</text>
-<rect x="483.6" y="50.2" width="56.7" height="203.8" rx="6" fill="#021859" class="dbar" data-i="4"></rect>
+<rect x="483.6" y="50.2" width="56.7" height="203.8" rx="6" fill="#021859"><title>Ven. 25/09 · 70 893 impressions</title></rect>
 <text x="512.0" y="276" text-anchor="middle" class="ax">Ven. 25/09</text>
-<rect x="585.0" y="74.2" width="56.7" height="179.8" rx="6" fill="#021859" class="dbar" data-i="5"></rect>
+<rect x="585.0" y="74.2" width="56.7" height="179.8" rx="6" fill="#021859"><title>Sam. 26/09 · 62 534 impressions</title></rect>
 <text x="613.3" y="276" text-anchor="middle" class="ax">Sam. 26/09</text>
 <polyline fill="none" stroke="#f25430" stroke-width="3" points="106.7,186.5 208.0,76.2 309.3,119.3 410.7,91.3 512.0,190.4 613.3,95.0"/>
 <circle cx="106.7" cy="186.5" r="5" fill="#fff" stroke="#f25430" stroke-width="3"/>
@@ -312,14 +303,8 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <text x="672" y="181.3" class="ax terra">0,9 %</text>
 <text x="672" y="104.7" class="ax terra">1,0 %</text>
 <text x="672" y="28.0" class="ax terra">1,1 %</text>
-<rect class="hit" x="56.0" y="24" width="101.3" height="260" fill="transparent" data-i="0" data-d="Lun. 21/09" data-imp="69 590" data-e="61 386" data-cr="88,21 %" data-c="618" data-ctr="0,89 %"/>
-<rect class="hit" x="157.3" y="24" width="101.3" height="260" fill="transparent" data-i="1" data-d="Mar. 22/09" data-imp="64 056" data-e="59 138" data-cr="92,32 %" data-c="661" data-ctr="1,03 %"/>
-<rect class="hit" x="258.7" y="24" width="101.3" height="260" fill="transparent" data-i="2" data-d="Mer. 23/09" data-imp="68 262" data-e="61 160" data-cr="89,60 %" data-c="666" data-ctr="0,98 %"/>
-<rect class="hit" x="360.0" y="24" width="101.3" height="260" fill="transparent" data-i="3" data-d="Jeu. 24/09" data-imp="64 810" data-e="59 609" data-cr="91,98 %" data-c="656" data-ctr="1,01 %"/>
-<rect class="hit" x="461.3" y="24" width="101.3" height="260" fill="transparent" data-i="4" data-d="Ven. 25/09" data-imp="70 893" data-e="63 172" data-cr="89,11 %" data-c="626" data-ctr="0,88 %"/>
-<rect class="hit" x="562.7" y="24" width="101.3" height="260" fill="transparent" data-i="5" data-d="Sam. 26/09" data-imp="62 534" data-e="56 733" data-cr="90,72 %" data-c="630" data-ctr="1,01 %"/>
-</svg><div class="tip" id="tip"></div></div>
-   <div class="legend"><span><i style="background:#021859"></i>Impressions</span><span><i style="background:#f25430"></i>CTR (échelle de droite)</span><span>Survolez ou touchez une journée pour le détail</span></div>
+</svg>
+   <div class="legend"><span><i style="background:#021859"></i>Impressions</span><span><i style="background:#f25430"></i>CTR (échelle de droite)</span></div>
   </div>
   <h3>Détail quotidien</h3>
   <div class="tbl-wrap"><table>
@@ -446,7 +431,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
  <div class="wrap">
   <h2>Contacts</h2>
   <p class="lead">L'équipe The Good Web reste à votre disposition pour échanger sur ce bilan et préparer les prochaines opérations.</p>
-  <div class="contacts"><a class="contact" href="mailto:jerome@thegoodweb.eu"><div class="cn">Jérôme Fages</div><div class="cr">Directeur commercial</div><div class="cp">06 18 74 66 75</div><div class="cm">jerome@thegoodweb.eu</div></a><a class="contact" href="mailto:mathilde@thegoodweb.eu"><div class="cn">Mathilde Coriton</div><div class="cr">Directrice de clientèle</div><div class="cp">06 48 61 92 92</div><div class="cm">mathilde@thegoodweb.eu</div></a><a class="contact" href="mailto:leslie@thegoodweb.eu"><div class="cn">Leslie Rogé</div><div class="cr">Cheffe de publicité</div><div class="cp">06 83 73 68 62</div><div class="cm">leslie@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Andrea</div><div class="cr">Chef de publicité</div><div class="cm">andrea@thegoodweb.eu</div></div><a class="contact" href="mailto:sofien@thegoodweb.eu"><div class="cn">Sofien Chaganiou</div><div class="cr">Chef de publicité</div><div class="cp">07 67 84 70 67</div><div class="cm">sofien@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Pôle activation</div><div class="cr">Mise en ligne & suivi</div><div class="cm">activation@thegoodweb.eu</div></div></div>
+  <div class="contacts"><a class="contact" href="mailto:jerome@thegoodweb.eu"><div class="cn">Jérôme Fages</div><div class="cr">Directeur commercial</div><div class="cp">06 18 74 66 75</div><div class="cm">jerome@thegoodweb.eu</div></a><a class="contact" href="mailto:mathilde@thegoodweb.eu"><div class="cn">Mathilde Coriton</div><div class="cr">Directrice de clientèle</div><div class="cp">06 48 61 92 92</div><div class="cm">mathilde@thegoodweb.eu</div></a><a class="contact" href="mailto:andrea@thegoodweb.eu"><div class="cn">Andrea Alonso</div><div class="cr">Cheffe de publicité junior</div><div class="cp">04 91 54 28 12</div><div class="cm">andrea@thegoodweb.eu</div></a><a class="contact" href="mailto:sofien@thegoodweb.eu"><div class="cn">Sofien Chaganiou</div><div class="cr">Chef de publicité</div><div class="cp">07 67 84 70 67</div><div class="cm">sofien@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Pôle activation</div><div class="cr">Mise en ligne & suivi</div><div class="cm">activation@thegoodweb.eu</div></div></div>
   <div class="foot-bottom">
    <div class="logo-f"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
   
@@ -503,27 +488,5 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
   </div>
  </div>
 </footer>
-<script>
-(function(){
- var box=document.querySelector('.chartbox'); if(!box) return;
- var tip=document.getElementById('tip'), svg=box.querySelector('svg');
- function show(h){
-  box.querySelectorAll('.dbar').forEach(function(b){b.classList.toggle('on',b.dataset.i===h.dataset.i)});
-  var d=h.dataset;
-  tip.innerHTML='<b>'+d.d+(+d.i>=3?' · Opération 72h':' · Amorce')+'</b><span>Impressions</span> '+d.imp+'<br><span>Écoutes 100 %</span> '+d.e+'<br><span>Complétion</span> '+d.cr+'<br><span>Clics</span> '+d.c+'<br><span>CTR</span> '+d.ctr;
-  var r=h.getBoundingClientRect(), br=box.getBoundingClientRect();
-  var x=r.left+r.width/2-br.left, tw=tip.offsetWidth/2;
-  x=Math.max(tw,Math.min(br.width-tw,x));
-  tip.style.left=x+'px'; tip.style.top=(r.top-br.top+r.height*0.28)+'px'; tip.classList.add('on');
- }
- function hide(){tip.classList.remove('on');box.querySelectorAll('.dbar').forEach(function(b){b.classList.remove('on')})}
- box.querySelectorAll('.hit').forEach(function(h){
-  h.addEventListener('mouseenter',function(){show(h)});
-  h.addEventListener('click',function(){show(h)});
- });
- svg.addEventListener('mouseleave',hide);
- document.addEventListener('touchstart',function(e){if(!box.contains(e.target))hide()},{passive:true});
-})();
-</script>
 </body>
 </html>

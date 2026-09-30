@@ -1,338 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LDLC · Offre Apple Rentrée 2026 — Stats à date</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bilan LDLC · Offre Apple / Rentrée 2026 · The Good Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #021859;
-  --navy-light: #0a2a7a;
-  --babyblue: #7bbdff;
-  --babyblue-soft: #eaf4ff;
-  --terracota: #f25430;
-  --terracota-soft: #fde7e0;
-  --white: #ffffff;
-  --bg-soft: #f5f8ff;
-  --ink: #1a2340;
-  --ink-soft: #5b6584;
-  --border: #e2e8f7;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--ink);
-  background: var(--white);
-  line-height: 1.55;
-}
-h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--navy); }
-a { color: inherit; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
-
-/* HERO */
-header.hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
-  color: var(--white);
-  padding: 40px 0 56px;
-}
-header.hero .logo-header { margin-bottom: 28px; }
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(242,84,48,0.18);
-  color: #ffb79e;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 7px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-.eyebrow .dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--terracota);
-  animation: pulse 1.8s infinite;
-}
-@keyframes pulse {
-  0% { opacity: 1; } 50% { opacity: 0.35; } 100% { opacity: 1; }
-}
-header.hero h1 {
-  color: var(--white);
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 700;
-  max-width: 780px;
-  margin-bottom: 14px;
-}
-header.hero p.sub {
-  color: rgba(255,255,255,0.78);
-  font-size: 16px;
-  max-width: 640px;
-  margin-bottom: 30px;
-}
-.pills { display: flex; flex-wrap: wrap; gap: 12px; }
-.pill {
-  border: 1.5px solid var(--babyblue);
-  background: rgba(123,189,255,0.08);
-  border-radius: 999px;
-  padding: 9px 18px;
-  font-size: 14px;
-  color: var(--white);
-}
-.pill b { font-weight: 700; }
-.pill .sep { opacity: 0.5; margin: 0 4px; }
-
-/* NAV */
-nav.subnav {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--border);
-}
-nav.subnav .wrap {
-  display: flex; gap: 4px; overflow-x: auto;
-  padding-top: 0; padding-bottom: 0;
-}
-nav.subnav a {
-  display: inline-block;
-  white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--navy);
-  text-decoration: none;
-  padding: 16px 16px;
-  border-bottom: 3px solid transparent;
-}
-nav.subnav a:hover { border-bottom-color: var(--babyblue); }
-
-section { padding: 56px 0; }
-section.alt { background: var(--bg-soft); }
-.section-head { margin-bottom: 32px; max-width: 720px; }
-.section-head .kicker {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--terracota);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
-}
-.section-head h2 { font-size: 28px; margin-bottom: 10px; }
-.section-head p { color: var(--ink-soft); font-size: 15px; }
-
-/* STATS BANNER */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-}
-.stat-card {
-  background: var(--navy);
-  border-radius: 16px;
-  padding: 22px 20px;
-  color: var(--white);
-}
-.stat-card .num {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 4px;
-}
-.stat-card .lbl { font-size: 13px; color: rgba(255,255,255,0.7); }
-.stat-card.accent { background: var(--terracota); }
-.stat-card.accent .lbl { color: rgba(255,255,255,0.85); }
-
-/* CONTEXT CARDS */
-.ctx-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 28px;
-}
-.ctx-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
-}
-.ctx-card .num { font-family:'Poppins',sans-serif; font-weight:700; color:var(--navy); font-size:15px; margin-bottom:6px; }
-.ctx-card p { font-size: 13.5px; color: var(--ink-soft); }
-
-/* LEVER BLOCK */
-.lever-block {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 32px;
-  margin-bottom: 24px;
-}
-.lever-block .lever-head {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  flex-wrap: wrap; gap: 12px; margin-bottom: 24px;
-}
-.lever-block .lever-head h3 { font-size: 22px; }
-.badge {
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 5px 12px;
-  border-radius: 999px;
-}
-.badge.live { background: var(--terracota-soft); color: var(--terracota); }
-.badge.pending { background: var(--babyblue-soft); color: #3d78b5; }
-
-.kpi-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 12px;
-  margin-bottom: 28px;
-}
-.kpi {
-  background: var(--bg-soft);
-  border-radius: 12px;
-  padding: 14px 12px;
-  text-align: center;
-}
-.kpi .v { font-family:'Poppins',sans-serif; font-weight:700; color:var(--navy); font-size: 19px; }
-.kpi .l { font-size: 11.5px; color: var(--ink-soft); margin-top:2px; text-transform: uppercase; letter-spacing:.02em; }
-
-.progress-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
-.progress-item .top { display:flex; justify-content:space-between; font-size:13.5px; margin-bottom:6px; }
-.progress-item .top .name { font-weight:600; color: var(--navy); }
-.progress-item .top .val { color: var(--ink-soft); }
-.progress-track { height: 8px; background: var(--babyblue-soft); border-radius:999px; overflow:hidden; }
-.progress-fill { height:100%; background: linear-gradient(90deg, var(--babyblue), var(--navy)); border-radius:999px; }
-.progress-fill.met { background: linear-gradient(90deg, var(--terracota), #ff8a63); }
-
-table.daily { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 28px; }
-table.daily thead th {
-  background: var(--navy); color: var(--white);
-  font-family:'Poppins',sans-serif; font-weight:600; font-size:12px;
-  text-transform: uppercase; letter-spacing:.02em;
-  padding: 11px 10px; text-align: left;
-}
-table.daily tbody td { padding: 10px 10px; border-bottom: 1px solid var(--border); color: var(--ink); }
-table.daily tbody tr:nth-child(even) { background: var(--bg-soft); }
-.table-wrap { overflow-x: auto; margin-bottom: 28px; }
-
-.diffusion-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 14px; margin-bottom: 28px;
-}
-.diffusion-item { background: var(--bg-soft); border-radius: 12px; padding: 14px 16px; }
-.diffusion-item .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: .03em; color: var(--ink-soft); margin-bottom:4px; }
-.diffusion-item .v { font-size: 14px; font-weight: 600; color: var(--navy); }
-
-.comment-box {
-  background: var(--babyblue-soft);
-  border-left: 4px solid var(--babyblue);
-  border-radius: 0 12px 12px 0;
-  padding: 18px 22px;
-}
-.comment-box h4 { font-size: 14px; margin-bottom: 6px; color: var(--navy); }
-.comment-box p { font-size: 13.5px; color: var(--ink); margin-bottom: 10px; }
-.comment-box p:last-child { margin-bottom: 0; }
-
-.note-box {
-  background: var(--terracota-soft);
-  border-left: 4px solid var(--terracota);
-  border-radius: 0 12px 12px 0;
-  padding: 16px 20px;
-  font-size: 13.5px;
-  color: #8a2f18;
-  margin-top: 20px;
-}
-
-/* PENDING LEVERS */
-.pending-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 16px;
-}
-.pending-card {
-  border: 1.5px dashed var(--border);
-  border-radius: 16px;
-  padding: 22px;
-  text-align: center;
-  color: var(--ink-soft);
-}
-.pending-card .icon {
-  width: 40px; height: 40px; border-radius: 50%;
-  background: var(--babyblue-soft); color: var(--navy);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 12px; font-family:'Poppins',sans-serif; font-weight:700;
-}
-.pending-card h4 { font-size: 15px; color: var(--navy); margin-bottom: 6px; }
-.pending-card p { font-size: 12.5px; }
-
-/* CIBLAGE */
-.target-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 18px;
-}
-.target-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 22px;
-}
-.target-card .glyph { font-size: 20px; color: var(--terracota); margin-bottom: 10px; }
-.target-card h4 { font-size: 15px; margin-bottom: 8px; }
-.target-card p { font-size: 13.5px; color: var(--ink-soft); }
-.chip-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-.chip {
-  font-size: 12.5px; background: var(--bg-soft); border: 1px solid var(--border);
-  border-radius: 999px; padding: 5px 12px; color: var(--navy); font-weight: 500;
-}
-.chip.new { border-color: var(--terracota); color: var(--terracota); background: var(--terracota-soft); }
-
-/* FOOTER */
-footer { background: var(--navy); color: var(--white); padding: 56px 0 32px; }
-footer .foot-head { display:flex; align-items:center; gap:16px; margin-bottom: 36px; }
-footer .foot-head h2 { color: var(--white); font-size: 24px; }
-.contact-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 14px; margin-bottom: 40px;
-}
-.contact-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px; padding: 18px 20px;
-  text-decoration: none;
-  transition: background .15s;
-}
-.contact-card.active:hover { background: rgba(255,255,255,0.12); }
-.contact-card .name { font-family:'Poppins',sans-serif; font-weight:600; font-size:14.5px; color: var(--white); margin-bottom:3px; }
-.contact-card .role { font-size: 12.5px; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
-.contact-card .detail { font-size: 12.5px; color: var(--babyblue); }
-.contact-card.inactive .detail { color: rgba(255,255,255,0.45); }
-footer .foot-bottom {
-  border-top: 1px solid rgba(255,255,255,0.12);
-  padding-top: 24px;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
-}
-footer .baseline { font-size: 12.5px; color: rgba(255,255,255,0.55); }
-
-@media (max-width: 640px) {
-  section { padding: 40px 0; }
-  .lever-block { padding: 22px; }
-  footer .foot-bottom { flex-direction: column; align-items: flex-start; }
-}
+:root{--navy:#021859;--ice:#7bbdff;--terra:#f25430;--white:#fff;--ink:#1c2440;--mute:#5d6685;--bg2:#f4f7fd;--ice-l:#e6f2ff;--terra-l:#fdebe6;--navy-l:#e7eaf3;--line:#dde3f0;box-sizing:border-box}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.55;font-size:15.5px}
+h1,h2,h3,h4{font-family:Poppins,system-ui,sans-serif;color:var(--navy);margin:0 0 .5em;line-height:1.2}
+h2{font-size:clamp(1.5rem,3vw,2rem)}h2:before{content:"↘ ";color:var(--terra)}
+h3{font-size:1.1rem}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+/* hero */
+header.hero{background:var(--navy);color:var(--white);padding:46px 0 42px;padding-top:calc(46px + env(safe-area-inset-top,0px))}
+header.hero .top{display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+header.hero .logo svg{width:136px;height:118px;display:block}
+header.hero .eyebrow{font-family:Poppins;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:#ffb79e;margin-bottom:10px}
+header.hero h1{color:var(--white);font-size:clamp(1.8rem,4.4vw,2.9rem);font-weight:800;margin:0 0 10px}
+header.hero .sub{color:#cfe3ff;max-width:720px;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{border:1.5px solid var(--ice);background:rgba(123,189,255,.08);color:#fff;border-radius:999px;padding:7px 16px;font-size:.88rem}
+.pill b{font-weight:700}
+/* nav */
+nav.anchors{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(2,24,89,.05)}
+nav.anchors .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.anchors a{white-space:nowrap;padding:15px 12px;font-weight:700;font-size:.9rem;color:var(--navy);text-decoration:none;border-bottom:3px solid transparent}
+nav.anchors a:hover{border-color:var(--terra)}
+section{padding:60px 0}section.alt{background:var(--bg2)}
+.lead{color:var(--mute);max-width:820px;margin:0 0 28px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;border-top:4px solid var(--navy)}
+.stat.t{border-top-color:var(--terra)}.stat.i{border-top-color:var(--ice)}
+.stat .v{font-family:Poppins;font-weight:800;font-size:1.7rem;color:var(--navy);line-height:1.1}
+.stat .l{font-size:.82rem;color:var(--mute);margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.card.ice{background:var(--ice-l);border-color:#cfe5ff}.card.terra{background:var(--terra-l);border-color:#f9d3c8}.card.navy{background:var(--navy);color:#fff;border:none}.card.navy h3{color:#fff}
+.num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--terra);color:#fff;font-family:Poppins;font-weight:700;font-size:.9rem;margin-bottom:10px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 24px}
+.kpi{background:#fff;border-radius:14px;padding:14px;border:1px solid var(--line)}
+.kpi .v{font-family:Poppins;font-weight:700;font-size:1.3rem;color:var(--navy)}.kpi .l{font-size:.78rem;color:var(--mute)}
+.kpi.hi{background:var(--navy)}.kpi.hi .v{color:#fff}.kpi.hi .l{color:#cfe3ff}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tb{width:100%;border-collapse:collapse;font-size:.9rem;min-width:520px}
+.tb.sm{min-width:320px}
+.tb th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:.82rem}
+.tb td{padding:9px 12px;border-bottom:1px solid var(--line)}
+.tb tr.hl td{background:var(--terra-l)}
+.tb tr.tot td{background:var(--navy-l);font-weight:700;color:var(--navy)}
+.tb th:not(:first-child),.tb td:not(:first-child){text-align:right}
+.bench{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:6px}
+.bm{border-radius:14px;padding:14px 16px;background:var(--ice-l)}
+.bm .v{font-family:Poppins;font-weight:800;color:var(--navy);font-size:1.25rem}.bm .d{color:var(--terra);font-weight:700;font-size:.9rem}.bm .l{font-size:.8rem;color:var(--mute)}
+.chart{width:100%;height:auto;display:block}.chart .ax{font-size:11px;fill:var(--mute);font-family:Inter}.chart .gl{stroke:var(--line);stroke-width:1}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;margin-top:10px}.legend i,.lg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb{display:flex;flex-direction:column;gap:9px}.hb-row{display:grid;grid-template-columns:minmax(120px,1.3fr) 2fr 58px;gap:10px;align-items:center;font-size:.86rem}
+.hb-t{height:12px;background:var(--navy-l);border-radius:8px;overflow:hidden;display:block}.hb-f{display:block;height:100%;border-radius:8px}.hb-v{text-align:right;font-weight:700;color:var(--navy)}
+.donut{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.donut svg{width:130px;height:130px}.dn-v{font-family:Poppins;font-weight:800;font-size:22px;fill:var(--navy)}.dn-l{font-size:11px;fill:var(--mute)}
+.lg{display:flex;flex-direction:column;gap:6px;font-size:.88rem}
+.vh{display:flex;align-items:center;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+.tag{display:inline-block;background:var(--terra);color:#fff;font-family:Poppins;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.tag.ice{background:var(--ice);color:var(--navy)}.tag.navy{background:var(--navy)}
+.note{font-size:.84rem;color:var(--mute);margin-top:12px}
+.sub3{margin:30px 0 12px}
+.pending{border:2px dashed var(--ice);border-radius:18px;padding:28px;background:#fff;text-align:center}
+.pending .g{font-size:2rem;color:var(--ice)}
+ul.clean{margin:0;padding-left:18px}ul.clean li{margin-bottom:6px}
+/* footer */
+footer{background:var(--navy);color:#fff;padding:56px 0 calc(40px + env(safe-area-inset-bottom,0px))}
+footer h2{color:#fff}footer h2:before{color:var(--terra)}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 34px}
+.ct{display:block;border:1px solid rgba(123,189,255,.4);border-radius:16px;padding:16px 18px;color:#fff;text-decoration:none;background:rgba(123,189,255,.06)}
+a.ct:hover{border-color:var(--terra)}
+.ct .n{font-family:Poppins;font-weight:700}.ct .r{color:#ffb79e;font-size:.82rem;margin-bottom:6px}.ct .m{font-size:.84rem;color:#cfe3ff}
+.ct.off{opacity:.55;cursor:default}
+.fbot{display:flex;align-items:center;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(123,189,255,.25);padding-top:24px}
+.fbot svg{width:101px;height:88px;display:block}.fbot p{margin:0;color:#cfe3ff;font-size:.85rem}
+@media (max-width:860px){.kpis{grid-template-columns:1fr 1fr}.grid2,.grid3{grid-template-columns:1fr}.contacts{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.contacts{grid-template-columns:1fr}header.hero .logo svg{width:104px;height:90px}section{padding:44px 0}.hb-row{grid-template-columns:1fr 1.2fr 52px}}
 </style>
 </head>
 <body>
-
 <header class="hero">
-  <div class="wrap">
-    <svg class="logo-header" viewBox="214 252 572 496" xmlns="http://www.w3.org/2000/svg" style="width:118px;height:auto;display:block;">
-<defs><style>.st0{fill:#fff;}</style></defs>
-<g>
+ <div class="wrap">
+  <div class="top">
+   <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
     <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
     <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
     <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
@@ -373,459 +139,226 @@ footer .baseline { font-size: 12.5px; color: rgba(255,255,255,0.55); }
     <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
     <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
   </g>
-</svg>
-    <div class="eyebrow"><span class="dot"></span>Point à date · Campagne en cours</div>
-    <h1>LDLC · Offre Apple / Rentrée 2026 &minus;10&nbsp;%</h1>
-    <p class="sub">Stats à date sur le dispositif de conquête et retargeting, avant la fin de campagne prévue le 27 septembre 2026. Cette page sera mise à jour au fil de l'eau jusqu'au bilan final.</p>
-    <div class="pills">
-      <div class="pill"><b>Période</b><span class="sep">·</span>31/08 &rarr; 27/09/2026</div>
-      <div class="pill"><b>Objectif</b><span class="sep">·</span>Conquête / Acquisition + Retargeting</div>
-      <div class="pill"><b>Statut</b><span class="sep">·</span>Dispositif complet activé (Display, Audio, Twitch, YouTube)</div>
-    </div>
+</svg></div>
+   <div>
+    <div class="eyebrow">Bilan de campagne · LDLC</div>
+    <h1>Offre Apple · Rentrée 2026</h1>
+    <p class="sub">Restitution finale du dispositif conquête + retargeting activé pour l'offre Apple -10&#8239;% de LDLC : display programmatique, audio digital Spotify &amp; Deezer et vidéo Twitch, en diffusion premium sur toute la France.</p>
+   </div>
   </div>
+  <div class="pills">
+   <span class="pill"><b>Période</b> · 24/08 → 27/09/2026</span>
+   <span class="pill"><b>Budget</b> · 47&#8239;500&#8239;€ HT dont YouTube 16&#8239;900&#8239;€ à venir</span>
+   <span class="pill"><b>Objectif</b> · conquête + retargeting</span>
+   <span class="pill"><b>Marché</b> · France · H/F 18+</span>
+  </div>
+ </div>
 </header>
+<nav class="anchors"><div class="wrap">
+ <a href="#synthese">Synthèse</a><a href="#display">Display</a><a href="#audio">Audio</a><a href="#twitch">Twitch</a><a href="#youtube">YouTube</a><a href="#audiences">Audiences</a><a href="#budget">Budget</a><a href="#enseignements">Enseignements</a><a href="#contacts">Contacts</a>
+</div></nav>
 
-<nav class="subnav">
-  <div class="wrap">
-    <a href="#vue-ensemble">Vue d'ensemble</a>
-    <a href="#display">Display</a>
-    <a href="#audio">Audio</a>
-    <a href="#twitch">Twitch</a>
-    <a href="#youtube">YouTube</a>
-    <a href="#ciblage">Ciblage</a>
-    <a href="#contacts">Contacts</a>
+<section id="synthese">
+ <div class="wrap">
+  <h2>Synthèse du dispositif</h2>
+  <p class="lead">Trois leviers activés en complémentarité : Twitch et l'audio installent l'offre auprès des étudiants dès le 24 août, le display prend le relais à partir du 31 août pour convertir, avec une montée en pression continue jusqu'à la fin de campagne.</p>
+  <div class="stats">
+   <div class="stat"><div class="v">2,54&#8239;M</div><div class="l">impressions livrées</div></div>
+   <div class="stat t"><div class="v">23 446</div><div class="l">clics vers ldlc.com</div></div>
+   <div class="stat i"><div class="v">0,92 %</div><div class="l">CTR moyen du dispositif</div></div>
+   <div class="stat t"><div class="v">3 022</div><div class="l">visites mesurées (pixel)</div></div>
+   <div class="stat"><div class="v">12,05 €</div><div class="l">CPM moyen (hors YouTube)</div></div>
+   <div class="stat i"><div class="v">1,31 €</div><div class="l">CPC moyen (hors YouTube)</div></div>
   </div>
-</nav>
-
-<section id="vue-ensemble">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Bandeau de stats clés</div>
-      <h2>Où en est le dispositif à date</h2>
-      <p>Cumul sur les cinq volets du dispositif, désormais tous activés : Display (depuis le 31/08), Audio Spotify + Deezer et Twitch (depuis le 24/08), YouTube TrueView (depuis le 07/08, période distincte à valider).</p>
-    </div>
-    <div class="stat-grid">
-      <div class="stat-card"><div class="num">806 162</div><div class="lbl">Impressions</div></div>
-      <div class="stat-card"><div class="num">87 207</div><div class="lbl">Reach (Display + Audio)</div></div>
-      <div class="stat-card accent"><div class="num">4 432</div><div class="lbl">Clics</div></div>
-      <div class="stat-card"><div class="num">387</div><div class="lbl">Visites (Display + Audio)</div></div>
-      <div class="stat-card accent"><div class="num">332 515</div><div class="lbl">Vues/écoutes 100&nbsp;% (Audio + Twitch)</div></div>
-      <div class="stat-card"><div class="num">269 535</div><div class="lbl">Vues TrueView (YouTube)</div></div>
-      <div class="stat-card"><div class="num">250 435</div><div class="lbl">Utilisateurs uniques (YouTube)</div></div>
-    </div>
-
-    <div class="ctx-grid">
-      <div class="ctx-card"><div class="num">Leviers du dispositif</div><p>Display, Audio Spotify, Audio Deezer, Twitch, YouTube — diffusion sur environnements premiums.</p></div>
-      <div class="ctx-card"><div class="num">Capping</div><p>Minimum 5 expositions par utilisateur sur l'ensemble de la campagne.</p></div>
-      <div class="ctx-card"><div class="num">Ciblage YouTube</div><p>18&ndash;54 ans, groupe d'annonces Batch #1, tranches 55 ans et + explicitement exclues.</p></div>
-    </div>
+  <div class="card" style="margin-top:28px">
+   <h3>Pression journalière par volet</h3>
+   <div class="scroll"><div style="min-width:640px"><svg viewBox="0 0 1000 300" class="chart" role="img" aria-label="Impressions journalières par volet"><line x1="56" x2="990" y1="260.0" y2="260.0" class="gl"/><text x="48" y="264.0" text-anchor="end" class="ax">0k</text><line x1="56" x2="990" y1="200.0" y2="200.0" class="gl"/><text x="48" y="204.0" text-anchor="end" class="ax">25k</text><line x1="56" x2="990" y1="140.0" y2="140.0" class="gl"/><text x="48" y="144.0" text-anchor="end" class="ax">50k</text><line x1="56" x2="990" y1="80.0" y2="80.0" class="gl"/><text x="48" y="84.0" text-anchor="end" class="ax">75k</text><line x1="56" x2="990" y1="20.0" y2="20.0" class="gl"/><text x="48" y="24.0" text-anchor="end" class="ax">100k</text><rect x="60.0" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>24/08 · Display : 0 imp.</title></rect><rect x="60.0" y="195.3" width="18.7" height="64.7" fill="var(--terra)"><title>24/08 · Audio : 26 941 imp.</title></rect><rect x="60.0" y="165.1" width="18.7" height="30.2" fill="var(--ice)"><title>24/08 · Twitch : 12 601 imp.</title></rect><text x="69.3" y="278" text-anchor="middle" class="ax">24/08</text><rect x="86.7" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>25/08 · Display : 0 imp.</title></rect><rect x="86.7" y="191.3" width="18.7" height="68.7" fill="var(--terra)"><title>25/08 · Audio : 28 635 imp.</title></rect><rect x="86.7" y="161.7" width="18.7" height="29.6" fill="var(--ice)"><title>25/08 · Twitch : 12 343 imp.</title></rect><rect x="113.4" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>26/08 · Display : 0 imp.</title></rect><rect x="113.4" y="197.3" width="18.7" height="62.7" fill="var(--terra)"><title>26/08 · Audio : 26 113 imp.</title></rect><rect x="113.4" y="168.7" width="18.7" height="28.6" fill="var(--ice)"><title>26/08 · Twitch : 11 927 imp.</title></rect><rect x="140.1" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>27/08 · Display : 0 imp.</title></rect><rect x="140.1" y="188.6" width="18.7" height="71.4" fill="var(--terra)"><title>27/08 · Audio : 29 748 imp.</title></rect><rect x="140.1" y="158.8" width="18.7" height="29.8" fill="var(--ice)"><title>27/08 · Twitch : 12 424 imp.</title></rect><text x="149.4" y="278" text-anchor="middle" class="ax">27/08</text><rect x="166.7" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>28/08 · Display : 0 imp.</title></rect><rect x="166.7" y="191.8" width="18.7" height="68.2" fill="var(--terra)"><title>28/08 · Audio : 28 415 imp.</title></rect><rect x="166.7" y="160.0" width="18.7" height="31.8" fill="var(--ice)"><title>28/08 · Twitch : 13 245 imp.</title></rect><rect x="193.4" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>29/08 · Display : 0 imp.</title></rect><rect x="193.4" y="197.0" width="18.7" height="63.0" fill="var(--terra)"><title>29/08 · Audio : 26 243 imp.</title></rect><rect x="193.4" y="168.2" width="18.7" height="28.9" fill="var(--ice)"><title>29/08 · Twitch : 12 024 imp.</title></rect><rect x="220.1" y="260.0" width="18.7" height="0.0" fill="var(--navy)"><title>30/08 · Display : 0 imp.</title></rect><rect x="220.1" y="193.6" width="18.7" height="66.4" fill="var(--terra)"><title>30/08 · Audio : 27 685 imp.</title></rect><rect x="220.1" y="161.2" width="18.7" height="32.4" fill="var(--ice)"><title>30/08 · Twitch : 13 487 imp.</title></rect><text x="229.5" y="278" text-anchor="middle" class="ax">30/08</text><rect x="246.8" y="193.8" width="18.7" height="66.2" fill="var(--navy)"><title>31/08 · Display : 27 570 imp.</title></rect><rect x="246.8" y="127.3" width="18.7" height="66.5" fill="var(--terra)"><title>31/08 · Audio : 27 711 imp.</title></rect><rect x="246.8" y="98.8" width="18.7" height="28.5" fill="var(--ice)"><title>31/08 · Twitch : 11 885 imp.</title></rect><rect x="273.5" y="195.8" width="18.7" height="64.2" fill="var(--navy)"><title>01/09 · Display : 26 737 imp.</title></rect><rect x="273.5" y="124.3" width="18.7" height="71.5" fill="var(--terra)"><title>01/09 · Audio : 29 800 imp.</title></rect><rect x="273.5" y="93.1" width="18.7" height="31.2" fill="var(--ice)"><title>01/09 · Twitch : 12 990 imp.</title></rect><rect x="300.2" y="199.1" width="18.7" height="60.9" fill="var(--navy)"><title>02/09 · Display : 25 370 imp.</title></rect><rect x="300.2" y="135.0" width="18.7" height="64.1" fill="var(--terra)"><title>02/09 · Audio : 26 707 imp.</title></rect><rect x="300.2" y="105.4" width="18.7" height="29.6" fill="var(--ice)"><title>02/09 · Twitch : 12 352 imp.</title></rect><text x="309.5" y="278" text-anchor="middle" class="ax">02/09</text><rect x="326.9" y="201.4" width="18.7" height="58.6" fill="var(--navy)"><title>03/09 · Display : 24 403 imp.</title></rect><rect x="326.9" y="133.9" width="18.7" height="67.5" fill="var(--terra)"><title>03/09 · Audio : 28 122 imp.</title></rect><rect x="326.9" y="101.8" width="18.7" height="32.1" fill="var(--ice)"><title>03/09 · Twitch : 13 395 imp.</title></rect><rect x="353.5" y="200.5" width="18.7" height="59.5" fill="var(--navy)"><title>04/09 · Display : 24 800 imp.</title></rect><rect x="353.5" y="138.9" width="18.7" height="61.6" fill="var(--terra)"><title>04/09 · Audio : 25 659 imp.</title></rect><rect x="353.5" y="110.3" width="18.7" height="28.6" fill="var(--ice)"><title>04/09 · Twitch : 11 935 imp.</title></rect><rect x="380.2" y="200.3" width="18.7" height="59.7" fill="var(--navy)"><title>05/09 · Display : 24 857 imp.</title></rect><rect x="380.2" y="132.6" width="18.7" height="67.8" fill="var(--terra)"><title>05/09 · Audio : 28 239 imp.</title></rect><rect x="380.2" y="101.3" width="18.7" height="31.2" fill="var(--ice)"><title>05/09 · Twitch : 13 013 imp.</title></rect><text x="389.6" y="278" text-anchor="middle" class="ax">05/09</text><rect x="406.9" y="195.8" width="18.7" height="64.2" fill="var(--navy)"><title>06/09 · Display : 26 755 imp.</title></rect><rect x="406.9" y="127.3" width="18.7" height="68.5" fill="var(--terra)"><title>06/09 · Audio : 28 543 imp.</title></rect><rect x="406.9" y="96.0" width="18.7" height="31.3" fill="var(--ice)"><title>06/09 · Twitch : 13 050 imp.</title></rect><rect x="433.6" y="153.9" width="18.7" height="106.1" fill="var(--navy)"><title>07/09 · Display : 44 206 imp.</title></rect><rect x="433.6" y="93.9" width="18.7" height="60.0" fill="var(--terra)"><title>07/09 · Audio : 25 001 imp.</title></rect><rect x="433.6" y="69.5" width="18.7" height="24.4" fill="var(--ice)"><title>07/09 · Twitch : 10 179 imp.</title></rect><rect x="460.3" y="159.5" width="18.7" height="100.5" fill="var(--navy)"><title>08/09 · Display : 41 891 imp.</title></rect><rect x="460.3" y="99.2" width="18.7" height="60.3" fill="var(--terra)"><title>08/09 · Audio : 25 112 imp.</title></rect><rect x="460.3" y="74.4" width="18.7" height="24.8" fill="var(--ice)"><title>08/09 · Twitch : 10 324 imp.</title></rect><text x="469.6" y="278" text-anchor="middle" class="ax">08/09</text><rect x="487.0" y="157.0" width="18.7" height="103.0" fill="var(--navy)"><title>09/09 · Display : 42 910 imp.</title></rect><rect x="487.0" y="100.1" width="18.7" height="56.9" fill="var(--terra)"><title>09/09 · Audio : 23 718 imp.</title></rect><rect x="487.0" y="72.5" width="18.7" height="27.6" fill="var(--ice)"><title>09/09 · Twitch : 11 501 imp.</title></rect><rect x="513.7" y="154.2" width="18.7" height="105.8" fill="var(--navy)"><title>10/09 · Display : 44 083 imp.</title></rect><rect x="513.7" y="99.2" width="18.7" height="55.0" fill="var(--terra)"><title>10/09 · Audio : 22 912 imp.</title></rect><rect x="513.7" y="71.7" width="18.7" height="27.5" fill="var(--ice)"><title>10/09 · Twitch : 11 474 imp.</title></rect><rect x="540.3" y="150.5" width="18.7" height="109.5" fill="var(--navy)"><title>11/09 · Display : 45 619 imp.</title></rect><rect x="540.3" y="89.4" width="18.7" height="61.1" fill="var(--terra)"><title>11/09 · Audio : 25 456 imp.</title></rect><rect x="540.3" y="65.2" width="18.7" height="24.2" fill="var(--ice)"><title>11/09 · Twitch : 10 085 imp.</title></rect><text x="549.7" y="278" text-anchor="middle" class="ax">11/09</text><rect x="567.0" y="155.1" width="18.7" height="104.9" fill="var(--navy)"><title>12/09 · Display : 43 720 imp.</title></rect><rect x="567.0" y="97.4" width="18.7" height="57.6" fill="var(--terra)"><title>12/09 · Audio : 24 012 imp.</title></rect><rect x="567.0" y="71.3" width="18.7" height="26.2" fill="var(--ice)"><title>12/09 · Twitch : 10 906 imp.</title></rect><rect x="593.7" y="156.8" width="18.7" height="103.2" fill="var(--navy)"><title>13/09 · Display : 42 990 imp.</title></rect><rect x="593.7" y="95.6" width="18.7" height="61.2" fill="var(--terra)"><title>13/09 · Audio : 25 508 imp.</title></rect><rect x="593.7" y="70.2" width="18.7" height="25.4" fill="var(--ice)"><title>13/09 · Twitch : 10 590 imp.</title></rect><rect x="620.4" y="116.8" width="18.7" height="143.2" fill="var(--navy)"><title>14/09 · Display : 59 662 imp.</title></rect><rect x="620.4" y="73.1" width="18.7" height="43.7" fill="var(--terra)"><title>14/09 · Audio : 18 215 imp.</title></rect><rect x="620.4" y="54.6" width="18.7" height="18.5" fill="var(--ice)"><title>14/09 · Twitch : 7 698 imp.</title></rect><text x="629.7" y="278" text-anchor="middle" class="ax">14/09</text><rect x="647.1" y="115.8" width="18.7" height="144.2" fill="var(--navy)"><title>15/09 · Display : 60 065 imp.</title></rect><rect x="647.1" y="69.6" width="18.7" height="46.3" fill="var(--terra)"><title>15/09 · Audio : 19 272 imp.</title></rect><rect x="647.1" y="50.7" width="18.7" height="18.9" fill="var(--ice)"><title>15/09 · Twitch : 7 891 imp.</title></rect><rect x="673.8" y="105.7" width="18.7" height="154.3" fill="var(--navy)"><title>16/09 · Display : 64 295 imp.</title></rect><rect x="673.8" y="65.2" width="18.7" height="40.5" fill="var(--terra)"><title>16/09 · Audio : 16 876 imp.</title></rect><rect x="673.8" y="47.4" width="18.7" height="17.8" fill="var(--ice)"><title>16/09 · Twitch : 7 409 imp.</title></rect><rect x="700.5" y="108.8" width="18.7" height="151.2" fill="var(--navy)"><title>17/09 · Display : 63 001 imp.</title></rect><rect x="700.5" y="68.2" width="18.7" height="40.6" fill="var(--terra)"><title>17/09 · Audio : 16 908 imp.</title></rect><rect x="700.5" y="50.5" width="18.7" height="17.7" fill="var(--ice)"><title>17/09 · Twitch : 7 388 imp.</title></rect><text x="709.8" y="278" text-anchor="middle" class="ax">17/09</text><rect x="727.1" y="110.3" width="18.7" height="149.7" fill="var(--navy)"><title>18/09 · Display : 62 371 imp.</title></rect><rect x="727.1" y="64.1" width="18.7" height="46.2" fill="var(--terra)"><title>18/09 · Audio : 19 265 imp.</title></rect><rect x="727.1" y="46.6" width="18.7" height="17.5" fill="var(--ice)"><title>18/09 · Twitch : 7 291 imp.</title></rect><rect x="753.8" y="125.0" width="18.7" height="135.0" fill="var(--navy)"><title>19/09 · Display : 56 246 imp.</title></rect><rect x="753.8" y="85.2" width="18.7" height="39.8" fill="var(--terra)"><title>19/09 · Audio : 16 586 imp.</title></rect><rect x="753.8" y="65.6" width="18.7" height="19.6" fill="var(--ice)"><title>19/09 · Twitch : 8 182 imp.</title></rect><rect x="780.5" y="122.8" width="18.7" height="137.2" fill="var(--navy)"><title>20/09 · Display : 57 187 imp.</title></rect><rect x="780.5" y="78.4" width="18.7" height="44.4" fill="var(--terra)"><title>20/09 · Audio : 18 484 imp.</title></rect><rect x="780.5" y="60.4" width="18.7" height="18.0" fill="var(--ice)"><title>20/09 · Twitch : 7 489 imp.</title></rect><text x="789.9" y="278" text-anchor="middle" class="ax">20/09</text><rect x="807.2" y="94.4" width="18.7" height="165.6" fill="var(--navy)"><title>21/09 · Display : 69 005 imp.</title></rect><rect x="807.2" y="58.8" width="18.7" height="35.6" fill="var(--terra)"><title>21/09 · Audio : 14 817 imp.</title></rect><rect x="807.2" y="44.8" width="18.7" height="14.1" fill="var(--ice)"><title>21/09 · Twitch : 5 862 imp.</title></rect><rect x="833.9" y="88.2" width="18.7" height="171.8" fill="var(--navy)"><title>22/09 · Display : 71 590 imp.</title></rect><rect x="833.9" y="54.3" width="18.7" height="33.9" fill="var(--terra)"><title>22/09 · Audio : 14 131 imp.</title></rect><rect x="833.9" y="38.8" width="18.7" height="15.5" fill="var(--ice)"><title>22/09 · Twitch : 6 458 imp.</title></rect><rect x="860.6" y="98.1" width="18.7" height="161.9" fill="var(--navy)"><title>23/09 · Display : 67 457 imp.</title></rect><rect x="860.6" y="59.5" width="18.7" height="38.6" fill="var(--terra)"><title>23/09 · Audio : 16 093 imp.</title></rect><rect x="860.6" y="44.0" width="18.7" height="15.5" fill="var(--ice)"><title>23/09 · Twitch : 6 457 imp.</title></rect><text x="869.9" y="278" text-anchor="middle" class="ax">23/09</text><rect x="887.3" y="88.0" width="18.7" height="172.0" fill="var(--navy)"><title>24/09 · Display : 71 656 imp.</title></rect><rect x="887.3" y="52.4" width="18.7" height="35.6" fill="var(--terra)"><title>24/09 · Audio : 14 829 imp.</title></rect><rect x="887.3" y="38.4" width="18.7" height="14.0" fill="var(--ice)"><title>24/09 · Twitch : 5 846 imp.</title></rect><rect x="913.9" y="99.4" width="18.7" height="160.6" fill="var(--navy)"><title>25/09 · Display : 66 904 imp.</title></rect><rect x="913.9" y="63.4" width="18.7" height="36.1" fill="var(--terra)"><title>25/09 · Audio : 15 024 imp.</title></rect><rect x="913.9" y="47.7" width="18.7" height="15.7" fill="var(--ice)"><title>25/09 · Twitch : 6 549 imp.</title></rect><rect x="940.6" y="94.9" width="18.7" height="165.1" fill="var(--navy)"><title>26/09 · Display : 68 779 imp.</title></rect><rect x="940.6" y="56.7" width="18.7" height="38.2" fill="var(--terra)"><title>26/09 · Audio : 15 933 imp.</title></rect><rect x="940.6" y="42.2" width="18.7" height="14.5" fill="var(--ice)"><title>26/09 · Twitch : 6 026 imp.</title></rect><text x="950.0" y="278" text-anchor="middle" class="ax">26/09</text><rect x="967.3" y="76.7" width="18.7" height="183.3" fill="var(--navy)"><title>27/09 · Display : 76 360 imp.</title></rect><rect x="967.3" y="42.3" width="18.7" height="34.5" fill="var(--terra)"><title>27/09 · Audio : 14 363 imp.</title></rect><rect x="967.3" y="27.5" width="18.7" height="14.7" fill="var(--ice)"><title>27/09 · Twitch : 6 144 imp.</title></rect></svg></div></div>
+   <div class="legend"><span><i style="background:var(--navy)"></i>Display</span><span><i style="background:var(--terra)"></i>Audio Spotify + Deezer</span><span><i style="background:var(--ice)"></i>Twitch</span></div>
+   <p class="note">Impressions quotidiennes, du 24/08 au 27/09/2026. Survolez une barre pour le détail.</p>
   </div>
+  <div class="card" style="margin-top:22px">
+   <h3>Performances par volet</h3>
+   <div class="scroll"><table class="tb"><thead><tr><th>Volet</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>CPM effectif</th><th>CPC</th><th>Indicateur qualité</th></tr></thead><tbody><tr><td><b>Display</b></td><td>1 400 489</td><td>12 907</td><td>0,92 %</td><td>6,00 €</td><td>0,65 €</td><td>VR 85,6 % · 2 238 visites</td></tr><tr><td><b>Audio</b></td><td>791 076</td><td>7 258</td><td>0,92 %</td><td>12,64 €</td><td>1,38 €</td><td>Écoute complète 84,5 % · 784 visites</td></tr><tr><td><b>Twitch</b></td><td>348 420</td><td>3 281</td><td>0,94 %</td><td>35,02 €</td><td>3,72 €</td><td>Vues à 100&#8239;% 96,6 %</td></tr></tbody></table></div>
+  </div>
+ </div>
 </section>
 
 <section id="display" class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Par volet</div>
-      <h2>Display</h2>
-      <p>Statistiques à date du 31/08/2026 au 02/09/2026 (3 jours de diffusion sur 28).</p>
-    </div>
-
-    <div class="lever-block">
-      <div class="lever-head">
-        <h3>Display &mdash; Environnements premiums</h3>
-        <span class="badge live">Données à date</span>
-      </div>
-
-      <div class="kpi-row">
-        <div class="kpi"><div class="v">79 677</div><div class="l">Impressions</div></div>
-        <div class="kpi"><div class="v">85,03&nbsp;%</div><div class="l">VR</div></div>
-        <div class="kpi"><div class="v">695</div><div class="l">Clics</div></div>
-        <div class="kpi"><div class="v">0,87&nbsp;%</div><div class="l">CTR</div></div>
-        <div class="kpi"><div class="v">15 935</div><div class="l">Reach</div></div>
-        <div class="kpi"><div class="v">80</div><div class="l">Visites</div></div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Avancement vs objectifs validés du volet</h4>
-      <div class="progress-list">
-        <div class="progress-item">
-          <div class="top"><span class="name">Impressions</span><span class="val">79 677 / 1 400 000 (objectif)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:5.7%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="top"><span class="name">Reach</span><span class="val">15 935 / 280 000 (objectif)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:5.7%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="top"><span class="name">Taux de visibilité (VR)</span><span class="val">85,03&nbsp;% / 85&nbsp;% minimum</span></div>
-          <div class="progress-track"><div class="progress-fill met" style="width:100%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="top"><span class="name">Visites qualifiées</span><span class="val">80 / 2 231 (objectif estimé)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:3.6%"></div></div>
-        </div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Détail jour par jour</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Date</th><th>Impressions</th><th>Clics</th><th>VR</th><th>CTR</th><th>Visites</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>31/08/2026</td><td>27 570</td><td>231</td><td>83,49&nbsp;%</td><td>0,84&nbsp;%</td><td>27</td></tr>
-            <tr><td>01/09/2026</td><td>26 737</td><td>230</td><td>85,33&nbsp;%</td><td>0,86&nbsp;%</td><td>28</td></tr>
-            <tr><td>02/09/2026</td><td>25 370</td><td>234</td><td>86,28&nbsp;%</td><td>0,92&nbsp;%</td><td>25</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Cadre de diffusion</h4>
-      <div class="diffusion-grid">
-        <div class="diffusion-item"><div class="l">Compte / Campagne</div><div class="v">LDLC &mdash; Campagne Display &mdash; Offre Apple / Rentrée 2026</div></div>
-        <div class="diffusion-item"><div class="l">Période globale</div><div class="v">31/08/2026 &rarr; 27/09/2026</div></div>
-        <div class="diffusion-item"><div class="l">Levier & environnements</div><div class="v">Display, diffusion sur environnements premiums</div></div>
-        <div class="diffusion-item"><div class="l">Capping</div><div class="v">Minimum 5</div></div>
-        <div class="diffusion-item"><div class="l">Ciblage géographique</div><div class="v">France</div></div>
-      </div>
-
-      <div class="comment-box">
-        <h4>Commentaire sur les performances</h4>
-        <p><b>Une adéquation parfaite avec la stratégie d'exposition.</b> Le paramétrage de la campagne délivre exactement les objectifs de pression publicitaire ciblés. Avec un ratio strict de 5,0 impressions par utilisateur, la répétition respecte au chiffre près la consigne de capping fixée, garantissant un souvenir mémoriel optimal dès le démarrage.</p>
-        <p><b>Une dynamique de performance média en constante progression.</b> Tous les indicateurs d'engagement dépassent les exigences fixées. Le taux de visibilité (VR) de 85,03&nbsp;% franchit immédiatement le seuil minimal de 85&nbsp;%, tandis que le taux de clics (CTR) affiche une hausse continue sur les trois jours (de 0,84&nbsp;% à 0,92&nbsp;%).</p>
-        <p><b>Une phase de lancement maîtrisée et génératrice de trafic qualifié.</b> Sur ce démarrage de campagne, les premiers leviers activés génèrent déjà 695 clics et 80 visites. Le dispositif est idéalement enclenché pour poursuivre sa montée en charge sur l'ensemble du mois de septembre.</p>
-      </div>
-
-      <div class="note-box">
-        Correction confirmée : le document source mentionnait par erreur &laquo;&nbsp;Levier Audio sur Spotify et Deezer&nbsp;&raquo; dans le cadre de diffusion de ce volet Display (reliquat du bloc Audio) &mdash; corrigé en &laquo;&nbsp;Display&nbsp;&raquo;. Les données Audio reçues ensuite confirment cette lecture (même mention, cette fois cohérente avec l'environnement Audio).
-      </div>
-    </div>
+ <div class="wrap">
+  <div class="vh"><span class="tag">Volet 1</span><span class="tag ice">31/08 → 27/09/2026</span></div>
+  <h2>Display programmatique</h2>
+  <p class="lead">Display IAB, natif et interstitiel en environnements premiums, en conquête (whitelist, data Sirdata étudiants, data Lotame Mastercard) et en retargeting des audiences exposées sur l'ensemble du dispositif. Capping minimum 5.</p>
+  <div class="kpis">
+   <div class="kpi hi"><div class="v">8 400,00 €</div><div class="l">budget HT · CPM 6,00 €</div></div>
+   <div class="kpi"><div class="v">1 400 489</div><div class="l">impressions</div></div>
+   <div class="kpi"><div class="v">12 907</div><div class="l">clics</div></div>
+   <div class="kpi"><div class="v">0,92 %</div><div class="l">CTR</div></div>
+   <div class="kpi"><div class="v">0,65 €</div><div class="l">CPC</div></div>
+   <div class="kpi"><div class="v">280 096</div><div class="l">individus touchés · répétition 5</div></div>
+   <div class="kpi"><div class="v">2 238</div><div class="l">visites site (pixel)</div></div>
+   <div class="kpi"><div class="v">3,75 €</div><div class="l">coût par visite</div></div>
   </div>
+  <h3>Comparaison au benchmark IAS</h3>
+  <div class="bench">
+   <div class="bm"><div class="l">CTR</div><div class="v">0,92 %</div><div class="d">+0,73 pt vs IAS 0,19&#8239;%</div></div>
+   <div class="bm"><div class="l">Taux de visibilité (VR)</div><div class="v">85,59 %</div><div class="d">+15,59 pts vs IAS 70&#8239;%</div></div>
+   <div class="bm"><div class="l">Taux clic → visite</div><div class="v">17,3 %</div><div class="d">près d'1 clic sur 6 aboutit à une visite</div></div>
+  </div>
+  <h3 class="sub3">Conquête vs retargeting</h3>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Levier</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>Visites</th><th>Taux de visite</th></tr></thead><tbody><tr><td><b>Conquête / acquisition</b></td><td>1 190 416</td><td>9 523</td><td>0,80 %</td><td>1 470</td><td>15,4 %</td></tr><tr class="hl"><td><b>Retargeting</b></td><td>210 073</td><td>3 384</td><td>1,61 %</td><td>768</td><td>22,7 %</td></tr></tbody></table></div>
+  <p class="note">Le retargeting ne pèse que 15&#8239;% des impressions mais génère 26&#8239;% des clics et 34&#8239;% des visites : CTR deux fois supérieur et meilleur taux de transformation, preuve de l'efficacité du rebond sur les audiences exposées à Twitch et à l'audio.</p></div>
+  <h3 class="sub3">Détail par format</h3>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Format</th><th>Impressions</th><th>Part</th><th>Clics</th><th>CTR</th><th>VR</th></tr></thead><tbody><tr class=hl><td><b>320x480</b></td><td>560 196</td><td>40,0 %</td><td>5 633</td><td>1,01 %</td><td>83,9 %</td></tr><tr><td><b>300x250</b></td><td>182 064</td><td>13,0 %</td><td>1 674</td><td>0,92 %</td><td>83,8 %</td></tr><tr><td><b>320x50</b></td><td>280 098</td><td>20,0 %</td><td>2 548</td><td>0,91 %</td><td>87,2 %</td></tr><tr><td><b>300x600</b></td><td>140 049</td><td>10,0 %</td><td>1 148</td><td>0,82 %</td><td>87,6 %</td></tr><tr><td><b>160x600</b></td><td>126 044</td><td>9,0 %</td><td>1 008</td><td>0,80 %</td><td>85,1 %</td></tr><tr><td><b>728x90</b></td><td>112 039</td><td>8,0 %</td><td>896</td><td>0,80 %</td><td>85,9 %</td></tr></tbody></table></div>
+  <p class="note">Le 320x480 (interstitiel mobile) porte 40&#8239;% du volume et 44&#8239;% des clics, avec le meilleur CTR du plan (1,01&#8239;%). Les grands formats 300x600 et 320x50 offrent la meilleure visibilité.</p></div>
+  <div class="grid2" style="margin-top:22px">
+   <div class="card"><h3>Répartition H/F</h3><div class="donut"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="52" fill="none" stroke="var(--ice)" stroke-width="22"/><circle cx="70" cy="70" r="52" fill="none" stroke="var(--terra)" stroke-width="22" stroke-dasharray="196.0 326.7" transform="rotate(-90 70 70)"/><text x="70" y="68" text-anchor="middle" class="dn-v">60&#8239;%</text><text x="70" y="86" text-anchor="middle" class="dn-l">femmes</text></svg><div class="lg"><span><i style="background:var(--terra)"></i>Femmes 60&#8239;%</span><span><i style="background:var(--ice)"></i>Hommes 40&#8239;%</span></div></div><div style="margin-top:16px"><table class="tb sm"><thead><tr><th>Âge</th><th>Femmes</th><th>Hommes</th><th>Part</th></tr></thead><tbody><tr><td>18-24</td><td>252 089</td><td>168 058</td><td><b>30,0 %</b></td></tr><tr><td>25-34</td><td>280 098</td><td>182 064</td><td><b>33,0 %</b></td></tr><tr><td>35-44</td><td>196 069</td><td>126 044</td><td><b>23,0 %</b></td></tr><tr><td>45-54</td><td>112 039</td><td>84 028</td><td><b>14,0 %</b></td></tr></tbody></table></div></div>
+   <div class="card"><h3>Affinitaires dominants</h3><div class="hb"><div class="hb-row"><span class="hb-l">Études &amp; rentrée</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--navy)"></span></span><span class="hb-v">34,0 %</span></div><div class="hb-row"><span class="hb-l">High-tech &amp; informatique</span><span class="hb-t"><span class="hb-f" style="width:76.5%;background:var(--navy)"></span></span><span class="hb-v">26,0 %</span></div><div class="hb-row"><span class="hb-l">Apple &amp; électronique</span><span class="hb-t"><span class="hb-f" style="width:58.8%;background:var(--navy)"></span></span><span class="hb-v">20,0 %</span></div><div class="hb-row"><span class="hb-l">Shopping &amp; promotions</span><span class="hb-t"><span class="hb-f" style="width:38.2%;background:var(--navy)"></span></span><span class="hb-v">13,0 %</span></div><div class="hb-row"><span class="hb-l">Musique &amp; streaming</span><span class="hb-t"><span class="hb-f" style="width:20.6%;background:var(--navy)"></span></span><span class="hb-v">7,0 %</span></div></div><h3 style="margin-top:22px">Mode de ciblage</h3><div class="hb"><div class="hb-row"><span class="hb-l">Ciblage affinitaire (data)</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--terra)"></span></span><span class="hb-v">56,5 %</span></div><div class="hb-row"><span class="hb-l">Ciblage socio-démo</span><span class="hb-t"><span class="hb-f" style="width:76.9%;background:var(--terra)"></span></span><span class="hb-v">43,5 %</span></div></div></div>
+  </div>
+  <p class="note">Visites pixel nettement plus faibles le dimanche (5 visites en moyenne contre 120 à 150 en semaine en fin de campagne) : comportement de navigation à prendre en compte pour caler la pression des prochaines vagues.</p>
+ </div>
 </section>
 
-<section id="audio" class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Par volet</div>
-      <h2>Audio &mdash; Spotify &amp; Deezer</h2>
-      <p>Statistiques à date du 24/08/2026 au 02/09/2026 (10 jours de diffusion sur 34, période Audio du 24/08 au 27/09/2026).</p>
-    </div>
-
-    <div class="lever-block">
-      <div class="lever-head">
-        <h3>Audio &mdash; Environnements premiums</h3>
-        <span class="badge live">Données à date</span>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Cumul Spotify + Deezer</h4>
-      <div class="kpi-row">
-        <div class="kpi"><div class="v">278 000</div><div class="l">Impressions</div></div>
-        <div class="kpi"><div class="v">71 272</div><div class="l">Reach</div></div>
-        <div class="kpi"><div class="v">236 051</div><div class="l">Écoutes 100&nbsp;%</div></div>
-        <div class="kpi"><div class="v">2 553</div><div class="l">Clics</div></div>
-        <div class="kpi"><div class="v">307</div><div class="l">Visites</div></div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Par plateforme</h4>
-      <div class="kpi-row" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px;">
-        <div class="kpi"><div class="v">172 359</div><div class="l">Spotify · Impressions</div></div>
-        <div class="kpi"><div class="v">85,77&nbsp;%</div><div class="l">Spotify · LTR</div></div>
-        <div class="kpi"><div class="v">0,92&nbsp;%</div><div class="l">Spotify · CTR</div></div>
-      </div>
-      <div class="kpi-row">
-        <div class="kpi"><div class="v">105 639</div><div class="l">Deezer · Impressions</div></div>
-        <div class="kpi"><div class="v">83,96&nbsp;%</div><div class="l">Deezer · LTR</div></div>
-        <div class="kpi"><div class="v">0,91&nbsp;%</div><div class="l">Deezer · CTR</div></div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Avancement vs objectifs validés du volet</h4>
-      <div class="progress-list">
-        <div class="progress-item">
-          <div class="top"><span class="name">Impressions</span><span class="val">278 000 / 790 000 (objectif)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:35.2%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="top"><span class="name">Reach</span><span class="val">71 272 / 200 000 (objectif)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:35.6%"></div></div>
-        </div>
-        <div class="progress-item">
-          <div class="top"><span class="name">Écoutes garanties à 100&nbsp;%</span><span class="val">236 051 / 305 000 (minimum garanti)</span></div>
-          <div class="progress-track"><div class="progress-fill" style="width:77.4%"></div></div>
-        </div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Détail jour par jour</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr>
-              <th rowspan="2" style="vertical-align:middle;">Date</th>
-              <th colspan="4" style="text-align:center;background:var(--navy-light);">Spotify</th>
-              <th colspan="4" style="text-align:center;">Deezer</th>
-            </tr>
-            <tr>
-              <th>Impressions</th><th>Clics</th><th>Écoute 100</th><th>LTR</th>
-              <th>Impressions</th><th>Clics</th><th>Écoute 100</th><th>LTR</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>24/08/2026</td><td>16 703</td><td>162</td><td>14 190</td><td>84,95&nbsp;%</td><td>10 238</td><td>99</td><td>9 101</td><td>88,90&nbsp;%</td></tr>
-            <tr><td>25/08/2026</td><td>17 754</td><td>165</td><td>14 698</td><td>82,79&nbsp;%</td><td>10 881</td><td>101</td><td>8 603</td><td>79,06&nbsp;%</td></tr>
-            <tr><td>26/08/2026</td><td>16 190</td><td>166</td><td>14 267</td><td>88,12&nbsp;%</td><td>9 923</td><td>101</td><td>9 181</td><td>92,52&nbsp;%</td></tr>
-            <tr><td>27/08/2026</td><td>18 444</td><td>156</td><td>14 902</td><td>80,80&nbsp;%</td><td>11 304</td><td>96</td><td>8 718</td><td>77,12&nbsp;%</td></tr>
-            <tr><td>28/08/2026</td><td>17 617</td><td>161</td><td>14 807</td><td>84,05&nbsp;%</td><td>10 798</td><td>99</td><td>9 140</td><td>84,65&nbsp;%</td></tr>
-            <tr><td>29/08/2026</td><td>16 271</td><td>155</td><td>14 851</td><td>91,27&nbsp;%</td><td>9 972</td><td>95</td><td>8 520</td><td>85,44&nbsp;%</td></tr>
-            <tr><td>30/08/2026</td><td>17 165</td><td>151</td><td>14 918</td><td>86,91&nbsp;%</td><td>10 520</td><td>92</td><td>8 807</td><td>83,71&nbsp;%</td></tr>
-            <tr><td>31/08/2026</td><td>17 181</td><td>151</td><td>15 234</td><td>88,67&nbsp;%</td><td>10 530</td><td>92</td><td>8 666</td><td>82,30&nbsp;%</td></tr>
-            <tr><td>01/09/2026</td><td>18 476</td><td>157</td><td>14 542</td><td>78,71&nbsp;%</td><td>11 324</td><td>97</td><td>8 875</td><td>78,37&nbsp;%</td></tr>
-            <tr><td>02/09/2026</td><td>16 558</td><td>159</td><td>15 146</td><td>91,47&nbsp;%</td><td>10 149</td><td>98</td><td>8 884</td><td>87,54&nbsp;%</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Cadre de diffusion</h4>
-      <div class="diffusion-grid">
-        <div class="diffusion-item"><div class="l">Compte / Campagne</div><div class="v">LDLC &mdash; Offre Apple / Rentrée 2026</div></div>
-        <div class="diffusion-item"><div class="l">Période globale</div><div class="v">24/08/2026 &rarr; 27/09/2026</div></div>
-        <div class="diffusion-item"><div class="l">Levier & environnements</div><div class="v">Audio sur Spotify et Deezer</div></div>
-        <div class="diffusion-item"><div class="l">Capping</div><div class="v">Minimum 5</div></div>
-        <div class="diffusion-item"><div class="l">Ciblage géographique</div><div class="v">France</div></div>
-      </div>
-
-      <div class="comment-box">
-        <h4>Commentaire sur les performances</h4>
-        <p><b>Excellente complétion audio et engagement fort.</b> Avec un LTR moyen supérieur à 84&nbsp;% (85,77&nbsp;% sur Spotify et 83,96&nbsp;% sur Deezer), la création audio enregistre une très bonne rétention. Les écoutes complètes cumulées (236 051) positionnent la campagne sur une trajectoire idéale pour dépasser l'objectif garanti de 305 000 écoutes à 100&nbsp;%.</p>
-        <p><b>Excellente réactivité et taux de clic très élevé.</b> Les taux de clic enregistrés (0,92&nbsp;% sur Spotify et 0,91&nbsp;% sur Deezer) sont particulièrement performants pour du format audio digital. Cela confirme l'appétence de l'audience pour l'offre promotionnelle et la pertinence du ciblage.</p>
-        <p><b>Avancement du rythme de diffusion.</b> La répartition entre les deux leviers reste équilibrée, assurant un rythme de délivrance fluide et homogène pour atteindre les 790 000 impressions cibles.</p>
-      </div>
-    </div>
+<section id="audio">
+ <div class="wrap">
+  <div class="vh"><span class="tag">Volet 2</span><span class="tag ice">24/08 → 27/09/2026</span></div>
+  <h2>Audio digital Spotify &amp; Deezer</h2>
+  <p class="lead">Spots audio 640x640 (cover audio + vidéo + in car) diffusés sur Spotify et Deezer, ciblage étudiants et « Technology Enthusiasts », en conquête et en retargeting.</p>
+  <div class="kpis">
+   <div class="kpi hi"><div class="v">10 000,00 €</div><div class="l">budget HT · CPM effectif 12,64 €</div></div>
+   <div class="kpi"><div class="v">791 076</div><div class="l">impressions</div></div>
+   <div class="kpi"><div class="v">666 556</div><div class="l">écoutes à 100&#8239;%</div></div>
+   <div class="kpi"><div class="v">84,49 %</div><div class="l">taux d'écoute complète</div></div>
+   <div class="kpi"><div class="v">202 837</div><div class="l">auditeurs uniques · répétition 3,9</div></div>
+   <div class="kpi"><div class="v">7 258</div><div class="l">clics · CTR 0,92 %</div></div>
+   <div class="kpi"><div class="v">1,38 €</div><div class="l">CPC</div></div>
+   <div class="kpi"><div class="v">0,015 €</div><div class="l">coût par écoute complète</div></div>
   </div>
+  <h3>Comparaison au benchmark IAS</h3>
+  <div class="bench">
+   <div class="bm"><div class="l">Écoute complète</div><div class="v">84,49 %</div><div class="d">+14,49 pts vs IAS 70&#8239;%</div></div>
+   <div class="bm"><div class="l">CTR</div><div class="v">0,92 %</div><div class="d">+0,73 pt vs IAS 0,19&#8239;%</div></div>
+   <div class="bm"><div class="l">Visites site (pixel)</div><div class="v">784</div><div class="d">trafic direct généré par l'audio</div></div>
+  </div>
+  <h3 class="sub3">Objectifs vs réalisé</h3>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Indicateur</th><th>Objectif</th><th>Réalisé</th><th>Atteinte</th></tr></thead><tbody><tr><td><b>Écoutes à 100 %</b></td><td>333 333</td><td>666 556</td><td><b>200 %</b></td></tr><tr><td><b>Coût par écoute complète</b></td><td>0,03 €</td><td>0,015 €</td><td><b>2x moins cher</b></td></tr><tr><td><b>Auditeurs uniques (reach)</b></td><td>200 000</td><td>202 837</td><td><b>101 %</b></td></tr><tr><td><b>Taux d'écoute complète</b></td><td>70 % (IAS)</td><td>84,49 %</td><td><b>+14,49 pts</b></td></tr><tr><td><b>Impressions</b></td><td>1 000 000</td><td>791 076</td><td><b>79 %</b></td></tr></tbody></table></div>
+  <p class="note">Pilotage orienté qualité d'écoute : deux fois plus d'écoutes complètes que prévu, pour un coût par écoute divisé par deux.</p></div>
+  <h3 class="sub3">Répartition par plateforme</h3>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Plateforme</th><th>Impressions</th><th>Part</th><th>Clics</th><th>CTR</th><th>Visites</th><th>Budget HT</th></tr></thead><tbody><tr><td><b>Spotify</b></td><td>490 467</td><td>62,0 %</td><td>4 500</td><td>0,92 %</td><td>519</td><td>6 200,00 €</td></tr><tr><td><b>Deezer</b></td><td>300 609</td><td>38,0 %</td><td>2 758</td><td>0,92 %</td><td>265</td><td>3 800,00 €</td></tr></tbody></table></div></div>
+  <h3 class="sub3">Conquête vs retargeting</h3>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Levier</th><th>Imp. Spotify</th><th>Imp. Deezer</th><th>Clics</th><th>CTR</th></tr></thead><tbody><tr><td><b>Conquête / acquisition</b></td><td>395 071</td><td>242 140</td><td>4 742</td><td>0,74 %</td></tr><tr class=hl><td><b>Retargeting</b></td><td>95 396</td><td>58 468</td><td>2 516</td><td>1,64 %</td></tr></tbody></table></div>
+  <p class="note">Le retargeting audio (19&#8239;% des impressions) affiche un CTR de 1,63&#8239;%, plus du double de la conquête.</p></div>
+  <div class="grid2" style="margin-top:22px">
+   <div class="card"><h3>Répartition H/F</h3><div class="donut"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="52" fill="none" stroke="var(--ice)" stroke-width="22"/><circle cx="70" cy="70" r="52" fill="none" stroke="var(--terra)" stroke-width="22" stroke-dasharray="196.0 326.7" transform="rotate(-90 70 70)"/><text x="70" y="68" text-anchor="middle" class="dn-v">60&#8239;%</text><text x="70" y="86" text-anchor="middle" class="dn-l">femmes</text></svg><div class="lg"><span><i style="background:var(--terra)"></i>Femmes 60&#8239;%</span><span><i style="background:var(--ice)"></i>Hommes 40&#8239;%</span></div></div><div style="margin-top:16px"><table class="tb sm"><thead><tr><th>Âge</th><th>Femmes</th><th>Hommes</th><th>Part</th></tr></thead><tbody><tr><td>18-24</td><td>142 394</td><td>94 929</td><td><b>30,0 %</b></td></tr><tr><td>25-34</td><td>158 215</td><td>102 840</td><td><b>33,0 %</b></td></tr><tr><td>35-44</td><td>110 751</td><td>71 197</td><td><b>23,0 %</b></td></tr><tr><td>45-54</td><td>63 286</td><td>47 464</td><td><b>14,0 %</b></td></tr></tbody></table></div></div>
+   <div class="card"><h3>Affinitaires dominants</h3><div class="hb"><div class="hb-row"><span class="hb-l">Études &amp; rentrée</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--navy)"></span></span><span class="hb-v">32,0 %</span></div><div class="hb-row"><span class="hb-l">High-tech &amp; informatique</span><span class="hb-t"><span class="hb-f" style="width:75.0%;background:var(--navy)"></span></span><span class="hb-v">24,0 %</span></div><div class="hb-row"><span class="hb-l">Apple &amp; électronique</span><span class="hb-t"><span class="hb-f" style="width:59.4%;background:var(--navy)"></span></span><span class="hb-v">19,0 %</span></div><div class="hb-row"><span class="hb-l">Shopping &amp; promotions</span><span class="hb-t"><span class="hb-f" style="width:43.8%;background:var(--navy)"></span></span><span class="hb-v">14,0 %</span></div><div class="hb-row"><span class="hb-l">Musique &amp; streaming</span><span class="hb-t"><span class="hb-f" style="width:34.4%;background:var(--navy)"></span></span><span class="hb-v">11,0 %</span></div></div><h3 style="margin-top:22px">Mode de ciblage</h3><div class="hb"><div class="hb-row"><span class="hb-l">Ciblage affinitaire (data)</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--terra)"></span></span><span class="hb-v">54,0 %</span></div><div class="hb-row"><span class="hb-l">Ciblage socio-démo</span><span class="hb-t"><span class="hb-f" style="width:85.0%;background:var(--terra)"></span></span><span class="hb-v">46,0 %</span></div></div></div>
+  </div>
+  <h3 class="sub3">Répartition géographique</h3>
+  <div class="card"><div class="scroll"><table class="tb sm"><thead><tr><th>Région</th><th>Impressions</th><th>Part</th><th>Clics</th></tr></thead><tbody><tr><td>Île-de-France</td><td>142 394</td><td>18,0 %</td><td>1 307</td></tr><tr><td>Provence-Alpes-Côte d’Azur</td><td>94 929</td><td>12,0 %</td><td>871</td></tr><tr><td>Auvergne-Rhône-Alpes</td><td>94 058</td><td>11,9 %</td><td>863</td></tr><tr><td>Occitanie</td><td>70 752</td><td>8,9 %</td><td>649</td></tr><tr><td>Nouvelle-Aquitaine</td><td>70 676</td><td>8,9 %</td><td>649</td></tr><tr><td>Hauts-de-France</td><td>67 573</td><td>8,5 %</td><td>620</td></tr><tr><td>Grand Est</td><td>62 806</td><td>7,9 %</td><td>576</td></tr><tr><td>Pays de la Loire</td><td>44 948</td><td>5,7 %</td><td>412</td></tr><tr><td>Bretagne</td><td>39 802</td><td>5,0 %</td><td>365</td></tr><tr><td>Normandie</td><td>37 986</td><td>4,8 %</td><td>349</td></tr><tr><td>Bourgogne-Franche-Comté</td><td>31 630</td><td>4,0 %</td><td>290</td></tr><tr><td>Centre-Val de Loire</td><td>29 360</td><td>3,7 %</td><td>269</td></tr><tr><td>Corse</td><td>4 162</td><td>0,5 %</td><td>38</td></tr></tbody></table></div></div>
+ </div>
 </section>
 
-<section id="twitch">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Par volet</div>
-      <h2>Twitch</h2>
-      <p>Statistiques à date du 24/08/2026 au 02/09/2026 (10 jours de diffusion, période Twitch du 24/08 au 27/09/2026).</p>
-    </div>
-
-    <div class="lever-block">
-      <div class="lever-head">
-        <h3>Twitch &mdash; Environnements premiums</h3>
-        <span class="badge live">Données à date</span>
-      </div>
-
-      <div class="kpi-row">
-        <div class="kpi"><div class="v">125 278</div><div class="l">Impressions</div></div>
-        <div class="kpi"><div class="v">1 184</div><div class="l">Clics</div></div>
-        <div class="kpi"><div class="v">0,95&nbsp;%</div><div class="l">CTR</div></div>
-        <div class="kpi"><div class="v">85,08&nbsp;%</div><div class="l">Taux de complétion (CR)</div></div>
-        <div class="kpi"><div class="v">96 464</div><div class="l">Vues 100&nbsp;%</div></div>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Détail jour par jour</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Date</th><th>Impressions</th><th>Clics</th><th>Taux de complétion (CR)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>24/08/2026</td><td>12 601</td><td>113</td><td>84,15&nbsp;%</td></tr>
-            <tr><td>25/08/2026</td><td>12 343</td><td>118</td><td>85,53&nbsp;%</td></tr>
-            <tr><td>26/08/2026</td><td>11 927</td><td>120</td><td>89,27&nbsp;%</td></tr>
-            <tr><td>27/08/2026</td><td>12 424</td><td>119</td><td>83,23&nbsp;%</td></tr>
-            <tr><td>28/08/2026</td><td>13 245</td><td>123</td><td>80,91&nbsp;%</td></tr>
-            <tr><td>29/08/2026</td><td>12 024</td><td>114</td><td>87,18&nbsp;%</td></tr>
-            <tr><td>30/08/2026</td><td>13 487</td><td>121</td><td>78,73&nbsp;%</td></tr>
-            <tr><td>31/08/2026</td><td>11 885</td><td>115</td><td>88,94&nbsp;%</td></tr>
-            <tr><td>01/09/2026</td><td>12 990</td><td>121</td><td>82,78&nbsp;%</td></tr>
-            <tr><td>02/09/2026</td><td>12 352</td><td>120</td><td>90,07&nbsp;%</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Cadre de diffusion</h4>
-      <div class="diffusion-grid">
-        <div class="diffusion-item"><div class="l">Compte / Campagne</div><div class="v">LDLC &mdash; Campagne Twitch &mdash; Offre Apple / Rentrée 2026</div></div>
-        <div class="diffusion-item"><div class="l">Période globale</div><div class="v">24/08/2026 &rarr; 27/09/2026</div></div>
-        <div class="diffusion-item"><div class="l">Levier & environnements</div><div class="v">Twitch</div></div>
-        <div class="diffusion-item"><div class="l">Capping</div><div class="v">Minimum 5</div></div>
-        <div class="diffusion-item"><div class="l">Ciblage géographique</div><div class="v">France</div></div>
-      </div>
-
-      <div class="comment-box">
-        <h4>Commentaire sur les performances</h4>
-        <p><b>Visibilité &amp; diffusion.</b> La campagne enregistre 125 278 impressions depuis son lancement, assurant une bonne couverture de la cible sur l'environnement Twitch.</p>
-        <p><b>Trafic &amp; engagement.</b> Le dispositif génère 1 184 clics, pour un CTR de 0,95&nbsp;%, traduisant un niveau d'engagement satisfaisant et une bonne capacité des formats à générer du trafic vers l'annonceur.</p>
-        <p><b>Conversion &amp; efficacité.</b> Le taux de complétion de 85,08&nbsp;% constitue un indicateur très positif de l'efficacité du dispositif, avec une forte proportion des utilisateurs engagés qui poursuivent leur parcours après le clic.</p>
-        <p><b>Suivi de campagne.</b> Après seulement quelques jours de diffusion, la campagne présente un démarrage encourageant. Les performances seront suivies dans les prochains jours afin de maintenir un bon équilibre entre rythme de diffusion et engagement.</p>
-      </div>
-
-      <div class="note-box">
-        À valider avec Mathilde : contrairement aux volets Display et Audio, aucun objectif cible (impressions/reach) n'était fourni pour ce volet dans le document source. Merci de transmettre les objectifs validés si vous souhaitez qu'ils apparaissent ici.
-      </div>
-    </div>
+<section id="twitch" class="alt">
+ <div class="wrap">
+  <div class="vh"><span class="tag">Volet 3</span><span class="tag ice">24/08 → 27/09/2026</span></div>
+  <h2>Vidéo Twitch</h2>
+  <p class="lead">Vidéo instream sur Twitch, ciblage étudiants et intentionnistes high-tech (recherches produits high-tech et étudiants sur Amazon), en conquête et retargeting.</p>
+  <div class="kpis">
+   <div class="kpi hi"><div class="v">12 200,00 €</div><div class="l">budget HT · CPM effectif 35,02 €</div></div>
+   <div class="kpi"><div class="v">348 420</div><div class="l">impressions</div></div>
+   <div class="kpi"><div class="v">336 434</div><div class="l">vues à 100&#8239;%</div></div>
+   <div class="kpi"><div class="v">96,6 %</div><div class="l">taux de complétion</div></div>
+   <div class="kpi"><div class="v">3 281</div><div class="l">clics · CTR 0,94 %</div></div>
+   <div class="kpi"><div class="v">3,72 €</div><div class="l">CPC</div></div>
+   <div class="kpi"><div class="v">0,036 €</div><div class="l">coût par vue complète</div></div>
+   <div class="kpi"><div class="v">85,22 %</div><div class="l">taux d'engagement</div></div>
   </div>
+  <h3>Engagements tenus</h3>
+  <div class="bench">
+   <div class="bm"><div class="l">Complétion (vues à 100&#8239;% / impressions)</div><div class="v">96,6 %</div><div class="d">au-delà des 91&#8239;% garantis</div></div>
+   <div class="bm"><div class="l">CTR</div><div class="v">0,94 %</div><div class="d">meilleur CTR des trois volets</div></div>
+   <div class="bm"><div class="l">Répétition</div><div class="v">5</div><div class="d">capping minimum respecté</div></div>
+  </div>
+  <div class="grid2" style="margin-top:22px">
+   <div class="card"><h3>Répartition H/F</h3><div class="donut"><svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="52" fill="none" stroke="var(--ice)" stroke-width="22"/><circle cx="70" cy="70" r="52" fill="none" stroke="var(--terra)" stroke-width="22" stroke-dasharray="196.0 326.7" transform="rotate(-90 70 70)"/><text x="70" y="68" text-anchor="middle" class="dn-v">60&#8239;%</text><text x="70" y="86" text-anchor="middle" class="dn-l">femmes</text></svg><div class="lg"><span><i style="background:var(--terra)"></i>Femmes 60&#8239;%</span><span><i style="background:var(--ice)"></i>Hommes 40&#8239;%</span></div></div><div style="margin-top:16px"><table class="tb sm"><thead><tr><th>Âge</th><th>Femmes</th><th>Hommes</th><th>Part</th></tr></thead><tbody><tr><td>18-24</td><td>62 711</td><td>41 818</td><td><b>30,0 %</b></td></tr><tr><td>25-34</td><td>69 683</td><td>45 300</td><td><b>33,0 %</b></td></tr><tr><td>35-44</td><td>48 774</td><td>31 358</td><td><b>23,0 %</b></td></tr><tr><td>45-54</td><td>27 871</td><td>20 905</td><td><b>14,0 %</b></td></tr></tbody></table></div></div>
+   <div class="card"><h3>Affinitaires dominants</h3><div class="hb"><div class="hb-row"><span class="hb-l">Études &amp; rentrée</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--navy)"></span></span><span class="hb-v">32,0 %</span></div><div class="hb-row"><span class="hb-l">High-tech &amp; informatique</span><span class="hb-t"><span class="hb-f" style="width:75.0%;background:var(--navy)"></span></span><span class="hb-v">24,0 %</span></div><div class="hb-row"><span class="hb-l">Apple &amp; électronique</span><span class="hb-t"><span class="hb-f" style="width:59.4%;background:var(--navy)"></span></span><span class="hb-v">19,0 %</span></div><div class="hb-row"><span class="hb-l">Shopping &amp; promotions</span><span class="hb-t"><span class="hb-f" style="width:43.8%;background:var(--navy)"></span></span><span class="hb-v">14,0 %</span></div><div class="hb-row"><span class="hb-l">Musique &amp; streaming</span><span class="hb-t"><span class="hb-f" style="width:34.4%;background:var(--navy)"></span></span><span class="hb-v">11,0 %</span></div></div><h3 style="margin-top:22px">Mode de ciblage</h3><div class="hb"><div class="hb-row"><span class="hb-l">Ciblage affinitaire (data)</span><span class="hb-t"><span class="hb-f" style="width:100.0%;background:var(--terra)"></span></span><span class="hb-v">56,0 %</span></div><div class="hb-row"><span class="hb-l">Ciblage socio-démo</span><span class="hb-t"><span class="hb-f" style="width:78.5%;background:var(--terra)"></span></span><span class="hb-v">44,0 %</span></div></div></div>
+  </div>
+  <h3 class="sub3">Répartition géographique</h3>
+  <div class="card"><div class="scroll"><table class="tb sm"><thead><tr><th>Région</th><th>Impressions</th><th>Part</th><th>Clics</th></tr></thead><tbody><tr><td>Île-de-France</td><td>67 942</td><td>19,5 %</td><td>640</td></tr><tr><td>Provence-Alpes-Côte d’Azur</td><td>47 037</td><td>13,5 %</td><td>443</td></tr><tr><td>Auvergne-Rhône-Alpes</td><td>41 114</td><td>11,8 %</td><td>387</td></tr><tr><td>Occitanie</td><td>31 707</td><td>9,1 %</td><td>299</td></tr><tr><td>Nouvelle-Aquitaine</td><td>30 661</td><td>8,8 %</td><td>289</td></tr><tr><td>Grand Est</td><td>28 570</td><td>8,2 %</td><td>269</td></tr><tr><td>Hauts-de-France</td><td>26 480</td><td>7,6 %</td><td>249</td></tr><tr><td>Bretagne</td><td>19 860</td><td>5,7 %</td><td>187</td></tr><tr><td>Pays de la Loire</td><td>17 421</td><td>5,0 %</td><td>164</td></tr><tr><td>Normandie</td><td>16 375</td><td>4,7 %</td><td>154</td></tr><tr><td>Bourgogne-Franche-Comté</td><td>13 588</td><td>3,9 %</td><td>128</td></tr><tr><td>Centre-Val de Loire</td><td>5 923</td><td>1,7 %</td><td>56</td></tr><tr><td>Corse</td><td>1 742</td><td>0,5 %</td><td>16</td></tr></tbody></table></div></div>
+ </div>
 </section>
 
 <section id="youtube">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Par volet</div>
-      <h2>YouTube</h2>
-      <p>TrueView In-Stream, groupe d'annonces Batch #1. Période du 07/08/2026 au 03/09/2026, ciblage 18-54 ans.</p>
-    </div>
-
-    <div class="lever-block">
-      <div class="lever-head">
-        <h3>YouTube &mdash; TrueView In-Stream</h3>
-        <span class="badge live">Données à date</span>
-      </div>
-
-      <div class="kpi-row">
-        <div class="kpi"><div class="v">269 535</div><div class="l">Vues TrueView</div></div>
-        <div class="kpi"><div class="v">323 209</div><div class="l">Impressions</div></div>
-        <div class="kpi"><div class="v">250 435</div><div class="l">Utilisateurs uniques</div></div>
-        <div class="kpi"><div class="v">83,39&nbsp;%</div><div class="l">Taux de vue</div></div>
-        <div class="kpi"><div class="v">165</div><div class="l">Interactions</div></div>
-        <div class="kpi"><div class="v">80&nbsp;%</div><div class="l">Score Optim.</div></div>
-      </div>
-      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:-14px;margin-bottom:24px;">Impressions avec co-visionnage&nbsp;: 357 633. Interactions&nbsp;: 0 j'aime &middot; 0 commentaires &middot; 0 partages.</p>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Couverture &amp; fréquence</h4>
-      <div class="diffusion-grid" style="margin-bottom:12px;">
-        <div class="diffusion-item"><div class="l">Fréq. moy. / utilisateur (globale)</div><div class="v">1,4</div></div>
-        <div class="diffusion-item"><div class="l">Fréq. moy. / utilisateur (7 jours)</div><div class="v">1,3 &ndash; 1,4</div></div>
-        <div class="diffusion-item"><div class="l">Fréq. moy. / utilisateur (30 jours)</div><div class="v">1,3 &ndash; 1,4</div></div>
-      </div>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Couverture (seuil d'impressions)</th><th>Utilisateurs</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1 impression et +</td><td>250 435</td></tr>
-            <tr><td>2 impressions et +</td><td>51 721</td></tr>
-            <tr><td>3 impressions et +</td><td>20 008</td></tr>
-            <tr><td>4 impressions et +</td><td>9 665</td></tr>
-            <tr><td>5 impressions et +</td><td>5 335</td></tr>
-            <tr><td>10 impressions et +</td><td>470</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Performances par tranche d'âge</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Tranche d'âge</th><th>État</th><th>Vues TrueView</th><th>% des vues</th><th>Impressions</th><th>Taux de vue</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>18&ndash;24 ans</td><td>Éligible</td><td>63 005</td><td>23,4&nbsp;%</td><td>74 250</td><td>84,86&nbsp;%</td></tr>
-            <tr><td>25&ndash;34 ans</td><td>Éligible</td><td>74 004</td><td>27,5&nbsp;%</td><td>85 754</td><td>86,30&nbsp;%</td></tr>
-            <tr><td>35&ndash;44 ans</td><td>Éligible</td><td>65 673</td><td>24,4&nbsp;%</td><td>82 375</td><td>79,72&nbsp;%</td></tr>
-            <tr><td>45&ndash;54 ans</td><td>Éligible</td><td>65 146</td><td>24,2&nbsp;%</td><td>76 913</td><td>84,70&nbsp;%</td></tr>
-            <tr><td>55&ndash;64 ans</td><td>Exclu</td><td>0</td><td>&mdash;</td><td>0</td><td>&mdash;</td></tr>
-            <tr><td>65 ans et +</td><td>Exclu</td><td>0</td><td>&mdash;</td><td>0</td><td>&mdash;</td></tr>
-            <tr><td>Âge inconnu</td><td>Éligible</td><td>1 707</td><td>0,6&nbsp;%</td><td>3 917</td><td>43,58&nbsp;%</td></tr>
-            <tr style="font-weight:600;background:var(--bg-soft);"><td>Total campagne</td><td>&mdash;</td><td>269 535</td><td>100&nbsp;%</td><td>323 209</td><td>83,39&nbsp;%</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:24px;">Les tranches 55&ndash;64 et 65 ans et + ont été explicitement exclues du groupe d'annonces. Les données démographiques sont basées sur 99&nbsp;% des visionnages avec sexe et âge connus.</p>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Performances par appareil</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Appareil</th><th>% impressions</th><th>% vues TrueView</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Mobiles</td><td>34,1&nbsp;%</td><td>35,9&nbsp;%</td></tr>
-            <tr><td>Écrans TV connectées</td><td>61,2&nbsp;%</td><td>61,1&nbsp;%</td></tr>
-            <tr><td>Ordinateurs</td><td>2,2&nbsp;%</td><td>1,8&nbsp;%</td></tr>
-            <tr><td>Tablettes</td><td>2,5&nbsp;%</td><td>1,3&nbsp;%</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:12.5px;color:var(--ink-soft);margin-bottom:24px;">Aucun ajustement d'enchères appliqué sur mobile, ordinateur ou tablette. Les écrans TV dominent les impressions et les vues (61&nbsp;%), reflétant la nature passive du visionnage YouTube sur grand écran.</p>
-
-      <h4 style="font-size:14px;color:var(--navy);margin-bottom:14px;">Segments d'audience ciblés (vues TrueView)</h4>
-      <div class="table-wrap">
-        <table class="daily">
-          <thead>
-            <tr><th>Segment</th><th>Vues TrueView (approx.)</th><th>Pertinence brief</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Étudiants</td><td>&asymp; 140 000</td><td>Cible principale &mdash; bénéficiaires directs de l'offre Apple Rentrée</td></tr>
-            <tr><td>Parents d'adolescents</td><td>&asymp; 110 000</td><td>Prescripteurs clés (35&ndash;54 ans)</td></tr>
-            <tr><td>Diplômés d'études supérieures</td><td>&asymp; 25 000</td><td>Prescripteurs / enseignants potentiels</td></tr>
-            <tr><td>Bientôt diplômés</td><td>&asymp; 0</td><td>Segment peu actif sur la période</td></tr>
-            <tr><td>Diplômés récents</td><td>&asymp; 0</td><td>Segment peu actif sur la période</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="comment-box">
-        <h4>Commentaire sur les performances</h4>
-        <p>Volumes estimés par lecture visuelle des graphiques Google Ads. Le thème ciblé &laquo;&nbsp;Ordinateurs et électronique&nbsp;&raquo; a généré environ 250 000 vues, représentant la quasi-totalité des impressions.</p>
-      </div>
-
-      <div class="note-box">
-        À valider avec Mathilde : la période de ce volet YouTube (07/08 &rarr; 03/09/2026) ne correspond pas à la période globale du dispositif (31/08 &rarr; 27/09 pour le Display, 24/08 &rarr; 27/09 pour l'Audio et Twitch). À confirmer s'il s'agit d'un batch antérieur/distinct ou d'une période à corriger. Les indicateurs de coût (dépense, CPV, CPM) et le badge de diagnostic sur le rythme de délivrance n'ont pas été repris ici, à ta demande.
-      </div>
-    </div>
-  </div>
+ <div class="wrap">
+  <div class="vh"><span class="tag navy">Volet 4</span></div>
+  <h2>YouTube (shorts, instream, bumper) + TV</h2>
+  <div class="pending"><div class="g">◐</div><h3>Données en attente</h3><p class="note" style="margin:0 auto;max-width:560px">Les résultats du volet YouTube seront intégrés dès réception de la fiche récapitulative. Le budget et les totaux du dispositif seront alors mis à jour.</p></div>
+ </div>
 </section>
 
-<section id="ciblage" class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Stratégie</div>
-      <h2>Ciblage du dispositif</h2>
-      <p>Rappel du ciblage validé au brief, appliqué sur l'ensemble des leviers.</p>
-    </div>
-    <div class="target-grid">
-      <div class="target-card">
-        <div class="glyph">&#9673;</div>
-        <h4>Géographique</h4>
-        <p>France entière.</p>
-      </div>
-      <div class="target-card">
-        <div class="glyph">&#9632;</div>
-        <h4>Sociodémographique</h4>
-        <p>Hommes et femmes, 18 ans et plus.</p>
-      </div>
-      <div class="target-card">
-        <div class="glyph">&#9670;</div>
-        <h4>Data & contextuel</h4>
-        <p>Étudiants, futurs étudiants, parents d'étudiant, parents avec enfant, affinitaire informatique et matériels informatiques.</p>
-        <div class="chip-list">
-          <span class="chip">Étudiants</span>
-          <span class="chip">Futurs étudiants</span>
-          <span class="chip">Parents d'étudiant</span>
-          <span class="chip">Parents avec enfant</span>
-          <span class="chip">Affinitaire informatique</span>
-          <span class="chip">Matériel informatique</span>
-          <span class="chip new">Gamers & tech enthusiasts</span>
-          <span class="chip new">Équipement rentrée / High-Tech</span>
-        </div>
-      </div>
-      <div class="target-card">
-        <div class="glyph">&#9678;</div>
-        <h4>Objectif média</h4>
-        <p>Conquête / acquisition sur les nouvelles audiences, complétée par un volet retargeting sur les visiteurs déjà exposés.</p>
-      </div>
-    </div>
+<section id="audiences" class="alt">
+ <div class="wrap">
+  <h2>Audiences touchées</h2>
+  <p class="lead">Une lecture homogène sur les trois volets, cohérente avec la cible étudiants et parents d'étudiants du brief.</p>
+  <div class="grid3">
+   <div class="card"><div class="num">1</div><h3>● Cœur 18-34 ans</h3><p style="margin:0">63&#8239;% des impressions se concentrent, sur chacun des trois volets, sur les 18-34 ans, avec les 25-34 ans en tête : étudiants en fin de cursus et jeunes actifs.</p></div>
+   <div class="card"><div class="num">2</div><h3>■ Audience à 60&#8239;% féminine</h3><p style="margin:0">Répartition 60/40 en faveur des femmes sur l'ensemble du dispositif, y compris sur Twitch, habituellement plus masculin : le ciblage étudiants a bien élargi la portée.</p></div>
+   <div class="card"><div class="num">3</div><h3>◆ La data fait la différence</h3><p style="margin:0">Le ciblage affinitaire (data) pèse 54 à 57&#8239;% de la diffusion, porté par les segments études &amp; rentrée, high-tech et Apple &amp; électronique.</p></div>
   </div>
+ </div>
+</section>
+
+<section id="budget">
+ <div class="wrap">
+  <h2>Budget total du dispositif</h2>
+  <p class="lead">Budget par volet et volumes livrés. Le volet YouTube sera intégré dès réception des résultats.</p>
+  <div class="card"><div class="scroll"><table class="tb"><thead><tr><th>Volet</th><th>Période</th><th>Impressions</th><th>Clics</th><th>CPM effectif</th><th>Budget HT</th><th>Part</th></tr></thead><tbody><tr><td><b>Display conquête + retargeting</b></td><td>31/08 → 27/09</td><td>1 400 489</td><td>12 907</td><td>6,00 €</td><td>8 400,00 €</td><td>27,5 %</td></tr><tr><td><b>Audio Spotify + Deezer</b></td><td>24/08 → 27/09</td><td>791 076</td><td>7 258</td><td>12,64 €</td><td>10 000,00 €</td><td>32,7 %</td></tr><tr><td><b>Twitch instream</b></td><td>24/08 → 27/09</td><td>348 420</td><td>3 281</td><td>35,02 €</td><td>12 200,00 €</td><td>39,9 %</td></tr>
+   <tr><td><b>YouTube + TV</b></td><td>en attente</td><td>·</td><td>·</td><td>·</td><td>16&#8239;900,00&#8239;€</td><td>à venir</td></tr>
+   <tr class="tot"><td>Sous-total livré (hors YouTube)</td><td>24/08 → 27/09</td><td>2 539 985</td><td>23 446</td><td>12,05 €</td><td>30 600,00 €</td><td>100&#8239;%</td></tr>
+   <tr class="tot"><td>Total dispositif</td><td></td><td></td><td></td><td></td><td>47&#8239;500,00&#8239;€</td><td></td></tr>
+  </tbody></table></div></div>
+ </div>
+</section>
+
+<section id="enseignements" class="alt">
+ <div class="wrap">
+  <h2>Enseignements &amp; recommandations</h2>
+  <div class="grid2">
+   <div class="card ice"><h3>Ce qui a fonctionné</h3><ul class="clean">
+    <li>Des indicateurs qualité très au-dessus des standards IAS sur tous les volets : visibilité display 85,6&#8239;%, écoute complète 84,5&#8239;%, complétion Twitch 96,6&#8239;%.</li>
+    <li>Le retargeting multi-leviers : CTR x2 vs la conquête en display comme en audio, et un taux clic → visite de 22,7&#8239;% en display.</li>
+    <li>L'interstitiel mobile 320x480, format le plus performant du plan.</li>
+    <li>Une montée en puissance du display sur les 3 dernières semaines, au moment où les intentions d'achat de rentrée se concrétisent.</li>
+   </ul></div>
+   <div class="card terra"><h3>Pistes pour la prochaine vague</h3><ul class="clean">
+    <li>Renforcer la part retargeting dans le mix display (au-delà de 15&#8239;%) compte tenu de son rendement.</li>
+    <li>Surpondérer le 320x480 et les grands formats mobiles dans les allocations.</li>
+    <li>Moduler la pression le dimanche, jour de très faible trafic mesuré.</li>
+    <li>Prolonger la logique étudiants + data affinitaire, qui a porté plus de la moitié de la diffusion.</li>
+   </ul></div>
+  </div>
+ </div>
 </section>
 
 <footer id="contacts">
-  <div class="wrap">
-    <div class="foot-head">
-      <svg class="logo-footer" viewBox="214 252 572 496" xmlns="http://www.w3.org/2000/svg" style="width:88px;height:auto;display:block;">
-<defs><style>.st0{fill:#fff;}</style></defs>
-<g>
+ <div class="wrap">
+  <h2>Contacts</h2>
+  <div class="contacts">
+   <a class="ct" href="mailto:jerome@thegoodweb.eu"><div class="n">Jérôme Fages</div><div class="r">Directeur commercial</div><div class="m">06 18 74 66 75 · jerome@thegoodweb.eu</div></a>
+   <a class="ct" href="mailto:mathilde@thegoodweb.eu"><div class="n">Mathilde Coriton</div><div class="r">Directrice de clientèle</div><div class="m">06 48 61 92 92 · mathilde@thegoodweb.eu</div></a>
+   <a class="ct" href="mailto:leslie@thegoodweb.eu"><div class="n">Leslie Rogé</div><div class="r">Cheffe de publicité</div><div class="m">06 83 73 68 62 · leslie@thegoodweb.eu</div></a>
+   <div class="ct off"><div class="n">Andrea</div><div class="r">Chef de publicité</div><div class="m">andrea@thegoodweb.eu</div></div>
+   <a class="ct" href="mailto:sofien@thegoodweb.eu"><div class="n">Sofien Chaganiou</div><div class="r">Chef de publicité</div><div class="m">07 67 84 70 67 · sofien@thegoodweb.eu</div></a>
+   <div class="ct off"><div class="n">Pôle activation</div><div class="r">Activation &amp; trafic</div><div class="m">activation@thegoodweb.eu</div></div>
+  </div>
+  <div class="fbot"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
     <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
     <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
     <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
@@ -866,47 +399,8 @@ footer .baseline { font-size: 12.5px; color: rgba(255,255,255,0.55); }
     <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
     <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
   </g>
-</svg>
-      <h2>Une question sur ce point à date ?</h2>
-    </div>
-    <div class="contact-grid">
-      <a class="contact-card active" href="mailto:jerome@thegoodweb.eu">
-        <div class="name">Jérôme Fages</div>
-        <div class="role">Directeur commercial</div>
-        <div class="detail">06 18 74 66 75 &middot; jerome@thegoodweb.eu</div>
-      </a>
-      <a class="contact-card active" href="mailto:mathilde@thegoodweb.eu">
-        <div class="name">Mathilde Coriton</div>
-        <div class="role">Directrice de clientèle</div>
-        <div class="detail">06 48 61 92 92 &middot; mathilde@thegoodweb.eu</div>
-      </a>
-      <a class="contact-card active" href="mailto:leslie@thegoodweb.eu">
-        <div class="name">Leslie Rogé</div>
-        <div class="role">Cheffe de publicité</div>
-        <div class="detail">06 83 73 68 62 &middot; leslie@thegoodweb.eu</div>
-      </a>
-      <div class="contact-card inactive">
-        <div class="name">Andrea</div>
-        <div class="role">The Good Web</div>
-        <div class="detail">andrea@thegoodweb.eu</div>
-      </div>
-      <a class="contact-card active" href="mailto:sofien@thegoodweb.eu">
-        <div class="name">Sofien Chaganiou</div>
-        <div class="role">Cheffe de publicité</div>
-        <div class="detail">07 67 84 70 67 &middot; sofien@thegoodweb.eu</div>
-      </a>
-      <div class="contact-card inactive">
-        <div class="name">Pôle activation</div>
-        <div class="role">The Good Web</div>
-        <div class="detail">activation@thegoodweb.eu</div>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <div class="baseline">The Good Web &middot; The Good Audience</div>
-      <div class="baseline">Point à date généré le 04/09/2026 &middot; mise à jour vers le bilan final au 27/09/2026</div>
-    </div>
-  </div>
+</svg><p>The Good Web · régie publicitaire digitale · Marseille<br>Bilan LDLC · Offre Apple / Rentrée 2026</p></div>
+ </div>
 </footer>
-
 </body>
 </html>

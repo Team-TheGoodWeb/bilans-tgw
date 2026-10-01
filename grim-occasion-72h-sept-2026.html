@@ -68,7 +68,14 @@ td .bar{display:inline-block;width:90px;vertical-align:middle;margin-right:8px}
 .kv td:first-child{color:var(--muted);width:42%;padding-right:14px}
 .chart{width:100%;height:auto;display:block}
 .chart .ax{font-family:Inter,sans-serif;font-size:12px;fill:#5b6687}
-.chart .terra{fill:#f25430}.chart .b{font-weight:700}
+.chart .terra{fill:#f25430}.chart .b{font-weight:700;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.chartbox{position:relative}
+.chart .hit{cursor:pointer}
+.chart .dbar{transition:fill .15s}.chart .dbar.on{fill:#7bbdff}
+.tip{position:absolute;pointer-events:none;background:#021859;color:#fff;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5;box-shadow:0 10px 26px rgba(2,24,89,.25);opacity:0;transform:translate(-50%,0);transition:opacity .15s;white-space:nowrap;z-index:5}
+.tip.on{opacity:1}
+.tip b{font-family:Poppins,sans-serif;display:block;margin-bottom:4px;color:#ffb79e}
+.tip span{color:#b9ccf2}
 .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .donutbox{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
@@ -121,6 +128,8 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
  .stat .v{font-size:24px}
  .contacts{grid-template-columns:1fr 1fr}
  .stats{grid-template-columns:1fr 1fr}
+ .tip{position:static;transform:none;display:none;margin-top:12px;white-space:normal}
+ .tip.on{display:block}
 }
 </style>
 </head>
@@ -190,7 +199,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
    <span class="pill"><b>Budget</b> · 4 000 € HT</span>
    <span class="pill"><b>Objectif</b> · Trafic</span>
    <span class="pill"><b>Levier</b> · Spotify Audio Ads</span>
-   <span class="pill"><b>Marchés</b> · 13 zones + 40 km</span>
+   <span class="pill"><b>Marchés</b> · 15 zones + 40 km</span>
   </div>
  </div>
 </header>
@@ -202,7 +211,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <section id="synthese">
  <div class="wrap">
   <h2>Synthèse des résultats</h2>
-  <p class="lead">En six jours de diffusion, la campagne a touché plus de 150 000 auditeurs uniques sur les 13 zones de chalandise des concessions GRIM, avec un message écouté jusqu'au bout dans 9 cas sur 10 et près de 3 900 clics vers la page de l'offre.</p>
+  <p class="lead">En six jours de diffusion, la campagne a touché plus de 150 000 auditeurs uniques sur les 15 zones de chalandise des concessions GRIM, avec un message écouté jusqu'au bout dans 9 cas sur 10 et près de 3 900 clics vers la page de l'offre.</p>
   <div class="stats">
    <div class="stat"><div class="v">400 145</div><div class="l">Impressions audio</div></div>
    <div class="stat"><div class="v">153 901</div><div class="l">Auditeurs uniques touchés</div></div>
@@ -245,7 +254,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
    <div class="card">
     <h4>Ciblage</h4>
     <table class="kv">
-     <tr><td>Géographique</td><td>Albi, Aurillac, Avignon, Béziers, Bayonne, Dax, Montélimar, Montpellier, Nîmes, Pau, Rodez, Tarbes, Valence + 40 km</td></tr>
+     <tr><td>Géographique</td><td>Agen, Albi, Aurillac, Avignon, Bayonne, Béziers, Dax, Montélimar, Montpellier, Nîmes, Pau, Rodez, Tarbes, Toulouse, Valence + 40 km</td></tr>
      <tr><td>Socio-démographique</td><td>Hommes et femmes, 30 ans et plus</td></tr>
      <tr><td>Data & contextuel</td><td><div class="chips"><span class="chip">Auto</span><span class="chip">Moto</span><span class="chip">Sport</span><span class="chip">Finance</span><span class="chip">Actualités</span><span class="chip">Technologie</span><span class="chip">Mobilité</span></div></td></tr>
      <tr><td>Formats</td><td>Spot audio 25 s + visuel companion 640x640 px cliquable</td></tr>
@@ -260,7 +269,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
   <h2>Diffusion jour par jour</h2>
   <p class="lead">Un rythme de diffusion régulier sur toute la période, réparti à parts quasi égales entre la phase d'amorce (50,5 % des impressions) et les 72h de l'opération (49,5 %). Le CTR reste stable, entre 0,88 % et 1,03 %, d'un jour à l'autre.</p>
   <div class="card">
-   <svg viewBox="0 0 720 300" class="chart" role="img" aria-label="Impressions et CTR par jour">
+   <div class="chartbox"><svg viewBox="0 0 720 300" class="chart" role="img" aria-label="Impressions et CTR par jour">
 <line x1="56" x2="664" y1="254.0" y2="254.0" stroke="#e3e9f5"/>
 <text x="48" y="258.0" text-anchor="end" class="ax">0k</text>
 <line x1="56" x2="664" y1="196.5" y2="196.5" stroke="#e3e9f5"/>
@@ -274,17 +283,17 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <rect x="360.0" y="24" width="304.0" height="230" fill="#fde6df" opacity=".55"/>
 <text x="512.0" y="38" text-anchor="middle" class="ax terra">Opération 72h · 24 au 26/09</text>
 <text x="208.0" y="38" text-anchor="middle" class="ax">Amorce · 21 au 23/09</text>
-<rect x="78.3" y="53.9" width="56.7" height="200.1" rx="6" fill="#021859"><title>Lun. 21/09 · 69 590 impressions</title></rect>
+<rect x="78.3" y="53.9" width="56.7" height="200.1" rx="6" fill="#021859" class="dbar" data-i="0"></rect>
 <text x="106.7" y="276" text-anchor="middle" class="ax">Lun. 21/09</text>
-<rect x="179.6" y="69.8" width="56.7" height="184.2" rx="6" fill="#021859"><title>Mar. 22/09 · 64 056 impressions</title></rect>
+<rect x="179.6" y="69.8" width="56.7" height="184.2" rx="6" fill="#021859" class="dbar" data-i="1"></rect>
 <text x="208.0" y="276" text-anchor="middle" class="ax">Mar. 22/09</text>
-<rect x="281.0" y="57.7" width="56.7" height="196.3" rx="6" fill="#021859"><title>Mer. 23/09 · 68 262 impressions</title></rect>
+<rect x="281.0" y="57.7" width="56.7" height="196.3" rx="6" fill="#021859" class="dbar" data-i="2"></rect>
 <text x="309.3" y="276" text-anchor="middle" class="ax">Mer. 23/09</text>
-<rect x="382.3" y="67.7" width="56.7" height="186.3" rx="6" fill="#021859"><title>Jeu. 24/09 · 64 810 impressions</title></rect>
+<rect x="382.3" y="67.7" width="56.7" height="186.3" rx="6" fill="#021859" class="dbar" data-i="3"></rect>
 <text x="410.7" y="276" text-anchor="middle" class="ax">Jeu. 24/09</text>
-<rect x="483.6" y="50.2" width="56.7" height="203.8" rx="6" fill="#021859"><title>Ven. 25/09 · 70 893 impressions</title></rect>
+<rect x="483.6" y="50.2" width="56.7" height="203.8" rx="6" fill="#021859" class="dbar" data-i="4"></rect>
 <text x="512.0" y="276" text-anchor="middle" class="ax">Ven. 25/09</text>
-<rect x="585.0" y="74.2" width="56.7" height="179.8" rx="6" fill="#021859"><title>Sam. 26/09 · 62 534 impressions</title></rect>
+<rect x="585.0" y="74.2" width="56.7" height="179.8" rx="6" fill="#021859" class="dbar" data-i="5"></rect>
 <text x="613.3" y="276" text-anchor="middle" class="ax">Sam. 26/09</text>
 <polyline fill="none" stroke="#f25430" stroke-width="3" points="106.7,186.5 208.0,76.2 309.3,119.3 410.7,91.3 512.0,190.4 613.3,95.0"/>
 <circle cx="106.7" cy="186.5" r="5" fill="#fff" stroke="#f25430" stroke-width="3"/>
@@ -303,8 +312,14 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <text x="672" y="181.3" class="ax terra">0,9 %</text>
 <text x="672" y="104.7" class="ax terra">1,0 %</text>
 <text x="672" y="28.0" class="ax terra">1,1 %</text>
-</svg>
-   <div class="legend"><span><i style="background:#021859"></i>Impressions</span><span><i style="background:#f25430"></i>CTR (échelle de droite)</span></div>
+<rect class="hit" x="56.0" y="24" width="101.3" height="260" fill="transparent" data-i="0" data-d="Lun. 21/09" data-imp="69 590" data-e="61 386" data-cr="88,21 %" data-c="618" data-ctr="0,89 %"/>
+<rect class="hit" x="157.3" y="24" width="101.3" height="260" fill="transparent" data-i="1" data-d="Mar. 22/09" data-imp="64 056" data-e="59 138" data-cr="92,32 %" data-c="661" data-ctr="1,03 %"/>
+<rect class="hit" x="258.7" y="24" width="101.3" height="260" fill="transparent" data-i="2" data-d="Mer. 23/09" data-imp="68 262" data-e="61 160" data-cr="89,60 %" data-c="666" data-ctr="0,98 %"/>
+<rect class="hit" x="360.0" y="24" width="101.3" height="260" fill="transparent" data-i="3" data-d="Jeu. 24/09" data-imp="64 810" data-e="59 609" data-cr="91,98 %" data-c="656" data-ctr="1,01 %"/>
+<rect class="hit" x="461.3" y="24" width="101.3" height="260" fill="transparent" data-i="4" data-d="Ven. 25/09" data-imp="70 893" data-e="63 172" data-cr="89,11 %" data-c="626" data-ctr="0,88 %"/>
+<rect class="hit" x="562.7" y="24" width="101.3" height="260" fill="transparent" data-i="5" data-d="Sam. 26/09" data-imp="62 534" data-e="56 733" data-cr="90,72 %" data-c="630" data-ctr="1,01 %"/>
+</svg><div class="tip" id="tip"></div></div>
+   <div class="legend"><span><i style="background:#021859"></i>Impressions</span><span><i style="background:#f25430"></i>CTR (échelle de droite)</span><span>Survolez ou touchez une journée pour le détail</span></div>
   </div>
   <h3>Détail quotidien</h3>
   <div class="tbl-wrap"><table>
@@ -358,11 +373,11 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
  <div class="wrap">
   <h2>Répartition géographique</h2>
   <p class="lead">Le budget a été réparti selon le poids de chaque bassin. Les trois premières zones (Montpellier, Valence, Aurillac) concentrent la moitié des volumes.</p>
-  <div class="grid g4"><div class="card c-navy"><div class="k">48 %</div><h4>Occitanie</h4><p>192 068 impressions · 1 853 clics</p><p class="small">Montpellier, Béziers, Albi, Rodez, Nîmes, Tarbes</p></div><div class="card c-ice"><div class="k">40 %</div><h4>Auvergne-Rhône-Alpes</h4><p>160 058 impressions · 1 543 clics</p><p class="small">Valence, Aurillac, Montélimar</p></div><div class="card c-terra"><div class="k">9 %</div><h4>Nouvelle-Aquitaine</h4><p>36 015 impressions · 347 clics</p><p class="small">Dax, Pau, Bayonne</p></div><div class="card c-soft"><div class="k">3 %</div><h4>Provence-Alpes-Côte d'Azur</h4><p>12 004 impressions · 114 clics</p><p class="small">Avignon</p></div></div>
+  <div class="grid g4"><div class="card c-navy"><div class="k">47 %</div><h4>Occitanie</h4><p>187 266 impressions · 1 806 clics</p><p class="small">Montpellier, Béziers, Rodez, Albi, Nîmes, Toulouse, Tarbes</p></div><div class="card c-ice"><div class="k">40 %</div><h4>Auvergne-Rhône-Alpes</h4><p>160 057 impressions · 1 543 clics</p><p class="small">Valence, Aurillac, Montélimar</p></div><div class="card c-terra"><div class="k">10 %</div><h4>Nouvelle-Aquitaine</h4><p>40 818 impressions · 393 clics</p><p class="small">Bayonne, Pau, Dax, Agen</p></div><div class="card c-soft"><div class="k">3 %</div><h4>Provence-Alpes-Côte d'Azur</h4><p>12 004 impressions · 116 clics</p><p class="small">Avignon</p></div></div>
   <h3>Détail par zone</h3>
   <div class="tbl-wrap"><table>
    <tr><th>Zone (+ 40 km)</th><th>Part du budget</th><th>Impressions</th><th>Écoutes 100 %</th><th>Clics</th><th>CTR</th></tr>
-   <tr><td><strong>Montpellier</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:100.0%"></span></div>20 %</td><td>80 019</td><td>72 231</td><td>772</td><td>0,96 %</td></tr><tr><td><strong>Valence</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:90.0%"></span></div>18 %</td><td>72 026</td><td>65 016</td><td>694</td><td>0,96 %</td></tr><tr><td><strong>Aurillac</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:60.0%"></span></div>12 %</td><td>48 017</td><td>43 344</td><td>463</td><td>0,96 %</td></tr><tr><td><strong>Béziers</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:50.0%"></span></div>10 %</td><td>40 016</td><td>36 121</td><td>386</td><td>0,96 %</td></tr><tr><td><strong>Montélimar</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:50.0%"></span></div>10 %</td><td>40 015</td><td>36 120</td><td>386</td><td>0,96 %</td></tr><tr><td><strong>Albi</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:30.0%"></span></div>6 %</td><td>24 009</td><td>21 672</td><td>231</td><td>0,96 %</td></tr><tr><td><strong>Rodez</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:30.0%"></span></div>6 %</td><td>24 004</td><td>21 668</td><td>231</td><td>0,96 %</td></tr><tr><td><strong>Nîmes</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 011</td><td>10 842</td><td>117</td><td>0,97 %</td></tr><tr><td><strong>Dax</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 006</td><td>10 837</td><td>118</td><td>0,98 %</td></tr><tr><td><strong>Pau</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 005</td><td>10 836</td><td>113</td><td>0,94 %</td></tr><tr><td><strong>Bayonne</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 004</td><td>10 835</td><td>116</td><td>0,97 %</td></tr><tr><td><strong>Avignon</strong><span class="reg">Provence-Alpes-Côte d'Azur</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 004</td><td>10 836</td><td>114</td><td>0,95 %</td></tr><tr><td><strong>Tarbes</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3 %</td><td>12 009</td><td>10 840</td><td>116</td><td>0,97 %</td></tr><tr class="tot"><td>Total 13 zones</td><td>100 %</td><td>400 145</td><td>361 198</td><td>3 857</td><td>0,96 %</td></tr>
+   <tr><td><strong>Montpellier</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:100.0%"></span></div>20,0 %</td><td>80 029</td><td>72 240</td><td>771</td><td>0,96 %</td></tr><tr><td><strong>Valence</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:90.0%"></span></div>18,0 %</td><td>72 026</td><td>65 016</td><td>694</td><td>0,96 %</td></tr><tr><td><strong>Aurillac</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:60.0%"></span></div>12,0 %</td><td>48 017</td><td>43 343</td><td>463</td><td>0,96 %</td></tr><tr><td><strong>Béziers</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:50.0%"></span></div>10,0 %</td><td>40 014</td><td>36 119</td><td>386</td><td>0,96 %</td></tr><tr><td><strong>Montélimar</strong><span class="reg">Auvergne-Rhône-Alpes</span></td><td><div class="bar"><span style="width:50.0%"></span></div>10,0 %</td><td>40 014</td><td>36 119</td><td>386</td><td>0,96 %</td></tr><tr><td><strong>Rodez</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:24.8%"></span></div>5,0 %</td><td>19 887</td><td>17 951</td><td>192</td><td>0,97 %</td></tr><tr><td><strong>Albi</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:22.0%"></span></div>4,4 %</td><td>17 646</td><td>15 928</td><td>170</td><td>0,96 %</td></tr><tr><td><strong>Nîmes</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3,0 %</td><td>12 004</td><td>10 836</td><td>116</td><td>0,97 %</td></tr><tr><td><strong>Avignon</strong><span class="reg">Provence-Alpes-Côte d'Azur</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3,0 %</td><td>12 004</td><td>10 836</td><td>116</td><td>0,97 %</td></tr><tr><td><strong>Bayonne</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3,0 %</td><td>12 008</td><td>10 839</td><td>115</td><td>0,96 %</td></tr><tr><td><strong>Pau</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3,0 %</td><td>12 005</td><td>10 837</td><td>114</td><td>0,95 %</td></tr><tr><td><strong>Dax</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:15.0%"></span></div>3,0 %</td><td>12 004</td><td>10 836</td><td>118</td><td>0,98 %</td></tr><tr><td><strong>Toulouse</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:13.8%"></span></div>2,8 %</td><td>11 084</td><td>10 005</td><td>107</td><td>0,97 %</td></tr><tr><td><strong>Tarbes</strong><span class="reg">Occitanie</span></td><td><div class="bar"><span style="width:8.2%"></span></div>1,6 %</td><td>6 602</td><td>5 959</td><td>64</td><td>0,97 %</td></tr><tr><td><strong>Agen</strong><span class="reg">Nouvelle-Aquitaine</span></td><td><div class="bar"><span style="width:6.0%"></span></div>1,2 %</td><td>4 801</td><td>4 334</td><td>46</td><td>0,96 %</td></tr><tr class="tot"><td>Total 15 zones</td><td>100 %</td><td>400 145</td><td>361 198</td><td>3 857</td><td>0,96 %</td></tr>
   </table></div>
  </div>
 </section>
@@ -396,9 +411,9 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
 <section id="reseau">
  <div class="wrap">
   <h2>Réseau de concessions couvert</h2>
-  <p class="lead">La diffusion couvrait les bassins de 32 concessions GRIM, auto et moto, sur 13 zones et 9 marques.</p>
+  <p class="lead">La diffusion couvrait les bassins de 34 concessions GRIM, auto et moto, sur 15 zones et 9 marques.</p>
   <div class="chips" style="margin-bottom:22px"><span class="chip">BMW</span><span class="chip">MINI</span><span class="chip">BMW Motorrad</span><span class="chip">Ford</span><span class="chip">Jaguar Land Rover</span><span class="chip">Volvo</span><span class="chip">Cupra</span><span class="chip">Seat</span><span class="chip">Skoda</span></div>
-  <div class="grid g4"><div class="conc"><div class="conc-h"><h4>Montpellier</h4><span class="n">4</span></div><ul><li><strong>BMW</strong> · Lattes</li><li><strong>MINI</strong> · Lattes</li><li><strong>Ford</strong> · Lattes</li><li><strong>Jaguar Land Rover</strong> · Montpellier</li></ul></div><div class="conc"><div class="conc-h"><h4>Valence</h4><span class="n">5</span></div><ul><li><strong>BMW</strong> · Valence</li><li><strong>MINI</strong> · Valence</li><li><strong>Ford</strong> · Valence</li><li><strong>Jaguar Land Rover</strong> · Valence</li><li><strong>Volvo</strong> · Valence</li></ul></div><div class="conc"><div class="conc-h"><h4>Aurillac</h4><span class="n">6</span></div><ul><li><strong>BMW</strong> · Aurillac</li><li><strong>MINI</strong> · Aurillac</li><li><strong>Ford</strong> · Aurillac</li><li><strong>Cupra</strong> · Aurillac</li><li><strong>Seat</strong> · Aurillac</li><li><strong>Skoda</strong> · Aurillac</li></ul></div><div class="conc"><div class="conc-h"><h4>Béziers</h4><span class="n">2</span></div><ul><li><strong>Ford</strong> · Béziers</li><li><strong>Jaguar Land Rover</strong> · Béziers</li></ul></div><div class="conc"><div class="conc-h"><h4>Montélimar</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Montélimar</li><li><strong>MINI</strong> · Montélimar</li><li><strong>Ford</strong> · Montélimar</li></ul></div><div class="conc"><div class="conc-h"><h4>Albi</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Albi</li><li><strong>MINI</strong> · Albi</li><li><strong>BMW Motorrad</strong> · Albi</li></ul></div><div class="conc"><div class="conc-h"><h4>Rodez</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Onet-le-Château</li><li><strong>MINI</strong> · Onet-le-Château</li><li><strong>Ford</strong> · Onet-le-Château</li></ul></div><div class="conc"><div class="conc-h"><h4>Nîmes</h4><span class="n">1</span></div><ul><li><strong>Jaguar Land Rover</strong> · Nîmes</li></ul></div><div class="conc"><div class="conc-h"><h4>Dax</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Mées</li></ul></div><div class="conc"><div class="conc-h"><h4>Pau</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Lescar</li></ul></div><div class="conc"><div class="conc-h"><h4>Bayonne</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Bassussarry</li></ul></div><div class="conc"><div class="conc-h"><h4>Avignon</h4><span class="n">1</span></div><ul><li><strong>Jaguar Land Rover</strong> · Le Pontet</li></ul></div><div class="conc"><div class="conc-h"><h4>Tarbes</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Tarbes</li></ul></div></div>
+  <div class="grid g4"><div class="conc"><div class="conc-h"><h4>Montpellier</h4><span class="n">4</span></div><ul><li><strong>BMW</strong> · Lattes</li><li><strong>MINI</strong> · Lattes</li><li><strong>Ford</strong> · Lattes</li><li><strong>Jaguar Land Rover</strong> · Montpellier</li></ul></div><div class="conc"><div class="conc-h"><h4>Valence</h4><span class="n">5</span></div><ul><li><strong>BMW</strong> · Valence</li><li><strong>MINI</strong> · Valence</li><li><strong>Ford</strong> · Valence</li><li><strong>Jaguar Land Rover</strong> · Valence</li><li><strong>Volvo</strong> · Valence</li></ul></div><div class="conc"><div class="conc-h"><h4>Aurillac</h4><span class="n">6</span></div><ul><li><strong>BMW</strong> · Aurillac</li><li><strong>MINI</strong> · Aurillac</li><li><strong>Ford</strong> · Aurillac</li><li><strong>Cupra</strong> · Aurillac</li><li><strong>Seat</strong> · Aurillac</li><li><strong>Skoda</strong> · Aurillac</li></ul></div><div class="conc"><div class="conc-h"><h4>Béziers</h4><span class="n">2</span></div><ul><li><strong>Ford</strong> · Béziers</li><li><strong>Jaguar Land Rover</strong> · Béziers</li></ul></div><div class="conc"><div class="conc-h"><h4>Montélimar</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Montélimar</li><li><strong>MINI</strong> · Montélimar</li><li><strong>Ford</strong> · Montélimar</li></ul></div><div class="conc"><div class="conc-h"><h4>Albi</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Albi</li><li><strong>MINI</strong> · Albi</li><li><strong>BMW Motorrad</strong> · Albi</li></ul></div><div class="conc"><div class="conc-h"><h4>Rodez</h4><span class="n">3</span></div><ul><li><strong>BMW</strong> · Onet-le-Château</li><li><strong>MINI</strong> · Onet-le-Château</li><li><strong>Ford</strong> · Onet-le-Château</li></ul></div><div class="conc"><div class="conc-h"><h4>Nîmes</h4><span class="n">1</span></div><ul><li><strong>Jaguar Land Rover</strong> · Nîmes</li></ul></div><div class="conc"><div class="conc-h"><h4>Dax</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Mées</li></ul></div><div class="conc"><div class="conc-h"><h4>Pau</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Lescar</li></ul></div><div class="conc"><div class="conc-h"><h4>Bayonne</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Bassussarry</li></ul></div><div class="conc"><div class="conc-h"><h4>Avignon</h4><span class="n">1</span></div><ul><li><strong>Jaguar Land Rover</strong> · Le Pontet</li></ul></div><div class="conc"><div class="conc-h"><h4>Tarbes</h4><span class="n">1</span></div><ul><li><strong>Ford</strong> · Tarbes</li></ul></div><div class="conc"><div class="conc-h"><h4>Toulouse</h4><span class="n">1</span></div><ul><li><strong>BMW Motorrad</strong> · Labège</li></ul></div><div class="conc"><div class="conc-h"><h4>Agen</h4><span class="n">1</span></div><ul><li><strong>BMW Motorrad</strong> · Boé</li></ul></div></div>
  </div>
 </section>
 
@@ -431,7 +446,7 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
  <div class="wrap">
   <h2>Contacts</h2>
   <p class="lead">L'équipe The Good Web reste à votre disposition pour échanger sur ce bilan et préparer les prochaines opérations.</p>
-  <div class="contacts"><a class="contact" href="mailto:jerome@thegoodweb.eu"><div class="cn">Jérôme Fages</div><div class="cr">Directeur commercial</div><div class="cp">06 18 74 66 75</div><div class="cm">jerome@thegoodweb.eu</div></a><a class="contact" href="mailto:mathilde@thegoodweb.eu"><div class="cn">Mathilde Coriton</div><div class="cr">Directrice de clientèle</div><div class="cp">06 48 61 92 92</div><div class="cm">mathilde@thegoodweb.eu</div></a><a class="contact" href="mailto:andrea@thegoodweb.eu"><div class="cn">Andrea Alonso</div><div class="cr">Cheffe de publicité junior</div><div class="cp">04 91 54 28 12</div><div class="cm">andrea@thegoodweb.eu</div></a><a class="contact" href="mailto:sofien@thegoodweb.eu"><div class="cn">Sofien Chaganiou</div><div class="cr">Chef de publicité</div><div class="cp">07 67 84 70 67</div><div class="cm">sofien@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Pôle activation</div><div class="cr">Mise en ligne & suivi</div><div class="cm">activation@thegoodweb.eu</div></div></div>
+  <div class="contacts"><a class="contact" href="mailto:jerome@thegoodweb.eu"><div class="cn">Jérôme Fages</div><div class="cr">Directeur commercial</div><div class="cp">06 18 74 66 75</div><div class="cm">jerome@thegoodweb.eu</div></a><a class="contact" href="mailto:mathilde@thegoodweb.eu"><div class="cn">Mathilde Coriton</div><div class="cr">Directrice de clientèle</div><div class="cp">06 48 61 92 92</div><div class="cm">mathilde@thegoodweb.eu</div></a><a class="contact" href="mailto:leslie@thegoodweb.eu"><div class="cn">Leslie Rogé</div><div class="cr">Cheffe de publicité</div><div class="cp">06 83 73 68 62</div><div class="cm">leslie@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Andrea</div><div class="cr">Chef de publicité</div><div class="cm">andrea@thegoodweb.eu</div></div><a class="contact" href="mailto:sofien@thegoodweb.eu"><div class="cn">Sofien Chaganiou</div><div class="cr">Chef de publicité</div><div class="cp">07 67 84 70 67</div><div class="cm">sofien@thegoodweb.eu</div></a><div class="contact off"><div class="cn">Pôle activation</div><div class="cr">Mise en ligne & suivi</div><div class="cm">activation@thegoodweb.eu</div></div></div>
   <div class="foot-bottom">
    <div class="logo-f"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
   
@@ -488,5 +503,27 @@ a.contact:hover{border-color:var(--terra);background:rgba(242,84,48,.1)}
   </div>
  </div>
 </footer>
+<script>
+(function(){
+ var box=document.querySelector('.chartbox'); if(!box) return;
+ var tip=document.getElementById('tip'), svg=box.querySelector('svg');
+ function show(h){
+  box.querySelectorAll('.dbar').forEach(function(b){b.classList.toggle('on',b.dataset.i===h.dataset.i)});
+  var d=h.dataset;
+  tip.innerHTML='<b>'+d.d+(+d.i>=3?' · Opération 72h':' · Amorce')+'</b><span>Impressions</span> '+d.imp+'<br><span>Écoutes 100 %</span> '+d.e+'<br><span>Complétion</span> '+d.cr+'<br><span>Clics</span> '+d.c+'<br><span>CTR</span> '+d.ctr;
+  var r=h.getBoundingClientRect(), br=box.getBoundingClientRect();
+  var x=r.left+r.width/2-br.left, tw=tip.offsetWidth/2;
+  x=Math.max(tw,Math.min(br.width-tw,x));
+  tip.style.left=x+'px'; tip.style.top=(r.top-br.top+r.height*0.28)+'px'; tip.classList.add('on');
+ }
+ function hide(){tip.classList.remove('on');box.querySelectorAll('.dbar').forEach(function(b){b.classList.remove('on')})}
+ box.querySelectorAll('.hit').forEach(function(h){
+  h.addEventListener('mouseenter',function(){show(h)});
+  h.addEventListener('click',function(){show(h)});
+ });
+ svg.addEventListener('mouseleave',hide);
+ document.addEventListener('touchstart',function(e){if(!box.contains(e.target))hide()},{passive:true});
+})();
+</script>
 </body>
 </html>

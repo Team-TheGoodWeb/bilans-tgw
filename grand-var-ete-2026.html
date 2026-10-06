@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bilan Grand Var · Campagne été 2026 · The Good Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#021859;--ice:#7bbdff;--terra:#f25430;--white:#fff;--bg2:#f4f7fd;--ice-l:#e8f3ff;--terra-l:#fff0ec;--txt:#26304f;--mut:#5a6488;--line:#e3e8f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--txt);background:#fff;line-height:1.55}
+h1,h2,h3,h4{font-family:Poppins,sans-serif;color:var(--navy);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header.hero{background:var(--navy);color:var(--white);padding:46px 0 52px}
+header.hero h1{color:var(--white);font-size:clamp(28px,4.4vw,46px);font-weight:800;line-height:1.1;margin:14px 0 10px}
+.herotop{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.eyebrow{color:#ffb79e;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.sub{color:#cfe3ff;max-width:640px;font-size:17px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{border:1.5px solid var(--ice);background:rgba(123,189,255,.08);border-radius:999px;padding:8px 16px;font-size:14px;color:#fff}
+.pill b{font-weight:700}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:26px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px;padding:16px 0;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--terra)}
+section{padding:60px 0}section.alt{background:var(--bg2)}
+h2{font-size:clamp(23px,3vw,31px);margin-bottom:8px}
+h2::before{content:"↘ ";color:var(--terra)}
+.lead{color:var(--mut);max-width:780px;margin:0 0 28px}
+h3{font-size:19px;margin:34px 0 14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.alt .stat{border-color:#dbe4f5}
+.stat .v{font-family:Poppins;font-weight:800;font-size:28px;color:var(--navy);line-height:1.1}
+.stat .l{font-size:13px;color:var(--mut);margin-top:6px}
+.stat.hl{background:var(--navy);border-color:var(--navy)}.stat.hl .v{color:#fff}.stat.hl .l{color:#cfe3ff}
+.stat .b{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:var(--terra);background:var(--terra-l);border-radius:999px;padding:2px 10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card.ice{background:var(--ice-l);border-color:#cfe5ff}.card.terra{background:var(--terra-l);border-color:#ffd9cf}
+.card h4{font-size:16px;margin-bottom:8px}
+.card p{margin:0;font-size:15px}
+.num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--terra);color:#fff;font-weight:700;font-family:Poppins;align-items:center;justify-content:center;margin-bottom:10px;font-size:14px}
+.tw{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+th{background:var(--navy);color:#fff;font-family:Poppins;font-weight:600;text-align:right;padding:12px 14px;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:12px 14px;border-top:1px solid var(--line);text-align:right;white-space:nowrap}
+tr.tot td{background:var(--ice-l);font-weight:700;color:var(--navy)}
+.chart{overflow-x:auto}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--mut);margin-top:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb{display:grid;grid-template-columns:150px 1fr 64px;gap:10px;align-items:center;margin:9px 0;font-size:14px}
+.hbt{background:#edf1fa;border-radius:6px;height:12px;overflow:hidden}
+.hbt div{height:100%;background:var(--navy);border-radius:6px}.hbt div.t{background:var(--terra)}
+.hbv{text-align:right;font-weight:600;color:var(--navy)}
+.agerow{display:grid;grid-template-columns:70px 1fr 220px;gap:10px;align-items:center;margin:11px 0;font-size:14px}
+.agebar{display:flex;height:16px;border-radius:6px;overflow:hidden;background:#edf1fa}
+.bf{background:var(--terra)}.bm{background:var(--ice)}
+.agel{font-weight:700;color:var(--navy)}.agev{color:var(--mut);font-size:13px}
+.donutrow{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.split{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;align-items:center;margin:14px 0}
+.splitl{font-weight:700;color:var(--navy);font-size:14px}
+.splitb{display:flex;height:22px;border-radius:7px;overflow:hidden}
+.splitv{grid-column:2;font-size:13px;color:var(--mut)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--ice-l);color:var(--navy);margin-right:6px}
+.logos{display:flex;flex-wrap:wrap;gap:10px}
+.logo-chip{border:1px solid var(--line);border-radius:12px;padding:10px 16px;font-family:Poppins;font-weight:700;color:var(--navy);background:#fff;font-size:14px}
+.note{font-size:13px;color:var(--mut);margin-top:12px}
+footer{background:var(--navy);color:#fff;padding:56px 0 40px}
+footer h2{color:#fff}footer h2::before{color:var(--terra)}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:26px 0 40px}
+.ct{display:block;border:1px solid rgba(123,189,255,.4);border-radius:16px;padding:18px;color:#fff;text-decoration:none;background:rgba(123,189,255,.06)}
+a.ct:hover{border-color:var(--terra)}
+.ct b{font-family:Poppins;display:block;font-size:15px}.ct span{display:block;font-size:13px;color:#cfe3ff}
+.ct.off{opacity:.55}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(123,189,255,.25);padding-top:28px;font-size:13px;color:#cfe3ff}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}.agerow{grid-template-columns:60px 1fr}.agev{grid-column:2}.hb{grid-template-columns:110px 1fr 56px}}
+</style></head><body>
+
+<header class="hero"><div class="wrap">
+<div class="herotop"><div>
+<div class="eyebrow">Bilan de campagne · Grand Var</div>
+<h1>Campagne été 2026</h1>
+<p class="sub">Display App interstitiel et Social Ads Facebook · Instagram · TikTok : restitution des résultats du dispositif TGW sur le Grand Var et sa zone élargie.</p>
+</div>
+<svg style="height:118px;width:auto;display:block" aria-label="The Good Web"  xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path class="st0" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path class="st0" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path class="st0" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path class="st0" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path class="st0" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path class="st0" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path class="st0" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path class="st0" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path class="st0" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path class="st0" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path class="st0" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path class="st0" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path class="st0" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path class="st0" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g>
+</svg></div>
+<div class="pills">
+<span class="pill"><b>Période ·</b> 21/07 → 31/08/2026</span>
+<span class="pill"><b>Budget ·</b> 4 000 € HT</span>
+<span class="pill"><b>Leviers ·</b> Display App + Social Ads</span>
+<span class="pill"><b>Zone ·</b> Grand Var + 50 km</span>
+</div></div></header>
+
+<nav><div class="wrap">
+<a href="#synthese">Synthèse</a><a href="#display">Display App</a><a href="#social">Social Ads</a><a href="#audiences">Audiences</a><a href="#diffusion">Cadre de diffusion</a><a href="#budget">Budget</a><a href="#contacts">Contacts</a>
+</div></nav>
+
+<section id="synthese"><div class="wrap">
+<h2>Synthèse du dispositif</h2>
+<p class="lead">Deux leviers complémentaires à budget égal : le Display App pour générer du trafic qualifié, le Social Ads pour installer la présence de Grand Var dans les feeds et stories de l'été.</p>
+<div class="stats">
+<div class="stat hl"><div class="v">835 336</div><div class="l">impressions totales</div></div>
+<div class="stat"><div class="v">5 433</div><div class="l">clics</div></div>
+<div class="stat"><div class="v">0,65 %</div><div class="l">CTR moyen</div></div>
+<div class="stat"><div class="v">4,79 €</div><div class="l">CPM moyen</div></div>
+<div class="stat"><div class="v">0,74 €</div><div class="l">CPC moyen</div></div>
+<div class="stat"><div class="v">13 752</div><div class="l">vues vidéo (25 %) en social</div></div>
+</div>
+<h3>Ce qu'il faut retenir</h3>
+<div class="grid3">
+<div class="card"><div class="num">1</div><h4>Un Display App très au-dessus des standards</h4><p>CTR de 0,93 %, soit près de 5 fois le benchmark IAS (0,19 %), et 3 132 clics pour un CPC de 0,64 €.</p></div>
+<div class="card ice"><div class="num">2</div><h4>Instagram porte la couverture</h4><p>108 128 personnes touchées et 70 % des impressions social pour un CPM de 2,80 €, le plus bas du dispositif.</p></div>
+<div class="card terra"><div class="num">3</div><h4>TikTok, champion de l'engagement</h4><p>78 % des clics social avec un CTR de 1,66 % et un CPC de 0,32 €, pour moins de 30 % du budget social.</p></div>
+</div>
+</div></section>
+
+<section id="display" class="alt"><div class="wrap">
+<h2>Volet 1 · Display App</h2>
+<p class="lead">Format interstitiel in-app 320x480, diffusé du 21/07 au 31/08/2026 sur le Grand Var et une zone élargie de 50 km. Budget 2 000 € HT.</p>
+<div class="stats">
+<div class="stat hl"><div class="v">335 118</div><div class="l">impressions</div></div>
+<div class="stat"><div class="v">3 132</div><div class="l">clics</div></div>
+<div class="stat"><div class="v">0,93 %</div><div class="l">CTR</div><span class="b">+0,74 pt vs IAS 0,19 %</span></div>
+<div class="stat"><div class="v">84,66 %</div><div class="l">CR (taux de visibilité)</div><span class="b">+14,66 pts vs IAS 70 %</span></div>
+<div class="stat"><div class="v">0,64 €</div><div class="l">CPC</div></div>
+<div class="stat"><div class="v">5,97 €</div><div class="l">CPM</div></div>
+<div class="stat"><div class="v">3,2</div><div class="l">répétition moyenne</div></div>
+</div>
+
+<h3>Diffusion quotidienne</h3>
+<div class="card"><div class="chart"><svg viewBox="0 0 840 220" style="width:100%;min-width:620px;height:auto"><line x1="36" x2="824" y1="20.0" y2="20.0" stroke="#e3e8f5"/><text x="32" y="23.0" font-size="10" text-anchor="end" fill="#5a6488">9K</text><line x1="36" x2="824" y1="76.7" y2="76.7" stroke="#e3e8f5"/><text x="32" y="79.7" font-size="10" text-anchor="end" fill="#5a6488">6K</text><line x1="36" x2="824" y1="133.3" y2="133.3" stroke="#e3e8f5"/><text x="32" y="136.3" font-size="10" text-anchor="end" fill="#5a6488">3K</text><rect x="42.0" y="44.2" width="14.6" height="145.8" rx="2" fill="#7bbdff"><title>21/07 : 7 718 imp. · 77 clics</title></rect><text x="49.3" y="208" font-size="10" text-anchor="middle" fill="#5a6488">21/07</text><rect x="60.6" y="43.0" width="14.6" height="147.0" rx="2" fill="#7bbdff"><title>22/07 : 7 781 imp. · 75 clics</title></rect><rect x="79.1" y="37.3" width="14.6" height="152.7" rx="2" fill="#7bbdff"><title>23/07 : 8 082 imp. · 74 clics</title></rect><rect x="97.7" y="42.8" width="14.6" height="147.2" rx="2" fill="#7bbdff"><title>24/07 : 7 791 imp. · 71 clics</title></rect><rect x="116.3" y="29.7" width="14.6" height="160.3" rx="2" fill="#7bbdff"><title>25/07 : 8 485 imp. · 78 clics</title></rect><rect x="134.9" y="37.7" width="14.6" height="152.3" rx="2" fill="#7bbdff"><title>26/07 : 8 061 imp. · 78 clics</title></rect><rect x="153.4" y="28.5" width="14.6" height="161.5" rx="2" fill="#7bbdff"><title>27/07 : 8 552 imp. · 74 clics</title></rect><text x="160.7" y="208" font-size="10" text-anchor="middle" fill="#5a6488">27/07</text><rect x="172.0" y="30.6" width="14.6" height="159.4" rx="2" fill="#7bbdff"><title>28/07 : 8 441 imp. · 71 clics</title></rect><rect x="190.6" y="29.7" width="14.6" height="160.3" rx="2" fill="#7bbdff"><title>29/07 : 8 488 imp. · 77 clics</title></rect><rect x="209.1" y="38.8" width="14.6" height="151.2" rx="2" fill="#7bbdff"><title>30/07 : 8 005 imp. · 73 clics</title></rect><rect x="227.7" y="47.7" width="14.6" height="142.3" rx="2" fill="#7bbdff"><title>31/07 : 7 536 imp. · 73 clics</title></rect><rect x="246.3" y="49.8" width="14.6" height="140.2" rx="2" fill="#7bbdff"><title>01/08 : 7 425 imp. · 72 clics</title></rect><rect x="264.9" y="34.1" width="14.6" height="155.9" rx="2" fill="#7bbdff"><title>02/08 : 8 252 imp. · 76 clics</title></rect><text x="272.1" y="208" font-size="10" text-anchor="middle" fill="#5a6488">02/08</text><rect x="283.4" y="30.4" width="14.6" height="159.6" rx="2" fill="#7bbdff"><title>03/08 : 8 449 imp. · 75 clics</title></rect><rect x="302.0" y="40.2" width="14.6" height="149.8" rx="2" fill="#7bbdff"><title>04/08 : 7 929 imp. · 73 clics</title></rect><rect x="320.6" y="36.0" width="14.6" height="154.0" rx="2" fill="#7bbdff"><title>05/08 : 8 152 imp. · 77 clics</title></rect><rect x="339.1" y="33.0" width="14.6" height="157.0" rx="2" fill="#7bbdff"><title>06/08 : 8 312 imp. · 77 clics</title></rect><rect x="357.7" y="39.4" width="14.6" height="150.6" rx="2" fill="#7bbdff"><title>07/08 : 7 971 imp. · 78 clics</title></rect><rect x="376.3" y="40.7" width="14.6" height="149.3" rx="2" fill="#7bbdff"><title>08/08 : 7 904 imp. · 74 clics</title></rect><text x="383.6" y="208" font-size="10" text-anchor="middle" fill="#5a6488">08/08</text><rect x="394.9" y="45.3" width="14.6" height="144.7" rx="2" fill="#7bbdff"><title>09/08 : 7 660 imp. · 72 clics</title></rect><rect x="413.4" y="31.0" width="14.6" height="159.0" rx="2" fill="#7bbdff"><title>10/08 : 8 416 imp. · 72 clics</title></rect><rect x="432.0" y="28.8" width="14.6" height="161.2" rx="2" fill="#7bbdff"><title>11/08 : 8 535 imp. · 75 clics</title></rect><rect x="450.6" y="50.3" width="14.6" height="139.7" rx="2" fill="#7bbdff"><title>12/08 : 7 395 imp. · 71 clics</title></rect><rect x="469.1" y="33.1" width="14.6" height="156.9" rx="2" fill="#7bbdff"><title>13/08 : 8 305 imp. · 78 clics</title></rect><rect x="487.7" y="40.9" width="14.6" height="149.1" rx="2" fill="#7bbdff"><title>14/08 : 7 895 imp. · 76 clics</title></rect><text x="495.0" y="208" font-size="10" text-anchor="middle" fill="#5a6488">14/08</text><rect x="506.3" y="45.9" width="14.6" height="144.1" rx="2" fill="#7bbdff"><title>15/08 : 7 630 imp. · 72 clics</title></rect><rect x="524.9" y="39.6" width="14.6" height="150.4" rx="2" fill="#7bbdff"><title>16/08 : 7 963 imp. · 74 clics</title></rect><rect x="543.4" y="34.2" width="14.6" height="155.8" rx="2" fill="#7bbdff"><title>17/08 : 8 246 imp. · 75 clics</title></rect><rect x="562.0" y="45.3" width="14.6" height="144.7" rx="2" fill="#7bbdff"><title>18/08 : 7 660 imp. · 71 clics</title></rect><rect x="580.6" y="29.7" width="14.6" height="160.3" rx="2" fill="#7bbdff"><title>19/08 : 8 487 imp. · 72 clics</title></rect><rect x="599.1" y="48.1" width="14.6" height="141.9" rx="2" fill="#7bbdff"><title>20/08 : 7 512 imp. · 77 clics</title></rect><text x="606.4" y="208" font-size="10" text-anchor="middle" fill="#5a6488">20/08</text><rect x="617.7" y="41.5" width="14.6" height="148.5" rx="2" fill="#7bbdff"><title>21/08 : 7 861 imp. · 75 clics</title></rect><rect x="636.3" y="50.5" width="14.6" height="139.5" rx="2" fill="#7bbdff"><title>22/08 : 7 386 imp. · 73 clics</title></rect><rect x="654.9" y="51.4" width="14.6" height="138.6" rx="2" fill="#7bbdff"><title>23/08 : 7 337 imp. · 75 clics</title></rect><rect x="673.4" y="35.5" width="14.6" height="154.5" rx="2" fill="#7bbdff"><title>24/08 : 8 178 imp. · 74 clics</title></rect><rect x="692.0" y="42.9" width="14.6" height="147.1" rx="2" fill="#7bbdff"><title>25/08 : 7 786 imp. · 72 clics</title></rect><rect x="710.6" y="31.9" width="14.6" height="158.1" rx="2" fill="#7bbdff"><title>26/08 : 8 371 imp. · 78 clics</title></rect><text x="717.9" y="208" font-size="10" text-anchor="middle" fill="#5a6488">26/08</text><rect x="729.1" y="43.4" width="14.6" height="146.6" rx="2" fill="#7bbdff"><title>27/08 : 7 763 imp. · 77 clics</title></rect><rect x="747.7" y="36.9" width="14.6" height="153.1" rx="2" fill="#7bbdff"><title>28/08 : 8 106 imp. · 78 clics</title></rect><rect x="766.3" y="50.3" width="14.6" height="139.7" rx="2" fill="#7bbdff"><title>29/08 : 7 397 imp. · 75 clics</title></rect><rect x="784.9" y="33.5" width="14.6" height="156.5" rx="2" fill="#7bbdff"><title>30/08 : 8 285 imp. · 72 clics</title></rect><rect x="803.4" y="46.3" width="14.6" height="143.7" rx="2" fill="#7bbdff"><title>31/08 : 7 610 imp. · 75 clics</title></rect><polyline points="49.3,44.6 67.9,48.3 86.4,50.2 105.0,55.9 123.6,42.7 142.1,42.7 160.7,50.2 179.3,55.9 197.9,44.6 216.4,52.1 235.0,52.1 253.6,54.0 272.1,46.4 290.7,48.3 309.3,52.1 327.9,44.6 346.4,44.6 365.0,42.7 383.6,50.2 402.1,54.0 420.7,54.0 439.3,48.3 457.9,55.9 476.4,42.7 495.0,46.4 513.6,54.0 532.1,50.2 550.7,48.3 569.3,55.9 587.9,54.0 606.4,44.6 625.0,48.3 643.6,52.1 662.1,48.3 680.7,50.2 699.3,54.0 717.9,42.7 736.4,44.6 755.0,42.7 773.6,48.3 792.1,54.0 810.7,48.3" fill="none" stroke="#f25430" stroke-width="2.2"/></svg></div>
+<div class="legend"><span><i style="background:#7bbdff"></i>Impressions par jour</span><span><i style="background:#f25430"></i>Clics par jour</span></div>
+<p class="note">Une diffusion parfaitement lissée sur les 42 jours (7 300 à 8 550 impressions et 71 à 78 clics par jour), sans à-coup ni sous-livraison, avec un CTR quotidien stable entre 0,84 % et 1,03 %.</p></div>
+
+<h3>Répartition par zone</h3>
+<div class="tw"><table><tr><th>Zone</th><th>Budget</th><th>Impressions</th><th>Part</th></tr>
+<tr><td><b>Grand Var</b></td><td>1 200 €</td><td>201 071</td><td>60 %</td></tr>
+<tr><td><b>Zone élargie + 50 km</b></td><td>800 €</td><td>134 047</td><td>40 %</td></tr>
+<tr class="tot"><td>Total</td><td>2 000 €</td><td>335 118</td><td>100 %</td></tr></table></div>
+</div></section>
+
+<section id="social"><div class="wrap">
+<h2>Volet 2 · Social Ads</h2>
+<p class="lead">Diffusion vidéo sur Facebook, Instagram et TikTok. Budget 2 000 € HT, CPM moyen 4,00 €.</p>
+<div class="stats">
+<div class="stat hl"><div class="v">500 218</div><div class="l">impressions</div></div>
+<div class="stat"><div class="v">169 848</div><div class="l">reach cumulé (non dédupliqué)</div></div>
+<div class="stat"><div class="v">2 301</div><div class="l">clics</div></div>
+<div class="stat"><div class="v">0,46 %</div><div class="l">CTR</div></div>
+<div class="stat"><div class="v">4,00 €</div><div class="l">CPM</div></div>
+<div class="stat"><div class="v">0,87 €</div><div class="l">CPC</div></div>
+</div>
+
+<h3>Performances par plateforme</h3>
+<div class="tw"><table><tr><th>Plateforme</th><th>Budget</th><th>Reach</th><th>Impressions</th><th>Répétition</th><th>Clics</th><th>CTR</th><th>CPM</th><th>CPC</th></tr><tr><td><b>Facebook</b></td><td>445,23 €</td><td>13 728</td><td>40 881</td><td>2,98</td><td>123</td><td>0,30 %</td><td>10,89 €</td><td>3,62 €</td></tr><tr><td><b>Instagram</b></td><td>983,77 €</td><td>108 128</td><td>351 024</td><td>3,25</td><td>376</td><td>0,11 %</td><td>2,80 €</td><td>2,62 €</td></tr><tr><td><b>TikTok</b></td><td>571,00 €</td><td>47 992</td><td>108 313</td><td>2,26</td><td>1 802</td><td>1,66 %</td><td>5,27 €</td><td>0,32 €</td></tr><tr class="tot"><td>Total</td><td>2 000,00 €</td><td>-</td><td>500 218</td><td>-</td><td>2 301</td><td>0,46 %</td><td>4,00 €</td><td>0,87 €</td></tr></table></div>
+
+<h3>Répartition entre plateformes</h3>
+<div class="card"><div class="split"><div class="splitl">Budget</div><div class="splitb"><div style="width:22.26%;background:#021859" title="Facebook"></div><div style="width:49.19%;background:#7bbdff" title="Instagram"></div><div style="width:28.55%;background:#f25430" title="TikTok"></div></div><div class="splitv">Facebook 22 % · Instagram 49 % · TikTok 29 %</div></div><div class="split"><div class="splitl">Impressions</div><div class="splitb"><div style="width:8.17%;background:#021859" title="Facebook"></div><div style="width:70.17%;background:#7bbdff" title="Instagram"></div><div style="width:21.65%;background:#f25430" title="TikTok"></div></div><div class="splitv">Facebook 8 % · Instagram 70 % · TikTok 22 %</div></div><div class="split"><div class="splitl">Clics</div><div class="splitb"><div style="width:5.35%;background:#021859" title="Facebook"></div><div style="width:16.34%;background:#7bbdff" title="Instagram"></div><div style="width:78.31%;background:#f25430" title="TikTok"></div></div><div class="splitv">Facebook 5 % · Instagram 16 % · TikTok 78 %</div></div><div class="split"><div class="splitl">Vues à 100 %</div><div class="splitb"><div style="width:8.06%;background:#021859" title="Facebook"></div><div style="width:68.17%;background:#7bbdff" title="Instagram"></div><div style="width:23.77%;background:#f25430" title="TikTok"></div></div><div class="splitv">Facebook 8 % · Instagram 68 % · TikTok 24 %</div></div>
+<div class="legend"><span><i style="background:#021859"></i>Facebook</span><span><i style="background:#7bbdff"></i>Instagram</span><span><i style="background:#f25430"></i>TikTok</span></div></div>
+
+<h3>Visionnage des vidéos</h3>
+<div class="tw"><table><tr><th>Plateforme</th><th>Vues 25 %</th><th>Vues 50 %</th><th>Vues 75 %</th><th>Vues 100 %</th><th>Rétention 25 → 100 %</th></tr><tr><td><b>Facebook</b></td><td>1 110</td><td>499</td><td>336</td><td>250</td><td>22,5 %</td></tr><tr><td><b>Instagram</b></td><td>7 080</td><td>3 770</td><td>2 632</td><td>2 114</td><td>29,9 %</td></tr><tr><td><b>TikTok</b></td><td>5 562</td><td>2 043</td><td>1 111</td><td>737</td><td>13,3 %</td></tr><tr class="tot"><td>Total</td><td>13 752</td><td>6 312</td><td>4 079</td><td>3 101</td><td>22,5 %</td></tr></table></div>
+<p class="note">Rétention calculée sur les personnes ayant atteint 25 % de la vidéo : part de celles qui l'ont regardée jusqu'au bout.</p>
+
+<h3>Lecture par plateforme</h3>
+<div class="grid3">
+<div class="card ice"><span class="tag">Instagram</span><h4 style="margin-top:10px">Le levier couverture</h4><p>CPM de 2,80 € et 108 K personnes touchées. C'est aussi la meilleure rétention vidéo : près de 30 % des vues engagées vont jusqu'au bout (2 114 vues complètes).</p></div>
+<div class="card terra"><span class="tag">TikTok</span><h4 style="margin-top:10px">Le levier trafic</h4><p>1 802 clics, CTR 1,66 % et CPC 0,32 €, soit un coût au clic 8 fois inférieur à Instagram. Audience très réactive à l'appel à l'action.</p></div>
+<div class="card"><span class="tag">Facebook</span><h4 style="margin-top:10px">Un rôle d'appoint</h4><p>CPM de 10,89 € et CPC de 3,62 € : la plateforme la moins efficiente de ce dispositif, à rééquilibrer au profit d'Instagram et TikTok sur les prochaines vagues.</p></div>
+</div>
+</div></section>
+
+<section id="audiences" class="alt"><div class="wrap">
+<h2>Audiences touchées</h2>
+<p class="lead">Analyse socio-démographique et affinitaire disponible sur le volet Display App.</p>
+<div class="grid2">
+<div class="card"><h4>Répartition par âge et sexe</h4><div class="agerow"><span class="agel">25-34</span><div class="agebar"><div style="width:52.5%" class="bf"></div><div style="width:35.0%" class="bm"></div></div><span class="agev">106 792 imp. · 998 clics · 32 %</span></div><div class="agerow"><span class="agel">35-44</span><div class="agebar"><div style="width:60.0%" class="bf"></div><div style="width:40.0%" class="bm"></div></div><span class="agev">122 047 imp. · 1141 clics · 36 %</span></div><div class="agerow"><span class="agel">45-54</span><div class="agebar"><div style="width:37.5%" class="bf"></div><div style="width:25.0%" class="bm"></div></div><span class="agev">76 279 imp. · 713 clics · 23 %</span></div><div class="agerow"><span class="agel">55 et +</span><div class="agebar"><div style="width:14.7%" class="bf"></div><div style="width:9.8%" class="bm"></div></div><span class="agev">30 000 imp. · 280 clics · 9 %</span></div>
+<div class="legend"><span><i style="background:#f25430"></i>Femmes</span><span><i style="background:#7bbdff"></i>Hommes</span></div>
+<p class="note">Les 35-44 ans arrivent en tête (36 % des impressions et des clics), suivis des 25-34 ans (32 %).</p></div>
+<div class="card"><h4>Profil de l'audience</h4>
+<div class="donutrow">
+<svg viewBox="0 0 42 42" width="130" height="130"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#7bbdff" stroke-width="6"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#f25430" stroke-width="6" stroke-dasharray="60 40" stroke-dashoffset="25"/><text x="21" y="22.5" font-size="7" font-family="Poppins" font-weight="800" text-anchor="middle" fill="#021859">60 %</text><text x="21" y="28" font-size="3" text-anchor="middle" fill="#5a6488">femmes</text></svg>
+<div><p style="margin:0 0 6px"><span class="tag" style="background:var(--terra-l)">Femmes 60 %</span><span class="tag">Hommes 40 %</span></p>
+<p style="margin:12px 0 4px;font-weight:700;color:var(--navy)">Top segment</p>
+<div class="hb" style="grid-template-columns:110px 1fr 60px"><span class="hbl">Affinitaire</span><div class="hbt"><div class="t" style="width:55.44%"></div></div><span class="hbv">55,44 %</span></div>
+<div class="hb" style="grid-template-columns:110px 1fr 60px"><span class="hbl">Socio-démo</span><div class="hbt"><div style="width:44.56%"></div></div><span class="hbv">44,56 %</span></div>
+</div></div>
+<h4 style="margin-top:22px">Centres d'intérêt affinitaires</h4><div class="hb"><span class="hbl">Tourisme & voyages</span><div class="hbt"><div class="t" style="width:100%"></div></div><span class="hbv">30 %</span></div><div class="hb"><span class="hbl">Immobilier & résidence</span><div class="hbt"><div class="t" style="width:83%"></div></div><span class="hbv">25 %</span></div><div class="hb"><span class="hbl">Shopping</span><div class="hbt"><div class="t" style="width:67%"></div></div><span class="hbv">20 %</span></div><div class="hb"><span class="hbl">Culture & événements locaux</span><div class="hbt"><div class="t" style="width:50%"></div></div><span class="hbv">15 %</span></div><div class="hb"><span class="hbl">Bien-être & qualité de vie</span><div class="hbt"><div class="t" style="width:33%"></div></div><span class="hbv">10 %</span></div>
+</div></div>
+</div></section>
+
+<section id="diffusion"><div class="wrap">
+<h2>Cadre de diffusion</h2>
+<p class="lead">Top 10 des sites et applications ayant diffusé le Display App, en part d'impressions.</p>
+<div class="grid2">
+<div class="card"><div class="hb"><span class="hbl">actu.fr</span><div class="hbt"><div style="width:100%"></div></div><span class="hbv">13,39 %</span></div><div class="hb"><span class="hbl">Voici</span><div class="hbt"><div style="width:98%"></div></div><span class="hbv">13,11 %</span></div><div class="hb"><span class="hbl">20 Minutes</span><div class="hbt"><div style="width:87%"></div></div><span class="hbv">11,62 %</span></div><div class="hb"><span class="hbl">ELLE</span><div class="hbt"><div style="width:74%"></div></div><span class="hbv">9,92 %</span></div><div class="hb"><span class="hbl">La Chaîne Météo</span><div class="hbt"><div style="width:61%"></div></div><span class="hbv">8,21 %</span></div><div class="hb"><span class="hbl">Le Monde</span><div class="hbt"><div style="width:50%"></div></div><span class="hbv">6,71 %</span></div><div class="hb"><span class="hbl">BlaBlaCar</span><div class="hbt"><div style="width:45%"></div></div><span class="hbv">6,08 %</span></div><div class="hb"><span class="hbl">Le Figaro</span><div class="hbt"><div style="width:27%"></div></div><span class="hbv">3,59 %</span></div><div class="hb"><span class="hbl">Linternaute</span><div class="hbt"><div style="width:17%"></div></div><span class="hbv">2,34 %</span></div><div class="hb"><span class="hbl">Ouest-France</span><div class="hbt"><div style="width:12%"></div></div><span class="hbv">1,60 %</span></div></div>
+<div class="card ice"><h4>Environnements Social Ads</h4><div class="logos" style="margin:12px 0 18px"><span class="logo-chip">Facebook</span><span class="logo-chip">Instagram</span><span class="logo-chip">TikTok</span></div>
+<h4>Lecture</h4><p>Un mix d'actualité locale et nationale (actu.fr, 20 Minutes, Le Monde) et de presse féminine et lifestyle (Voici, ELLE), cohérent avec une audience à 60 % féminine. La présence de BlaBlaCar et de La Chaîne Météo confirme la bonne captation des publics en déplacement estival.</p></div>
+</div></div></section>
+
+<section id="budget" class="alt"><div class="wrap">
+<h2>Budget total du dispositif</h2>
+<p class="lead">Somme recalculée des deux volets.</p>
+<div class="tw"><table><tr><th>Levier</th><th>Budget HT</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>CPM</th><th>CPC</th></tr>
+<tr><td><b>Display App 320x480</b></td><td>2 000,00 €</td><td>335 118</td><td>3 132</td><td>0,93 %</td><td>5,97 €</td><td>0,64 €</td></tr>
+<tr><td><b>Social Ads Facebook · Instagram · TikTok</b></td><td>2 000,00 €</td><td>500 218</td><td>2 301</td><td>0,46 %</td><td>4,00 €</td><td>0,87 €</td></tr>
+<tr class="tot"><td>Total dispositif</td><td>4 000,00 €</td><td>835 336</td><td>5 433</td><td>0,65 %</td><td>4,79 €</td><td>0,74 €</td></tr></table></div>
+<h3>Pistes pour les prochaines campagnes</h3>
+<div class="grid3">
+<div class="card"><div class="num">1</div><h4>Reconduire le Display App 320x480</h4><p>Format éprouvé, CTR et visibilité nettement au-dessus des benchmarks, livraison régulière.</p></div>
+<div class="card"><div class="num">2</div><h4>Rééquilibrer le social</h4><p>Réduire la part Facebook au profit d'Instagram (couverture) et TikTok (trafic) pour faire baisser le CPC moyen.</p></div>
+<div class="card"><div class="num">3</div><h4>Capitaliser sur les affinités</h4><p>Le ciblage affinitaire (tourisme, immobilier, shopping) porte 55 % de la diffusion : à garder comme socle data.</p></div>
+</div>
+</div></section>
+
+<footer id="contacts"><div class="wrap">
+<h2>Contacts</h2>
+<div class="contacts">
+<a class="ct" href="mailto:jerome@thegoodweb.eu"><b>Jérôme Fages</b><span>Directeur commercial</span><span>06 18 74 66 75</span><span>jerome@thegoodweb.eu</span></a>
+<a class="ct" href="mailto:mathilde@thegoodweb.eu"><b>Mathilde Coriton</b><span>Directrice de clientèle</span><span>06 48 61 92 92</span><span>mathilde@thegoodweb.eu</span></a>
+<a class="ct" href="mailto:andrea@thegoodweb.eu"><b>Andrea Alonso</b><span>Cheffe de publicité junior</span><span>04 91 54 28 12</span><span>andrea@thegoodweb.eu</span></a>
+<a class="ct" href="mailto:sofien@thegoodweb.eu"><b>Sofien Chaganiou</b><span>Chef de publicité</span><span>07 67 84 70 67</span><span>sofien@thegoodweb.eu</span></a>
+<div class="ct off"><b>Pôle activation</b><span>activation@thegoodweb.eu</span></div>
+</div>
+<div class="foot">
+<svg style="height:88px;width:auto;display:block" aria-label="The Good Web"  xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path class="st0" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path class="st0" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path class="st0" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path class="st0" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path class="st0" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path class="st0" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path class="st0" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path class="st0" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path class="st0" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path class="st0" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path class="st0" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path class="st0" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path class="st0" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path class="st0" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path class="st0" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path class="st0" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path class="st0" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path class="st0" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path class="st0" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path class="st0" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path class="st0" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path class="st0" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path class="st0" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path class="st0" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path class="st0" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g>
+</svg><span>The Good Web · Bilan Grand Var · Campagne été 2026</span></div>
+</div></footer>
+</body></html>

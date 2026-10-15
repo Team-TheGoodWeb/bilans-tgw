@@ -186,6 +186,50 @@ tr.tot td{background:var(--navy);color:var(--white);font-weight:700;border:none}
 .st h4{font-size:16px;margin:6px 0}
 .st p{font-size:14px;color:var(--muted)}
 
+
+/* BRAND LIFT */
+.bl{display:grid;grid-template-columns:300px 1fr;gap:20px}
+.score{background:var(--navy);color:var(--white);border-radius:20px;padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score .ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--terra) 0 60%,rgba(255,255,255,.12) 60% 100%);display:flex;align-items:center;justify-content:center;margin:14px 0}
+.score .ring div{width:116px;height:116px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:Poppins;font-weight:800;font-size:44px}
+.score h3{color:var(--white);font-size:18px}
+.score p{font-size:13px;color:#c9d2ef}
+.upl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.up{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}
+.up .k{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.up .v{font-family:Poppins;font-weight:800;font-size:34px;color:var(--terra);line-height:1.1;margin:6px 0}
+.up .q{font-size:13px;color:var(--muted);font-style:italic}
+.up .b{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;color:#1f8a52;background:#e3f5ea;padding:3px 9px;border-radius:999px}
+.cmp{margin-top:6px}
+.cmp .r{display:flex;align-items:center;gap:10px;font-size:13px;margin-top:8px}
+.cmp .r span{width:96px;color:var(--muted)}
+.cmp .t{flex:1;height:12px;background:var(--navy-5);border-radius:999px;overflow:hidden}
+.cmp .t i{display:block;height:100%;border-radius:999px}
+.cmp .r b{font-family:Poppins;color:var(--navy);width:40px;text-align:right}
+.bl-take{margin-top:16px;background:var(--terra-10);border:1px solid var(--terra-20);border-radius:16px;padding:20px 22px;font-size:15.5px;color:var(--navy)}
+
+/* CONCURRENCE */
+.comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cp{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.cp .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.cp h3{font-size:20px}
+.cp .ty{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--navy-10);color:var(--navy);white-space:nowrap}
+.cp .ty.loc{background:var(--terra-10);color:#b5381b}
+.cp ul{list-style:none;font-size:14.5px;color:var(--text)}
+.cp li{padding:6px 0 6px 18px;position:relative;border-top:1px solid var(--line)}
+.cp li:first-child{border-top:none}
+.cp li::before{content:"◆";position:absolute;left:0;top:8px;font-size:9px;color:var(--ice)}
+.cp .so{margin-top:auto;padding-top:14px;font-size:14px;font-weight:600;color:var(--navy);border-top:2px solid var(--terra-20)}
+.cp .so::before{content:"Pour Hylton : ";color:var(--terra)}
+.syn{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sy{background:var(--navy);color:var(--white);border-radius:16px;padding:22px}
+.sy b{font-family:Poppins;color:var(--ice);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.sy h4{color:var(--white);font-size:17px;margin:6px 0}
+.sy p{font-size:14px;color:#d7defa}
+.src{margin-top:16px;font-size:12px;color:var(--muted)}
+.src a{color:var(--navy-60)}
+@media (max-width:900px){.bl{grid-template-columns:1fr}.syn{grid-template-columns:1fr}}
+
 /* FOOTER */
 footer{background:var(--navy);color:var(--white);margin-top:72px;padding:52px 0 36px}
 .f-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-bottom:30px}
@@ -283,8 +327,8 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <p class="lead">Tout ce que nous avons construit ensemble depuis l'hiver 2024, ce que les chiffres nous apprennent, et la marche suivante : faire de Hylton la marque de chaussures incontournable du Sud, toute l'année.</p>
     <div class="pills">
       <div class="pill"><small>Période</small><b>Nov. 2024 → Sept. 2026</b></div>
-      <div class="pill"><small>Campagnes</small><b>13 opérations</b></div>
-      <div class="pill"><small>Investissement</small><b>102 195 € HT</b></div>
+      <div class="pill"><small>Campagnes</small><b>14 opérations</b></div>
+      <div class="pill"><small>Investissement</small><b>110 195 € HT</b></div>
       <div class="pill"><small>Réseau</small><b>Jusqu'à 14 magasins</b></div>
       <div class="pill"><small>Leviers</small><b>DTS · Social · Audio · Vidéo</b></div>
     </div>
@@ -297,6 +341,8 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <a href="#trajectoire">Trajectoire</a>
     <a href="#calendrier">Présence</a>
     <a href="#leviers">Leviers</a>
+    <a href="#brandlift">Brand Lift</a>
+    <a href="#concurrence">Concurrence</a>
     <a href="#enseignements">Enseignements</a>
     <a href="#cap">Cap 2027</a>
     <a href="#contacts">Contacts</a>
@@ -310,10 +356,10 @@ a.ct:hover{background:rgba(255,255,255,.12)}
   <h2>Deux ans de prises de parole, en un coup d'œil</h2>
   <p class="intro">Cumul de l'ensemble des campagnes menées avec The Good Web, de la Collection hiver 2024-25 à la Rentrée 2026.</p>
   <div class="stats">
-    <div class="stat hot"><div class="v">19,8 M</div><div class="l">impressions diffusées</div></div>
-    <div class="stat hot"><div class="v">8 233</div><div class="l">visites en magasin mesurées (Drive-to-Store)</div></div>
-    <div class="stat"><div class="v">81 500</div><div class="l">clics vers Hylton</div></div>
-    <div class="stat"><div class="v">4,32 €</div><div class="l">coût moyen par visite en magasin</div></div>
+    <div class="stat hot"><div class="v">22,2 M</div><div class="l">impressions diffusées</div></div>
+    <div class="stat hot"><div class="v">8 800</div><div class="l">visites en magasin mesurées (Drive-to-Store)</div></div>
+    <div class="stat"><div class="v">93 000</div><div class="l">clics vers Hylton</div></div>
+    <div class="stat"><div class="v">4,39 €</div><div class="l">coût moyen par visite en magasin</div></div>
     <div class="stat"><div class="v">x 4 à 5</div><div class="l">CTR Display vs benchmark IAS (0,19 %)</div></div>
     <div class="stat"><div class="v">97 %</div><div class="l">complétion sur la vidéo premium (TV Replay, cTV)</div></div>
   </div>
@@ -329,18 +375,18 @@ a.ct:hover{background:rgba(255,255,255,.12)}
       <p class="note" style="margin:0 0 14px">En € HT, 2026 arrêté au 6 septembre</p>
       <div class="bars">
         <div class="bar bH"><div class="amt">37,2 K€</div><div class="col" style="height:76%"></div></div>
-        <div class="bar"><div class="amt">19,0 K€</div><div class="col" style="height:39%"></div></div>
+        <div class="bar"><div class="amt">27,0 K€</div><div class="col" style="height:55%"></div></div>
         <div class="bar b26"><div class="amt">46,0 K€</div><div class="col" style="height:94%"></div></div>
       </div>
       <div class="bar-lbls">
         <div><b>Hiver 24-25</b>3 opérations</div>
-        <div><b>2025</b>5 opérations</div>
+        <div><b>2025</b>6 opérations</div>
         <div><b>2026</b>5 opérations</div>
       </div>
     </div>
     <div class="big-quote">
-      <div class="x">x 2,4</div>
-      <p><b>L'investissement 2026 dépasse déjà 2,4 fois celui de 2025</b>, alors que l'année n'est pas terminée. Les campagnes sont passées de 2 500 € mono-levier à des dispositifs de 7 000 à 15 000 € combinant jusqu'à 4 leviers.</p>
+      <div class="x">+ 70 %</div>
+      <p><b>L'investissement 2026 dépasse déjà de 70 % celui de 2025</b>, alors qu'il reste le Black Friday et Noël à venir. Les campagnes sont passées de 2 500 € mono-levier à des dispositifs de 7 000 à 15 000 € combinant jusqu'à 4 leviers.</p>
       <div class="sub">2026 : 8,8 M impressions · 45 500 clics · 3 209 visites magasin</div>
     </div>
   </div>
@@ -353,11 +399,12 @@ a.ct:hover{background:rgba(255,255,255,.12)}
         <tr><td>Collection hiver 24-25</td><td>09/11/24 → 12/01/25</td><td><span class="tag t-vid">TV Replay</span></td><td class="n">20 000 €</td><td class="n">1 265 823</td><td class="n">·</td></tr>
         <tr><td>Noël 2024</td><td>07 → 22/12/24</td><td><span class="tag t-dts">DTS</span><span class="tag t-aud">Spotify</span><span class="tag t-soc">Story Ads</span></td><td class="n">9 650 €</td><td class="n">3 165 392</td><td class="n">1 043</td></tr>
         <tr><td>Hiver 24-25 YouTube</td><td>03/12/24 → 12/01/25</td><td><span class="tag t-vid">YouTube</span></td><td class="n">7 500 €</td><td class="n">545 997</td><td class="n">·</td></tr>
-        <tr class="yr"><td colspan="6">2025 · 19 000 €</td></tr>
+        <tr class="yr"><td colspan="6">2025 · 27 000 €</td></tr>
         <tr><td>Printemps</td><td>03 → 31/05/25</td><td><span class="tag t-dts">DTS</span></td><td class="n">5 000 €*</td><td class="n">758 319</td><td class="n">376</td></tr>
         <tr><td>Collection été</td><td>06 → 26/06/25</td><td><span class="tag t-soc">Story Ads</span></td><td class="n">3 500 €</td><td class="n">2 178 189</td><td class="n">·</td></tr>
         <tr><td>Braderie été</td><td>25/07 → 10/08/25</td><td><span class="tag t-dts">DTS</span></td><td class="n">2 500 €</td><td class="n">714 409</td><td class="n">1 149</td></tr>
         <tr><td>Rentrée</td><td>23/08 → 15/09/25</td><td><span class="tag t-dts">DTS</span></td><td class="n">2 500 €</td><td class="n">714 375</td><td class="n">1 730</td></tr>
+        <tr><td>Black Friday (2 phases)</td><td>07/11 → 01/12/25</td><td><span class="tag t-soc">Story Ads</span><span class="tag t-dts">DTS</span><span class="tag t-aud">Spotify</span></td><td class="n">8 000 €</td><td class="n">2 399 059</td><td class="n">567</td></tr>
         <tr><td>Noël</td><td>04 → 21/12/25</td><td><span class="tag t-dts">DTS</span><span class="tag t-soc">Story Ads</span></td><td class="n">5 500 €</td><td class="n">≈ 1 700 000</td><td class="n">726</td></tr>
         <tr class="yr"><td colspan="6">2026 · 46 045 €</td></tr>
         <tr><td>Soldes d'hiver</td><td>Janvier 2026</td><td><span class="tag t-dts">DTS</span></td><td class="n">2 000 €</td><td class="n">358 236</td><td class="n">467</td></tr>
@@ -365,7 +412,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
         <tr><td>Soldes d'été</td><td>24/06 → 21/07/26</td><td><span class="tag t-dts">DTS</span><span class="tag t-soc">Story Ads</span><span class="tag t-aud">Spotify</span></td><td class="n">15 000 €</td><td class="n">3 201 440</td><td class="n">1 558</td></tr>
         <tr><td>Never Gonna Stop · Asics x Hylton</td><td>01/08 → 06/09/26</td><td><span class="tag t-vid">cTV + Replay</span><span class="tag t-vid">Retargeting vidéo</span></td><td class="n">15 045 €</td><td class="n">1 129 572</td><td class="n">·</td></tr>
         <tr><td>Rentrée 2026</td><td>21/08 → 06/09/26</td><td><span class="tag t-dts">DTS</span><span class="tag t-aud">Spotify · Deezer</span><span class="tag t-soc">Story Ads</span><span class="tag t-vid">YouTube</span></td><td class="n">7 000 €</td><td class="n">2 316 387</td><td class="n">607</td></tr>
-        <tr class="tot"><td colspan="3">Total du dispositif · 13 campagnes</td><td class="n">102 195 €</td><td class="n">≈ 19,8 M</td><td class="n">8 233</td></tr>
+        <tr class="tot"><td colspan="3">Total du dispositif · 14 campagnes</td><td class="n">110 195 €</td><td class="n">≈ 22,2 M</td><td class="n">8 800</td></tr>
       </tbody>
     </table>
   </div>
@@ -386,7 +433,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
       <div class="m on">Replay</div><div class="m on">Noël</div>
 
       <div class="yl">2025</div>
-      <div class="m half">Replay</div><div class="m off">silence</div><div class="m off">silence</div><div class="m off">silence</div><div class="m on">Printemps</div><div class="m on">Été</div><div class="m halfr">Braderie</div><div class="m on">Rentrée</div><div class="m half">Rentrée</div><div class="m off">silence</div><div class="m off">silence</div><div class="m on">Noël</div>
+      <div class="m half">Replay</div><div class="m off">silence</div><div class="m off">silence</div><div class="m off">silence</div><div class="m on">Printemps</div><div class="m on">Été</div><div class="m halfr">Braderie</div><div class="m on">Rentrée</div><div class="m half">Rentrée</div><div class="m off">silence</div><div class="m on">Black Friday</div><div class="m on">Noël</div>
 
       <div class="yl">2026</div>
       <div class="m on">Soldes</div><div class="m off">silence</div><div class="m off">silence</div><div class="m off">silence</div><div class="m halfr">Collection</div><div class="m on">Soldes</div><div class="m on">Soldes</div><div class="m on">Asics</div><div class="m half">Rentrée</div><div class="m next">à venir</div><div class="m next">à venir</div><div class="m next">à venir</div>
@@ -399,9 +446,9 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     </div>
   </div>
   <div class="cal-kpis">
-    <div class="ck alert"><b>≈ 4 mois</b><span>d'antenne cumulés sur 12 en 2025 : le reste de l'année, Hylton était absent</span></div>
+    <div class="ck alert"><b>≈ 5 mois</b><span>d'antenne cumulés sur 12 en 2025 : le reste de l'année, Hylton était absent</span></div>
     <div class="ck alert"><b>3 à 4 mois</b><span>de silence consécutifs chaque printemps (février → avril), deux années de suite</span></div>
-    <div class="ck alert"><b>0</b><span>prise de parole sur le Black Friday, ni en 2024 ni en 2025</span></div>
+    <div class="ck alert"><b>0</b><span>prise de parole en octobre, ni en 2025 ni en 2026 à ce jour : la rentrée retombe aussitôt</span></div>
     <div class="ck"><b>15 semaines</b><span>de présence continue à l'été 2026 : la meilleure séquence de l'historique</span></div>
   </div>
 </section>
@@ -414,9 +461,9 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <div class="lv">
       <div class="g" style="background:var(--terra-10);color:var(--terra)">⌂</div>
       <h3>Display Drive-to-Store</h3>
-      <div class="meta">9 campagnes · 35 600 €</div>
-      <div class="kpi"><span>Visites magasin</span><b>8 233</b></div>
-      <div class="kpi"><span>Coût par visite moyen</span><b>4,32 €</b></div>
+      <div class="meta">10 campagnes · 38 600 €</div>
+      <div class="kpi"><span>Visites magasin</span><b>8 800</b></div>
+      <div class="kpi"><span>Coût par visite moyen</span><b>4,39 €</b></div>
       <div class="kpi"><span>CTR</span><b>0,82 → 1,01 %<em>IAS 0,19 %</em></b></div>
       <div class="kpi"><span>Visibilité</span><b>82 → 90 %<em>IAS 70 %</em></b></div>
       <div class="role">Le pilier : il transforme l'exposition en trafic mesuré dans chaque magasin.</div>
@@ -424,9 +471,9 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <div class="lv">
       <div class="g" style="background:var(--ice-20);color:#1a5ea8">●</div>
       <h3>Social Story Ads</h3>
-      <div class="meta">6 campagnes · 12 750 € · Meta & TikTok</div>
-      <div class="kpi"><span>Impressions</span><b>≈ 7,5 M</b></div>
-      <div class="kpi"><span>CPM moyen observé</span><b>≈ 1,70 €</b></div>
+      <div class="meta">7 campagnes · 16 750 € · Meta & TikTok</div>
+      <div class="kpi"><span>Impressions</span><b>≈ 9,3 M</b></div>
+      <div class="kpi"><span>CPM moyen observé</span><b>≈ 1,80 €</b></div>
       <div class="kpi"><span>CPM le plus bas</span><b>0,62 €<em>TikTok</em></b></div>
       <div class="kpi"><span>Volume livré vs garanti</span><b>jusqu'à x 2,9</b></div>
       <div class="role">Le multiplicateur de reach : énormément de visibilité pour un coût minime.</div>
@@ -434,10 +481,10 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <div class="lv">
       <div class="g" style="background:#ece8fb;color:#4b3a9c">◐</div>
       <h3>Audio Spotify & Deezer</h3>
-      <div class="meta">4 campagnes · 10 500 €</div>
-      <div class="kpi"><span>Impressions audio</span><b>≈ 1,4 M</b></div>
+      <div class="meta">5 campagnes · 11 500 €</div>
+      <div class="kpi"><span>Impressions audio</span><b>≈ 1,5 M</b></div>
       <div class="kpi"><span>Écoute intégrale</span><b>84,6 → 89,2 %<em>bench 70 %</em></b></div>
-      <div class="kpi"><span>Coût par écoute complète</span><b>dès 0,04 €</b></div>
+      <div class="kpi"><span>Coût par écoute complète</span><b>dès 0,01 €</b></div>
       <div class="kpi"><span>CTR</span><b>≈ 0,9 %</b></div>
       <div class="role">Le levier de mémorisation : un message écouté jusqu'au bout, près des magasins.</div>
     </div>
@@ -453,17 +500,100 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     </div>
   </div>
   <div class="split">
-    <div style="width:34.8%;background:var(--terra)"></div>
-    <div style="width:12.5%;background:var(--ice)"></div>
-    <div style="width:10.3%;background:#8e7be0"></div>
-    <div style="width:42.4%;background:var(--navy)"></div>
+    <div style="width:35%;background:var(--terra)"></div>
+    <div style="width:15.2%;background:var(--ice)"></div>
+    <div style="width:10.4%;background:#8e7be0"></div>
+    <div style="width:39.4%;background:var(--navy)"></div>
   </div>
   <div class="split-lg">
-    <span><i style="background:var(--terra)"></i>Drive-to-Store 34,8 %</span>
-    <span><i style="background:var(--ice)"></i>Social Story 12,5 %</span>
-    <span><i style="background:#8e7be0"></i>Audio 10,3 %</span>
-    <span><i style="background:var(--navy)"></i>Vidéo premium 42,4 %</span>
+    <span><i style="background:var(--terra)"></i>Drive-to-Store 35,0 %</span>
+    <span><i style="background:var(--ice)"></i>Social Story 15,2 %</span>
+    <span><i style="background:#8e7be0"></i>Audio 10,4 %</span>
+    <span><i style="background:var(--navy)"></i>Vidéo premium 39,4 %</span>
   </div>
+</section>
+
+<section id="brandlift">
+  <div class="eyebrow">Étude Brand Lift</div>
+  <h2>La preuve que la marque Hylton progresse dans les esprits</h2>
+  <p class="intro">Étude Brand Lift menée en septembre 2026 sur la campagne cTV « Never Gonna Stop · Asics x Hylton » : 250 personnes qui se souviennent de la publicité comparées à 250 personnes qui ne s'en souviennent pas, au profil identique. Résultats comparés à plus de 25 000 campagnes de référence.</p>
+  <div class="bl">
+    <div class="score">
+      <h3>Impact score</h3>
+      <div class="ring"><div>60</div></div>
+      <p>50 = moyenne du marché<br>Hylton se situe nettement au-dessus</p>
+    </div>
+    <div>
+      <div class="upl">
+        <div class="up"><div class="k">Considération</div><div class="v">+31 pts</div><div class="q">« Pourriez-vous envisager d'acheter chez Hylton ? »</div>
+          <div class="cmp"><div class="r"><span>Exposés</span><div class="t"><i style="width:64%;background:var(--terra)"></i></div><b>64 %</b></div><div class="r"><span>Non exposés</span><div class="t"><i style="width:33%;background:var(--ice)"></i></div><b>33 %</b></div></div>
+          <span class="b">Top 10 % du benchmark</span></div>
+        <div class="up"><div class="k">Image de marque</div><div class="v">+27 pts</div><div class="q">« Quelle image vous donne-t-elle de Hylton ? »</div><span class="b">Top 10 % · +4 pts vs benchmark</span></div>
+        <div class="up"><div class="k">Préférence</div><div class="v">+15 pts</div><div class="q">« Parmi ces marques, lesquelles préférez-vous ? »</div><span class="b">Top 10 % · +3 pts vs benchmark</span></div>
+        <div class="up"><div class="k">Intérêt & mémorisation</div><div class="v">48 %</div><div class="q">d'intérêt personnel pour le produit présenté, 22 % de mémorisation de la publicité</div><span class="b">Top 20 % · au-dessus de la moyenne</span></div>
+      </div>
+      <div class="bl-take"><b>Ce qu'il faut retenir :</b> quand Hylton prend la parole en vidéo premium, la part de personnes prêtes à acheter chez Hylton double (33 % → 64 %). C'est exactement ce qu'une présence continue permet d'entretenir, au lieu de le laisser retomber entre deux temps forts.</div>
+    </div>
+  </div>
+</section>
+
+<section id="concurrence">
+  <div class="eyebrow">Ce que fait la concurrence</div>
+  <h2>Les concurrents de Hylton, eux, ne s'arrêtent jamais</h2>
+  <p class="intro">Grandes enseignes de la sneaker, géant de l'e-commerce ou concept store régional : chacun a structuré sa communication pour rester présent toute l'année, au niveau national comme dans les villes où Hylton est implanté.</p>
+  <div class="comp">
+    <div class="cp">
+      <div class="hd"><h3>Zalando</h3><span class="ty">E-commerce · Europe</span></div>
+      <ul>
+        <li>Partenaire de la Star Academy 2025-26 sur TF1 : plus de 520 diffusions de billboards, ≈ 189 M de contacts sur les 25-49 ans</li>
+        <li>Dispositif complet : TV, TF1+, cTV, réseaux sociaux et influence, avec les looks achetables en direct</li>
+        <li>Plateforme saisonnière « Euro Summer » lancée dès le 9 mars 2026 avec Lily Collins : films, DOOH, social</li>
+      </ul>
+      <div class="so">la marque est installée sur toute la saison, pas seulement sur les soldes.</div>
+    </div>
+    <div class="cp">
+      <div class="hd"><h3>JD Sports</h3><span class="ty">Sneakers · International</span></div>
+      <ul>
+        <li>La France est son premier marché européen ; rachat de Courir finalisé fin 2024 (520 M€)</li>
+        <li>Noël : affichage et DOOH dans 5 grandes villes dont Marseille et Nice, plus digital (Netflix, Spotify, Brut, RMC Sport)</li>
+        <li>Coupe du monde 2026 : plateforme « Summer. Who's In? », événementiel et influence</li>
+      </ul>
+      <div class="so">JD Sports vient chercher l'audience jusque dans les zones de chalandise Hylton.</div>
+    </div>
+    <div class="cp">
+      <div class="hd"><h3>Courir</h3><span class="ty">Sneakers · France</span></div>
+      <ul>
+        <li>Plus de 300 magasins en Europe, avec une clientèle plus féminine et plus âgée que JD Sports, donc très proche de celle de Hylton</li>
+        <li>Stratégie communautaire permanente : Club Courir (fidélité), média propre Sneaker Spirit (270 000 abonnés Instagram)</li>
+        <li>Paid social Instagram & TikTok, influence, événements et collaborations (Adidas)</li>
+      </ul>
+      <div class="so">le concurrent le plus proche en cible entretient la relation entre les temps forts.</div>
+    </div>
+    <div class="cp">
+      <div class="hd"><h3>Foot Locker</h3><span class="ty">Sneakers · International</span></div>
+      <ul>
+        <li>Racheté par Dick's Sporting Goods (2,4 Md$, finalisé en septembre 2025) : enseigne en pleine transition</li>
+        <li>Communication très portée par les grandes marques (Nike, Adidas) et les flagships, comme celui des Champs-Élysées</li>
+        <li>Positionnement sneakers et streetwear, plus jeune et masculin</li>
+      </ul>
+      <div class="so">une période de réorganisation, donc une fenêtre pour gagner de la part de voix.</div>
+    </div>
+    <div class="cp">
+      <div class="hd"><h3>Lulli</h3><span class="ty loc">Concept store · Sud-Est</span></div>
+      <ul>
+        <li>13 boutiques sur les mêmes villes que Hylton : Marseille, Aix, Toulon, Nice, Sanary, Cassis, Saint-Tropez, Lyon</li>
+        <li>Rebranding en 2025 et boutique-café à Aix-en-Provence : une marque qui investit dans l'expérience</li>
+        <li>Instagram, TikTok et Pinterest au cœur de la stratégie, application mobile, montée en gamme sur la chaussure</li>
+      </ul>
+      <div class="so">le concurrent direct, sur la même cible féminine CSP+ et le même territoire.</div>
+    </div>
+  </div>
+  <div class="syn">
+    <div class="sy"><b>Constat 1</b><h4>Une présence continue</h4><p>Les leaders ne pensent plus en « coups » : ils déroulent des plateformes saisonnières sur plusieurs mois.</p></div>
+    <div class="sy"><b>Constat 2</b><h4>La marque et le trafic</h4><p>Vidéo et TV pour l'image, social et local pour le trafic : exactement le mix déjà validé par Hylton.</p></div>
+    <div class="sy"><b>Constat 3</b><h4>L'avantage Hylton</h4><p>Un ciblage magasin par magasin et des visites mesurées : un niveau de précision locale que les acteurs nationaux n'ont pas.</p></div>
+  </div>
+  <p class="src">Sources : <a href="https://lareclame.fr/bilan-zalando-star-academy-tf1pub-335169" target="_blank" rel="noopener">La Réclame</a> · <a href="https://fashionunited.fr/presse/mode/zalando-celebre-l-euro-summer-avec-sa-nouvelle-ambassadrice-mondiale-lily-collins/2026030940964" target="_blank" rel="noopener">FashionUnited</a> · <a href="https://fr.themedialeader.com/?p=74680" target="_blank" rel="noopener">The Media Leader</a> · <a href="https://fr.themedialeader.com/?p=215798" target="_blank" rel="noopener">The Media Leader</a> · <a href="https://fashionunited.fr/actualite/business/jd-sports-rachete-le-francais-courir-pour-se-developper-en-europe/2024112736528" target="_blank" rel="noopener">FashionUnited</a> · <a href="https://www.republik-event.fr/strategies/marques-entreprises/evenement-courir-fait-vibrer-sa-communaute-avec-the-sneaker-odyssey.html" target="_blank" rel="noopener">Republik Event</a> · <a href="https://www.worldfootwear.com/news/dicks-sporting-goods-closes-foot-locker-acquisition/10892.html" target="_blank" rel="noopener">World Footwear</a> · <a href="https://fashionunited.fr/actualite/retail/lulli-rebranding-et-nouvelle-boutique-a-aix-en-provence/2025032037568" target="_blank" rel="noopener">FashionUnited</a></p>
 </section>
 
 <section id="enseignements">
@@ -474,7 +604,8 @@ a.ct:hover{background:rgba(255,255,255,.12)}
     <div class="ln"><div class="num">1</div><h3>L'audience Hylton répond toute l'année</h3><p>CTR Display stable entre 0,82 % et 1,01 % et visibilité au-dessus de 82 % sur toutes les vagues, en janvier comme en août. La demande n'attend pas les temps forts : elle attend que Hylton soit là.</p></div>
     <div class="ln"><div class="num">2</div><h3>Le multi-leviers démultiplie l'effet</h3><p>Les campagnes combinant DTS, Social et Audio (Soldes d'été 2026 : 3,2 M d'impressions, 17 728 clics, 1 558 visites) délivrent bien plus que la somme de campagnes isolées.</p></div>
     <div class="ln"><div class="num">3</div><h3>Le stop & go coûte cher</h3><p>Après 3 à 4 mois de silence, chaque campagne repart de zéro : il faut reconstruire la mémorisation avant de générer du trafic. Une présence continue capitalise au contraire sur l'effort précédent.</p></div>
-    <div class="ln"><div class="num">4</div><h3>Le terrain est prêt à l'échelle du réseau</h3><p>Ciblage magasin par magasin rodé sur 14 points de vente, data shopping et mode qualifiée (The Bradery, Seiki…), créas déclinables. Tout est en place pour passer en always-on.</p></div>
+    <div class="ln"><div class="num">4</div><h3>La vidéo premium construit la préférence</h3><p>Brand Lift Asics x Hylton : considération +31 pts, image +27 pts, préférence +15 pts, tous dans le top 10 % du marché. Un temps fort de marque par an fait monter tout le reste.</p></div>
+    <div class="ln"><div class="num">5</div><h3>Le terrain est prêt à l'échelle du réseau</h3><p>Ciblage magasin par magasin rodé sur 14 points de vente, data shopping et mode qualifiée (The Bradery, Seiki…), créas déclinables. Tout est en place pour passer en always-on.</p></div>
   </div>
   <div class="proof">
     <div>
@@ -524,7 +655,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
           <li>Une campagne décidée à chaque temps fort, souvent dans l'urgence</li>
           <li>3 à 5 mois de silence par an</li>
           <li>La mémorisation repart de zéro à chaque reprise</li>
-          <li>Black Friday et printemps laissés aux concurrents</li>
+          <li>Le printemps et l'automne laissés aux concurrents</li>
         </ul>
       </div>
       <div class="c after">
@@ -540,7 +671,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
   </div>
 
   <h3 style="margin-top:44px;font-size:22px">Trois paliers pour 2027</h3>
-  <p class="note" style="font-size:14px">Cliquez sur un scénario pour voir le détail. Estimations basées sur les CPM et le coût par visite moyen observés sur le compte Hylton (DTS 6 €, Story 4 €, Audio 10 €, cTV + Replay 12 €, CPV 4,32 €).</p>
+  <p class="note" style="font-size:14px">Cliquez sur un scénario pour voir le détail. Estimations basées sur les CPM et le coût par visite moyen observés sur le compte Hylton (DTS 6 €, Story 4 €, Audio 10 €, cTV + Replay 12 €, CPV 4,39 €).</p>
   <div class="scen">
     <div class="sc" onclick="this.classList.toggle('open')">
       <div class="glyph">◆</div>
@@ -549,7 +680,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
       <div class="pm">soit 6 000 € / mois en moyenne</div>
       <div class="row"><span>Socle mensuel</span><b>3 000 € / mois</b></div>
       <div class="row"><span>Temps forts</span><b>6 x 6 000 €</b></div>
-      <div class="row"><span>Visites magasin estimées</span><b>≈ 9 700 / an</b></div>
+      <div class="row"><span>Visites magasin estimées</span><b>≈ 9 600 / an</b></div>
       <div class="row"><span>Impressions estimées</span><b>≈ 13 M</b></div>
       <p class="desc">Plus aucun mois de silence. Le minimum pour installer la marque dans la durée.</p>
       <div class="det"><b>Socle :</b> DTS 2 000 € + Social Story 1 000 € chaque mois (≈ 580 000 impressions / mois).<br><b>Temps forts :</b> Soldes d'hiver, Collection & Fête des mères, Soldes d'été, Rentrée, Black Friday, Noël, chacun en DTS 3 000 € + Story 1 500 € + Audio 1 500 €.</div>
@@ -564,10 +695,10 @@ a.ct:hover{background:rgba(255,255,255,.12)}
       <div class="row"><span>Socle mensuel</span><b>4 000 € / mois</b></div>
       <div class="row"><span>Temps forts</span><b>6 x 5 500 €</b></div>
       <div class="row"><span>Temps fort de marque</span><b>1 vague cTV 15 000 €</b></div>
-      <div class="row"><span>Visites magasin estimées</span><b>≈ 10 400 / an</b></div>
+      <div class="row"><span>Visites magasin estimées</span><b>≈ 10 300 / an</b></div>
       <div class="row"><span>Impressions estimées</span><b>≈ 15 M</b></div>
       <p class="desc">La séquence de l'été 2026, étendue à toute l'année, avec un grand moment de marque en TV.</p>
-      <div class="det"><b>Socle :</b> DTS 2 000 € + Social Story 1 000 € + Audio Spotify/Deezer 1 000 € chaque mois (≈ 680 000 impressions et ≈ 460 visites magasin / mois).<br><b>Temps forts :</b> 6 renforts de 5 500 € (DTS 3 500 € + Story 1 000 € + Audio 1 000 €).<br><b>Marque :</b> une vague cTV + Replay type « Never Gonna Stop » (≈ 1,2 M d'impressions sur écran TV).</div>
+      <div class="det"><b>Socle :</b> DTS 2 000 € + Social Story 1 000 € + Audio Spotify/Deezer 1 000 € chaque mois (≈ 680 000 impressions et ≈ 460 visites magasin / mois).<br><b>Temps forts :</b> 6 renforts de 5 500 € (DTS 3 500 € + Story 1 000 € + Audio 1 000 €).<br><b>Marque :</b> une vague cTV + Replay type « Never Gonna Stop » (≈ 1,2 M d'impressions sur écran TV), qui a démontré +31 pts de considération au Brand Lift.</div>
       <div class="more">Voir le détail</div>
     </div>
     <div class="sc" onclick="this.classList.toggle('open')">
@@ -578,7 +709,7 @@ a.ct:hover{background:rgba(255,255,255,.12)}
       <div class="row"><span>Socle mensuel</span><b>5 000 € / mois</b></div>
       <div class="row"><span>Temps forts</span><b>6 x 7 500 €</b></div>
       <div class="row"><span>Temps forts de marque</span><b>2 vagues cTV 25 000 €</b></div>
-      <div class="row"><span>Visites magasin estimées</span><b>≈ 13 200 / an</b></div>
+      <div class="row"><span>Visites magasin estimées</span><b>≈ 13 000 / an</b></div>
       <div class="row"><span>Impressions estimées</span><b>≈ 20 M</b></div>
       <p class="desc">Hylton occupe le terrain face aux enseignes nationales, avec deux temps de marque TV par an.</p>
       <div class="det"><b>Socle :</b> DTS 2 500 € + Social Story 1 500 € + Audio 1 000 € chaque mois.<br><b>Temps forts :</b> 6 renforts de 7 500 € (DTS 4 500 € + Story 1 500 € + Audio 1 500 €).<br><b>Marque :</b> deux vagues cTV + Replay (printemps et automne), possiblement co-financées avec une marque partenaire comme Asics.</div>

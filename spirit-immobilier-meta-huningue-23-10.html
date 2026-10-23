@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilan Spirit Immobilier · Huningue</title>
+<meta name="description" content="Bilan à date de la campagne Social Ads Meta Spirit Immobilier Huningue, au 23 octobre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#021859;--navy-2:#0a2470;--navy-3:#13307f;
+  --ice:#7bbdff;--ice-50:#f1f7ff;--ice-100:#e2efff;--ice-200:#c6e0ff;
+  --terra:#f25430;--terra-50:#fff2ee;--terra-100:#ffe0d7;
+  --white:#ffffff;--bg:#f5f8fd;--ink:#0d1a3f;--muted:#5a6788;--line:#e2e8f4;
+  --radius:18px;--shadow:0 10px 30px rgba(2,24,89,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Poppins,sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ HERO ============ */
+.hero{position:relative;background:var(--navy);color:var(--white);overflow:hidden;padding:34px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 420px at 82% 38%,rgba(123,189,255,.28),transparent 70%),
+  radial-gradient(420px 320px at 64% 88%,rgba(242,84,48,.22),transparent 70%),
+  radial-gradient(500px 400px at 5% 0%,rgba(123,189,255,.10),transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent 30%,#000 75%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 75%);pointer-events:none}
+.hero-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.logo{width:118px;height:auto}
+.hero-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ice);border:1px solid rgba(123,189,255,.35);padding:7px 14px;border-radius:999px;white-space:nowrap}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.08fr;gap:30px;align-items:center;padding:30px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--terra)}
+.hero h1{color:var(--white);font-size:clamp(34px,4.6vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.hero .sub{font-family:Poppins,sans-serif;font-size:clamp(18px,2vw,23px);font-weight:500;color:var(--ice-200);margin-bottom:22px}
+.hero .sub b{color:var(--white);font-weight:700}
+.hero p.lead{color:rgba(255,255,255,.78);max-width:520px;margin-bottom:26px;font-size:15.5px}
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:440px}
+.pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px}
+.pill small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);font-weight:600}
+.pill strong{font-family:Poppins,sans-serif;font-size:15px;font-weight:600;color:var(--white)}
+.pill.hl{background:var(--terra);border-color:var(--terra)}
+.pill.hl small{color:rgba(255,255,255,.85)}
+
+/* devices */
+.stage{position:relative;height:440px;perspective:1600px}
+.laptop{position:absolute;right:0;top:34px;width:86%;transform:rotateY(-14deg) rotateX(5deg) rotateZ(.5deg);transform-style:preserve-3d;animation:float 7s ease-in-out infinite;filter:drop-shadow(0 40px 50px rgba(0,0,0,.45))}
+.lap-screen{background:#0b0e18;border-radius:16px 16px 4px 4px;padding:14px 14px 18px;position:relative;border:1px solid #2a3150}
+.lap-screen::before{content:"";position:absolute;top:5px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#2c3352}
+.lap-screen .scr{border-radius:4px;overflow:hidden;aspect-ratio:806/568;background:#111;position:relative}
+.lap-screen .scr img{width:100%;height:100%;object-fit:cover}
+.scr .glare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%);pointer-events:none}
+.lap-base{height:16px;margin:0 -7%;background:linear-gradient(#e6e9f0,#aab1c2);border-radius:0 0 18px 18px;position:relative}
+.lap-base::before{content:"";position:absolute;top:0;left:50%;width:16%;margin-left:-8%;height:6px;background:#c3c8d4;border-radius:0 0 8px 8px}
+.ad-ring{position:absolute;right:3.6%;top:15.5%;width:19.5%;height:57%;border:2px solid var(--terra);border-radius:4px;box-shadow:0 0 0 6px rgba(242,84,48,.18);animation:pulse 2.6s ease-in-out infinite}
+.phone{position:absolute;left:0;bottom:0;width:164px;transform:rotateY(10deg) rotateZ(-4deg);animation:float 7s ease-in-out infinite;animation-delay:-3.2s;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5));z-index:3}
+.ph-body{background:#0b0e18;border-radius:30px;padding:9px;border:1px solid #39405e;position:relative}
+.ph-body::before{content:"";position:absolute;top:15px;left:50%;width:52px;height:14px;margin-left:-26px;background:#0b0e18;border-radius:10px;z-index:2}
+.ph-body .scr{border-radius:22px;overflow:hidden;aspect-ratio:226/507;position:relative;background:#fff}
+.ph-body .scr img{width:100%;height:100%;object-fit:cover}
+.chip{position:absolute;z-index:4;background:var(--white);color:var(--navy);font-size:12px;font-weight:600;padding:8px 12px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--terra);display:inline-block;flex:none}
+.chip.c1{right:4%;top:0}
+.chip.c2{left:150px;bottom:26px}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(242,84,48,.15)}50%{box-shadow:0 0 0 10px rgba(242,84,48,.05)}}
+@media (prefers-reduced-motion:reduce){.laptop,.phone,.ad-ring{animation:none}}
+
+/* ============ NAV ============ */
+nav.anchors{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.anchors .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:10px;padding-bottom:10px}
+nav.anchors .wrap::-webkit-scrollbar{display:none}
+nav.anchors a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;transition:.2s}
+nav.anchors a:hover{color:var(--navy);background:var(--ice-50)}
+nav.anchors a.on{background:var(--navy);color:var(--white)}
+
+/* ============ SECTIONS ============ */
+section.block{padding:72px 0 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.kicker .n{font-family:Poppins,sans-serif;background:var(--terra-50);color:var(--terra);border-radius:8px;padding:2px 8px}
+h2{font-size:clamp(26px,3vw,36px);font-weight:700;letter-spacing:-.01em}
+.sec-head p{max-width:520px;color:var(--muted)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.muted{color:var(--muted)}
+b,strong{font-weight:600}
+
+/* KPI band */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.kpi{padding:24px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.kpi:nth-child(4n){border-right:none}
+.kpi:nth-child(n+5){border-bottom:none}
+.kpi small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.kpi .v{font-family:Poppins,sans-serif;font-size:30px;font-weight:700;color:var(--navy);line-height:1.1}
+.kpi .d{font-size:13px;color:var(--muted);margin-top:6px}
+.kpi .d em{font-style:normal;color:var(--terra);font-weight:600}
+.kpi.star{background:linear-gradient(160deg,var(--navy),var(--navy-3))}
+.kpi.star small{color:var(--ice)}
+.kpi.star .v{color:var(--white)}
+.kpi.star .d{color:rgba(255,255,255,.75)}
+.kpi.star .d em{color:#ff9d84}
+.verdict{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{border-radius:var(--radius);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line)}
+.vcard .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:18px;color:var(--white);background:var(--navy);font-family:Poppins,sans-serif;font-weight:700}
+.vcard.t .ic{background:var(--terra)}
+.vcard.i .ic{background:var(--ice);color:var(--navy)}
+.vcard h4{font-size:16px;margin-bottom:2px}
+.vcard p{font-size:14px;color:var(--muted)}
+
+/* Dispositif */
+.ctx{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.ctx .intro{font-size:17px;line-height:1.7}
+.ctx .intro strong{color:var(--navy)}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.spec{background:var(--ice-50);border-radius:14px;padding:14px 16px}
+.spec small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.spec strong{font-family:Poppins,sans-serif;color:var(--navy);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tag{font-size:13px;background:var(--white);border:1px solid var(--ice-200);color:var(--navy);padding:5px 11px;border-radius:999px;font-weight:500}
+.kpi-pri{display:flex;flex-direction:column;gap:12px}
+.kp{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;background:var(--bg)}
+.kp .g{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy);color:var(--ice);display:grid;place-items:center;font-size:14px}
+.kp h4{font-size:15px}
+.kp p{font-size:13.5px;color:var(--muted)}
+
+/* Parcours créa */
+.journey{display:grid;grid-template-columns:.75fr auto 1.6fr;gap:22px;align-items:center;margin-top:18px}
+.crea-frame{background:linear-gradient(160deg,var(--navy),var(--navy-3));border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--white)}
+.crea-frame img{width:160px;border-radius:4px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.crea-frame .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);font-weight:600}
+.fmts{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.fmts span{font-size:12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px}
+.arrow{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--terra);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.arrow svg{width:46px;height:46px}
+.landing{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.landing .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px}
+.land-stage{position:relative;padding-right:90px}
+.mini-lap{background:#0b0e18;border-radius:12px 12px 3px 3px;padding:9px 9px 12px}
+.mini-lap img{border-radius:3px;aspect-ratio:797/558;object-fit:cover;width:100%}
+.mini-lap-base{height:10px;margin:0 -5%;background:linear-gradient(#e6e9f0,#aab1c2);border-radius:0 0 12px 12px}
+.mini-ph{position:absolute;right:0;bottom:-6px;width:112px;background:#0b0e18;border-radius:20px;padding:6px;box-shadow:0 20px 40px rgba(2,24,89,.3)}
+.mini-ph img{border-radius:15px;aspect-ratio:217/481;object-fit:cover;width:100%}
+.landing p{font-size:14px;color:var(--muted);margin-top:16px}
+
+/* Chart */
+.tabs{display:inline-flex;background:var(--ice-50);border-radius:999px;padding:4px;gap:2px;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;font:600 13.5px Inter,sans-serif;color:var(--muted);padding:8px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.tabs button.on{background:var(--navy);color:var(--white)}
+.chart-card{padding:24px 24px 18px}
+.chart-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.chart-legend{display:flex;gap:16px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px}
+.chart-legend i{width:14px;height:3px;border-radius:2px;background:var(--navy);display:inline-block}
+.chart-legend i.b{background:repeating-linear-gradient(90deg,var(--terra) 0 4px,transparent 4px 7px)}
+#chart{width:100%;height:auto;display:block;overflow:visible}
+#chart text{font-family:Inter,sans-serif;font-size:11px;fill:var(--muted)}
+.tip{position:absolute;pointer-events:none;background:var(--navy);color:var(--white);font-size:12.5px;padding:8px 11px;border-radius:10px;box-shadow:0 10px 24px rgba(2,24,89,.3);opacity:0;transition:opacity .15s;white-space:nowrap;z-index:5}
+.tip b{color:var(--ice)}
+.chart-wrap{position:relative}
+.peaks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.peak{background:var(--bg);border-radius:14px;padding:14px 16px}
+.peak small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.peak strong{display:block;font-family:Poppins,sans-serif;font-size:20px;color:var(--navy)}
+.peak span{font-size:12.5px;color:var(--muted)}
+
+/* Benchmark */
+.bench h3{font-size:19px;margin-bottom:4px}
+.bench .big{font-family:Poppins,sans-serif;font-size:46px;font-weight:800;color:var(--navy);line-height:1;margin:16px 0 4px}
+.bench .delta{display:inline-block;background:var(--terra);color:var(--white);font-weight:700;font-size:13px;padding:4px 10px;border-radius:999px}
+.bar-cmp{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.bar-row{display:grid;grid-template-columns:96px 1fr 64px;gap:12px;align-items:center;font-size:13.5px}
+.bar-row .tr{height:14px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.bar-row .fl{height:100%;border-radius:999px;background:var(--navy);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .fl.ias{background:var(--ice-200)}
+.bar-row .val{text-align:right;font-weight:600;color:var(--navy)}
+.bench .note{margin-top:16px;font-size:13.5px;color:var(--muted)}
+
+/* Table */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:15px}
+.tbl th{background:var(--navy);color:var(--white);font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;text-align:right;padding:14px 16px}
+.tbl th:first-child{text-align:left;border-radius:12px 0 0 0}
+.tbl th:last-child{border-radius:0 12px 0 0}
+.tbl td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:right}
+.tbl td:first-child{text-align:left;font-weight:600;color:var(--navy)}
+.tbl tr.best td{background:var(--terra-50)}
+.tbl tr.best td:first-child::after{content:"Top CTR";margin-left:10px;font-size:11px;font-weight:700;color:var(--white);background:var(--terra);padding:2px 8px;border-radius:999px;vertical-align:middle}
+.tbl tr.tot td{background:var(--ice-50);font-weight:700;color:var(--navy);border-bottom:none}
+.tbl-scroll{overflow-x:auto}
+.share{display:flex;height:12px;border-radius:999px;overflow:hidden;margin:18px 0 8px}
+.share div{height:100%}
+.share-leg{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.share-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* Audiences */
+.seg{border-radius:var(--radius);padding:26px;position:relative;overflow:hidden}
+.seg.a{background:linear-gradient(160deg,var(--navy),var(--navy-3));color:var(--white)}
+.seg.a h3{color:var(--white)}
+.seg.b{background:var(--white);border:1px solid var(--line)}
+.seg .glyph{font-size:22px;color:var(--terra);margin-bottom:10px}
+.seg h3{font-size:20px;margin-bottom:6px}
+.seg .desc{font-size:14px;opacity:.85;min-height:66px}
+.seg .stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.seg .stats3 div{border-radius:12px;padding:12px;background:rgba(255,255,255,.08)}
+.seg.b .stats3 div{background:var(--ice-50)}
+.seg .stats3 strong{display:block;font-family:Poppins,sans-serif;font-size:20px}
+.seg.b .stats3 strong{color:var(--navy)}
+.seg .stats3 small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.seg .badge{position:absolute;top:20px;right:20px;background:var(--terra);color:var(--white);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.donut-wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.donut{width:160px;height:160px;flex:none}
+.donut text{font-family:Poppins,sans-serif}
+.leg{display:flex;flex-direction:column;gap:10px;font-size:14.5px}
+.leg div{display:flex;align-items:center;gap:10px}
+.leg i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.leg strong{font-family:Poppins,sans-serif;color:var(--navy)}
+.hbar{display:flex;flex-direction:column;gap:13px;margin-top:6px}
+.hb{display:grid;grid-template-columns:minmax(120px,1.4fr) 2fr 44px;gap:12px;align-items:center;font-size:14px}
+.hb .tr{height:12px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.hb .fl{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--navy),var(--navy-3));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.hb:first-child .fl{background:linear-gradient(90deg,var(--terra),#ff7e5f)}
+.hb .p{font-weight:700;color:var(--navy);text-align:right}
+.agegrid{display:grid;grid-template-columns:70px 1fr 1fr;gap:8px;margin-top:6px;font-size:14px}
+.agegrid .h{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 4px}
+.agegrid .r{font-family:Poppins,sans-serif;font-weight:600;color:var(--navy);display:flex;align-items:center}
+.cell{border-radius:12px;padding:10px 12px;background:var(--ice-50)}
+.cell strong{font-family:Poppins,sans-serif;color:var(--navy);font-size:17px}
+.cell span{display:block;font-size:12px;color:var(--muted)}
+.cell.hot{background:var(--terra);}
+.cell.hot strong,.cell.hot span{color:var(--white)}
+.geo{display:flex;gap:22px;align-items:center}
+.geo .ring{flex:none;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--navy) 0 100%);display:grid;place-items:center;position:relative}
+.geo .ring::after{content:"";position:absolute;inset:12px;background:var(--white);border-radius:50%}
+.geo .ring span{position:relative;z-index:1;font-family:Poppins,sans-serif;font-weight:800;color:var(--navy);font-size:24px}
+
+/* Top sites */
+.sites{display:flex;flex-direction:column;gap:10px}
+.site{display:grid;grid-template-columns:34px minmax(110px,180px) 1fr 70px 90px;gap:14px;align-items:center;padding:10px 14px;border-radius:14px;transition:background .2s}
+.site:hover{background:var(--ice-50)}
+.site .rk{width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--white);display:grid;place-items:center;font-family:Poppins,sans-serif;font-size:13px;font-weight:600}
+.site:nth-child(-n+3) .rk{background:var(--terra)}
+.site .nm{font-weight:600;color:var(--navy)}
+.site .nm small{display:block;font-weight:500;font-size:11.5px;color:var(--muted)}
+.site .tr{height:10px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.site .fl{height:100%;width:0;background:var(--navy);border-radius:999px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.site:nth-child(-n+3) .fl{background:var(--terra)}
+.site .pc{font-weight:700;color:var(--navy);text-align:right}
+.site .im{font-size:13px;color:var(--muted);text-align:right}
+
+/* Temporalité */
+.hours{display:flex;align-items:flex-end;gap:6px;height:300px;padding-top:28px;position:relative}
+.grid>*,.ctx>*,.journey>*{min-width:0}
+.hcol{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;cursor:default;position:relative}
+.hcol .b{width:100%;max-width:34px;border-radius:8px 8px 3px 3px;background:var(--ice-200);height:0;transition:height 1s cubic-bezier(.2,.8,.2,1),background .2s}
+.hcol:hover .b{background:var(--ice)}
+.hcol.top .b{background:var(--terra)}
+.hcol .lb{font-size:11.5px;color:var(--muted);margin-top:8px}
+.hcol .vv{margin-bottom:4px;font-size:10.5px;font-weight:700;color:var(--navy);opacity:0;transition:.2s;white-space:nowrap}
+.hcol:hover .vv,.hcol.top .vv{opacity:1}
+.hcol.top .vv{color:var(--terra)}
+.days{display:flex;flex-direction:column;gap:8px}
+.day{display:grid;grid-template-columns:96px 1fr 70px 70px;gap:12px;align-items:center;padding:11px 14px;border-radius:12px;background:var(--bg);font-size:14px}
+.day .dn{font-weight:600;color:var(--navy);text-transform:capitalize}
+.day .dn small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;text-transform:none}
+.day .tr{height:8px;border-radius:999px;background:var(--white);overflow:hidden}
+.day .fl{height:100%;background:var(--navy);border-radius:999px;width:0;transition:width 1.2s}
+.day .c{text-align:right;font-weight:700;color:var(--navy)}
+.day .v{text-align:right;color:var(--muted)}
+.day.best{background:var(--terra-50);outline:1.5px solid var(--terra)}
+.day.best .fl{background:var(--terra)}
+.days-head{display:grid;grid-template-columns:96px 1fr 70px 70px;gap:12px;padding:0 14px 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.days-head span:nth-child(n+3){text-align:right}
+
+/* Conclusion */
+.concl{background:var(--navy);border-radius:26px;padding:44px;color:var(--white);position:relative;overflow:hidden}
+.concl::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(rgba(123,189,255,.25),transparent 70%)}
+.concl h2{color:var(--white)}
+.concl .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;position:relative}
+.ccol{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px}
+.ccol .g{color:var(--terra);font-size:20px;margin-bottom:10px}
+.ccol h4{color:var(--white);font-size:17px;margin-bottom:8px}
+.ccol p{font-size:14px;color:rgba(255,255,255,.78)}
+.ccol p b{color:var(--white)}
+.recos{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+.reco{background:var(--white);color:var(--ink);border-radius:18px;padding:22px;position:relative}
+.reco .n{font-family:Poppins,sans-serif;font-weight:800;font-size:13px;color:var(--white);background:var(--terra);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.reco h4{font-size:16px;margin-bottom:6px}
+.reco p{font-size:14px;color:var(--muted)}
+.recos-title{margin-top:34px;font-family:Poppins,sans-serif;font-weight:600;color:var(--ice);font-size:14px;letter-spacing:.1em;text-transform:uppercase;position:relative}
+
+/* Footer */
+footer{background:var(--navy);color:var(--white);margin-top:80px;padding:56px 0 34px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:30px}
+.foot-top h3{color:var(--white);font-size:24px;margin-bottom:6px}
+.foot-top p{color:rgba(255,255,255,.7);max-width:480px}
+.foot-logo{width:88px}
+.contacts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ct{display:block;text-decoration:none;color:var(--white);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;transition:.2s}
+a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.ct .av{width:40px;height:40px;border-radius:12px;background:var(--ice);color:var(--navy);display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;font-size:14px;margin-bottom:12px}
+.ct.me .av{background:var(--terra);color:var(--white)}
+.ct strong{display:block;font-family:Poppins,sans-serif;font-size:15px}
+.ct small{display:block;color:var(--ice);font-size:12.5px;margin-bottom:8px}
+.ct span{display:block;font-size:12.5px;color:rgba(255,255,255,.75);word-break:break-all}
+.ct.off{opacity:.6;cursor:default}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;font-size:12.5px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:40px}
+  .stage{height:400px;max-width:620px;width:100%;margin:0 auto}
+  .ctx,.journey{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .contacts{grid-template-columns:repeat(3,1fr)}
+  .concl .cols,.recos{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .kpi:nth-child(4n){border-right:1px solid var(--line)}
+  .kpi:nth-child(2n){border-right:none}
+  .kpi:nth-child(n+5){border-bottom:1px solid var(--line)}
+  .kpi:nth-child(n+7){border-bottom:none}
+  .verdict,.g2,.g3,.peaks{grid-template-columns:1fr}
+  .peaks{grid-template-columns:1fr 1fr}
+  .site{grid-template-columns:30px 1fr 60px;row-gap:6px}
+  .site .tr{grid-column:2/4;grid-row:2}
+  .site .im{display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hero{padding-top:22px}
+  .logo{width:92px}
+  .hero-tag{font-size:10.5px;padding:6px 10px}
+  .stage{height:300px}
+  .phone{width:116px}
+  .chip{font-size:10.5px;padding:6px 9px}
+  .chip.c2{left:96px;bottom:10px}
+  .chip.c1{right:0}
+  .ad-ring{display:none}
+  section.block{padding-top:56px}
+  .card{padding:20px}
+  .kpi{padding:18px 16px}
+  .kpi .v{font-size:24px}
+  .specs{grid-template-columns:1fr}
+  .contacts{grid-template-columns:1fr 1fr}
+  .concl{padding:28px 20px}
+  .land-stage{padding-right:60px}
+  .mini-ph{width:84px}
+  .bench .big{font-size:38px}
+  .day,.days-head{grid-template-columns:82px 1fr 56px 60px;gap:8px;padding-left:10px;padding-right:10px}
+  .hours{gap:3px}
+  .hcol .lb{font-size:9px}
+  .hcol .vv{display:none}
+  .hcol.top .vv{display:block;font-size:9.5px}
+  .tbl{font-size:13.5px}
+  .tbl th,.tbl td{padding:12px 10px}
+  .tbl tr.best td:first-child::after{display:none}
+}
+
+/* ============ HERO SANS VISUEL : PARCOURS DE CONVERSION ============ */
+.stage{height:auto;min-height:420px;display:flex;align-items:center;justify-content:center}
+.funnel-card{position:relative;width:100%;max-width:470px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);border-radius:24px;padding:28px 26px 24px;transform:rotateY(-8deg) rotateX(4deg);animation:float 7s ease-in-out infinite;box-shadow:0 40px 60px rgba(0,0,0,.35)}
+.funnel-card .fc-h{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--ice);margin-bottom:18px}
+.tier{position:relative;margin:0 auto 10px;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;background:rgba(123,189,255,.14);border:1px solid rgba(123,189,255,.28)}
+.tier small{font-size:12.5px;color:rgba(255,255,255,.78)}
+.tier strong{font-family:Poppins,sans-serif;font-size:20px;color:var(--white);white-space:nowrap}
+.tier.t1{width:100%}
+.tier.t2{width:88%}
+.tier.t3{width:74%}
+.tier.t4{width:60%;background:var(--terra);border-color:var(--terra);box-shadow:0 0 0 6px rgba(242,84,48,.18);animation:pulse 2.6s ease-in-out infinite}
+.tier.t4 small{color:rgba(255,255,255,.9)}
+.funnel-card .fc-f{margin-top:16px;font-size:12.5px;color:rgba(255,255,255,.6);text-align:center}
+.chip.c1{right:-6px;top:6px}
+.chip.c2{left:-6px;bottom:6px}
+
+/* ============ PROGRESSION ============ */
+.prog{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.meter-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.meter-h span{font-weight:600;color:var(--navy)}
+.meter-h strong{font-family:Poppins,sans-serif;font-size:26px;color:var(--navy)}
+.meter{position:relative;height:18px;border-radius:999px;background:var(--ice-100);margin-bottom:8px}
+.meter .fl{position:absolute;inset:0 auto 0 0;width:0;border-radius:999px;background:linear-gradient(90deg,var(--navy),var(--navy-3));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.meter.time .fl{background:linear-gradient(90deg,var(--ice),var(--ice-200))}
+.meter .mark{position:absolute;top:-7px;bottom:-7px;width:3px;border-radius:3px;background:var(--terra)}
+.meter-leg{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+.meter-block+.meter-block{margin-top:28px}
+.key{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.key i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.status{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;margin-bottom:14px;background:var(--terra-50);color:#b83a1c}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.side h3{font-size:18px;margin-bottom:8px}
+.side p{font-size:14.5px;color:var(--muted)}
+.side p+p{margin-top:10px}
+.side .big{font-family:Poppins,sans-serif;font-weight:700;font-size:40px;color:var(--terra);line-height:1;margin:16px 0 4px}
+.side .big small{font-size:15px;color:var(--muted);font-weight:500}
+
+/* ============ VOLETS ============ */
+.volets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.volet{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;display:flex;flex-direction:column;gap:16px;position:relative}
+.volet.on{background:linear-gradient(160deg,var(--navy),var(--navy-3));border-color:var(--navy);color:var(--white)}
+.volet.on h3{color:var(--white)}
+.volet .st{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--ice-50);color:var(--muted)}
+.volet.on .st{background:var(--terra);color:var(--white)}
+.volet .vh{display:flex;gap:12px;align-items:flex-start}
+.volet .gl{flex:none;width:40px;height:40px;border-radius:12px;background:var(--navy);color:var(--ice);display:grid;place-items:center;font-size:16px}
+.volet.on .gl{background:var(--terra);color:var(--white)}
+.volet h3{font-size:18px}
+.volet .vh p{font-size:13.5px;color:var(--muted);margin-top:2px}
+.volet.on .vh p{color:rgba(255,255,255,.75)}
+.volet .hero-v{font-family:Poppins,sans-serif;font-weight:800;font-size:38px;line-height:1;color:var(--navy)}
+.volet.on .hero-v{color:var(--white)}
+.volet .hero-v small{display:block;font-family:Inter,sans-serif;font-size:13px;font-weight:500;color:var(--muted);margin-top:6px}
+.volet.on .hero-v small{color:var(--ice-200)}
+.vk{width:100%;border-collapse:collapse;font-size:14.5px}
+.vk th{text-align:left;font-weight:500;color:var(--muted);padding:9px 0;border-top:1px solid var(--line)}
+.vk td{text-align:right;font-family:Poppins,sans-serif;font-weight:600;color:var(--navy);padding:9px 0;border-top:1px solid var(--line)}
+.volet.on .vk th{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.14)}
+.volet.on .vk td{color:var(--white);border-color:rgba(255,255,255,.14)}
+.tbl tr.best td:first-child::after{content:"Top CTR"}
+.tbl tr.lead td{background:var(--ice-50)}
+.tbl tr.lead td:first-child::after{content:"Leads";margin-left:10px;font-size:11px;font-weight:700;color:var(--white);background:var(--navy);padding:2px 8px;border-radius:999px;vertical-align:middle}
+
+/* ============ LEADS ============ */
+.lead-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.steps{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.step{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center}
+.step .lb{font-size:14px;font-weight:600;color:var(--navy)}
+.step .vl{font-family:Poppins,sans-serif;font-weight:700;color:var(--navy);font-size:18px;text-align:right}
+.step .tr{grid-column:1/-1;height:14px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.step .fl{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--navy),var(--navy-3));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.step.last .fl{background:linear-gradient(90deg,var(--terra),#ff7e5f)}
+.step.last .vl{color:var(--terra)}
+.rate{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);padding-left:6px}
+.rate b{color:var(--terra);font-family:Poppins,sans-serif}
+.rate::before{content:"";width:2px;height:16px;background:var(--ice-200);border-radius:2px}
+.deltas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.dl{background:var(--bg);border-radius:14px;padding:14px 16px}
+.dl small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.dl strong{display:block;font-family:Poppins,sans-serif;font-size:22px;color:var(--navy)}
+.dl strong em{font-style:normal;color:var(--terra)}
+.dl span{font-size:12.5px;color:var(--muted)}
+
+/* ============ CIBLAGE ============ */
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--ice-50);color:var(--navy);font-weight:500;border:1px solid var(--ice-200)}
+.chips li.geo{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.chips li.geo:first-child{background:var(--terra);border-color:var(--terra)}
+.beh{list-style:none;display:grid;gap:10px}
+.beh li{position:relative;padding-left:22px;font-size:15px}
+.beh li::before{content:"■";position:absolute;left:0;top:1px;color:var(--ice);font-size:12px}
+.span2{grid-column:1/-1}
+.card h3.ch{font-size:18px;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.card h3.ch .g{color:var(--terra);font-size:14px}
+.card p.cs{font-size:14px;color:var(--muted);margin-bottom:14px}
+
+@media (max-width:1020px){
+  .stage{min-height:0;padding:10px 0 20px}
+  .funnel-card{transform:none}
+  .prog,.lead-grid{grid-template-columns:1fr}
+  .volets{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .funnel-card{padding:22px 16px 18px}
+  .tier{padding:10px 12px}
+  .tier strong{font-size:17px}
+  .tier small{font-size:11.5px}
+  .tier.t4{width:72%}
+  .chip.c1,.chip.c2{position:static;display:inline-flex;margin:0 0 10px}
+  .stage{flex-direction:column;align-items:stretch}
+  .deltas{grid-template-columns:1fr 1fr}
+  .tbl tr.lead td:first-child::after{display:none}
+}
+</style>
+</head>
+<body class="no-js">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <svg class="logo" role="img" aria-label="The Good Web" id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496"> <g> <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/> <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/> <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/> <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/> <path fill="#fff" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/> <path fill="#fff" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/> <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/> <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/> <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/> <path fill="#fff" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/> </g> <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/> <g> <path fill="#fff" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/> <path fill="#fff" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/> <path fill="#fff" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/> <path fill="#fff" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/> <path fill="#fff" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/> <path fill="#fff" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/> </g> <g> <path fill="#fff" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/> <path fill="#fff" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/> <path fill="#fff" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> <path fill="#fff" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/> <path fill="#fff" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/> <path fill="#fff" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/> <path fill="#fff" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/> <path fill="#fff" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/> <path fill="#fff" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/> <path fill="#fff" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/> <path fill="#fff" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/> <path fill="#fff" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> <path fill="#fff" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/> <path fill="#fff" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/> <path fill="#fff" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> </g> </svg>
+      <span class="hero-tag">Bilan à date · 23 octobre 2026</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Social Ads Meta · Génération de leads</div>
+        <h1>Spirit Immobilier</h1>
+        <div class="sub">Programme immobilier · <b>Huningue</b></div>
+        <p class="lead">Après une première phase de notoriété et de trafic, la campagne est passée en génération de leads sur Facebook et Instagram. Point d'étape après 15 jours de diffusion sur Huningue et son bassin de vie.</p>
+        <div class="pills">
+          <div class="pill"><small>Période</small><strong>09/10 au 20/11/2026</strong></div>
+          <div class="pill"><small>Budget</small><strong>2 000 € HT</strong></div>
+          <div class="pill"><small>Zone</small><strong>Huningue et 4 secteurs</strong></div>
+          <div class="pill hl"><small>Leads générés</small><strong>8 contacts</strong></div>
+        </div>
+      </div>
+      <div class="stage" aria-label="Parcours de conversion de la campagne">
+        <div class="chip c1"><i></i>Facebook et Instagram</div>
+        <div class="funnel-card">
+          <div class="fc-h">Parcours de conversion au 23/10</div>
+          <div class="tier t1"><small>Impressions</small><strong>51 944</strong></div>
+          <div class="tier t2"><small>Personnes touchées</small><strong>14 673</strong></div>
+          <div class="tier t3"><small>Clics</small><strong>513</strong></div>
+          <div class="tier t4"><small>Leads</small><strong>8</strong></div>
+          <div class="fc-f">Dispositif cumulé : Notoriété, Trafic et Prospect</div>
+        </div>
+        <div class="chip c2"><i></i>Formulaire de contact Meta</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="anchors" aria-label="Sommaire">
+  <div class="wrap">
+    <a href="#synthese">Synthèse</a>
+    <a href="#dispositif">Dispositif</a>
+    <a href="#progression">Progression</a>
+    <a href="#volets">Volets</a>
+    <a href="#leads">Leads</a>
+    <a href="#audiences">Audiences</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#contacts">Contacts</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="block" id="synthese">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">01</span>Synthèse</div><h2>L'essentiel en un coup d'œil</h2></div>
+    <p>Les premiers contacts qualifiés arrivent, portés par un ciblage qui avait déjà fait ses preuves en phase de trafic.</p>
+  </div>
+  <div class="kpis rv">
+    <div class="kpi star"><small>Leads</small><div class="v num">8</div><div class="d">via le formulaire Meta</div></div>
+    <div class="kpi"><small>Taux de conversion</small><div class="v num">5,71 %</div><div class="d">des clics du volet Prospect</div></div>
+    <div class="kpi"><small>Impressions</small><div class="v num" data-count="51944">51 944</div><div class="d"><em>+34 %</em> depuis le 15/10</div></div>
+    <div class="kpi"><small>Personnes touchées</small><div class="v num" data-count="14673">14 673</div><div class="d">au minimum, sur la zone</div></div>
+    <div class="kpi star"><small>CTR volet Trafic</small><div class="v num">1,84 %</div><div class="d"><em>366 clics</em> vers le site Spirit</div></div>
+    <div class="kpi"><small>Clics</small><div class="v num" data-count="513">513</div><div class="d">sur l'ensemble du dispositif</div></div>
+    <div class="kpi"><small>Taux de clics global</small><div class="v num">0,99 %</div><div class="d">tous volets confondus</div></div>
+    <div class="kpi"><small>Répétition Prospect</small><div class="v num">2,56</div><div class="d">expositions par personne</div></div>
+  </div>
+  <div class="verdict">
+    <div class="vcard t rv"><div class="ic">↗</div><div><h4>Bascule en leads réussie</h4><p>8 contacts qualifiés générés depuis le passage en génération de leads, avec 1 clic sur 17 converti en formulaire complété.</p></div></div>
+    <div class="vcard rv"><div class="ic">●</div><div><h4>Un trafic de qualité</h4><p>Le volet Trafic a clôturé sa phase à 1,84 % de taux de clics, avec 366 visites qualifiées sur le site Spirit.</p></div></div>
+    <div class="vcard i rv"><div class="ic">◆</div><div><h4>Une zone bien couverte</h4><p>Au moins 14 673 personnes exposées au programme sur Huningue et les 4 secteurs voisins.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="dispositif">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">02</span>Dispositif</div><h2>Rappel du contexte et du dispositif</h2></div>
+  </div>
+  <div class="ctx">
+    <div class="card rv">
+      <p class="intro">Campagne Social Ads au service de la commercialisation du programme <strong>Spirit Immobilier à Huningue</strong>. Le dispositif a d'abord installé la visibilité du programme et amené du trafic qualifié sur le site, avant de basculer en <strong>génération de leads</strong> pour convertir cette visibilité en prises de contact directes, grâce au formulaire intégré de Meta.</p>
+      <div class="specs">
+        <div class="spec"><small>Levier</small><strong>Social Ads Meta</strong></div>
+        <div class="spec"><small>Objectif actuel</small><strong>Génération de leads</strong></div>
+        <div class="spec"><small>Plateformes</small><strong>Facebook · Instagram</strong></div>
+        <div class="spec"><small>Géolocalisation</small><strong>Huningue et 4 secteurs</strong></div>
+        <div class="spec"><small>Socio‑démo</small><strong>30‑65 ans, CSP+ et CSP++</strong></div>
+        <div class="spec"><small>CPM maximum</small><strong>6,00 € HT</strong></div>
+      </div>
+      <div style="margin-top:20px">
+        <small class="muted" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Ciblage data et affinitaire : projet immobilier et patrimoine</small>
+        <div class="tags">
+          <span class="tag">Achat immobilier</span><span class="tag">Appartement neuf</span><span class="tag">Investissement immobilier</span><span class="tag">Gestion de patrimoine</span><span class="tag">Crédit immobilier</span><span class="tag">Audiences similaires</span>
+        </div>
+      </div>
+    </div>
+    <div class="card rv">
+      <h3 style="font-size:19px;margin-bottom:16px">KPIs prioritaires</h3>
+      <div class="kpi-pri">
+        <div class="kp"><div class="g">●</div><div><h4>Leads générés</h4><p>Nombre de formulaires de contact complétés directement dans Facebook et Instagram.</p></div></div>
+        <div class="kp"><div class="g">■</div><div><h4>Taux de conversion</h4><p>Part des clics sur la publicité qui aboutissent à un formulaire complété.</p></div></div>
+        <div class="kp"><div class="g">◆</div><div><h4>Couverture et taux de clics</h4><p>Nombre de personnes exposées sur la zone et capacité de la publicité à susciter l'intérêt.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="progression">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">03</span>Progression</div><h2>Où en est la campagne ?</h2></div>
+    <p>Au 23/10/2026, jour 15 sur 43 : budget consommé et leads générés à date.</p>
+  </div>
+  <div class="prog">
+    <div class="card rv">
+      <div class="meter-block">
+        <div class="meter-h"><span>Budget consommé</span><strong class="num">16 %</strong></div>
+        <div class="meter"><div class="fl" data-w="16"></div></div>
+        <div class="meter-leg"><span>319,14 € HT consommés</span><span>Budget 2 000 € HT</span></div>
+      </div>
+      <div class="meter-block">
+        <div class="meter-h"><span>Période écoulée</span><strong class="num">35 %</strong></div>
+        <div class="meter time"><div class="fl" data-w="34.9"></div></div>
+        <div class="meter-leg"><span>Jour 15 sur 43</span><span>Fin le 20/11/2026</span></div>
+      </div>
+      <div class="key">
+        <span><i style="background:var(--navy)"></i>Budget consommé</span>
+        <span><i style="background:var(--ice)"></i>Temps écoulé</span>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:16px">1 680,86 € HT restent disponibles pour les 28 derniers jours de diffusion, entièrement consacrés à la génération de leads.</p>
+    </div>
+    <div class="card side rv">
+      <span class="status">Campagne pilotée au lead</span>
+      <h3>Leads à date</h3>
+      <p>La bascule en génération de leads concentre la diffusion sur les profils les plus enclins à laisser leurs coordonnées, au profit de contacts directement exploitables par vos équipes commerciales.</p>
+      <div class="big num">8 <small>leads générés au 23/10</small></div>
+      <p>Le ciblage est optimisé en continu sur les profils qui convertissent, pour la suite de la campagne jusqu'au 20/11/2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="volets">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">04</span>Résultats par volet</div><h2>Trois volets, un même parcours</h2></div>
+    <p>Notoriété pour installer le programme, Trafic pour amener les profils intéressés sur le site, Prospect pour recueillir des contacts.</p>
+  </div>
+  <div class="volets">
+    <article class="volet rv">
+      <span class="st">Phase 1 terminée</span>
+      <div class="vh"><span class="gl">◆</span><div><h3>Volet Notoriété</h3><p>Exposer un maximum de personnes au programme.</p></div></div>
+      <div class="hero-v num">14 673<small>personnes touchées</small></div>
+      <table class="vk num"><tr><th>Impressions</th><td>19 308</td></tr><tr><th>Répétition</th><td>1,32</td></tr><tr><th>Clics sur un lien</th><td>7</td></tr><tr><th>Taux de clics</th><td>0,04 %</td></tr></table>
+    </article>
+    <article class="volet rv">
+      <span class="st">Phase 1 terminée</span>
+      <div class="vh"><span class="gl">●</span><div><h3>Volet Trafic</h3><p>Générer des visites qualifiées sur le site Spirit.</p></div></div>
+      <div class="hero-v num">366<small>clics vers le site</small></div>
+      <table class="vk num"><tr><th>Impressions</th><td>19 944</td></tr><tr><th>Personnes touchées</th><td>8 221</td></tr><tr><th>Répétition</th><td>2,43</td></tr><tr><th>Taux de clics</th><td>1,84 %</td></tr></table>
+    </article>
+    <article class="volet on rv">
+      <span class="st">En cours</span>
+      <div class="vh"><span class="gl">■</span><div><h3>Volet Prospect</h3><p>Recueillir des contacts via le formulaire Meta.</p></div></div>
+      <div class="hero-v num">8<small>leads générés</small></div>
+      <table class="vk num"><tr><th>Impressions</th><td>12 692</td></tr><tr><th>Personnes touchées</th><td>4 949</td></tr><tr><th>Clics</th><td>140</td></tr><tr><th>Taux de clics</th><td>1,10 %</td></tr></table>
+    </article>
+  </div>
+
+  <div class="card rv" style="margin-top:18px">
+    <div class="tbl-scroll">
+    <table class="tbl num">
+      <thead><tr><th>Volet</th><th>Impressions</th><th>Personnes touchées</th><th>Répétition</th><th>Clics</th><th>CTR</th><th>Résultat clé</th></tr></thead>
+      <tbody>
+        <tr><td>Notoriété</td><td>19 308</td><td>14 673</td><td>1,32</td><td>7</td><td>0,04 %</td><td>14 673 personnes</td></tr>
+        <tr class="best"><td>Trafic</td><td>19 944</td><td>8 221</td><td>2,43</td><td>366</td><td>1,84 %</td><td>366 visites</td></tr>
+        <tr class="lead"><td>Prospect</td><td>12 692</td><td>4 949</td><td>2,56</td><td>140</td><td>1,10 %</td><td>8 leads</td></tr>
+        <tr class="tot"><td>Total</td><td>51 944</td><td>14 673 min.</td><td>·</td><td>513</td><td>0,99 %</td><td>8 leads</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="share">
+      <div style="width:37.2%;background:var(--ice)"></div><div style="width:38.4%;background:var(--navy)"></div><div style="width:24.4%;background:var(--terra)"></div>
+    </div>
+    <div class="share-leg"><span><i style="background:var(--ice)"></i>Notoriété · 37,2 % des impressions</span><span><i style="background:var(--navy)"></i>Trafic · 38,4 %</span><span><i style="background:var(--terra)"></i>Prospect · 24,4 %</span></div>
+    <p class="muted" style="font-size:13px;margin-top:14px">Le volet Notoriété est optimisé pour le nombre de personnes touchées et non pour le clic : un taux de clics bas y est normal. Les personnes touchées ne s'additionnent pas d'un volet à l'autre, une même personne pouvant être exposée à plusieurs volets.</p>
+  </div>
+</section>
+
+<section class="block" id="leads">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">05</span>Génération de leads</div><h2>Les premiers contacts qualifiés</h2></div>
+    <p>Le formulaire Meta permet de laisser ses coordonnées sans quitter Facebook ou Instagram, ce qui fluidifie la prise de contact.</p>
+  </div>
+  <div class="lead-grid">
+    <div class="card rv">
+      <h3 style="font-size:18px;margin-bottom:2px">Parcours du volet Prospect</h3>
+      <p class="muted" style="font-size:13.5px;margin-bottom:16px">De l'exposition au formulaire complété.</p>
+      <div class="steps num">
+        <div class="step"><span class="lb">Impressions</span><span class="vl">12 692</span><div class="tr"><div class="fl" data-w="100"></div></div></div>
+        <div class="step"><span class="lb">Personnes touchées</span><span class="vl">4 949</span><div class="tr"><div class="fl" data-w="62"></div></div></div>
+        <div class="rate">Taux de clics : <b>1,10 %</b></div>
+        <div class="step"><span class="lb">Clics sur la publicité</span><span class="vl">140</span><div class="tr"><div class="fl" data-w="34"></div></div></div>
+        <div class="rate">Taux de conversion : <b>5,71 %</b></div>
+        <div class="step last"><span class="lb">Leads</span><span class="vl">8</span><div class="tr"><div class="fl" data-w="12"></div></div></div>
+      </div>
+      <p class="muted" style="font-size:12px;margin-top:12px">Longueur des barres indicative, pour la lisibilité du parcours.</p>
+    </div>
+    <div class="card bench rv">
+      <div class="kicker" style="margin-bottom:4px">Évolution depuis le 15/10</div>
+      <h3>Ce qui a bougé en une semaine</h3>
+      <div class="big num">+8</div>
+      <span class="delta">leads depuis la bascule</span>
+      <div class="deltas num">
+        <div class="dl"><small>Impressions</small><strong><em>+13 208</em></strong><span>38 736 au 15/10</span></div>
+        <div class="dl"><small>Clics site</small><strong><em>+14</em></strong><span>359 au 15/10, 373 au 23/10</span></div>
+        <div class="dl"><small>1 lead pour</small><strong>619</strong><span>personnes touchées</span></div>
+        <div class="dl"><small>1 lead pour</small><strong>17,5</strong><span>clics sur la publicité</span></div>
+      </div>
+      <p class="note">Le volet Prospect s'appuie sur l'audience déjà sensibilisée par les phases Notoriété et Trafic, ce qui explique un taux de conversion solide dès les premiers jours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="audiences">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">06</span>Audiences</div><h2>Le ciblage activé</h2></div>
+    <p>Des profils d'acquéreurs et d'investisseurs à fort potentiel, au plus près du programme.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card span2 rv">
+      <h3 class="ch"><span class="g">⌂</span>Zone de diffusion</h3>
+      <p class="cs">Huningue et les secteurs de son bassin de vie, de part et d'autre de l'agglomération de Saint‑Louis.</p>
+      <ul class="chips"><li class="geo">Huningue</li><li class="geo">Saint‑Louis</li><li class="geo">Village‑Neuf</li><li class="geo">Hégenheim</li><li class="geo">Mulhouse</li></ul>
+    </div>
+    <div class="card rv">
+      <h3 class="ch"><span class="g">●</span>Ciblage sociodémographique</h3>
+      <p class="cs">Profils d'acquéreurs et d'investisseurs.</p>
+      <ul class="chips"><li>30 à 65 ans</li><li>CSP+</li><li>CSP++</li><li>Cadres et cadres supérieurs</li><li>Dirigeants d'entreprise</li><li>Professions libérales</li><li>Investisseurs immobiliers</li><li>Primo‑accédants</li><li>Secundo‑accédants</li><li>Revenus moyens à élevés</li></ul>
+    </div>
+    <div class="card rv">
+      <h3 class="ch"><span class="g">◆</span>Ciblage data et contextuel</h3>
+      <p class="cs">Centres d'intérêt liés au projet immobilier et au patrimoine.</p>
+      <ul class="chips"><li>Immobilier</li><li>Achat immobilier</li><li>Appartement neuf</li><li>Investissement immobilier</li><li>Loi Pinel</li><li>Gestion de patrimoine</li><li>Finance personnelle</li><li>Épargne</li><li>Crédit immobilier</li><li>Banque</li><li>Architecture</li><li>Décoration intérieure</li><li>Aménagement de la maison</li><li>Résidence principale</li><li>Résidence secondaire</li></ul>
+    </div>
+    <div class="card span2 rv">
+      <h3 class="ch"><span class="g">◐</span>Comportements Meta</h3>
+      <p class="cs">Signaux d'intention et audiences similaires.</p>
+      <ul class="beh"><li>Personnes ayant manifesté une intention d'achat immobilier</li><li>Utilisateurs ayant consulté ou interagi avec des contenus liés à l'immobilier</li><li>Personnes ayant récemment déménagé ou susceptibles de déménager</li><li>Audiences similaires construites à partir des prospects et clients existants</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="conclusion">
+  <div class="concl rv">
+    <div class="kicker" style="color:var(--ice)"><span class="n" style="background:rgba(255,255,255,.1);color:var(--ice)">07</span>Conclusion</div>
+    <h2>Une bascule qui porte ses fruits, 28 jours pour accélérer</h2>
+    <div class="cols">
+      <div class="ccol"><div class="g">●</div><h4>Des premiers leads</h4><p><b>8 contacts qualifiés</b> générés depuis le passage en génération de leads, avec un taux de conversion de <b>5,71 %</b> sur les clics du volet Prospect.</p></div>
+      <div class="ccol"><div class="g">■</div><h4>Un socle bien construit</h4><p>Les phases Notoriété et Trafic ont exposé <b>au moins 14 673 personnes</b> et généré <b>366 visites</b> sur le site : autant de profils sensibilisés que le volet Prospect peut désormais convertir.</p></div>
+      <div class="ccol"><div class="g">◆</div><h4>Un ciblage pertinent</h4><p>Un taux de clics de <b>1,84 %</b> en phase de trafic confirme l'adéquation entre le ciblage acquéreurs et investisseurs et l'offre du programme.</p></div>
+    </div>
+    <div class="recos-title">Nos recommandations pour la suite</div>
+    <div class="recos">
+      <div class="reco"><div class="n">1</div><h4>Concentrer sur le volet Prospect</h4><p>Consacrer la fin de campagne à la génération de leads, en nourrissant l'algorithme avec les audiences similaires construites à partir des premiers contacts.</p></div>
+      <div class="reco"><div class="n">2</div><h4>Recibler les visiteurs du site</h4><p>Proposer le formulaire en Social Ads Story aux 366 visiteurs issus du volet Trafic : une audience déjà intéressée, à fort potentiel de conversion.</p></div>
+      <div class="reco"><div class="n">3</div><h4>Relancer par SMS</h4><p>Compléter le dispositif par une campagne SMS géolocalisée sur Huningue et Saint‑Louis, avec un lien direct vers la prise de rendez‑vous en bureau de vente.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <h3>Merci pour votre confiance</h3>
+        <p>Notre équipe reste à votre disposition pour échanger sur ce bilan et piloter ensemble la fin de campagne.</p>
+      </div>
+      <svg class="foot-logo" role="img" aria-label="The Good Web" id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496"> <g> <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/> <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/> <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/> <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/> <path fill="#fff" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/> <path fill="#fff" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/> <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/> <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/> <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/> <path fill="#fff" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/> </g> <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/> <g> <path fill="#fff" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/> <path fill="#fff" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/> <path fill="#fff" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/> <path fill="#fff" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/> <path fill="#fff" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/> <path fill="#fff" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/> <path fill="#fff" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/> </g> <g> <path fill="#fff" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/> <path fill="#fff" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/> <path fill="#fff" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> <path fill="#fff" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/> <path fill="#fff" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/> <path fill="#fff" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/> <path fill="#fff" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/> <path fill="#fff" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/> <path fill="#fff" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/> <path fill="#fff" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/> <path fill="#fff" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/> <path fill="#fff" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> <path fill="#fff" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/> <path fill="#fff" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/> <path fill="#fff" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/> </g> </svg>
+    </div>
+    <div class="contacts">
+      <a class="ct" href="mailto:jerome@thegoodweb.eu"><div class="av">JF</div><strong>Jérôme Fages</strong><small>Directeur commercial</small><span>06 18 74 66 75</span><span>jerome@thegoodweb.eu</span></a>
+      <a class="ct" href="mailto:mathilde@thegoodweb.eu"><div class="av">MC</div><strong>Mathilde Coriton</strong><small>Directrice de clientèle</small><span>06 48 61 92 92</span><span>mathilde@thegoodweb.eu</span></a>
+      <a class="ct" href="mailto:andrea@thegoodweb.eu"><div class="av">AA</div><strong>Andréa Alonso</strong><small>Cheffe de publicité</small><span>04 91 54 28 12</span><span>andrea@thegoodweb.eu</span></a>
+      <a class="ct me" href="mailto:sofien@thegoodweb.eu"><div class="av">SC</div><strong>Sofien Chaganiou</strong><small>Chef de publicité</small><span>07 67 84 70 67</span><span>sofien@thegoodweb.eu</span></a>
+      <div class="ct off"><div class="av">PA</div><strong>Pôle activation</strong><small>Activation des campagnes</small><span>activation@thegoodweb.eu</span></div>
+    </div>
+    <div class="copy"><span>© 2026 The Good Web · The Good Audience</span><span>Bilan Spirit Immobilier · Huningue · au 23/10/2026</span></div>
+  </div>
+</footer>
+
+<script>
+document.body.classList.remove('no-js');
+const fr=(n,d=0)=>n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+  el.querySelectorAll('[data-w]').forEach(f=>f.style.width=f.dataset.w+'%');
+  el.querySelectorAll('[data-count]').forEach(n=>{if(n.dataset.done)return;n.dataset.done=1;const t=+n.dataset.count,st=performance.now();
+    const step=now=>{const p=Math.min((now-st)/1200,1),e2=1-Math.pow(1-p,3);n.textContent=fr(Math.round(t*e2));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)});
+  io.unobserve(el)}),{threshold:.15});
+document.querySelectorAll('.rv,.card').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('nav.anchors a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));
+  const a=links.find(l=>l.classList.contains('on'));if(a){const nv=a.parentNode;nv.scrollTo({left:a.offsetLeft-nv.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section.block,footer').forEach(s=>so.observe(s));
+</script>
+</body>
+</html>

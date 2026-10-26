@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilan Villages Clubs du Soleil · Vague 2</title>
+<meta name="description" content="Bilan de campagne Audio digital et TV connectee pour Villages Clubs du Soleil, Vague 2, du 12 octobre au 6 novembre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#021859;--navy-2:#0a2470;--navy-3:#13307f;
+  --ice:#7bbdff;--ice-50:#f1f7ff;--ice-100:#e2efff;--ice-200:#c6e0ff;
+  --terra:#f25430;--terra-50:#fff2ee;--terra-100:#ffe0d7;
+  --white:#ffffff;--bg:#f5f8fd;--ink:#0d1a3f;--muted:#5a6788;--line:#e2e8f4;
+  --radius:18px;--shadow:0 10px 30px rgba(2,24,89,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Poppins,sans-serif;color:var(--navy);line-height:1.2}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
+
+/* HERO */
+.hero{position:relative;background:var(--navy);color:var(--white);overflow:hidden;padding:34px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 420px at 82% 38%,rgba(123,189,255,.28),transparent 70%),
+  radial-gradient(420px 320px at 64% 88%,rgba(242,84,48,.22),transparent 70%),
+  radial-gradient(500px 400px at 5% 0%,rgba(123,189,255,.10),transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent 30%,#000 75%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 75%);pointer-events:none}
+.hero-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.logo{width:118px;height:auto}
+.hero-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ice);border:1px solid rgba(123,189,255,.35);padding:7px 14px;border-radius:999px;white-space:nowrap}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:30px 0 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--terra)}
+.hero h1{color:var(--white);font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.hero .sub{font-family:Poppins,sans-serif;font-size:clamp(16px,1.8vw,20px);font-weight:500;color:var(--ice-200);margin-bottom:22px}
+.hero .sub b{color:var(--white);font-weight:700}
+.hero p.lead{color:rgba(255,255,255,.78);max-width:520px;margin-bottom:26px;font-size:15px}
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:440px}
+.pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px}
+.pill small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);font-weight:600}
+.pill strong{font-family:Poppins,sans-serif;font-size:15px;font-weight:600;color:var(--white)}
+.pill.hl{background:var(--terra);border-color:var(--terra)}
+.pill.hl small{color:rgba(255,255,255,.85)}
+
+/* hero visual: deux leviers */
+.hero-vis{display:flex;flex-direction:column;gap:16px;align-items:flex-end;padding-bottom:20px}
+.levier-badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px 24px;width:100%;max-width:380px;backdrop-filter:blur(8px)}
+.levier-badge .lb-icon{font-size:28px;margin-bottom:8px}
+.levier-badge h3{color:var(--white);font-size:17px;font-weight:700;margin-bottom:6px}
+.levier-badge p{color:rgba(255,255,255,.7);font-size:13px;line-height:1.5}
+.levier-badge .lb-kpi{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.levier-badge .lk{background:rgba(255,255,255,.12);border-radius:10px;padding:6px 12px;text-align:center}
+.levier-badge .lk small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ice);font-weight:600}
+.levier-badge .lk strong{display:block;font-family:Poppins,sans-serif;font-size:16px;font-weight:700;color:var(--white)}
+.levier-badge.ctv{border-color:rgba(242,84,48,.4)}
+.levier-badge.ctv .lk{background:rgba(242,84,48,.15)}
+
+/* NAV */
+nav.anchors{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.anchors .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:10px;padding-bottom:10px}
+nav.anchors .wrap::-webkit-scrollbar{display:none}
+nav.anchors a{flex:none;text-decoration:none;color:var(--muted);font-size:13px;font-weight:500;padding:7px 13px;border-radius:999px;transition:.2s}
+nav.anchors a:hover{color:var(--navy);background:var(--ice-50)}
+nav.anchors a.on{background:var(--navy);color:var(--white)}
+
+/* SECTIONS */
+section.block{padding:72px 0 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.kicker .n{font-family:Poppins,sans-serif;background:var(--terra-50);color:var(--terra);border-radius:8px;padding:2px 8px}
+h2{font-size:clamp(24px,2.8vw,34px);font-weight:700;letter-spacing:-.01em}
+.sec-head p{max-width:520px;color:var(--muted)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.muted{color:var(--muted)}
+
+/* KPI band */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.kpi{padding:22px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.kpi:nth-child(4n){border-right:none}
+.kpi:nth-child(n+5){border-bottom:none}
+.kpi small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.kpi .v{font-family:Poppins,sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1.1}
+.kpi .d{font-size:13px;color:var(--muted);margin-top:6px}
+.kpi .d em{font-style:normal;color:var(--terra);font-weight:600}
+.kpi.star{background:linear-gradient(160deg,var(--navy),var(--navy-3))}
+.kpi.star small{color:var(--ice)}
+.kpi.star .v{color:var(--white)}
+.kpi.star .d{color:rgba(255,255,255,.75)}
+.kpi.star .d em{color:#ff9d84}
+.verdict{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{border-radius:var(--radius);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line)}
+.vcard .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:18px;color:var(--white);background:var(--navy);font-family:Poppins,sans-serif;font-weight:700}
+.vcard.t .ic{background:var(--terra)}
+.vcard.i .ic{background:var(--ice);color:var(--navy)}
+.vcard h4{font-size:16px;margin-bottom:2px}
+.vcard p{font-size:14px;color:var(--muted)}
+
+/* Levier sub-section */
+.levier-sec{margin-top:40px;padding:32px;background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.levier-sec-head{display:flex;align-items:center;gap:16px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.levier-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:22px;flex:none}
+.levier-icon.audio{background:var(--ice-100)}
+.levier-icon.ctv{background:var(--terra-50)}
+.levier-sec-head h3{font-size:20px;font-weight:700;margin-bottom:2px}
+.levier-sec-head p{font-size:14px;color:var(--muted)}
+.levier-badge-inline{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;margin-left:10px}
+.lb-audio{background:var(--ice-100);color:var(--navy)}
+.lb-ctv{background:var(--terra-50);color:var(--terra)}
+
+/* KPI mini */
+.kpi-row{display:grid;gap:14px}
+.kpi-mini{background:var(--ice-50);border-radius:14px;padding:16px 18px}
+.kpi-mini small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.kpi-mini .v{font-family:Poppins,sans-serif;font-size:24px;font-weight:700;color:var(--navy)}
+.kpi-mini .d{font-size:12px;color:var(--muted);margin-top:3px}
+.kpi-mini.star-mini{background:linear-gradient(135deg,var(--navy),var(--navy-3))}
+.kpi-mini.star-mini small{color:var(--ice)}
+.kpi-mini.star-mini .v{color:var(--white)}
+.kpi-mini.star-mini .d{color:rgba(255,255,255,.7)}
+
+/* Benchmark bars */
+.bench{margin-top:18px}
+.bench-row{margin-bottom:16px}
+.bench-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.bench-label span{font-size:14px;font-weight:600;color:var(--navy)}
+.bench-label small{font-size:12px;color:var(--muted)}
+.bar-track{height:10px;background:var(--line);border-radius:999px;overflow:hidden}
+.bar-fill{height:100%;border-radius:999px;transition:width 1s ease}
+.bar-camp{background:var(--navy)}
+.bar-bench{background:var(--terra)}
+.bench-legend{display:flex;gap:18px;margin-top:8px;flex-wrap:wrap}
+.bench-legend span{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.bench-legend span::before{content:"";width:10px;height:10px;border-radius:50%;background:currentColor;display:inline-block}
+.leg-camp::before{background:var(--navy) !important}
+.leg-bench::before{background:var(--terra) !important}
+
+/* Timeline / Diffusion chart area */
+.chart-wrap{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.chart-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab-btn{font-size:13px;font-weight:600;padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--muted);cursor:pointer;transition:.2s}
+.tab-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.chart-area{position:relative;height:200px;overflow:hidden}
+svg.chart{width:100%;height:100%}
+
+/* Pige concurrentielle */
+.pige-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.pige-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.pige-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px}
+.pige-m6::before{background:#e30613}
+.pige-disney::before{background:#113ccf}
+.pige-netflix::before{background:#e50914}
+.pige-logo{font-family:Poppins,sans-serif;font-size:22px;font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
+.pige-m6 .pige-logo{color:#e30613}
+.pige-disney .pige-logo{color:#113ccf}
+.pige-netflix .pige-logo{color:#e50914}
+.pige-card .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:14px}
+.pige-m6 .tag{background:#fff0f0;color:#e30613}
+.pige-disney .tag{background:#eef1ff;color:#113ccf}
+.pige-netflix .tag{background:#fff0f0;color:#e50914}
+.pige-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+.pige-row .pr-label{font-size:12px;font-weight:600;color:var(--muted);min-width:80px;text-transform:uppercase;letter-spacing:.06em;flex:none}
+.pige-row .pr-val{font-size:14px;color:var(--ink)}
+.pige-card .analyse{margin-top:14px;padding:12px 14px;background:var(--ice-50);border-radius:10px;font-size:13px;color:var(--muted);line-height:1.5}
+
+/* Conclusion */
+.conclu{background:linear-gradient(160deg,var(--navy),var(--navy-3));border-radius:22px;padding:42px;color:var(--white)}
+.conclu h2{color:var(--white);margin-bottom:8px}
+.conclu .sub-conclu{color:rgba(255,255,255,.7);margin-bottom:30px}
+.conclu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:32px}
+.conclu-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px}
+.conclu-card h4{color:var(--ice);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.conclu-card ul{list-style:none}
+.conclu-card ul li{font-size:14px;color:rgba(255,255,255,.85);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;gap:8px;align-items:flex-start}
+.conclu-card ul li::before{content:"●";color:var(--terra);font-size:8px;flex:none;margin-top:5px}
+.reco-title{font-family:Poppins,sans-serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:18px}
+.reco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.reco-card{background:var(--white);border-radius:14px;padding:20px}
+.reco-card .rn{font-family:Poppins,sans-serif;font-size:32px;font-weight:800;color:var(--terra);margin-bottom:6px;line-height:1}
+.reco-card h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.reco-card p{font-size:13px;color:var(--muted)}
+
+/* Footer */
+footer{background:var(--navy);color:var(--white);padding:56px 0 40px;margin-top:80px}
+footer h3{font-size:22px;font-weight:700;margin-bottom:6px;color:var(--white)}
+footer .ft-sub{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:36px}
+.foot-logo{width:88px;height:auto;margin-bottom:28px}
+.contacts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ct{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+.ct.me{background:var(--terra);border-color:var(--terra)}
+.ct .ct-role{font-size:11px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.ct.me .ct-role{color:rgba(255,255,255,.85)}
+.ct .ct-name{font-family:Poppins,sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px}
+.ct .ct-info{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6}
+.ct.me .ct-info{color:rgba(255,255,255,.9)}
+.ct a{color:inherit;text-decoration:none}
+.ct-placeholder{background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.15)}
+.ft-legal{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.4);text-align:center}
+
+/* Progress bar budget */
+.budget-bar{margin:14px 0}
+.budget-bar-track{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin:6px 0}
+.budget-bar-fill{height:100%;border-radius:999px;background:var(--navy)}
+.budget-bar-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:30px}
+  .hero-vis{align-items:stretch}
+  .levier-badge{max-width:100%}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .kpi:nth-child(2n){border-right:none}
+  .kpi:nth-child(n+3){border-bottom:none}
+  .verdict,.conclu-grid,.reco-grid,.pige-grid{grid-template-columns:1fr}
+  .contacts{grid-template-columns:repeat(2,1fr)}
+  .ctx,.g2,.g3,.g4{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .pills{grid-template-columns:1fr}
+  .contacts{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
+  .kpi{border-right:none}
+}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496" class="logo" role="img" aria-label="The Good Web">
+        <g>
+          <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+          <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+          <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+          <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+          <path fill="#fff" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+          <path fill="#fff" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+          <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+          <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+          <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+          <path fill="#fff" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+        </g>
+        <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+        <g>
+          <path fill="#fff" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+          <path fill="#fff" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22Z"/>
+          <path fill="#fff" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+          <path fill="#fff" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+          <path fill="#fff" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+        </g>
+        <g>
+          <path fill="#fff" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+          <path fill="#fff" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+          <path fill="#fff" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+          <path fill="#fff" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+          <path fill="#fff" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+        </g>
+      </svg>
+      <span class="hero-tag">Bilan de campagne · A date · Octobre 2026</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Audio digital + TV connectee · Notoriete et trafic</div>
+        <h1>Villages Clubs du Soleil</h1>
+        <p class="sub"><b>Vague 2</b> · Campagne hiver 2026</p>
+        <p class="lead">Premier bilan intermediaire de la vague 2, couvrant les leviers audio digital et TV connectee (CTV). La campagne affiche des performances au-dessus des benchmarks sectoriels sur les deux leviers.</p>
+        <div class="pills">
+          <div class="pill"><small>Periode</small><strong>12/10 au 06/11/2026</strong></div>
+          <div class="pill"><small>Leviers actifs</small><strong>Audio digital + CTV</strong></div>
+          <div class="pill"><small>Budget engage</small><strong>2 252,70 EUR HT</strong></div>
+          <div class="pill hl"><small>KPI phare</small><strong>CR CTV : 94,67 %</strong></div>
+        </div>
+      </div>
+      <div class="hero-vis">
+        <div class="levier-badge">
+          <div class="lb-icon">&#9834;</div>
+          <h3>Audio digital</h3>
+          <p>Diffusion en marque blanche sur les plateformes de streaming audio et webradios premium</p>
+          <div class="lb-kpi">
+            <div class="lk"><small>Reach</small><strong>52 467</strong></div>
+            <div class="lk"><small>LTR</small><strong>85,17 %</strong></div>
+            <div class="lk"><small>CTR</small><strong>0,89 %</strong></div>
+          </div>
+        </div>
+        <div class="levier-badge ctv">
+          <div class="lb-icon">&#9654;</div>
+          <h3>TV connectee (CTV)</h3>
+          <p>Spots video pre-roll sur ecrans connectes, format non-skippable sur replay et AVOD</p>
+          <div class="lb-kpi">
+            <div class="lk"><small>Impressions</small><strong>56 598</strong></div>
+            <div class="lk"><small>Completion</small><strong>94,67 %</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="anchors" id="nav">
+  <div class="wrap">
+    <a href="#synthese" class="on">01 Synthese</a>
+    <a href="#dispositif">02 Dispositif</a>
+    <a href="#audio">03 Audio</a>
+    <a href="#ctv">04 CTV</a>
+    <a href="#pige">05 Pige</a>
+    <a href="#conclusion">06 Conclusion</a>
+    <a href="#contacts">07 Contacts</a>
+  </div>
+</nav>
+
+<!-- 01 SYNTHESE -->
+<section class="block reveal" id="synthese">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><span class="n">01</span> Synthese globale</div>
+        <h2>Performance consolidee des deux leviers</h2>
+      </div>
+      <p>Bilan au 26 octobre 2026 · 14 jours de diffusion sur 26</p>
+    </div>
+    <div class="kpis">
+      <div class="kpi">
+        <small>Impressions totales</small>
+        <div class="v num">118 238</div>
+        <div class="d">Audio : 61 640 + CTV : 56 598</div>
+      </div>
+      <div class="kpi star">
+        <small>Reach audio</small>
+        <div class="v num">52 467</div>
+        <div class="d">individus uniques touches</div>
+      </div>
+      <div class="kpi">
+        <small>Repetition audio</small>
+        <div class="v num">1,17</div>
+        <div class="d">contacts par individu</div>
+      </div>
+      <div class="kpi">
+        <small>Clics (audio)</small>
+        <div class="v num">545</div>
+        <div class="d">desktop uniquement</div>
+      </div>
+      <div class="kpi">
+        <small>CTR audio</small>
+        <div class="v num">0,89 %</div>
+        <div class="d"><em>+0,24 pt</em> vs benchmark 0,65 %</div>
+      </div>
+      <div class="kpi star">
+        <small>Taux de completion CTV</small>
+        <div class="v num">94,67 %</div>
+        <div class="d"><em>Excellent</em> · benchmark 85-90 %</div>
+      </div>
+      <div class="kpi">
+        <small>LTR audio</small>
+        <div class="v num">85,17 %</div>
+        <div class="d"><em>+5,17 pt</em> vs benchmark 80 %</div>
+      </div>
+      <div class="kpi">
+        <small>Budget engage total</small>
+        <div class="v num">2 252 EUR</div>
+        <div class="d">554,76 audio + 1 697,94 CTV</div>
+      </div>
+    </div>
+    <div class="verdict">
+      <div class="vcard t">
+        <div class="ic">&#9654;</div>
+        <div>
+          <h4>Diffusion en cours</h4>
+          <p>57,8 % du budget audio consomme. CTV a 54,8 % de l'objectif d'impressions. La campagne est sur le bon rythme pour les 26 jours prevus.</p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="ic">&#9679;</div>
+        <div>
+          <h4>Audio : engagement exceptionnel</h4>
+          <p>LTR de 85,17 % bien au-dessus du benchmark de 80 %. CTR de 0,89 % depasse le marche (+37 %). Les auditeurs vont jusqu'au bout et cliquent.</p>
+        </div>
+      </div>
+      <div class="vcard i">
+        <div class="ic" style="font-size:13px;font-weight:800">CTV</div>
+        <div>
+          <h4>CTV : completion remarquable</h4>
+          <p>94,67 % de taux de completion sur TV connectee. Les spectateurs regardent les spots en totalite, signe d'une forte adequation creative-contexte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 DISPOSITIF -->
+<section class="block reveal" id="dispositif">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><span class="n">02</span> Dispositif</div>
+        <h2>Organisation de la campagne</h2>
+      </div>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <h3 style="margin-bottom:16px;font-size:18px">Contexte de la campagne</h3>
+        <p style="font-size:15px;line-height:1.7;color:var(--muted)">Villages Clubs du Soleil active sa <strong>vague 2</strong> hiver 2026 avec deux leviers complementaires : l'audio digital pour travailler la notoriete aupres des auditeurs en situation de detente, et la TV connectee pour un impact video fort aupres des foyers en replay. La periode cible les vacances d'hiver avec une promotion jusqu'a -30 %.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px">
+          <div style="background:var(--ice-50);border-radius:12px;padding:12px 14px">
+            <small style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600">Levier 1</small>
+            <div style="font-weight:700;color:var(--navy);margin-top:2px">Audio digital</div>
+            <div style="font-size:13px;color:var(--muted)">Streaming + webradio</div>
+          </div>
+          <div style="background:var(--terra-50);border-radius:12px;padding:12px 14px">
+            <small style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600">Levier 2</small>
+            <div style="font-weight:700;color:var(--navy);margin-top:2px">TV connectee</div>
+            <div style="font-size:13px;color:var(--muted)">CTV · Replay · AVOD</div>
+          </div>
+          <div style="background:var(--ice-50);border-radius:12px;padding:12px 14px">
+            <small style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600">Objectif</small>
+            <div style="font-weight:700;color:var(--navy);margin-top:2px">Notoriete + trafic</div>
+          </div>
+          <div style="background:var(--ice-50);border-radius:12px;padding:12px 14px">
+            <small style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600">Cible</small>
+            <div style="font-weight:700;color:var(--navy);margin-top:2px">Familles CSP+</div>
+            <div style="font-size:13px;color:var(--muted)">25-54 ans</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:16px;font-size:18px">KPIs prioritaires</h3>
+        <div style="margin-bottom:14px;padding:14px;background:var(--ice-50);border-radius:12px;display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px">&#9679;</span>
+          <div>
+            <div style="font-weight:700;color:var(--navy);margin-bottom:2px">LTR · Listen-Through Rate</div>
+            <div style="font-size:13px;color:var(--muted)">Taux d'ecoute jusqu'au bout du spot audio. Mesure l'attention et la qualite de diffusion.</div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;padding:14px;background:var(--terra-50);border-radius:12px;display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px">&#9632;</span>
+          <div>
+            <div style="font-weight:700;color:var(--navy);margin-bottom:2px">CR · Completion Rate CTV</div>
+            <div style="font-size:13px;color:var(--muted)">Taux de visionnage complet du spot video sur TV connectee. Principal indicateur CTV.</div>
+          </div>
+        </div>
+        <div style="padding:14px;background:var(--ice-50);border-radius:12px;display:flex;gap:12px;align-items:flex-start">
+          <span style="font-size:20px">&#9670;</span>
+          <div>
+            <div style="font-weight:700;color:var(--navy);margin-bottom:2px">CTR · Click-Through Rate</div>
+            <div style="font-size:13px;color:var(--muted)">Sur audio uniquement (desktop). La CTV ne genere pas de clics : format 100 % TV connectee.</div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:12px 14px;background:var(--navy);border-radius:12px">
+          <div style="font-size:13px;color:rgba(255,255,255,.8)">Landing page commune : <strong style="color:var(--white)">villagesclubbsdusoleil.com/promotions/hiver</strong> · Promo givre jusqu'a -30 %</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 AUDIO -->
+<section class="block reveal" id="audio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><span class="n">03</span> Audio digital</div>
+        <h2>Resultats du levier audio</h2>
+      </div>
+      <p>12/10 au 26/10/2026 · Budget : 554,76 EUR / 960 EUR HT</p>
+    </div>
+
+    <div class="grid g4" style="margin-bottom:18px">
+      <div class="kpi-mini star-mini">
+        <small>Impressions</small>
+        <div class="v num">61 640</div>
+        <div class="d">sur la periode a date</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Reach</small>
+        <div class="v num">52 467</div>
+        <div class="d">individus uniques</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Repetition</small>
+        <div class="v num">1,17</div>
+        <div class="d">contacts / individu</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Clics (desktop)</small>
+        <div class="v num">545</div>
+        <div class="d">vers la landing</div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="chart-wrap">
+        <h4 style="margin-bottom:4px">Engagement audio</h4>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:18px">Performances vs benchmarks marche</p>
+        <div class="bench">
+          <div class="bench-row">
+            <div class="bench-label">
+              <span>CTR · Taux de clic</span>
+              <small>Campagne : 0,89 % vs benchmark : 0,65 %</small>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill bar-camp" style="width:89%" id="bar-ctr"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:4px">
+              <span style="color:var(--navy);font-weight:600">Campagne : 0,89 %</span>
+              <span style="color:var(--terra);font-weight:600">Benchmark : 0,65 %</span>
+            </div>
+          </div>
+          <div style="height:10px;background:var(--line);border-radius:999px;overflow:hidden;margin:8px 0">
+            <div style="height:100%;width:65%;background:var(--terra);border-radius:999px"></div>
+          </div>
+          <div class="bench-row" style="margin-top:18px">
+            <div class="bench-label">
+              <span>LTR · Listen-Through Rate</span>
+              <small>Campagne : 85,17 % vs benchmark : 80 %</small>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill bar-camp" style="width:85.17%" id="bar-ltr"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:4px">
+              <span style="color:var(--navy);font-weight:600">Campagne : 85,17 %</span>
+              <span style="color:var(--terra);font-weight:600">Benchmark : 80 %</span>
+            </div>
+          </div>
+          <div style="height:10px;background:var(--line);border-radius:999px;overflow:hidden;margin:8px 0">
+            <div style="height:100%;width:80%;background:var(--terra);border-radius:999px"></div>
+          </div>
+        </div>
+        <div class="bench-legend" style="margin-top:12px">
+          <span class="leg-camp">Campagne VCDS</span>
+          <span class="leg-bench">Benchmark marche</span>
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:16px">Avancement budget audio</h4>
+        <div class="budget-bar">
+          <div class="budget-bar-labels">
+            <span>Budget engage</span>
+            <span style="font-weight:700;color:var(--navy)">554,76 EUR</span>
+          </div>
+          <div class="budget-bar-track">
+            <div class="budget-bar-fill" style="width:57.8%"></div>
+          </div>
+          <div class="budget-bar-labels">
+            <span>57,8 % consomme</span>
+            <span>Enveloppe : 960 EUR HT</span>
+          </div>
+        </div>
+        <div style="margin-top:22px">
+          <div style="font-weight:700;color:var(--navy);margin-bottom:12px;font-family:Poppins,sans-serif">Analyse des resultats</div>
+          <div style="font-size:14px;color:var(--muted);line-height:1.7">
+            <p style="margin-bottom:10px">Le CTR de <strong style="color:var(--navy)">0,89 %</strong> depasse le benchmark de 37 %, signe d'un ciblage pertinent et d'un message creatif adapte a la cible familles CSP+ en recherche de sejours hiver.</p>
+            <p style="margin-bottom:10px">Le LTR de <strong style="color:var(--navy)">85,17 %</strong> confirme que les auditeurs ecoutent les spots jusqu'au bout, limitant les skips et maximisant l'exposition au message.</p>
+            <p>La repetition de <strong style="color:var(--navy)">1,17</strong> reste maitrisee, evitant la saturation tout en assurant la memorisation de l'offre hiver -30 %.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 CTV -->
+<section class="block reveal" id="ctv">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><span class="n">04</span> TV connectee (CTV)</div>
+        <h2>Resultats du levier CTV</h2>
+      </div>
+      <p>12/10 au 25/10/2026 · Budget engage : 1 697,94 EUR HT</p>
+    </div>
+
+    <div class="grid g4" style="margin-bottom:18px">
+      <div class="kpi-mini star-mini">
+        <small>Completion Rate</small>
+        <div class="v num">94,67 %</div>
+        <div class="d">benchmark : 85-90 %</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Impressions diffusees</small>
+        <div class="v num">56 598</div>
+        <div class="d">sur 103 333 objectif</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Avancement objectif</small>
+        <div class="v num">54,8 %</div>
+        <div class="d">a mi-campagne</div>
+      </div>
+      <div class="kpi-mini">
+        <small>Format</small>
+        <div class="v" style="font-size:17px">100 % CTV</div>
+        <div class="d">Pas de clic · TV connectee</div>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h4 style="margin-bottom:16px">Avancement impressions CTV</h4>
+        <div class="budget-bar">
+          <div class="budget-bar-labels">
+            <span>Impressions realisees</span>
+            <span style="font-weight:700;color:var(--navy)">56 598</span>
+          </div>
+          <div class="budget-bar-track">
+            <div class="budget-bar-fill" style="width:54.8%"></div>
+          </div>
+          <div class="budget-bar-labels">
+            <span>54,8 % de l'objectif</span>
+            <span>Objectif : 103 333</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding:16px;background:var(--terra-50);border-radius:14px;border-left:3px solid var(--terra)">
+          <div style="font-weight:700;color:var(--terra);margin-bottom:6px">Taux de completion : 94,67 %</div>
+          <div style="font-size:14px;color:var(--muted)">Les benchmarks sectoriels se situent entre 85 et 90 % pour la CTV. VCDS affiche +4,67 points au-dessus du haut de la fourchette, signe d'une diffusion de qualite sur des inventaires premium.</div>
+        </div>
+        <div style="margin-top:14px;padding:14px;background:var(--ice-50);border-radius:12px">
+          <div style="font-size:13px;color:var(--muted)">La CTV est un format 100 % ecran de television connecte. Il ne genere pas de clics : l'impact est mesure par le taux de completion et la puissance de diffusion (impressions, reach foyer).</div>
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:16px">Analyse de la performance CTV</h4>
+        <div style="font-size:14px;color:var(--muted);line-height:1.8">
+          <p style="margin-bottom:12px">Le taux de completion de <strong style="color:var(--navy)">94,67 %</strong> est exceptionnel pour un format video CTV, ou l'attention est naturellement plus elevee qu'en pre-roll desktop.</p>
+          <p style="margin-bottom:12px">La diffusion en environnement replay et AVOD garantit un contexte premium : les foyers sont dans une disposition active de consommation de contenus, favorable a la reception d'un message publicitaire hiver.</p>
+          <p style="margin-bottom:12px">A mi-parcours (54,8 % de l'objectif d'impressions), la pression publicitaire est calibree pour atteindre les <strong style="color:var(--navy)">103 333 impressions</strong> cibles d'ici le 6 novembre.</p>
+          <p>L'absence de clic est normale pour ce levier : la conversion se fait en memoire et en recherche directe sur villagesclubbsdusoleil.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PIGE CONCURRENTIELLE -->
+<section class="block reveal" id="pige">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="kicker"><span class="n">05</span> Pige concurrentielle</div>
+        <h2>Monitoring des acteurs en replay CTV</h2>
+      </div>
+      <p>Periode de surveillance : 12/10 au 06/11/2026 · M6+, Disney+, Netflix</p>
+    </div>
+    <div style="margin-bottom:18px;padding:16px 20px;background:var(--ice-50);border-radius:14px;border-left:3px solid var(--ice)">
+      <div style="font-size:14px;color:var(--muted)">The Good Web a surveille les achats publicitaires des grandes plateformes de streaming sur le meme format (Replay / CTV) et la meme periode que la campagne VCDS Vague 2. Ces trois acteurs ont achete de l'espace pendant que VCDS diffuse : le contexte est fortement concurrentiel sur ce segment.</div>
+    </div>
+    <div class="pige-grid">
+      <div class="pige-card pige-m6">
+        <div class="pige-logo">M6+</div>
+        <div class="tag">Replay TV</div>
+        <div class="pige-row"><span class="pr-label">Support</span><span class="pr-val">M6+ (service replay de M6 et W9)</span></div>
+        <div class="pige-row"><span class="pr-label">Format</span><span class="pr-val">Spot video pre-roll replay</span></div>
+        <div class="pige-row"><span class="pr-label">Creation</span><span class="pr-val">Personnages animes, univers montagne et neige, ambiance familiale hivernale</span></div>
+        <div class="pige-row"><span class="pr-label">Periode</span><span class="pr-val">12/10 au 06/11/2026</span></div>
+        <div class="pige-row"><span class="pr-label">Redirection</span><span class="pr-val">Landing hiver M6+ (promotions vacances)</span></div>
+        <div class="analyse">M6+ active son propre espace replay pour promouvoir son offre vacances hiver en simultanee avec VCDS. Periode et format identiques : competition directe sur les memes inventaires CTV.</div>
+      </div>
+      <div class="pige-card pige-disney">
+        <div class="pige-logo">Disney+</div>
+        <div class="tag">Replay TV</div>
+        <div class="pige-row"><span class="pr-label">Support</span><span class="pr-val">Disney+ (service de streaming SVOD)</span></div>
+        <div class="pige-row"><span class="pr-label">Format</span><span class="pr-val">Spot video pre-roll · 13 secondes</span></div>
+        <div class="pige-row"><span class="pr-label">Creation</span><span class="pr-val">Famille dans la neige, promo -30 % code DISNEY27, ambiance hivernale</span></div>
+        <div class="pige-row"><span class="pr-label">Periode</span><span class="pr-val">12/10 au 06/11/2026</span></div>
+        <div class="pige-row"><span class="pr-label">Redirection</span><span class="pr-val">Landing VCDS "Promo givree jusqu'a -30 %" sur villagesclubbsdusoleil.com</span></div>
+        <div class="analyse">Disney+ achete de l'espace CTV pour renvoyer directement vers la landing VCDS Vague 2 avec un code promo dedie (DISNEY27). La creation cible le meme segment familial hiver. Ce partenariat genere du trafic complementaire vers le meme site.</div>
+      </div>
+      <div class="pige-card pige-netflix">
+        <div class="pige-logo">Netflix</div>
+        <div class="tag">Replay TV</div>
+        <div class="pige-row"><span class="pr-label">Support</span><span class="pr-val">Netflix (plan avec publicite)</span></div>
+        <div class="pige-row"><span class="pr-label">Format</span><span class="pr-val">Spot video pre-roll · 18 secondes</span></div>
+        <div class="pige-row"><span class="pr-label">Creation</span><span class="pr-val">Logo VCDS "Les vacances qui rapprochent" + villagesclubsdusoleil.com</span></div>
+        <div class="pige-row"><span class="pr-label">Periode</span><span class="pr-val">12/10 au 06/11/2026</span></div>
+        <div class="pige-row"><span class="pr-label">Redirection</span><span class="pr-val">Landing VCDS "Promo givree jusqu'a -30 %" sur villagesclubbsdusoleil.com</span></div>
+        <div class="analyse">VCDS diffuse sur Netflix (plan AVOD) avec un spot branding pur : logo et baseline uniquement. Ce levier travaille la notoriete de marque aupres d'une audience premium. La landing est commune a la campagne CTV TGW, creant une synergie de message.</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;padding:20px 24px;background:var(--navy);border-radius:16px;display:flex;gap:20px;align-items:flex-start">
+      <div style="font-size:24px;flex:none">&#9670;</div>
+      <div>
+        <div style="font-family:Poppins,sans-serif;font-weight:700;color:var(--white);margin-bottom:6px">Enseignement cle de la pige</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.7">Les trois principaux acteurs de la SVOD et du replay (M6+, Disney+, Netflix) sont tous actifs sur le format CTV pendant la meme periode que VCDS Vague 2. VCDS est donc presente sur les memes ecrans et dans le meme contexte concurrentiel. La diffusion TGW vient renforcer la presence de la marque la ou les grandes plateformes investissent : un signal fort de la pertinence du levier CTV pour les sejours hiver.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CONCLUSION -->
+<section class="block reveal" id="conclusion">
+  <div class="wrap">
+    <div class="conclu">
+      <div class="kicker" style="color:var(--ice)"><span class="n" style="background:rgba(123,189,255,.15);color:var(--ice)">06</span> Conclusion</div>
+      <h2 style="color:var(--white);margin-bottom:8px">Bilan intermediaire tres positif</h2>
+      <p class="sub-conclu">Les deux leviers performent au-dessus des benchmarks a mi-campagne. Aucun point d'alerte.</p>
+      <div class="conclu-grid">
+        <div class="conclu-card">
+          <h4>KPIs phares</h4>
+          <ul>
+            <li>LTR audio 85,17 % vs 80 % benchmark</li>
+            <li>CTR audio 0,89 % vs 0,65 % benchmark</li>
+            <li>Completion CTV 94,67 % vs 87,5 % benchmark</li>
+            <li>52 467 individus uniques touches en audio</li>
+            <li>Repetition maitrisee a 1,17</li>
+          </ul>
+        </div>
+        <div class="conclu-card">
+          <h4>Insights cles</h4>
+          <ul>
+            <li>Ciblage affinitaire pertinent : engagement eleve sur les deux leviers</li>
+            <li>Contexte hiver -30 % bien recu par les auditeurs et telespectateurs connectes</li>
+            <li>Pige : Disney+ et Netflix amplifient la visibilite VCDS en CTV</li>
+            <li>Complementarite audio (mobile/nomade) et CTV (domicile/prime) validee</li>
+          </ul>
+        </div>
+        <div class="conclu-card">
+          <h4>Projection fin de campagne</h4>
+          <ul>
+            <li>Audio : budget restant 405,24 EUR a investir d'ici le 06/11</li>
+            <li>CTV : 46 735 impressions restantes a diffuser</li>
+            <li>Rythme actuel suffisant pour atteindre les objectifs</li>
+            <li>Aucune optimisation urgente necessaire</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reco-title">Nos recommandations pour la suite</div>
+      <div class="reco-grid">
+        <div class="reco-card">
+          <div class="rn">01</div>
+          <h4>Vague 3 : Display programmatique</h4>
+          <p>Prolonger la pression post-campagne avec du display IAB et VOL pour retargeter les visiteurs de la landing hiver et capitaliser sur les audiences construites en audio et CTV.</p>
+        </div>
+        <div class="reco-card">
+          <div class="rn">02</div>
+          <h4>Renforcer l'audio pour Noel</h4>
+          <p>Activer une vague audio supplementaire sur la periode Noel avec un budget renforce. La performance du LTR valide l'attention des auditeurs sur ce type de message saisonnier.</p>
+        </div>
+        <div class="reco-card">
+          <div class="rn">03</div>
+          <h4>OTT pour les vagues suivantes</h4>
+          <p>La pige montre que Netflix et Disney+ sont actifs en CTV sur cette cible. Envisager l'achat d'inventaires OTT directs (Netflix AVOD, myCANAL) pour etre present la ou la concurrence investit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 CONTACTS -->
+<footer id="contacts">
+  <div class="wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="214 252 572 496" class="foot-logo" role="img" aria-label="The Good Web">
+      <g>
+        <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+        <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+        <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+        <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+        <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+        <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+        <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+      </g>
+      <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+    </svg>
+    <h3>Merci pour votre confiance</h3>
+    <p class="ft-sub">L'equipe The Good Web reste disponible pour tout echange sur ce bilan ou la suite de la campagne.</p>
+    <div class="contacts">
+      <div class="ct">
+        <div class="ct-role">Directeur commercial</div>
+        <div class="ct-name">Jerome Fages</div>
+        <div class="ct-info"><a href="tel:0618746675">06 18 74 66 75</a><br><a href="mailto:jerome@thegoodweb.eu">jerome@thegoodweb.eu</a></div>
+      </div>
+      <div class="ct me">
+        <div class="ct-role">Directrice de clientele</div>
+        <div class="ct-name">Mathilde Coriton</div>
+        <div class="ct-info"><a href="tel:0648619292">06 48 61 92 92</a><br><a href="mailto:mathilde@thegoodweb.eu">mathilde@thegoodweb.eu</a></div>
+      </div>
+      <div class="ct">
+        <div class="ct-role">Cheffe de publicite junior</div>
+        <div class="ct-name">Andrea Alonso</div>
+        <div class="ct-info"><a href="tel:0491542812">04 91 54 28 12</a><br><a href="mailto:andrea@thegoodweb.eu">andrea@thegoodweb.eu</a></div>
+      </div>
+      <div class="ct">
+        <div class="ct-role">Chef de publicite</div>
+        <div class="ct-name">Sofien Chaganiou</div>
+        <div class="ct-info"><a href="tel:0767847067">07 67 84 70 67</a><br><a href="mailto:sofien@thegoodweb.eu">sofien@thegoodweb.eu</a></div>
+      </div>
+      <div class="ct ct-placeholder">
+        <div class="ct-role">Equipe technique</div>
+        <div class="ct-name">Pole activation</div>
+        <div class="ct-info" style="color:rgba(255,255,255,.4)">activation@thegoodweb.eu</div>
+      </div>
+    </div>
+    <p class="ft-legal">The Good Web · Bilan de campagne · Villages Clubs du Soleil · Vague 2 · Document confidentiel a usage client exclusif</p>
+  </div>
+</footer>
+
+<script>
+// Nav active on scroll
+const secs = document.querySelectorAll('section[id], footer[id]');
+const links = document.querySelectorAll('nav.anchors a');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      links.forEach(l => l.classList.remove('on'));
+      const a = document.querySelector('nav.anchors a[href="#'+e.target.id+'"]');
+      if(a) a.classList.add('on');
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s => obs.observe(s));
+
+// Reveal on scroll
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+</script>
+</body>
+</html>

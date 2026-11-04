@@ -454,7 +454,7 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
         <div class="spec"><small>Levier</small><strong>cTV · Netflix, Prime Video, myCANAL</strong></div>
         <div class="spec"><small>Objectif</small><strong>Complétion</strong></div>
         <div class="spec"><small>Format</small><strong>Film 16:9 · TV et ordinateur</strong></div>
-        <div class="spec"><small>Géolocalisation</small><strong>AURA, IDF, Occitanie, Sud, Alsace, Jura, Franche‑Comté</strong></div>
+        <div class="spec"><small>Géolocalisation</small><strong>AURA, IDF, Occitanie, Provence‑Alpes‑Côte d’Azur, Alsace, Jura, Franche‑Comté</strong></div>
         <div class="spec"><small>Socio‑démo</small><strong>Hommes et femmes 18‑35 ans</strong></div>
         <div class="spec"><small>Volume et CPM</small><strong>866 667 imp. · 30 € HT</strong></div>
       </div>
@@ -752,7 +752,7 @@ document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',
   document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');draw(b.dataset.k)}));
 draw('imp');
 
-const zones=[['Auvergne‑Rhône‑Alpes','AURA',217295,25.06,43450],['Île‑de‑France','IDF',173397,20.00,34679],['Occitanie','Occitanie',130192,15.02,26004],['Sud','Provence‑Alpes‑Côte d’Azur',94275,10.88,18976],['Franche‑Comté','Bourgogne‑Franche‑Comté',86814,10.02,17328],['Alsace','Grand Est',86728,10.01,17320],['Jura','Massif du Jura',78051,9.01,15593]];
+const zones=[['Auvergne‑Rhône‑Alpes','AURA',217295,25.06,43450],['Île‑de‑France','IDF',173397,20.00,34679],['Occitanie','Occitanie',130192,15.02,26004],['Provence‑Alpes‑Côte d’Azur','PACA',94275,10.88,18976],['Franche‑Comté','Bourgogne‑Franche‑Comté',86814,10.02,17328],['Alsace','Grand Est',86728,10.01,17320],['Jura','Massif du Jura',78051,9.01,15593]];
 document.getElementById('sites-list').innerHTML=zones.map((s,i)=>`<div class="site"><span class="rk">${i+1}</span><span class="nm">${s[0]}<small>${fr(s[4])} individus uniques</small></span><div class="tr"><div class="fl" data-w="${(s[3]/25.06*100).toFixed(1)}"></div></div><span class="pc">${fr(s[3],2)} %</span><span class="im">${fr(s[2])} imp.</span></div>`).join('');
 
 const wd=[['lundi','12, 19, 26/10 et 02/11',127685,98.29,0.85],['mardi','13, 20, 27/10 et 03/11',131978,96.35,0.78],['mercredi','14, 21 et 28/10',121016,97.47,0.78],['jeudi','15, 22 et 29/10',121648,96.90,0.71],['vendredi','16, 23 et 30/10',121062,98.04,0.73],['samedi','17, 24 et 31/10',122558,95.93,0.69],['dimanche','18, 25/10 et 01/11',120805,96.08,0.67]];

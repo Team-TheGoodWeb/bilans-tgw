@@ -166,7 +166,7 @@ b,strong{font-weight:600}
 .share-leg{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
 .share-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 
-/* Segments (volets) */
+/* Segments */
 .seg{border-radius:var(--radius);padding:26px;position:relative;overflow:hidden}
 .seg.a{background:linear-gradient(160deg,var(--navy),var(--navy-3));color:var(--white)}
 .seg.a h3{color:var(--white)}
@@ -183,7 +183,7 @@ b,strong{font-weight:600}
 .seg .stats3 small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
 .seg .badge{position:absolute;top:20px;right:20px;background:var(--terra);color:var(--white);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
 
-/* Funnel trafic */
+/* Funnel */
 .funnel{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:center;margin-top:6px}
 .fstep{border-radius:16px;padding:18px;background:var(--ice-50);text-align:center}
 .fstep strong{display:block;font-family:Poppins,sans-serif;font-size:26px;color:var(--navy);line-height:1.15}
@@ -193,6 +193,17 @@ b,strong{font-weight:600}
 .fstep.hl strong,.fstep.hl small,.fstep.hl span{color:var(--white)}
 .farr{color:var(--terra);display:flex;flex-direction:column;align-items:center;font-size:12px;font-weight:700;gap:2px}
 .farr svg{width:34px;height:34px}
+
+/* Coûts */
+.costs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cost{background:var(--ice-50);border-radius:14px;padding:16px 18px}
+.cost small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.cost strong{display:block;font-family:Poppins,sans-serif;font-size:24px;color:var(--navy);line-height:1.25;margin-top:4px}
+.cost span{font-size:12.5px;color:var(--muted)}
+.cost.hl{background:var(--navy)}
+.cost.hl small{color:var(--ice)}
+.cost.hl strong{color:var(--white)}
+.cost.hl span{color:rgba(255,255,255,.75)}
 
 /* Conclusion */
 .concl{background:var(--navy);border-radius:26px;padding:44px;color:var(--white);position:relative;overflow:hidden}
@@ -250,6 +261,7 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
   .kpi:nth-child(n+7){border-bottom:none}
   .verdict,.g2,.g3{grid-template-columns:1fr}
   .funnel{grid-template-columns:1fr}
+  .costs{grid-template-columns:1fr 1fr}
   .farr{transform:rotate(90deg)}
 }
 @media (max-width:600px){
@@ -294,40 +306,40 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
     </div>
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">Social Ads · Notoriété et trafic</div>
+        <div class="eyebrow">Social Ads · Facebook et Instagram</div>
         <h1>Ville de Nice</h1>
         <div class="sub">Campagne <b>Musée de la photo</b></div>
         <p class="lead">Trois semaines de prise de parole sur Facebook et Instagram pour faire connaître le Musée de la photo auprès des familles et des amateurs d'arts de Nice et de ses alentours.</p>
         <div class="pills">
           <div class="pill"><small>Période</small><strong>21/10 au 10/11/2026</strong></div>
-          <div class="pill"><small>Budget</small><strong>700 € HT</strong></div>
+          <div class="pill"><small>Budget</small><strong>700 € HT</strong></div>
           <div class="pill"><small>Zone</small><strong>Nice + 30 km</strong></div>
-          <div class="pill hl"><small>Volume livré</small><strong>193 % de l'objectif</strong></div>
+          <div class="pill hl"><small>Volume livré</small><strong>193 % de l'objectif</strong></div>
         </div>
       </div>
-      <div class="stage" aria-label="Résultats des deux volets de la campagne sur mobile">
-        <div class="chip c1"><i></i>Volet notoriété · Post et Story</div>
+      <div class="stage" aria-label="Résultats de la campagne sur mobile">
+        <div class="chip c1"><i></i>Post · Facebook et Instagram</div>
         <div class="phone p1">
           <div class="ph-body"><div class="scr"><div class="res n">
-            <div><div class="tp">Notoriété</div><div class="ttl">Musée de la photo <br>Ville de Nice</div></div>
-            <div><div class="bigv num">213 631</div><div class="bigl">impressions</div></div>
+            <div><div class="tp">Diffusion</div><div class="ttl">Musée de la photo <br>Ville de Nice</div></div>
+            <div><div class="bigv num">257 863</div><div class="bigl">impressions</div></div>
             <div class="rows">
-              <div class="rw"><strong class="num">78 331</strong><span>personnes touchées</span></div>
-              <div class="rw"><strong class="num">2,7</strong><span>expositions par personne</span></div>
+              <div class="rw"><strong class="num">103 973</strong><span>personnes touchées</span></div>
+              <div class="rw"><strong class="num">2,5</strong><span>expositions par personne</span></div>
             </div>
           </div><div class="glare"></div></div></div>
         </div>
         <div class="phone p2">
           <div class="ph-body"><div class="scr"><div class="res t">
-            <div><div class="tp">Trafic</div><div class="ttl">Direction la page <br>du musée</div></div>
-            <div><div class="bigv num">2 550</div><div class="bigl">clics générés</div></div>
+            <div><div class="tp">Engagement</div><div class="ttl">Direction la page <br>du musée</div></div>
+            <div><div class="bigv num">3 558</div><div class="bigl">clics générés</div></div>
             <div class="rows">
-              <div class="rw hl"><strong class="num">5,77 %</strong><span>taux de clics</span></div>
-              <div class="rw"><strong class="num">1 767</strong><span>visites de la page</span></div>
+              <div class="rw hl"><strong class="num">1,38 %</strong><span>taux de clics</span></div>
+              <div class="rw"><strong class="num">1 767</strong><span>visites de la page</span></div>
             </div>
           </div><div class="glare"></div></div></div>
         </div>
-        <div class="chip c2"><i></i>Volet trafic · Facebook et Instagram</div>
+        <div class="chip c2"><i></i>Story · Facebook et Instagram</div>
       </div>
     </div>
   </div>
@@ -337,7 +349,7 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
   <div class="wrap">
     <a href="#synthese">Synthèse</a>
     <a href="#dispositif">Dispositif</a>
-    <a href="#volets">Volets</a>
+    <a href="#parcours">Parcours</a>
     <a href="#performance">Performance</a>
     <a href="#conclusion">Conclusion</a>
     <a href="#contacts">Contacts</a>
@@ -349,22 +361,22 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
 <section class="block" id="synthese">
   <div class="sec-head rv">
     <div><div class="kicker"><span class="n">01</span>Synthèse</div><h2>L'essentiel en un coup d'œil</h2></div>
-    <p>Un volume livré près de deux fois supérieur à l'objectif, pour un budget inchangé, et un volet trafic particulièrement réactif.</p>
+    <p>Un volume livré près de deux fois supérieur à l'objectif, pour un budget inchangé, et une audience qui a rejoint en nombre la page du musée.</p>
   </div>
   <div class="kpis rv">
-    <div class="kpi star"><small>Impressions</small><div class="v num" data-count="257863">257 863</div><div class="d"><em>193 %</em> du volume prévu</div></div>
-    <div class="kpi"><small>Couverture cumulée</small><div class="v num" data-count="103973">103 973</div><div class="d">personnes touchées sur les 2 volets</div></div>
+    <div class="kpi star"><small>Impressions</small><div class="v num" data-count="257863">257 863</div><div class="d"><em>193 %</em> du volume prévu</div></div>
+    <div class="kpi"><small>Couverture</small><div class="v num" data-count="103973">103 973</div><div class="d">personnes touchées</div></div>
     <div class="kpi"><small>Répétition</small><div class="v num">2,5</div><div class="d">expositions par personne</div></div>
-    <div class="kpi"><small>Clics</small><div class="v num" data-count="3558">3 558</div><div class="d">sur les publicités</div></div>
-    <div class="kpi"><small>Taux de clics</small><div class="v num">1,38 %</div><div class="d"><em>5,77 %</em> sur le volet trafic</div></div>
-    <div class="kpi"><small>Visites de la page</small><div class="v num" data-count="1767">1 767</div><div class="d">pages chargées après un clic</div></div>
-    <div class="kpi star"><small>CPM</small><div class="v num">2,71 €</div><div class="d"><em>−55 %</em> vs 6 € HT au devis</div></div>
-    <div class="kpi"><small>CPC</small><div class="v num">0,20 €</div><div class="d">coût par clic constaté</div></div>
+    <div class="kpi"><small>Clics</small><div class="v num" data-count="3558">3 558</div><div class="d">sur les publicités</div></div>
+    <div class="kpi"><small>Taux de clics</small><div class="v num">1,38 %</div><div class="d">des impressions suivies d'un clic</div></div>
+    <div class="kpi"><small>Visites de la page</small><div class="v num" data-count="1767">1 767</div><div class="d">pages chargées après un clic</div></div>
+    <div class="kpi star"><small>CPM</small><div class="v num">2,71 €</div><div class="d"><em>−55 %</em> vs 6 € HT au devis</div></div>
+    <div class="kpi"><small>CPC</small><div class="v num">0,20 €</div><div class="d">coût par clic constaté</div></div>
   </div>
   <div class="verdict">
-    <div class="vcard rv"><div class="ic">✓</div><div><h4>Objectif de volume dépassé</h4><p>257 863 impressions livrées pour 133 333 prévues, soit 124 530 impressions supplémentaires sans surcoût.</p></div></div>
-    <div class="vcard t rv"><div class="ic">↗</div><div><h4>Un trafic qualifié</h4><p>Le volet trafic atteint 5,77 % de taux de clics et 69 % des clics aboutissent à une visite de la page.</p></div></div>
-    <div class="vcard i rv"><div class="ic">◆</div><div><h4>Un investissement optimisé</h4><p>Pour 700 € HT, le coût réel ressort à 2,71 € les mille impressions, contre 6 € HT prévus au devis.</p></div></div>
+    <div class="vcard rv"><div class="ic">✓</div><div><h4>Objectif de volume dépassé</h4><p>257 863 impressions livrées pour 133 333 prévues, soit 124 530 impressions supplémentaires sans surcoût.</p></div></div>
+    <div class="vcard t rv"><div class="ic">↗</div><div><h4>Un trafic qualifié</h4><p>1 767 visites de la page du musée : un clic sur deux aboutit à une visite, pour 0,40 € HT par visite.</p></div></div>
+    <div class="vcard i rv"><div class="ic">◆</div><div><h4>Un investissement optimisé</h4><p>Pour 700 € HT, le coût réel ressort à 2,71 € les mille impressions, contre 6 € HT prévus au devis.</p></div></div>
   </div>
 </section>
 
@@ -374,14 +386,14 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
   </div>
   <div class="ctx">
     <div class="card rv">
-      <p class="intro">Prise de parole de la <strong>Ville de Nice</strong> pour valoriser le <strong>Musée de la photo</strong> et sa programmation. Un dispositif Social Ads sur <strong>Facebook et Instagram</strong>, en Post et en Story, à destination des <strong>hommes et femmes de 25 ans et plus</strong> à Nice et dans un rayon de 30 km, articulé en deux volets : notoriété pour installer le message, trafic pour amener l'audience sur la page du musée.</p>
+      <p class="intro">Prise de parole de la <strong>Ville de Nice</strong> pour valoriser le <strong>Musée de la photo</strong> et sa programmation. Un dispositif Social Ads sur <strong>Facebook et Instagram</strong>, en Post et en Story, à destination des <strong>hommes et femmes de 25 ans et plus</strong> à Nice et dans un rayon de 30 km, pour faire connaître le musée et amener l'audience sur sa page.</p>
       <div class="specs">
         <div class="spec"><small>Levier</small><strong>Social Ads Meta</strong></div>
-        <div class="spec"><small>Objectifs</small><strong>Notoriété et trafic</strong></div>
+        <div class="spec"><small>Objectifs</small><strong>Visibilité et visites</strong></div>
         <div class="spec"><small>Formats</small><strong>Post et Story Ads</strong></div>
         <div class="spec"><small>Géolocalisation</small><strong>Ville de Nice + 30 km</strong></div>
         <div class="spec"><small>Socio‑démo</small><strong>Hommes et femmes 25 ans et +</strong></div>
-        <div class="spec"><small>Volume et CPM</small><strong>133 333 imp. · 6 € HT</strong></div>
+        <div class="spec"><small>Volume et CPM</small><strong>133 333 imp. · 6 € HT</strong></div>
       </div>
       <div style="margin-top:20px">
         <small class="muted" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Ciblage par centres d'intérêt</small>
@@ -401,56 +413,29 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
   </div>
 </section>
 
-<section class="block" id="volets">
+<section class="block" id="parcours">
   <div class="sec-head rv">
-    <div><div class="kicker"><span class="n">03</span>Volets</div><h2>Deux volets complémentaires</h2></div>
-    <p>La notoriété a porté le volume et la couverture, le trafic a converti l'intérêt en visites sur la page du musée.</p>
+    <div><div class="kicker"><span class="n">03</span>Parcours</div><h2>De l'impression à la visite</h2></div>
+    <p>Une campagne qui a su installer le musée auprès du public niçois et transformer l'intérêt en visites sur sa page.</p>
   </div>
-  <div class="grid g2">
-    <div class="seg b rv">
-      <div class="glyph">●</div>
-      <h3>Volet notoriété</h3>
-      <p class="desc muted">Diffusion large sur Facebook et Instagram pour faire connaître le musée au plus grand nombre de Niçois et d'habitants des alentours.</p>
-      <div class="stats3 num"><div><strong>213 631</strong><small>Impressions</small></div><div><strong>78 331</strong><small>Personnes</small></div><div><strong>2,7</strong><small>Répétition</small></div></div>
-      <div class="stats3 num"><div><strong>1 008</strong><small>Clics</small></div><div><strong>0,47 %</strong><small>CTR</small></div><div><strong>579,93 €</strong><small>Budget HT</small></div></div>
-    </div>
-    <div class="seg a rv">
-      <span class="badge">Meilleur CTR</span>
-      <div class="glyph">◆</div>
-      <h3>Volet trafic</h3>
-      <p class="desc">Diffusion optimisée vers les personnes les plus enclines à cliquer, pour générer des visites sur la page du Musée de la photo.</p>
-      <div class="stats3 num"><div><strong>44 232</strong><small>Impressions</small></div><div><strong>25 642</strong><small>Personnes</small></div><div><strong>1,7</strong><small>Répétition</small></div></div>
-      <div class="stats3 num"><div><strong>2 550</strong><small>Clics</small></div><div><strong>5,77 %</strong><small>CTR</small></div><div><strong>1 767</strong><small>Visites</small></div></div>
-    </div>
-  </div>
-
-  <div class="card rv" style="margin-top:18px">
-    <div class="tbl-scroll">
-    <table class="tbl num">
-      <thead><tr><th>Volet</th><th>Budget HT</th><th>Impressions</th><th>Couverture</th><th>Clics</th><th>CTR</th><th>CPM</th><th>CPC</th></tr></thead>
-      <tbody>
-        <tr><td>Notoriété</td><td>579,93 €</td><td>213 631</td><td>78 331</td><td>1 008</td><td>0,47 %</td><td>2,71 €</td><td>0,58 €</td></tr>
-        <tr class="best"><td>Trafic</td><td>120,07 €</td><td>44 232</td><td>25 642</td><td>2 550</td><td>5,77 %</td><td>2,71 €</td><td>0,05 €</td></tr>
-        <tr class="tot"><td>Total</td><td>700,00 €</td><td>257 863</td><td>103 973</td><td>3 558</td><td>1,38 %</td><td>2,71 €</td><td>0,20 €</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <div class="share">
-      <div style="width:83%;background:var(--navy)"></div><div style="width:17%;background:var(--terra)"></div>
-    </div>
-    <div class="share-leg"><span><i style="background:var(--navy)"></i>Notoriété · 83 % des impressions</span><span><i style="background:var(--terra)"></i>Trafic · 17 %</span></div>
-    <p class="muted" style="font-size:12.5px;margin-top:12px">Budget réparti au prorata des impressions livrées sur la base du forfait de 700 € HT. Couverture totale exprimée en cumul des deux volets.</p>
-  </div>
-
-  <div class="card rv" style="margin-top:18px">
-    <h3 style="font-size:18px;margin-bottom:4px">Volet trafic : de l'impression à la visite</h3>
-    <p class="muted" style="font-size:14px;margin-bottom:18px">Près de 7 clics sur 10 se sont transformés en visite effective de la page du musée.</p>
+  <div class="card rv">
+    <h3 style="font-size:18px;margin-bottom:4px">Le parcours de l'audience</h3>
+    <p class="muted" style="font-size:14px;margin-bottom:18px">Un clic sur deux s'est transformé en visite effective de la page du musée.</p>
     <div class="funnel num">
-      <div class="fstep"><strong>44 232</strong><small>Impressions</small><span>25 642 personnes touchées</span></div>
-      <div class="farr"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 24h18M26 17l7 7-7 7"/></svg>5,77 %</div>
-      <div class="fstep"><strong>2 550</strong><small>Clics</small><span>0,05 € par clic</span></div>
-      <div class="farr"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 24h18M26 17l7 7-7 7"/></svg>69 %</div>
-      <div class="fstep hl"><strong>1 767</strong><small>Visites de la page</small><span>0,07 € par visite</span></div>
+      <div class="fstep"><strong>257 863</strong><small>Impressions</small><span>103 973 personnes touchées</span></div>
+      <div class="farr"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 24h18M26 17l7 7-7 7"/></svg>1,38 %</div>
+      <div class="fstep"><strong>3 558</strong><small>Clics</small><span>0,20 € par clic</span></div>
+      <div class="farr"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 24h18M26 17l7 7-7 7"/></svg>50 %</div>
+      <div class="fstep hl"><strong>1 767</strong><small>Visites de la page</small><span>0,40 € par visite</span></div>
+    </div>
+  </div>
+  <div class="card rv" style="margin-top:18px">
+    <h3 style="font-size:18px;margin-bottom:16px">Ce qu'a rapporté chaque euro investi</h3>
+    <div class="costs num">
+      <div class="cost"><small>Budget</small><strong>700 € HT</strong><span>forfait du devis</span></div>
+      <div class="cost"><small>CPM</small><strong>2,71 €</strong><span>pour mille impressions</span></div>
+      <div class="cost"><small>CPC</small><strong>0,20 €</strong><span>par clic</span></div>
+      <div class="cost hl"><small>Coût par visite</small><strong>0,40 €</strong><span>par visite de la page</span></div>
     </div>
   </div>
 </section>
@@ -464,24 +449,24 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
     <div class="card bench rv">
       <div class="kicker" style="margin-bottom:4px">Volume d'impressions</div>
       <h3>Près de deux fois le volume prévu</h3>
-      <div class="big num">193 %</div>
-      <span class="delta">+124 530 impressions offertes</span>
+      <div class="big num">193 %</div>
+      <span class="delta">+124 530 impressions offertes</span>
       <div class="bar-cmp num">
-        <div class="bar-row"><span>Livré</span><div class="tr"><div class="fl" data-w="100"></div></div><span class="val">257 863</span></div>
-        <div class="bar-row"><span>Prévu au devis</span><div class="tr"><div class="fl ias" data-w="51.7"></div></div><span class="val">133 333</span></div>
+        <div class="bar-row"><span>Livré</span><div class="tr"><div class="fl" data-w="100"></div></div><span class="val">257 863</span></div>
+        <div class="bar-row"><span>Prévu au devis</span><div class="tr"><div class="fl ias" data-w="51.7"></div></div><span class="val">133 333</span></div>
       </div>
       <p class="note">Le volume garanti a été atteint puis largement dépassé, sans aucun surcoût pour la Ville de Nice.</p>
     </div>
     <div class="card bench rv">
       <div class="kicker" style="margin-bottom:4px">Coût pour mille impressions</div>
       <h3>Un CPM réel divisé par plus de deux</h3>
-      <div class="big num">2,71 €</div>
-      <span class="delta">−55 % vs CPM du devis</span>
+      <div class="big num">2,71 €</div>
+      <span class="delta">−55 % vs CPM du devis</span>
       <div class="bar-cmp num">
-        <div class="bar-row"><span>CPM réel</span><div class="tr"><div class="fl" data-w="45.2"></div></div><span class="val">2,71 €</span></div>
-        <div class="bar-row"><span>CPM au devis</span><div class="tr"><div class="fl ias" data-w="100"></div></div><span class="val">6,00 €</span></div>
+        <div class="bar-row"><span>CPM réel</span><div class="tr"><div class="fl" data-w="45.2"></div></div><span class="val">2,71 €</span></div>
+        <div class="bar-row"><span>CPM au devis</span><div class="tr"><div class="fl ias" data-w="100"></div></div><span class="val">6,00 €</span></div>
       </div>
-      <p class="note">Grâce à la sur‑livraison, chaque millier d'impressions est revenu à 2,71 € HT au lieu des 6 € HT prévus, pour un budget maintenu à 700 € HT.</p>
+      <p class="note">Grâce à la sur‑livraison, chaque millier d'impressions est revenu à 2,71 € HT au lieu des 6 € HT prévus, pour un budget maintenu à 700 € HT.</p>
     </div>
   </div>
 </section>
@@ -491,13 +476,13 @@ a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
     <div class="kicker" style="color:var(--ice)"><span class="n" style="background:rgba(255,255,255,.1);color:var(--ice)">05</span>Conclusion</div>
     <h2>Une campagne réussie, des enseignements à capitaliser</h2>
     <div class="cols">
-      <div class="ccol"><div class="g">●</div><h4>Des KPIs au‑dessus des attentes</h4><p><b>257 863 impressions</b> livrées pour 133 333 prévues, <b>103 973 personnes</b> touchées en cumul et <b>1 767 visites</b> de la page du musée, pour un CPM réel de <b>2,71 €</b>.</p></div>
-      <div class="ccol"><div class="g">■</div><h4>Des insights réutilisables</h4><p>Le <b>volet trafic</b> est de loin le plus efficace : <b>5,77 %</b> de taux de clics et une visite pour <b>0,07 €</b>. Le volet notoriété a assuré la couverture avec une répétition de 2,7.</p></div>
+      <div class="ccol"><div class="g">●</div><h4>Des KPIs au‑dessus des attentes</h4><p><b>257 863 impressions</b> livrées pour 133 333 prévues, <b>103 973 personnes</b> touchées et <b>1 767 visites</b> de la page du musée, pour un CPM réel de <b>2,71 €</b>.</p></div>
+      <div class="ccol"><div class="g">■</div><h4>Des insights réutilisables</h4><p>Une audience <b>réactive</b> : <b>3 558 clics</b>, dont <b>un sur deux</b> aboutit à une visite de la page, pour <b>0,40 €</b> par visite et une répétition maîtrisée de 2,5.</p></div>
       <div class="ccol"><div class="g">◆</div><h4>Un ciblage maîtrisé</h4><p>Une diffusion concentrée sur <b>Nice et 30 km</b> autour, auprès des <b>25 ans et plus</b> intéressés par la famille, les arts, la photographie et les expositions.</p></div>
     </div>
     <div class="recos-title">Nos recommandations pour la suite</div>
     <div class="recos">
-      <div class="reco"><div class="n">1</div><h4>Renforcer le volet trafic</h4><p>Redonner plus de poids au trafic en Social Ads Post et Story lors des prochaines expositions : c'est le volet qui transforme le mieux l'intérêt en visites.</p></div>
+      <div class="reco"><div class="n">1</div><h4>Capitaliser sur les visites</h4><p>Reconduire le Social Ads Post et Story à chaque nouvelle exposition, en orientant davantage la diffusion vers les visites de la page, l'indicateur le plus concret pour le musée.</p></div>
       <div class="reco"><div class="n">2</div><h4>Étendre avec le pDisplay</h4><p>Ajouter du display programmatique IAB en contextuel culture, sorties et famille sur Nice + 30 km, pour toucher les publics peu présents sur Facebook et Instagram.</p></div>
       <div class="reco"><div class="n">3</div><h4>Ancrer localement avec le pDOOH</h4><p>Relayer les temps forts du musée sur les écrans digitaux urbains de la métropole niçoise, pour un rappel de proximité en complément du social.</p></div>
     </div>

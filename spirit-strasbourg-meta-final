@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilan Spirit Immobilier · Le Kin Huningue</title>
+<meta name="description" content="Bilan de la campagne Meta Ads Spirit Immobilier pour la résidence Le Kin à Huningue, du 09/10 au 20/11/2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#021859;--navy-2:#0a2470;--navy-3:#13307f;
+  --ice:#7bbdff;--ice-50:#f1f7ff;--ice-100:#e2efff;--ice-200:#c6e0ff;
+  --terra:#f25430;--terra-50:#fff2ee;--terra-100:#ffe0d7;
+  --white:#ffffff;--bg:#f5f8fd;--ink:#0d1a3f;--muted:#5a6788;--line:#e2e8f4;
+  --radius:18px;--shadow:0 10px 30px rgba(2,24,89,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:Poppins,sans-serif;color:var(--navy);line-height:1.2}
+img,svg{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ HERO ============ */
+.hero{position:relative;background:var(--navy);color:var(--white);overflow:hidden;padding:34px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 420px at 82% 38%,rgba(123,189,255,.28),transparent 70%),
+  radial-gradient(420px 320px at 64% 88%,rgba(242,84,48,.22),transparent 70%),
+  radial-gradient(500px 400px at 5% 0%,rgba(123,189,255,.10),transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,transparent 30%,#000 75%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 75%);pointer-events:none}
+.hero-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.logo{width:118px;height:auto}
+.hero-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ice);border:1px solid rgba(123,189,255,.35);padding:7px 14px;border-radius:999px;white-space:nowrap}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.08fr;gap:30px;align-items:center;padding:30px 0 70px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--terra)}
+.hero h1{color:var(--white);font-size:clamp(34px,4.6vw,56px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.hero .sub{font-family:Poppins,sans-serif;font-size:clamp(18px,2vw,23px);font-weight:500;color:var(--ice-200);margin-bottom:22px}
+.hero .sub b{color:var(--white);font-weight:700}
+.hero p.lead{color:rgba(255,255,255,.78);max-width:520px;margin-bottom:26px;font-size:15.5px}
+.pills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:460px}
+.pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px}
+.pill.wide{grid-column:1/-1}
+.pill small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);font-weight:600}
+.pill strong{font-family:Poppins,sans-serif;font-size:15px;font-weight:600;color:var(--white)}
+.pill.hl{background:var(--terra);border-color:var(--terra)}
+.pill.hl small{color:rgba(255,255,255,.85)}
+
+/* devices */
+.stage{position:relative;height:440px;perspective:1600px}
+.laptop{position:absolute;right:0;top:34px;width:86%;transform:rotateY(-14deg) rotateX(5deg) rotateZ(.5deg);transform-style:preserve-3d;animation:float 7s ease-in-out infinite;filter:drop-shadow(0 40px 50px rgba(0,0,0,.45))}
+.lap-screen{background:#0b0e18;border-radius:16px 16px 4px 4px;padding:14px 14px 18px;position:relative;border:1px solid #2a3150}
+.lap-screen::before{content:"";position:absolute;top:5px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#2c3352}
+.lap-screen .scr{border-radius:4px;overflow:hidden;aspect-ratio:16/10.4;background:#eef1f6;position:relative}
+.scr .glare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%);pointer-events:none}
+.lap-base{height:16px;margin:0 -7%;background:linear-gradient(#e6e9f0,#aab1c2);border-radius:0 0 18px 18px;position:relative}
+.lap-base::before{content:"";position:absolute;top:0;left:50%;width:16%;margin-left:-8%;height:6px;background:#c3c8d4;border-radius:0 0 8px 8px}
+.phone{position:absolute;left:0;bottom:0;width:164px;transform:rotateY(10deg) rotateZ(-4deg);animation:float 7s ease-in-out infinite;animation-delay:-3.2s;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5));z-index:3}
+.ph-body{background:#0b0e18;border-radius:30px;padding:9px;border:1px solid #39405e;position:relative}
+.ph-body::before{content:"";position:absolute;top:15px;left:50%;width:52px;height:14px;margin-left:-26px;background:#0b0e18;border-radius:10px;z-index:2}
+.ph-body .scr{border-radius:22px;overflow:hidden;aspect-ratio:9/19.5;position:relative;background:#fff}
+.chip{position:absolute;z-index:4;background:var(--white);color:var(--navy);font-size:12px;font-weight:600;padding:8px 12px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--terra);display:inline-block;flex:none}
+.chip.c1{right:4%;top:0}
+.chip.c2{left:150px;bottom:26px}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(242,84,48,.15)}50%{box-shadow:0 0 0 10px rgba(242,84,48,.05)}}
+@media (prefers-reduced-motion:reduce){.laptop,.phone,.mk-ring{animation:none}}
+
+/* ad mockups */
+.mk-feed{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1.55fr 1fr;gap:4%;padding:4% 4% 0;background:#eef1f6}
+.mk-col{display:flex;flex-direction:column;gap:7%}
+.mk-col.l i,.mk-col.r i{display:block;height:9px;border-radius:5px;background:#dde3ee}
+.mk-col.l i.s,.mk-col.r i.s{width:60%}
+.mk-col.r i{height:34px;border-radius:8px}
+.mk-col.r i.s{height:9px;width:70%}
+.mk-ring{border-radius:8px;outline:2px solid var(--terra);outline-offset:3px;animation:pulse 2.6s ease-in-out infinite}
+.mk-post{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 4px 14px rgba(2,24,89,.10);font-size:8px;color:#1c2333;line-height:1.3}
+.mk-head{display:flex;align-items:center;gap:6px;padding:7px 8px}
+.mk-head b{display:block;font-size:8.5px}
+.mk-head small{display:block;font-size:7px;color:#7a8499}
+.mk-av{flex:none;width:18px;height:18px;border-radius:50%;background:#1f2b45;color:#fff;font:700 9px Poppins,sans-serif;display:grid;place-items:center}
+.mk-txt{padding:0 8px 6px;font-weight:600}
+.mk-car{display:grid;grid-template-columns:1fr 26%;gap:3px}
+.mk-slide{position:relative;aspect-ratio:1/1;overflow:hidden}
+.mk-slide svg{width:100%;height:100%}
+.mk-cap{position:absolute;left:6px;bottom:6px;background:rgba(255,255,255,.92);color:#1c2333;font-weight:700;font-size:7.5px;padding:3px 6px;border-radius:4px}
+.mk-foot{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:6px 8px;background:#f4f6fa}
+.mk-foot small{display:block;font-size:6.5px;color:#7a8499;text-transform:uppercase}
+.mk-foot b{font-size:8px}
+.mk-cta{flex:none;background:#e4e8f0;border-radius:4px;padding:3px 7px;font-weight:700;font-size:7.5px}
+.mk-post.sm{font-size:10px}
+.mk-post.sm .mk-head b{font-size:11px}.mk-post.sm .mk-head small{font-size:9px}.mk-post.sm .mk-av{width:24px;height:24px;font-size:11px}
+.mk-post.sm .mk-cap{font-size:10px}.mk-post.sm .mk-foot b{font-size:10.5px}.mk-post.sm .mk-foot small{font-size:8.5px}.mk-post.sm .mk-cta{font-size:9.5px;padding:4px 9px}
+.mk-story{position:absolute;inset:0;background:#20283a;display:flex;flex-direction:column;color:#fff}
+.mk-bars{display:flex;gap:3px;padding:24px 8px 0}
+.mk-bars i{flex:1;height:2px;border-radius:2px;background:rgba(255,255,255,.4)}
+.mk-bars i.on{background:#fff}
+.mk-head.lt b{color:#fff}.mk-head.lt small{color:rgba(255,255,255,.75)}
+.mk-art{flex:1;min-height:0;position:relative}
+.mk-art svg{position:absolute;inset:0;width:100%;height:100%}
+.mk-st-txt{position:absolute;left:10px;right:10px;bottom:48px;background:rgba(10,14,24,.55);border-radius:8px;padding:8px}
+.mk-st-txt b{display:block;font:700 11px/1.25 Poppins,sans-serif}
+.mk-st-txt span{display:inline-block;margin-top:4px;background:#fff;color:#1c2333;font-weight:700;font-size:9px;padding:2px 6px;border-radius:4px}
+.mk-st-cta{position:absolute;left:10px;right:10px;bottom:14px;background:#fff;color:#1c2333;font-weight:700;font-size:9.5px;text-align:center;padding:6px;border-radius:999px}
+.mk-form{position:absolute;inset:0;background:#fff;padding:26px 10px 10px;display:flex;flex-direction:column;gap:7px;font-size:9px;color:#1c2333}
+.mk-form .mk-head{padding:0 0 4px;border-bottom:1px solid #eef1f6}
+.mk-ft{font:600 10.5px/1.3 Poppins,sans-serif;margin:2px 0}
+.mk-form label{display:block;font-size:8px;color:#7a8499}
+.mk-form label i{display:block;height:16px;border:1px solid #d6dce8;border-radius:5px;margin-top:2px}
+.mk-send{margin-top:auto;background:var(--navy);color:#fff;text-align:center;font-weight:700;padding:7px;border-radius:999px;font-size:9.5px}
+
+/* ============ NAV ============ */
+nav.anchors{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.anchors .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:10px;padding-bottom:10px}
+nav.anchors .wrap::-webkit-scrollbar{display:none}
+nav.anchors a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;transition:.2s}
+nav.anchors a:hover{color:var(--navy);background:var(--ice-50)}
+nav.anchors a.on{background:var(--navy);color:var(--white)}
+
+/* ============ SECTIONS ============ */
+section.block{padding:72px 0 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--terra);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.kicker .n{font-family:Poppins,sans-serif;background:var(--terra-50);color:var(--terra);border-radius:8px;padding:2px 8px}
+h2{font-size:clamp(26px,3vw,36px);font-weight:700;letter-spacing:-.01em}
+.sec-head p{max-width:520px;color:var(--muted)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.grid>*,.ctx>*,.journey>*{min-width:0}
+.muted{color:var(--muted)}
+b,strong{font-weight:600}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;flex:none;vertical-align:middle}
+.dot.noto{background:var(--ice)}.dot.traf{background:var(--navy)}.dot.lead{background:var(--terra)}
+
+/* KPI band */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.kpi{padding:24px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.kpi:nth-child(4n){border-right:none}
+.kpi:nth-child(n+5){border-bottom:none}
+.kpi small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.kpi .v{font-family:Poppins,sans-serif;font-size:30px;font-weight:700;color:var(--navy);line-height:1.1}
+.kpi .d{font-size:13px;color:var(--muted);margin-top:6px}
+.kpi.star{background:linear-gradient(160deg,var(--navy),var(--navy-3))}
+.kpi.star small{color:var(--ice)}
+.kpi.star .v{color:var(--white)}
+.kpi.star .d{color:rgba(255,255,255,.75)}
+.verdict{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{border-radius:var(--radius);padding:20px 22px;display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line)}
+.vcard .ic{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:18px;color:var(--white);background:var(--navy);font-family:Poppins,sans-serif;font-weight:700}
+.vcard.t .ic{background:var(--terra)}
+.vcard.i .ic{background:var(--ice);color:var(--navy)}
+.vcard h4{font-size:16px;margin-bottom:2px}
+.vcard p{font-size:14px;color:var(--muted)}
+
+/* Dispositif */
+.ctx{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.ctx .intro{font-size:17px;line-height:1.7}
+.ctx .intro strong{color:var(--navy)}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.spec{background:var(--ice-50);border-radius:14px;padding:14px 16px}
+.spec small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.spec strong{font-family:Poppins,sans-serif;color:var(--navy);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tag{font-size:13px;background:var(--white);border:1px solid var(--ice-200);color:var(--navy);padding:5px 11px;border-radius:999px;font-weight:500}
+.kpi-pri{display:flex;flex-direction:column;gap:12px}
+.kp{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;background:var(--bg)}
+.kp .g{flex:none;width:34px;height:34px;border-radius:10px;background:var(--navy);color:var(--ice);display:grid;place-items:center;font-size:14px}
+.kp h4{font-size:15px}
+.kp p{font-size:13.5px;color:var(--muted)}
+
+/* Parcours */
+.journey{display:grid;grid-template-columns:.8fr auto 1.5fr;gap:22px;align-items:center;margin-top:18px}
+.crea-frame{background:linear-gradient(160deg,var(--navy),var(--navy-3));border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--white)}
+.crea-frame .mk-post{width:100%;max-width:250px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.crea-frame .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);font-weight:600}
+.fmts{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.fmts span{font-size:12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px}
+.arrow{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--terra);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.arrow svg{width:46px;height:46px}
+.landing{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;grid-template-columns:1fr 150px;gap:22px;align-items:center}
+.landing .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px}
+.landing p{font-size:14px;color:var(--muted)}
+.jstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.jstats div{background:var(--ice-50);border-radius:12px;padding:10px 12px}
+.jstats div:last-child{background:var(--terra-50)}
+.jstats strong{display:block;font-family:Poppins,sans-serif;color:var(--navy);font-size:19px}
+.jstats div:last-child strong{color:var(--terra)}
+.jstats small{font-size:11.5px;color:var(--muted)}
+.mini-ph{width:150px;background:#0b0e18;border-radius:22px;padding:7px;box-shadow:0 20px 40px rgba(2,24,89,.3)}
+.mini-ph .scr{border-radius:16px;overflow:hidden;aspect-ratio:9/18;position:relative;background:#fff}
+
+/* Frise des volets */
+.gantt{display:flex;flex-direction:column;gap:14px}
+.g-row{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center}
+.g-lbl{font-weight:600;color:var(--navy);display:flex;align-items:center;flex-wrap:wrap}
+.g-lbl small{display:block;width:100%;padding-left:18px;font-weight:500;font-size:12.5px;color:var(--muted)}
+.g-track{position:relative;height:38px;background:var(--bg);border-radius:10px}
+.g-bar{position:absolute;top:0;bottom:0;border-radius:10px;display:flex;align-items:center;padding:0 10px;overflow:hidden;min-width:8px}
+.g-bar span{font-size:12px;font-weight:700;white-space:nowrap}
+.g-out{position:absolute;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:var(--navy);white-space:nowrap}
+.g-bar.noto{background:var(--ice)}.g-bar.noto span{color:var(--navy)}
+.g-bar.traf{background:var(--navy)}.g-bar.traf span{color:#fff}
+.g-bar.lead{background:var(--terra)}.g-bar.lead span{color:#fff}
+.g-axis{position:relative;height:20px;margin-left:238px;font-size:11.5px;color:var(--muted)}
+.g-axis span{position:absolute;top:0;transform:translateX(-50%)}
+.g-axis span:first-child{transform:none}
+.vols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.vol{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.vol-h{padding:20px 22px;color:#fff}
+.vol.noto .vol-h{background:var(--ice)}.vol.noto .vol-h *{color:var(--navy)}
+.vol.traf .vol-h{background:var(--navy)}
+.vol.lead .vol-h{background:var(--terra)}
+.vol-h small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;opacity:.85}
+.vol-h h3{color:inherit;font-size:20px;margin:2px 0 4px}
+.vol.traf .vol-h h3,.vol.lead .vol-h h3{color:#fff}
+.vol-h p{font-size:13.5px;opacity:.9}
+.vol-b{padding:18px 22px 22px;flex:1}
+.vol-bud{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.vol-bud span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.vol-bud strong{font-family:Poppins,sans-serif;font-size:22px;color:var(--navy)}
+.vol-bud em{font-style:normal;font-size:12.5px;color:var(--terra);font-weight:600}
+.vol-k{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vol-k div{background:var(--bg);border-radius:12px;padding:10px 12px}
+.vol-k small{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.vol-k strong{font-family:Poppins,sans-serif;font-size:17px;color:var(--navy)}
+.vol.lead .vol-k div:nth-child(4){background:var(--terra-50)}
+.vol.lead .vol-k div:nth-child(4) strong{color:var(--terra)}
+.foot-note{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* Engagement */
+.bench h3{font-size:19px;margin-bottom:4px}
+.funnel{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.fn{display:flex;align-items:center;gap:14px}
+.fn .fb{height:46px;border-radius:12px;display:flex;align-items:center;padding:0 14px;color:#fff;font-family:Poppins,sans-serif;font-weight:700;font-size:18px;white-space:nowrap;min-width:110px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.fn:nth-child(1) .fb{background:var(--ice);color:var(--navy)}
+.fn:nth-child(2) .fb{background:var(--navy)}
+.fn:nth-child(3) .fb{background:var(--terra)}
+.fn .fl2{font-size:13.5px;color:var(--muted);line-height:1.35}
+.fn .fl2 b{display:block;color:var(--navy)}
+.bench .delta{display:inline-block;background:var(--terra);color:var(--white);font-weight:700;font-size:13px;padding:4px 10px;border-radius:999px;margin-top:6px}
+.bar-cmp{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.bar-row{display:grid;grid-template-columns:86px 1fr 64px;gap:12px;align-items:center;font-size:13.5px}
+.bar-row .tr{height:14px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.bar-row .fl{height:100%;border-radius:999px;background:var(--navy);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.bar-row .fl.noto{background:var(--ice)}.bar-row .fl.lead{background:var(--terra)}
+.bar-row .val{text-align:right;font-weight:600;color:var(--navy)}
+.bench .note{margin-top:16px;font-size:13.5px;color:var(--muted)}
+
+/* Table */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:15px}
+.tbl th{background:var(--navy);color:var(--white);font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;text-align:right;padding:14px 16px;white-space:nowrap}
+.tbl th:first-child{text-align:left;border-radius:12px 0 0 0}
+.tbl th:last-child{border-radius:0 12px 0 0}
+.tbl td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.tbl td:first-child{text-align:left;font-weight:600;color:var(--navy)}
+.tbl tr.best td{background:var(--terra-50)}
+.tbl tr.best td:first-child::after{content:attr(data-badge);margin-left:10px;font-size:11px;font-weight:700;color:var(--white);background:var(--terra);padding:2px 8px;border-radius:999px;vertical-align:middle}
+.tbl tr.tot td{background:var(--ice-50);font-weight:700;color:var(--navy);border-bottom:none}
+.tbl-scroll{overflow-x:auto}
+.shares{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}
+.shares h4{font-size:14px;color:var(--muted);font-family:Inter,sans-serif;font-weight:600}
+.share{display:flex;height:12px;border-radius:999px;overflow:hidden;margin:10px 0 8px}
+.share div{height:100%}
+.share-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.share-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+/* Audiences */
+.seg{border-radius:var(--radius);padding:26px;position:relative;overflow:hidden}
+.seg.a{background:linear-gradient(160deg,var(--navy),var(--navy-3));color:var(--white)}
+.seg.a h3{color:var(--white)}
+.seg.b{background:var(--white);border:1px solid var(--line)}
+.seg .glyph{font-size:22px;color:var(--terra);margin-bottom:10px}
+.seg h3{font-size:20px;margin-bottom:6px}
+.seg .desc{font-size:14px;opacity:.85;min-height:44px}
+.seg .stats3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.seg .stats3 div{border-radius:12px;padding:12px;background:rgba(255,255,255,.08)}
+.seg.b .stats3 div{background:var(--ice-50)}
+.seg .stats3 strong{display:block;font-family:Poppins,sans-serif;font-size:20px}
+.seg.b .stats3 strong{color:var(--navy)}
+.seg .stats3 small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.seg .seg-f{font-size:12.5px;opacity:.7;margin-top:12px}
+.seg .badge{position:absolute;top:20px;right:20px;background:var(--terra);color:var(--white);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.donut-wrap{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.donut{width:150px;height:150px;flex:none}
+.donut text{font-family:Poppins,sans-serif}
+.leg{display:flex;flex-direction:column;gap:10px;font-size:14.5px}
+.leg div{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.leg i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.leg strong{font-family:Poppins,sans-serif;color:var(--navy)}
+.leg em{font-style:normal;font-size:12.5px;color:var(--muted);width:100%;padding-left:22px;margin-top:-6px}
+.ages{display:flex;flex-direction:column;gap:14px}
+.age{display:grid;grid-template-columns:96px 1fr 104px;gap:14px;align-items:center;font-size:14px}
+.age .al{font-weight:600;color:var(--navy)}
+.age .ab{display:flex;flex-direction:column;gap:5px}
+.age .tr{height:10px;background:var(--ice-50);border-radius:999px;overflow:hidden}
+.age .fl{height:100%;width:0;border-radius:999px;background:var(--ice-200);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.age .fl.t{background:var(--navy)}
+.age .fl.t.top{background:var(--terra)}
+.age .av2{text-align:right;line-height:1.25}
+.age .av2 b{display:block;color:var(--navy);font-family:Poppins,sans-serif}
+.age .av2 em{font-style:normal;font-size:12px;color:var(--muted)}
+.age-leg{display:flex;gap:16px;font-size:12.5px;color:var(--muted);margin-bottom:14px;flex-wrap:wrap}
+.age-leg i{display:inline-block;width:14px;height:6px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.geo{display:flex;gap:22px;align-items:center}
+.geo .ring{flex:none;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--navy) 0 100%);display:grid;place-items:center;position:relative}
+.geo .ring::after{content:"";position:absolute;inset:12px;background:var(--white);border-radius:50%}
+.geo .ring span{position:relative;z-index:1;font-family:Poppins,sans-serif;font-weight:800;color:var(--navy);font-size:24px}
+.geo p{font-size:15px}
+.geo p strong{color:var(--navy)}
+.cities{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.cities li{font-size:13px;background:var(--ice-50);color:var(--navy);padding:5px 11px;border-radius:999px;font-weight:500}
+
+/* Annonces */
+.pitch{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:center}
+.pitch p{font-size:16.5px;line-height:1.7}
+.pitch p strong{color:var(--navy)}
+.offers{display:flex;flex-wrap:wrap;gap:10px}
+.offer{background:var(--terra-50);color:var(--terra);border:1px solid var(--terra-100);font-weight:700;font-size:14px;padding:8px 14px;border-radius:12px}
+.ads{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.ad{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.ad-prev{background:linear-gradient(160deg,var(--navy),var(--navy-3));padding:22px;display:flex;justify-content:center;align-items:center;min-height:300px}
+.ad-prev .mk-post{width:100%;max-width:230px}
+.ad-prev.story{position:relative}
+.ad-prev.story .mk-story{position:relative;inset:auto;width:150px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.ad-txt{padding:18px 20px 22px}
+.ad-vol{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.ad-vol.noto{background:var(--ice-100);color:var(--navy)}.ad-vol.traf{background:var(--navy);color:#fff}.ad-vol.lead{background:var(--terra);color:#fff}
+.ad-txt h4{font-size:16px;margin-bottom:4px}
+.ad-txt p{font-size:14px;color:var(--muted)}
+
+/* Budget */
+.btbl td small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-left:18px}
+.btbl td:first-child{white-space:normal}
+
+/* Conclusion */
+.concl{background:var(--navy);border-radius:26px;padding:44px;color:var(--white);position:relative;overflow:hidden}
+.concl::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(rgba(123,189,255,.25),transparent 70%)}
+.concl h2{color:var(--white)}
+.concl .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;position:relative}
+.ccol{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px}
+.ccol .g{color:var(--terra);font-size:20px;margin-bottom:10px}
+.ccol h4{color:var(--white);font-size:17px;margin-bottom:8px}
+.ccol p{font-size:14px;color:rgba(255,255,255,.78)}
+.ccol p b{color:var(--white)}
+.recos{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+.reco{background:var(--white);color:var(--ink);border-radius:18px;padding:22px;position:relative}
+.reco .n{font-family:Poppins,sans-serif;font-weight:800;font-size:13px;color:var(--white);background:var(--terra);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.reco h4{font-size:16px;margin-bottom:6px}
+.reco p{font-size:14px;color:var(--muted)}
+.recos-title{margin-top:34px;font-family:Poppins,sans-serif;font-weight:600;color:var(--ice);font-size:14px;letter-spacing:.1em;text-transform:uppercase;position:relative}
+
+/* Footer */
+footer{background:var(--navy);color:var(--white);margin-top:80px;padding:56px 0 34px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;margin-bottom:30px}
+.foot-top h3{color:var(--white);font-size:24px;margin-bottom:6px}
+.foot-top p{color:rgba(255,255,255,.7);max-width:480px}
+.foot-logo{width:88px;height:auto}
+.contacts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ct{display:block;text-decoration:none;color:var(--white);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px;transition:.2s}
+a.ct:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.ct.me{background:rgba(242,84,48,.16);border-color:var(--terra)}
+.ct .av{width:40px;height:40px;border-radius:12px;background:var(--ice);color:var(--navy);display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;font-size:14px;margin-bottom:12px}
+.ct.me .av{background:var(--terra);color:var(--white)}
+.ct strong{display:block;font-family:Poppins,sans-serif;font-size:15px}
+.ct small{display:block;color:var(--ice);font-size:12.5px;margin-bottom:8px}
+.ct.me small{color:#ffb3a1}
+.ct span{display:block;font-size:12.5px;color:rgba(255,255,255,.75);word-break:break-all}
+.ct.off{opacity:.6;cursor:default}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;font-size:12.5px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:40px}
+  .stage{height:400px;max-width:620px;width:100%;margin:0 auto}
+  .ctx,.journey,.pitch{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg)}
+  .contacts{grid-template-columns:repeat(3,1fr)}
+  .concl .cols,.recos,.vols,.ads{grid-template-columns:1fr}
+  .ads{max-width:520px}
+}
+@media (max-width:820px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .kpi:nth-child(4n){border-right:1px solid var(--line)}
+  .kpi:nth-child(2n){border-right:none}
+  .kpi:nth-child(n+5){border-bottom:1px solid var(--line)}
+  .kpi:nth-child(n+7){border-bottom:none}
+  .verdict,.g2,.g3,.shares{grid-template-columns:1fr}
+  .g-row{grid-template-columns:1fr;gap:6px}
+  .g-axis{margin-left:0}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hero{padding-top:22px}
+  .logo{width:92px}
+  .hero-tag{font-size:10.5px;padding:6px 10px}
+  .stage{height:300px}
+  .phone{width:116px}
+  .chip{font-size:10.5px;padding:6px 9px}
+  .chip.c2{left:96px;bottom:10px}
+  .chip.c1{right:0}
+  .mk-ring{outline-width:1.5px}
+  section.block{padding-top:56px}
+  .card{padding:20px}
+  .kpi{padding:18px 16px}
+  .kpi .v{font-size:24px}
+  .specs{grid-template-columns:1fr}
+  .contacts{grid-template-columns:1fr 1fr}
+  .concl{padding:28px 20px}
+  .landing{grid-template-columns:1fr;justify-items:center}
+  .landing>div:first-child{width:100%}
+  .jstats strong{font-size:16px}
+  .tbl{font-size:13.5px}
+  .tbl th,.tbl td{padding:12px 10px}
+  .tbl tr.best td:first-child::after{display:none}
+  .age{grid-template-columns:78px 1fr 88px;gap:10px}
+  .btbl td small{display:none}
+  .btbl th:nth-child(2),.btbl td:nth-child(2){display:none}
+  .g-axis span{font-size:10px}
+  .g-axis span:nth-child(even){display:none}
+  .fn .fb{font-size:16px}
+}
+</style>
+</head>
+<body class="no-js">
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <svg class="logo" role="img" aria-label="The Good Web" xmlns="http://www.w3.org/2000/svg" viewBox="214 252 572 496"><g>
+    <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path fill="#fff" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path fill="#fff" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path fill="#fff" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path fill="#fff" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path fill="#fff" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path fill="#fff" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path fill="#fff" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path fill="#fff" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path fill="#fff" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path fill="#fff" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path fill="#fff" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path fill="#fff" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path fill="#fff" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path fill="#fff" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path fill="#fff" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path fill="#fff" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path fill="#fff" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path fill="#fff" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path fill="#fff" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path fill="#fff" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path fill="#fff" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path fill="#fff" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path fill="#fff" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path fill="#fff" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g></svg>
+      <span class="hero-tag">Bilan de campagne · Novembre 2026</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Social Ads Meta · Génération de contacts</div>
+        <h1>Spirit Immobilier</h1>
+        <div class="sub">Résidence <b>Le Kin</b> · Huningue</div>
+        <p class="lead">Six semaines de diffusion sur Facebook et Instagram pour faire connaître la résidence Le Kin, puis transformer l'audience en demandes de contact qualifiées.</p>
+        <div class="pills">
+          <div class="pill"><small>Période</small><strong>09/10 au 20/11/2026</strong></div>
+          <div class="pill"><small>Budget</small><strong>2 000 € HT</strong></div>
+          <div class="pill wide"><small>Zone géographique</small><strong>Huningue et alentours</strong></div>
+          <div class="pill"><small>Coût par contact</small><strong>56,09 €</strong></div>
+          <div class="pill hl"><small>Demandes de contact</small><strong>33</strong></div>
+        </div>
+      </div>
+      <div class="stage" aria-label="Aperçu des annonces diffusées sur ordinateur et mobile">
+        <div class="chip c1"><i></i>Carrousel en fil d'actualité</div>
+        <div class="laptop">
+          <div class="lap-screen">
+            <div class="scr"><div class="mk-feed">
+  <div class="mk-col l"><i></i><i></i><i></i><i></i><i class="s"></i></div>
+  <div class="mk-col c"><div class="mk-ring"><div class="mk-post">
+  <div class="mk-head"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <p class="mk-txt">Votre appartement neuf à Huningue</p>
+  <div class="mk-car"><div class="mk-slide"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="sklapa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#sklapa)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg><span class="mk-cap">Dès 272 000 €</span></div><div class="mk-slide peek"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="sklapb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#sklapb)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div></div>
+  <div class="mk-foot"><span><small>spirit-immobilier.fr</small><b>Le Kin · Huningue</b></span><span class="mk-cta">En savoir plus</span></div>
+</div></div></div>
+  <div class="mk-col r"><i></i><i class="s"></i><i></i><i class="s"></i></div>
+</div><div class="glare"></div></div>
+          </div>
+          <div class="lap-base"></div>
+        </div>
+        <div class="phone">
+          <div class="ph-body"><div class="scr"><div class="mk-story">
+  <div class="mk-bars"><i class="on"></i><i></i><i></i></div>
+  <div class="mk-head lt"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <div class="mk-art"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skhero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skhero)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div>
+  <div class="mk-st-txt"><b>Devenez propriétaire à Huningue</b><span>Dès 272 000 €</span></div>
+  <div class="mk-st-cta">Demander des informations</div>
+</div><div class="glare"></div></div></div>
+        </div>
+        <div class="chip c2"><i></i>Format Story sur mobile</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="anchors" aria-label="Sommaire">
+  <div class="wrap">
+    <a href="#synthese">Synthèse</a>
+    <a href="#dispositif">Dispositif</a>
+    <a href="#volets">Volets</a>
+    <a href="#engagement">Engagement</a>
+    <a href="#repartition">Répartition</a>
+    <a href="#audiences">Audiences</a>
+    <a href="#annonces">Annonces</a>
+    <a href="#budget">Budget</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#contacts">Contacts</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section class="block" id="synthese">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">01</span>Synthèse</div><h2>33 demandes de contact pour la résidence Le Kin</h2></div>
+    <p>Une campagne rapidement réorientée vers la génération de contacts, avec une audience engagée et des demandes réparties sur toutes les tranches d'âge acheteuses.</p>
+  </div>
+  <div class="kpis rv">
+<div class="kpi star"><small>Demandes de contact</small><div class="v num" data-count="33">33</div><div class="d">via formulaire Meta</div></div>
+<div class="kpi"><small>Coût par contact</small><div class="v num">56,09 €</div><div class="d">sur le volet contacts</div></div>
+<div class="kpi"><small>Taux de conversion</small><div class="v num">5,7 %</div><div class="d">des clics du volet contacts</div></div>
+<div class="kpi"><small>Visites du site</small><div class="v num" data-count="240">240</div><div class="d">pour 0,44 € par visite</div></div>
+<div class="kpi"><small>Impressions</small><div class="v num" data-count="81351">81 351</div><div class="d">sur Facebook et Instagram</div></div>
+<div class="kpi"><small>Personnes touchées</small><div class="v num" data-count="34694">34 694</div><div class="d">individus uniques</div></div>
+<div class="kpi"><small>Répétition</small><div class="v num">2,3</div><div class="d">expositions par personne</div></div>
+<div class="kpi star"><small>Taux de clics</small><div class="v num">1,17 %</div><div class="d">954 clics au total</div></div>
+  </div>
+  <div class="verdict">
+<div class="vcard  rv"><div class="ic">✓</div><div><h4>Des prospects nominatifs</h4><p>33 demandes de contact collectées via le formulaire Meta, directement exploitables par vos équipes commerciales.</p></div></div><div class="vcard t rv"><div class="ic">↗</div><div><h4>Un engagement solide</h4><p>1,17 % de taux de clics sur l'ensemble de la campagne, et 1,38 % sur le volet contacts.</p></div></div><div class="vcard i rv"><div class="ic">◆</div><div><h4>Instagram efficace</h4><p>15,3 % des impressions mais 30 % des contacts : 2,4 fois plus de contacts par impression que Facebook.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="dispositif">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">02</span>Dispositif</div><h2>Rappel du contexte et du dispositif</h2></div>
+  </div>
+  <div class="ctx">
+    <div class="card rv">
+      <p class="intro">Campagne de <strong>Spirit Immobilier</strong> pour la commercialisation de la résidence <strong>Le Kin</strong> à Huningue, à la croisée des trois frontières et à proximité de Bâle. Après une semaine de diffusion en notoriété et en trafic, le dispositif a été <strong>réorienté vers la génération de contacts à partir du 16/10</strong> : l'essentiel du budget a servi à collecter des demandes via un formulaire Meta.</p>
+      <div class="specs"><div class="spec"><small>Levier</small><strong>Social Ads Meta</strong></div><div class="spec"><small>Objectif</small><strong>Notoriété puis contacts</strong></div><div class="spec"><small>Formats</small><strong>Carrousel · Image</strong></div><div class="spec"><small>Géolocalisation</small><strong>Huningue et alentours</strong></div><div class="spec"><small>Volume et CPM</small><strong>333 333 imp. · CPM 6 € HT</strong></div></div>
+      <div style="margin-top:20px">
+        <small class="muted" style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700">Plateformes et placements</small>
+        <div class="tags"><span class="tag">Fil d'actualité</span><span class="tag">Stories</span><span class="tag">Reels</span><span class="tag">Facebook</span><span class="tag">Instagram</span></div>
+      </div>
+    </div>
+    <div class="card rv">
+      <h3 style="font-size:19px;margin-bottom:16px">KPIs prioritaires</h3>
+      <div class="kpi-pri">
+        <div class="kp"><div class="g">●</div><div><h4>Demandes de contact</h4><p>Formulaires envoyés directement depuis Facebook ou Instagram, avec les coordonnées des prospects.</p></div></div>
+        <div class="kp"><div class="g">■</div><div><h4>Coût par contact</h4><p>Budget du volet contacts rapporté au nombre de demandes reçues.</p></div></div>
+        <div class="kp"><div class="g">◆</div><div><h4>Taux de clics et de conversion</h4><p>Part des impressions qui génèrent un clic, puis part des clics qui aboutissent à une demande de contact.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="journey">
+    <div class="crea-frame rv">
+      <span class="lbl">L'annonce</span>
+      <div class="mk-post sm">
+  <div class="mk-head"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <p class="mk-txt">Votre appartement neuf à Huningue</p>
+  <div class="mk-car"><div class="mk-slide"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skjra" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skjra)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg><span class="mk-cap">Dès 272 000 €</span></div><div class="mk-slide peek"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skjrb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skjrb)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div></div>
+  <div class="mk-foot"><span><small>spirit-immobilier.fr</small><b>Le Kin · Huningue</b></span><span class="mk-cta">En savoir plus</span></div>
+</div>
+      <div class="fmts"><span>Carrousel</span><span>Fil d'actualité</span><span>Stories</span></div>
+    </div>
+    <div class="arrow rv">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="21" stroke-opacity=".25"/><path d="M15 24h18M26 17l7 7-7 7"/></svg>
+      Clic
+    </div>
+    <div class="landing rv">
+      <div>
+        <div class="lbl">Formulaire de contact Meta</div>
+        <p>Le formulaire s'ouvre directement dans Facebook ou Instagram, prérempli avec les informations du compte : l'internaute laisse ses coordonnées en quelques secondes, sans quitter l'application.</p>
+        <div class="jstats num">
+          <div><strong>581</strong><small>clics</small></div>
+          <div><strong>33</strong><small>formulaires envoyés</small></div>
+          <div><strong>5,7 %</strong><small>de conversion</small></div>
+        </div>
+      </div>
+      <div class="mini-ph"><div class="scr"><div class="mk-form">
+  <div class="mk-head"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Le Kin · Huningue</small></span></div>
+  <p class="mk-ft">Recevez la documentation de la résidence</p>
+  <label>Prénom et nom<i></i></label><label>E-mail<i></i></label><label>Téléphone<i></i></label>
+  <span class="mk-send">Envoyer</span>
+</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="volets">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">03</span>Volets</div><h2>Notoriété, trafic puis demandes de contact</h2></div>
+    <p>Les volets notoriété et trafic ont lancé la campagne la première semaine, avant que 93 % du budget ne bascule sur le volet demandes de contact jusqu'au 20/11.</p>
+  </div>
+  <div class="card rv">
+    <div class="gantt">
+<div class="g-row"><div class="g-lbl"><span class="dot noto"></span>Notoriété<small>09/10 au 11/10 · 3 jours</small></div>
+<div class="g-track"><div class="g-bar noto" style="left:0.00%;width:6.98%"></div><span class="g-out" style="left:calc(6.98% + 10px)">2 % du budget</span></div></div>
+<div class="g-row"><div class="g-lbl"><span class="dot traf"></span>Trafic vers le site<small>09/10 au 16/10 · 8 jours</small></div>
+<div class="g-track"><div class="g-bar traf" style="left:0.00%;width:18.60%"><span>5 % du budget</span></div></div></div>
+<div class="g-row"><div class="g-lbl"><span class="dot lead"></span>Demandes de contact<small>16/10 au 20/11 · 36 jours</small></div>
+<div class="g-track"><div class="g-bar lead" style="left:16.28%;width:83.72%"><span>93 % du budget</span></div></div></div>
+    </div>
+    <div class="g-axis"><span style="left:0.00%">09/10</span><span style="left:23.26%">19/10</span><span style="left:39.53%">26/10</span><span style="left:55.81%">02/11</span><span style="left:72.09%">09/11</span><span style="left:88.37%">16/11</span></div>
+  </div>
+  <div class="vols">
+<div class="vol rv noto"><div class="vol-h"><small>Volet 1</small><h3>Notoriété</h3><p>Image fixe « Votre appartement neuf à Huningue »</p></div>
+<div class="vol-b"><div class="vol-bud"><span>Budget</span><strong>44 € HT</strong><em>2 % du dispositif</em></div><div class="vol-k num"><div><small>Impressions</small><strong>19 308</strong></div><div><small>Personnes touchées</small><strong>14 673</strong></div><div><small>Répétition</small><strong>1,3</strong></div><div><small>Clics</small><strong>7</strong></div><div><small>Taux de clics</small><strong>0,04 %</strong></div><div><small>Part des impressions</small><strong>24 %</strong></div></div></div></div>
+<div class="vol rv traf"><div class="vol-h"><small>Volet 2</small><h3>Trafic vers le site</h3><p>Carrousel de présentation de la résidence Le Kin</p></div>
+<div class="vol-b"><div class="vol-bud"><span>Budget</span><strong>105 € HT</strong><em>5 % du dispositif</em></div><div class="vol-k num"><div><small>Impressions</small><strong>19 944</strong></div><div><small>Clics</small><strong>366</strong></div><div><small>Taux de clics</small><strong>1,84 %</strong></div><div><small>Coût par clic</small><strong>0,29 €</strong></div><div><small>Visites du site</small><strong>240</strong></div><div><small>Coût par visite</small><strong>0,44 €</strong></div></div></div></div>
+<div class="vol rv lead"><div class="vol-h"><small>Volet 3</small><h3>Demandes de contact</h3><p>Carrousel « Devenez propriétaire à Huningue » avec formulaire Meta</p></div>
+<div class="vol-b"><div class="vol-bud"><span>Budget</span><strong>1 851 € HT</strong><em>93 % du dispositif</em></div><div class="vol-k num"><div><small>Impressions</small><strong>42 099</strong></div><div><small>Clics</small><strong>581</strong></div><div><small>Taux de clics</small><strong>1,38 %</strong></div><div><small>Demandes de contact</small><strong>33</strong></div><div><small>Taux de conversion</small><strong>5,7 %</strong></div><div><small>Coût par contact</small><strong>56,09 €</strong></div></div></div></div>
+  </div>
+  <p class="foot-note rv">Les coûts sont calculés sur le budget de la campagne.</p>
+</section>
+
+<section class="block" id="engagement">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">04</span>Engagement</div><h2>Du clic au contact</h2></div>
+    <p>Le volet contacts transforme l'intérêt en prospects nominatifs, directement dans les applications.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card bench rv">
+      <div class="kicker" style="margin-bottom:4px">Parcours de conversion</div>
+      <h3>Volet demandes de contact</h3>
+      <div class="funnel num">
+        <div class="fn"><div class="fb" data-w="100">42 099</div><div class="fl2"><b>Impressions</b></div></div>
+        <div class="fn"><div class="fb" data-w="22">581</div><div class="fl2"><b>Clics</b>1,38 % de taux de clics</div></div>
+        <div class="fn"><div class="fb" data-w="12">33</div><div class="fl2"><b>Contacts</b>5,7 % des clics</div></div>
+      </div>
+      <p class="note">Sur 581 clics, 33 internautes ont envoyé le formulaire, soit un taux de conversion de 5,7 %.</p>
+    </div>
+    <div class="card bench rv">
+      <div class="kicker" style="margin-bottom:4px">Taux de clics</div>
+      <h3>Un engagement fort sur les volets d'action</h3>
+      <div class="bar-cmp">
+<div class="bar-row"><span>Notoriété</span><div class="tr"><div class="fl noto" data-w="2.0"></div></div><span class="val">0,04 %</span></div><div class="bar-row"><span>Trafic</span><div class="tr"><div class="fl traf" data-w="100.0"></div></div><span class="val">1,84 %</span></div><div class="bar-row"><span>Contacts</span><div class="tr"><div class="fl lead" data-w="75.2"></div></div><span class="val">1,38 %</span></div>
+      </div>
+      <p class="note">Les volets trafic et contacts dépassent 1,3 % de taux de clics. Le volet notoriété, très court, a touché 14 673 personnes en trois jours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="repartition">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">05</span>Répartition</div><h2>Le volet contacts porte toute la conversion</h2></div>
+    <p>93 % du budget, 52 % des impressions et la totalité des demandes de contact.</p>
+  </div>
+  <div class="card rv">
+    <div class="tbl-scroll">
+    <table class="tbl num">
+      <thead><tr><th>Volet</th><th>Budget HT</th><th>Impressions</th><th>Clics</th><th>CTR</th><th>Résultat</th><th>Coût</th></tr></thead>
+      <tbody>
+<tr><td>Notoriété</td><td>44 €</td><td>19 308</td><td>7</td><td>0,04 %</td><td>14 673 pers. touchées</td><td>CPM 2,28 €</td></tr>
+<tr><td>Trafic vers le site</td><td>105 €</td><td>19 944</td><td>366</td><td>1,84 %</td><td>240 visites</td><td>0,44 € / visite</td></tr>
+<tr class="best"><td data-badge="100 % des contacts">Demandes de contact</td><td>1 851 €</td><td>42 099</td><td>581</td><td>1,38 %</td><td>33 contacts</td><td>56,09 € / contact</td></tr>
+<tr class="tot"><td>Total</td><td>2 000 €</td><td>81 351</td><td>954</td><td>1,17 %</td><td>33 contacts</td><td>56,09 € / contact</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="shares">
+      <div><h4>Répartition des impressions</h4><div class="share"><div style="width:23.73%;background:var(--ice)"></div><div style="width:24.52%;background:var(--navy)"></div><div style="width:51.75%;background:var(--terra)"></div></div><div class="share-leg"><span><i style="background:var(--ice)"></i>Notoriété · 24 %</span><span><i style="background:var(--navy)"></i>Trafic · 25 %</span><span><i style="background:var(--terra)"></i>Contacts · 52 %</span></div></div>
+      <div><h4>Répartition du budget</h4><div class="share"><div style="width:2.20%;background:var(--ice)"></div><div style="width:5.25%;background:var(--navy)"></div><div style="width:92.55%;background:var(--terra)"></div></div><div class="share-leg"><span><i style="background:var(--ice)"></i>Notoriété · 2 %</span><span><i style="background:var(--navy)"></i>Trafic · 5 %</span><span><i style="background:var(--terra)"></i>Contacts · 93 %</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="audiences">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">06</span>Audiences</div><h2>Plateformes et audiences</h2></div>
+    <p>Facebook apporte le volume et l'engagement, Instagram convertit davantage, et les demandes viennent des 35 à 64 ans.</p>
+  </div>
+  <div class="grid g2">
+<div class="seg a rv"><span class="badge">Meilleur rendement</span><div class="glyph">◆</div><h3>Instagram</h3>
+<p class="desc">Plateforme plus marginale en volume, mais près d'un tiers des demandes de contact.</p>
+<div class="stats3 num"><div><strong>15,3 %</strong><small>des impressions</small></div><div><strong>0,70 %</strong><small>Taux de clics</small></div><div><strong>10</strong><small>Contacts</small></div></div>
+<p class="seg-f">12 415 impressions · 87 clics · 0,81 contact pour 1 000 impressions</p></div><div class="seg b rv"><div class="glyph">●</div><h3>Facebook</h3>
+<p class="desc">La plateforme de volume : 85 % des impressions, le meilleur taux de clics et 23 contacts.</p>
+<div class="stats3 num"><div><strong>84,7 %</strong><small>des impressions</small></div><div><strong>1,26 %</strong><small>Taux de clics</small></div><div><strong>23</strong><small>Contacts</small></div></div>
+<p class="seg-f">68 936 impressions · 867 clics · 0,33 contact pour 1 000 impressions</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card rv">
+      <h3 style="font-size:18px;margin-bottom:4px">Âge : impressions et contacts</h3>
+      <p class="muted" style="font-size:14px;margin-bottom:14px">Les demandes se répartissent sur les 35 à 64 ans, en cohérence avec la cible d'acquéreurs d'un appartement neuf.</p>
+      <div class="age-leg"><span><i style="background:var(--ice-200)"></i>Part des impressions</span><span><i style="background:var(--navy)"></i>Demandes de contact</span></div>
+      <div class="ages num"><div class="age"><span class="al">25 à 34 ans</span><div class="ab"><div class="tr"><div class="fl" data-w="36"></div></div><div class="tr t"><div class="fl t" data-w="18"></div></div></div><span class="av2"><b>12 %</b><em>2 contacts</em></span></div><div class="age"><span class="al">35 à 44 ans</span><div class="ab"><div class="tr"><div class="fl" data-w="79"></div></div><div class="tr t"><div class="fl t top" data-w="100"></div></div></div><span class="av2"><b>26 %</b><em>11 contacts</em></span></div><div class="age"><span class="al">45 à 54 ans</span><div class="ab"><div class="tr"><div class="fl" data-w="88"></div></div><div class="tr t"><div class="fl t" data-w="82"></div></div></div><span class="av2"><b>29 %</b><em>9 contacts</em></span></div><div class="age"><span class="al">55 à 64 ans</span><div class="ab"><div class="tr"><div class="fl" data-w="100"></div></div><div class="tr t"><div class="fl t top" data-w="100"></div></div></div><span class="av2"><b>33 %</b><em>11 contacts</em></span></div></div>
+    </div>
+    <div class="card rv">
+      <h3 style="font-size:18px;margin-bottom:18px">Répartition par genre</h3>
+      <div class="donut-wrap">
+        <svg class="donut" viewBox="0 0 42 42" aria-label="46 % de femmes, 54 % d'hommes dans les impressions">
+          <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--navy)" stroke-width="5.2"/>
+          <circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--terra)" stroke-width="5.2" stroke-dasharray="46 54" stroke-dashoffset="25"/>
+          <text x="21" y="21.5" text-anchor="middle" font-size="7" font-weight="700" fill="var(--navy)">46%</text>
+          <text x="21" y="27" text-anchor="middle" font-size="3" fill="var(--muted)" font-family="Inter">femmes</text>
+        </svg>
+        <div class="leg">
+          <div><i style="background:var(--terra)"></i>Femmes <strong>46&nbsp;%</strong><em>20 demandes de contact</em></div>
+          <div><i style="background:var(--navy)"></i>Hommes <strong>54&nbsp;%</strong><em>12 demandes de contact</em></div>
+        </div>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:16px">Part des impressions par genre. Les femmes représentent la majorité des contacts. Genre non renseigné pour 1 contact.</p>
+      <div class="geo" style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+        <div class="ring"><span>100%</span></div>
+        <div><p>La campagne a été diffusée auprès des habitants de <strong>Huningue et de ses alentours</strong>, au plus près du futur lieu de vie des acquéreurs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="annonces">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">07</span>Annonces</div><h2>Les messages diffusés</h2></div>
+  </div>
+  <div class="card pitch rv">
+    <p>Résidence <strong>Le Kin</strong> à Huningue : appartements neufs du 2 au 4 pièces, des balcons, une résidence à taille humaine à proximité de Bâle, emménagement en 2027.</p>
+    <div class="offers"><span class="offer">Dès 272 000 €</span><span class="offer">Frais de notaire offerts</span><span class="offer">Jusqu'à 12 000 € de remise</span><span class="offer">Du 2 au 4 pièces</span></div>
+  </div>
+  <div class="ads">
+<div class="ad rv"><div class="ad-prev post"><div class="mk-post sm">
+  <div class="mk-head"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <p class="mk-txt">Votre appartement neuf à Huningue</p>
+  <div class="mk-car"><div class="mk-slide"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skadnotoa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skadnotoa)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg><span class="mk-cap">Dès 272 000 €</span></div><div class="mk-slide peek"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skadnotob" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skadnotob)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div></div>
+  <div class="mk-foot"><span><small>spirit-immobilier.fr</small><b>Le Kin · Huningue</b></span><span class="mk-cta">En savoir plus</span></div>
+</div></div><div class="ad-txt"><span class="ad-vol noto">Notoriété</span><h4>Votre appartement neuf à Huningue</h4><p>Visuel fixe présentant la résidence et l'offre, diffusé sur Facebook et Instagram.</p></div></div>
+<div class="ad rv"><div class="ad-prev post"><div class="mk-post sm">
+  <div class="mk-head"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <p class="mk-txt">Découvrez la résidence</p>
+  <div class="mk-car"><div class="mk-slide"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skadtrafa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skadtrafa)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg><span class="mk-cap">Dès 272 000 €</span></div><div class="mk-slide peek"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skadtrafb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skadtrafb)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div></div>
+  <div class="mk-foot"><span><small>spirit-immobilier.fr</small><b>Le Kin · Huningue</b></span><span class="mk-cta">En savoir plus</span></div>
+</div></div><div class="ad-txt"><span class="ad-vol traf">Trafic</span><h4>Découvrez la résidence</h4><p>Carrousel de 5 visuels renvoyant vers le site de la résidence.</p></div></div>
+<div class="ad rv"><div class="ad-prev story"><div class="mk-story">
+  <div class="mk-bars"><i class="on"></i><i></i><i></i></div>
+  <div class="mk-head lt"><span class="mk-av">S</span><span><b>Spirit Immobilier</b><small>Sponsorisé</small></span></div>
+  <div class="mk-art"><svg viewBox="0 0 260 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><linearGradient id="skadlead" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7def2"/><stop offset="1" stop-color="#eef3f8"/></linearGradient></defs>
+<rect width="260" height="200" fill="url(#skadlead)"/>
+<circle cx="212" cy="40" r="16" fill="#fff" opacity=".55"/>
+<rect x="50" y="36" width="120" height="150" rx="3" fill="#d9cfc2"/>
+<rect x="46" y="30" width="128" height="8" rx="2" fill="#7d8fa3"/>
+<rect x="62" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="68" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="52" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="94" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="78" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="120" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="104" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="146" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="130" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="62" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="88" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="85" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="114" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/><rect x="111" y="172" width="20" height="3" fill="#7d8fa3"/><rect x="140" y="156" width="14" height="16" rx="1.5" fill="#dfeaf5" opacity=".95"/>
+<rect x="172" y="66" width="62" height="120" rx="3" fill="#7d8fa3" opacity=".92"/>
+<rect x="182" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="82" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="108" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="134" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="182" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/><rect x="204" y="160" width="12" height="15" rx="1.5" fill="#dfeaf5" opacity=".9"/>
+<rect x="0" y="184" width="260" height="16" fill="#8fb58a"/>
+<circle cx="30" cy="172" r="16" fill="#6f9d6a"/><rect x="28" y="176" width="4" height="12" fill="#6b5640"/>
+<circle cx="246" cy="174" r="13" fill="#6f9d6a"/>
+</svg></div>
+  <div class="mk-st-txt"><b>Devenez propriétaire à Huningue</b><span>Dès 272 000 €</span></div>
+  <div class="mk-st-cta">Demander des informations</div>
+</div></div><div class="ad-txt"><span class="ad-vol lead">Contacts</span><h4>Devenez propriétaire à Huningue</h4><p>Carrousel « Des appartements neufs aux prestations haut de gamme, à la croisée des 3 frontières », avec formulaire de contact Meta.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="budget">
+  <div class="sec-head rv">
+    <div><div class="kicker"><span class="n">08</span>Budget</div><h2>Budget total du dispositif</h2></div>
+    <p>Budget intégralement consommé sur la période de diffusion.</p>
+  </div>
+  <div class="card rv">
+    <div class="tbl-scroll">
+    <table class="tbl btbl num">
+      <thead><tr><th>Volet</th><th>Période</th><th>Part</th><th>Budget</th></tr></thead>
+      <tbody>
+<tr><td><span class="dot noto"></span>Notoriété<small>Image fixe, Facebook et Instagram</small></td><td>09/10 au 11/10</td><td>2 %</td><td>44 € HT</td></tr><tr><td><span class="dot traf"></span>Trafic vers le site<small>Carrousel, Facebook et Instagram</small></td><td>09/10 au 16/10</td><td>5 %</td><td>105 € HT</td></tr><tr><td><span class="dot lead"></span>Demandes de contact<small>Carrousel et formulaire, Facebook et Instagram</small></td><td>16/10 au 20/11</td><td>93 %</td><td>1 851 € HT</td></tr>
+        <tr class="tot"><td>Total Social Ads Meta</td><td></td><td>100&nbsp;%</td><td>2 000 € HT</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="conclusion">
+  <div class="concl rv">
+    <div class="kicker" style="color:var(--ice)"><span class="n" style="background:rgba(255,255,255,.1);color:var(--ice)">09</span>Conclusion</div>
+    <h2>Une base de prospects à transformer</h2>
+    <div class="cols">
+<div class="ccol"><div class="g">●</div><h4>Des résultats concrets</h4><p><b>33 demandes de contact</b>, <b>240 visites</b> du site et <b>34 694 personnes</b> touchées, avec un taux de clics global de <b>1,17 %</b>.</p></div><div class="ccol"><div class="g">■</div><h4>Des enseignements clairs</h4><p><b>Instagram</b> convertit 2,4 fois mieux que Facebook, et les demandes viennent des <b>35 à 64 ans</b>, majoritairement des femmes.</p></div><div class="ccol"><div class="g">◆</div><h4>Un dispositif agile</h4><p>La bascule vers le formulaire Meta dès la deuxième semaine a permis de <b>transformer l'exposition en prospects</b> nominatifs pour Le Kin.</p></div>
+    </div>
+    <div class="recos-title">Nos recommandations pour la suite</div>
+    <div class="recos">
+<div class="reco"><div class="n">1</div><h4>Renouveler les créations</h4><p>Tester de nouveaux visuels et une vidéo motion en Story sur le volet contacts pour relancer l'attention et améliorer le taux de conversion du formulaire.</p></div><div class="reco"><div class="n">2</div><h4>Renforcer Instagram</h4><p>Augmenter le poids d'Instagram (Post et Story), qui génère près d'un tiers des contacts avec 15 % des impressions, pour faire baisser le coût par contact.</p></div><div class="reco"><div class="n">3</div><h4>Relancer par SMS</h4><p>Compléter le social par une campagne SMS géolocalisée autour de Huningue pour annoncer une journée portes ouvertes ou une offre de fin d'année.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <h3>Merci pour votre confiance</h3>
+        <p>Notre équipe reste à votre disposition pour échanger sur ce bilan et construire ensemble vos prochaines prises de parole.</p>
+      </div>
+      <svg class="foot-logo" role="img" aria-label="The Good Web" xmlns="http://www.w3.org/2000/svg" viewBox="214 252 572 496"><g>
+    <path fill="#fff" d="M292.13,387.3h-42.97v-94.37h-31.41v-37.41h105.8v37.41h-31.41v94.37Z"/>
+    <path fill="#fff" d="M411.11,337.23h-35.03v50.07h-42.97v-131.78h42.79v44.67h35.03v-44.67h43.15v131.78h-42.97v-50.07Z"/>
+    <path fill="#fff" d="M474.29,255.52h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path fill="#fff" d="M288.42,538.95c-10.11,0-19.47-1.61-28.07-4.84-8.61-3.23-16.07-7.85-22.39-13.87-6.32-6.02-11.28-13.31-14.89-21.87-3.61-8.56-5.42-18.11-5.42-28.66s1.81-20.1,5.42-28.66c3.61-8.56,8.54-15.88,14.8-21.96,6.26-6.08,13.6-10.76,22.03-14.05,8.42-3.29,17.45-4.93,27.08-4.93s19.47,1.68,28.44,5.03c8.96,3.35,16.28,7.94,21.94,13.77l-25.1,31.08c-2.65-3.23-5.78-5.8-9.39-7.72-3.61-1.92-8.07-2.89-13.36-2.89-3.49,0-6.89.72-10.2,2.14-3.31,1.43-6.23,3.48-8.76,6.14-2.53,2.67-4.58,5.86-6.14,9.59-1.57,3.72-2.35,7.88-2.35,12.47,0,9.18,2.32,16.66,6.95,22.43,4.63,5.77,12.07,8.66,22.3,8.66,1.81,0,3.67-.15,5.6-.46,1.92-.31,3.43-.77,4.51-1.4v-10.05h-20.58v-34.81h58.68v72.03c-3.01,1.86-6.47,3.57-10.38,5.12-3.91,1.55-8.07,2.89-12.46,4-4.39,1.12-9,2.02-13.81,2.7-4.82.68-9.63,1.02-14.44,1.02Z"/>
+    <path fill="#fff" d="M351.61,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24-8.67,3.35-18.05,5.03-28.17,5.03s-19.5-1.68-28.16-5.03-16.16-8.1-22.48-14.24c-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM397.28,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path fill="#fff" d="M502.36,468.97c0-10.55,1.81-20.07,5.42-28.57,3.61-8.5,8.58-15.73,14.89-21.68,6.32-5.96,13.81-10.55,22.48-13.77,8.67-3.23,18.05-4.84,28.16-4.84s19.5,1.61,28.17,4.84c8.67,3.23,16.19,7.82,22.57,13.77,6.38,5.96,11.37,13.19,14.99,21.68,3.61,8.5,5.42,18.02,5.42,28.57s-1.81,20.17-5.42,28.85c-3.61,8.69-8.61,16.1-14.99,22.24-6.38,6.14-13.9,10.89-22.57,14.24s-18.05,5.03-28.17,5.03-19.5-1.68-28.16-5.03c-8.67-3.35-16.16-8.1-22.48-14.24-6.32-6.14-11.28-13.56-14.89-22.24-3.61-8.68-5.42-18.3-5.42-28.85ZM548.04,468.97c0,4.35.63,8.31,1.9,11.91,1.26,3.6,3.01,6.7,5.24,9.31,2.23,2.61,4.9,4.62,8.03,6.05,3.13,1.43,6.5,2.14,10.11,2.14s6.95-.71,10.02-2.14c3.07-1.42,5.75-3.44,8.03-6.05,2.29-2.61,4.06-5.71,5.33-9.31,1.26-3.6,1.9-7.57,1.9-11.91s-.63-8.1-1.9-11.63c-1.26-3.54-3.04-6.51-5.33-8.93-2.29-2.42-4.96-4.31-8.03-5.68-3.07-1.36-6.41-2.05-10.02-2.05s-6.98.68-10.11,2.05c-3.13,1.37-5.81,3.26-8.03,5.68-2.23,2.42-3.97,5.4-5.24,8.93-1.26,3.54-1.9,7.42-1.9,11.63Z"/>
+    <path fill="#fff" d="M658.89,535.6v-131.78h47.66c10.11,0,19.77,1.02,28.98,3.07,9.21,2.05,17.33,5.58,24.37,10.61,7.04,5.02,12.67,11.7,16.88,20.01,4.21,8.32,6.32,18.8,6.32,31.46,0,11.54-2.02,21.53-6.05,29.97-4.03,8.44-9.42,15.36-16.16,20.75-6.74,5.4-14.51,9.4-23.29,12.01-8.79,2.61-17.94,3.91-27.44,3.91h-51.27ZM700.23,441.42v56.02h7.94c10.11,0,17.87-2.26,23.29-6.77,5.42-4.51,8.12-11.9,8.12-22.17,0-8.53-2.71-15.18-8.12-19.94-5.42-4.76-12.64-7.14-21.67-7.14h-9.57Z"/>
+    <path fill="#fff" d="M295.65,683.9h-43.33l-34.84-131.78h45.5l13.72,74.08h.72l14.8-74.08h44.95l16.07,74.08h.72l13.9-74.08h44.05l-35.57,131.78h-43.33l-18.05-74.45h-.72l-18.6,74.45Z"/>
+    <path fill="#fff" d="M420.23,552.13h87.92v36.85h-47.48v11.35h44.59v34.43h-44.59v12.28h50.55v36.85h-90.99v-131.78Z"/>
+    <path fill="#fff" d="M609.07,615.41c3.01.75,5.96,1.95,8.85,3.63,2.89,1.68,5.47,3.79,7.76,6.33,2.28,2.54,4.09,5.49,5.42,8.84,1.32,3.35,1.99,7.07,1.99,11.17,0,7.2-1.42,13.25-4.24,18.15-2.83,4.9-6.56,8.87-11.19,11.91-4.64,3.04-9.93,5.21-15.89,6.51-5.96,1.3-12.07,1.95-18.32,1.95h-57.96v-131.78h52.54c5.17,0,10.68.4,16.52,1.21,5.84.81,11.22,2.42,16.16,4.84,4.93,2.42,9.03,5.96,12.28,10.61,3.25,4.65,4.87,10.77,4.87,18.33,0,7.07-1.71,12.91-5.14,17.5-3.43,4.59-7.98,8-13.63,10.24v.56ZM565.56,586.56v16.19h11.56c3.01,0,5.47-.71,7.4-2.14,1.92-1.42,2.89-3.63,2.89-6.61,0-2.48-1.02-4.34-3.07-5.58-2.05-1.24-4.76-1.86-8.12-1.86h-10.65ZM565.56,631.23v17.87h12.82c3.37,0,6.11-.77,8.21-2.33,2.11-1.55,3.16-3.82,3.16-6.79,0-1.74-.45-3.16-1.35-4.28s-2.02-2.02-3.34-2.7c-1.33-.68-2.74-1.15-4.24-1.4-1.51-.25-2.92-.37-4.24-.37h-11.01Z"/>
+  </g>
+  <path fill="#fff" d="M228.48,738.01c-.08,0-.19-.03-.27-.08l-4.72-2.74v5.44c0,.35-.27.54-.54.54s-.54-.19-.54-.54v-5.44l-4.72,2.74c-.08.05-.19.08-.27.08-.3,0-.54-.29-.54-.56,0-.19.08-.35.27-.46l4.72-2.71-4.72-2.74c-.19-.11-.27-.27-.27-.46,0-.27.24-.56.54-.56.08,0,.19.03.27.08l4.72,2.74v-5.44c0-.35.27-.54.54-.54s.54.19.54.54v5.44l4.72-2.74c.08-.05.19-.08.27-.08.29,0,.54.29.54.56,0,.19-.08.35-.27.46l-4.72,2.71,4.72,2.74c.19.11.27.27.27.46,0,.27-.24.56-.54.56Z"/>
+  <g>
+    <path fill="#fff" d="M606.22,313.32h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h-.62s.62,0,.62,0c0,2.89-1.14,5.6-3.18,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM606.22,292.96c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c2.54,0,4.94-.99,6.74-2.78,1.81-1.8,2.81-4.2,2.82-6.75,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M619.73,382.89l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03s-.64-.43-1.02-.43h0c-.38,0-.74.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.2-.16-.36-.36-.36h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c3.61.01,7.01,1.43,9.56,3.99,2.55,2.57,3.95,5.97,3.94,9.58l-.08,24.38-6.83-.02.06-20.02c0-.19-.17-.36-.36-.36h0c-.21,0-.37.16-.37.35l-.18,51.22ZM608.67,381.61l9.82.03.18-49.98c0-.88.73-1.59,1.61-1.59h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.88,0,1.6.73,1.6,1.61l-.15,50,9.83.03.07-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79h0c.72,0,1.4.29,1.9.8.51.51.78,1.19.78,1.91l-.06,21.28Z"/>
+    <path fill="#fff" d="M774.01,293.18c-.12,0-.29-.04-.41-.12l-7.18-4.16v8.29c0,.53-.41.82-.82.82s-.82-.29-.82-.82v-8.29l-7.18,4.16c-.12.08-.29.12-.41.12-.45,0-.82-.45-.82-.86,0-.29.12-.53.41-.69l7.18-4.12-7.18-4.16c-.29-.16-.41-.41-.41-.69,0-.41.37-.86.82-.86.12,0,.29.04.41.12l7.18,4.16v-8.29c0-.53.41-.82.82-.82s.82.29.82.82v8.29l7.18-4.16c.12-.08.29-.12.41-.12.45,0,.82.45.82.86,0,.29-.12.53-.41.69l-7.18,4.12,7.18,4.16c.29.16.41.41.41.69,0,.41-.37.86-.82.86Z"/>
+    <path fill="#fff" d="M650.77,313.46h-.03c-5.95-.02-10.78-4.88-10.77-10.84.02-5.94,4.86-10.76,10.8-10.76h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64h0c-.02,5.94-4.86,10.77-10.8,10.77ZM650.77,293.1c-5.26,0-9.54,4.27-9.56,9.52-.02,5.27,4.26,9.57,9.53,9.59h.03c5.26,0,9.54-4.27,9.56-9.53,0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M664.27,383.02l-12.3-.04.07-22.52c0-.8-.65-1.45-1.45-1.46h0c-.38,0-.74.15-1.02.42s-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.25c0-.1-.04-.19-.1-.26-.07-.07-.16-.11-.25-.11h0c-.2,0-.36.16-.36.36l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.93-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.11,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.06-.21-.1-.25-.07-.07-.17-.12-.26-.11-.1,0-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM653.22,381.75l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47.41-.01.84.17,1.14.48.3.3.47.7.46,1.13l-.06,18.78h4.35s.07-23.12.07-23.12c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.88.72-1.6,1.6-1.6h0c.43,0,.83.17,1.14.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.9-.79h0c.72,0,1.39.29,1.9.8.51.51.78,1.19.78,1.91l-.07,21.28Z"/>
+    <path fill="#fff" d="M695.08,313.59h-.03c-2.88,0-5.59-1.14-7.63-3.19-2.03-2.05-3.15-4.76-3.14-7.65,0-2.88,1.14-5.59,3.19-7.62,2.04-2.02,4.74-3.14,7.61-3.14h.03c2.89,0,5.59,1.14,7.63,3.18,2.03,2.04,3.15,4.76,3.14,7.64,0,2.89-1.14,5.6-3.19,7.63-2.04,2.03-4.74,3.14-7.61,3.14ZM695.08,293.24c-5.26,0-9.54,4.27-9.56,9.52,0,2.56.98,4.96,2.78,6.77,1.8,1.81,4.19,2.81,6.75,2.82,2.57-.01,4.96-.98,6.77-2.78,1.81-1.8,2.81-4.2,2.82-6.75h0c0-2.55-.98-4.95-2.78-6.76-1.8-1.81-4.2-2.81-6.75-2.82h-.03Z"/>
+    <path fill="#fff" d="M708.58,383.16l-12.3-.04.07-22.52c0-.39-.15-.75-.42-1.03-.27-.27-.63-.42-1.02-.43h0c-.38,0-.75.15-1.02.42-.27.27-.43.64-.43,1.03l-.07,22.52-12.31-.04.16-51.24c0-.1-.04-.19-.1-.26-.07-.07-.19-.13-.25-.11-.12,0-.21.05-.25.1-.07.07-.11.16-.11.26l-.06,20.05-6.85-.02.08-24.38c.01-3.61,1.43-7.01,3.99-9.56,2.55-2.54,5.94-3.94,9.53-3.94h.04l15.61.05c7.46.02,13.51,6.12,13.49,13.58l-.08,24.38-6.83-.02.06-20.02c0-.12-.07-.21-.11-.25-.07-.07-.16-.11-.26-.11-.05.01-.2.04-.27.11-.07.07-.1.15-.1.25l-.18,51.22ZM697.52,381.88l9.82.03.18-49.98c0-.42.17-.82.47-1.12.31-.3.71-.47,1.14-.47h0c.88,0,1.6.72,1.6,1.6l-.06,18.78h4.35s.07-23.12.07-23.12h.62s-.62,0-.62,0c.02-6.78-5.48-12.31-12.25-12.33l-15.61-.05h-.04c-3.27,0-6.34,1.27-8.66,3.57-2.33,2.32-3.61,5.4-3.62,8.68l-.07,23.13h4.37s.06-18.79.06-18.79c0-.43.17-.84.47-1.14.3-.3.7-.46,1.13-.46h0c.43,0,.83.17,1.13.48.3.3.46.71.46,1.13l-.15,50,9.83.03.06-21.28c0-.72.28-1.39.79-1.9.51-.51,1.18-.79,1.89-.79.76.04,1.4.28,1.91.79.51.51.79,1.19.79,1.91l-.07,21.28Z"/>
+    <path fill="#fff" d="M749.2,302.96c-.02,5.63-4.58,10.17-10.21,10.15-5.62-.02-10.16-4.58-10.15-10.21.02-5.62,4.59-10.16,10.21-10.14s10.16,4.58,10.15,10.2Z"/>
+    <path fill="#fff" d="M759.67,327.74c.02-7.13-5.74-12.93-12.87-12.95l-15.61-.05c-7.13-.02-12.92,5.74-12.94,12.87l-.07,23.75,5.61.02.06-19.43c0-.54.43-.98.98-.98s.98.45.98.99l-.06,19.43h0l-.1,31.2,11.07.03.07-21.9c0-1.14.93-2.07,2.07-2.07s2.07.94,2.06,2.08l-.07,21.9,11.06.03.1-31.2h.02s.06-19.4.06-19.4c0-.54.45-.97,1-.97s.98.44.98.98l-.06,19.4,5.59.02.07-23.75Z"/>
+  </g>
+  <g>
+    <path fill="#fff" d="M244.94,744.06h-1.64v-15.08h-5.38v-1.5h12.4v1.5h-5.38v15.08Z"/>
+    <path fill="#fff" d="M252.28,727.48h1.63v7.19h8.77v-7.19h1.64v16.58h-1.64v-7.84h-8.77v7.84h-1.63v-16.58Z"/>
+    <path fill="#fff" d="M269.76,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path fill="#fff" d="M298.54,730.48c-.56-.61-1.23-1.08-2-1.42-.77-.33-1.66-.5-2.66-.5s-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.02,1.43-1.33,2.3-.31.87-.47,1.79-.47,2.76s.16,1.89.47,2.76c.31.87.75,1.64,1.33,2.29.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58c.91,0,1.74-.1,2.5-.3.76-.2,1.37-.46,1.84-.77v-5.03h-3.75v-1.5h5.38v7.49c-.88.55-1.82.95-2.84,1.22-1.01.27-2.07.4-3.16.4-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c1.29,0,2.41.2,3.36.6.95.4,1.77.95,2.45,1.65l-1.14,1.17Z"/>
+    <path fill="#fff" d="M319.48,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM317.76,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58c-.83.39-1.53.92-2.1,1.58-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path fill="#fff" d="M338.33,735.77c0,1.26-.21,2.43-.64,3.49s-1.01,1.98-1.76,2.75c-.75.77-1.63,1.38-2.66,1.81-1.02.44-2.13.66-3.33.66s-2.31-.22-3.33-.66-1.91-1.04-2.66-1.81c-.75-.77-1.34-1.69-1.76-2.75-.42-1.06-.64-2.22-.64-3.49s.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66,2.31.22,3.33.66c1.02.44,1.91,1.04,2.66,1.81.75.77,1.34,1.69,1.76,2.75.42,1.06.64,2.22.64,3.49ZM336.61,735.78c0-.97-.15-1.89-.46-2.76s-.74-1.64-1.32-2.3c-.58-.66-1.28-1.19-2.1-1.58s-1.75-.58-2.78-.58-1.96.2-2.78.58-1.53.92-2.1,1.58c-.58.66-1.01,1.43-1.32,2.3s-.45,1.79-.45,2.76.15,1.89.45,2.76.74,1.64,1.32,2.29c.58.65,1.28,1.18,2.1,1.57s1.75.58,2.78.58,1.96-.19,2.78-.58,1.53-.91,2.1-1.57c.58-.65,1.01-1.42,1.32-2.29s.46-1.79.46-2.76Z"/>
+    <path fill="#fff" d="M341.29,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM342.92,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path fill="#fff" d="M362.73,744.06h-1.79l6.95-16.58h1.59l6.9,16.58h-1.82l-1.77-4.35h-8.31l-1.75,4.35ZM365.09,738.16h7.09l-3.54-8.8-3.54,8.8Z"/>
+    <path fill="#fff" d="M383.94,744.48c-1.21,0-2.2-.21-2.98-.64-.77-.43-1.39-.97-1.84-1.63-.46-.66-.77-1.37-.94-2.14-.17-.77-.26-1.5-.26-2.19v-10.4h1.63v10.21c0,.67.08,1.32.23,1.96.15.63.4,1.19.74,1.69s.79.89,1.35,1.19c.56.3,1.25.46,2.07.46s1.51-.15,2.07-.46,1.01-.7,1.35-1.19.59-1.05.74-1.69c.15-.63.23-1.28.23-1.96v-10.21h1.63v10.4c0,.69-.09,1.42-.26,2.19-.17.77-.49,1.49-.94,2.14-.45.66-1.07,1.2-1.85,1.63-.78.43-1.77.64-2.96.64Z"/>
+    <path fill="#fff" d="M393.68,727.48h5.34c1,0,2,.17,3.01.51s1.92.86,2.73,1.56c.81.69,1.46,1.56,1.96,2.6.5,1.04.75,2.24.75,3.62s-.25,2.6-.75,3.63c-.5,1.03-1.16,1.89-1.96,2.59-.81.7-1.72,1.21-2.73,1.56-1.01.34-2.01.52-3.01.52h-5.34v-16.58ZM395.32,742.56h3.25c1.21,0,2.27-.2,3.17-.58.9-.39,1.65-.9,2.24-1.53.59-.63,1.03-1.35,1.33-2.17.29-.81.44-1.65.44-2.51s-.15-1.69-.44-2.51c-.3-.81-.74-1.53-1.33-2.17-.59-.63-1.34-1.14-2.24-1.53-.9-.39-1.96-.58-3.17-.58h-3.25v13.58Z"/>
+    <path fill="#fff" d="M412.06,744.06h-1.63v-16.58h1.63v16.58Z"/>
+    <path fill="#fff" d="M417.51,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+    <path fill="#fff" d="M440.27,741.6h.04v-14.12h1.64v16.58h-2.04l-9.36-14.26h-.05v14.26h-1.63v-16.58h2.04l9.36,14.12Z"/>
+    <path fill="#fff" d="M459.3,741.37c-.27.42-.6.82-.99,1.2s-.83.71-1.34.99-1.07.51-1.68.68c-.61.17-1.28.25-2.01.25-1.21,0-2.33-.22-3.36-.66-1.03-.44-1.92-1.04-2.66-1.81-.74-.77-1.32-1.69-1.74-2.75s-.62-2.22-.62-3.49.21-2.43.64-3.49c.42-1.06,1.01-1.98,1.76-2.75.75-.77,1.64-1.38,2.66-1.81s2.13-.66,3.33-.66c.59,0,1.17.06,1.74.19.57.13,1.1.31,1.6.54.5.23.95.51,1.36.83.41.32.75.69,1.02,1.09l-1.36,1.03c-.17-.27-.39-.53-.67-.8s-.61-.5-.99-.7c-.38-.2-.79-.37-1.24-.49-.45-.12-.93-.19-1.44-.19-1.04,0-1.98.2-2.81.58-.83.39-1.53.91-2.1,1.58-.58.66-1.01,1.43-1.32,2.3-.3.87-.45,1.79-.45,2.75s.16,1.88.47,2.75c.31.87.75,1.64,1.33,2.3.58.66,1.28,1.19,2.1,1.57.83.39,1.75.58,2.78.58.92,0,1.8-.19,2.63-.58s1.53-1.01,2.09-1.87l1.27.84Z"/>
+    <path fill="#fff" d="M463.3,742.56h8.61v1.5h-10.24v-16.58h9.97v1.5h-8.34v5.69h7.79v1.5h-7.79v6.39Z"/>
+  </g></svg>
+    </div>
+    <div class="contacts">
+      <a class="ct me" href="mailto:sofien@thegoodweb.eu"><div class="av">SC</div><strong>Sofien Chaganiou</strong><small>Chef de publicité</small><span>07 67 84 70 67</span><span>sofien@thegoodweb.eu</span></a>
+      <a class="ct" href="mailto:jerome@thegoodweb.eu"><div class="av">JF</div><strong>Jérôme Fages</strong><small>Directeur commercial</small><span>06 18 74 66 75</span><span>jerome@thegoodweb.eu</span></a>
+      <a class="ct" href="mailto:mathilde@thegoodweb.eu"><div class="av">MC</div><strong>Mathilde Coriton</strong><small>Directrice de clientèle</small><span>06 48 61 92 92</span><span>mathilde@thegoodweb.eu</span></a>
+      <a class="ct" href="mailto:andrea@thegoodweb.eu"><div class="av">AA</div><strong>Andréa Alonso</strong><small>Cheffe de publicité</small><span>04 91 54 28 12</span><span>andrea@thegoodweb.eu</span></a>
+      <div class="ct off"><div class="av">PA</div><strong>Pôle activation</strong><small>Activation des campagnes</small><span>activation@thegoodweb.eu</span></div>
+    </div>
+    <div class="copy"><span>© 2026 The Good Web · The Good Audience</span><span>Bilan Spirit Immobilier · Résidence Le Kin · Huningue</span></div>
+  </div>
+</footer>
+
+<script>
+document.body.classList.remove('no-js');
+const fr=n=>n.toLocaleString('fr-FR');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+  el.querySelectorAll('[data-w]').forEach(f=>f.style.width=f.dataset.w+'%');
+  el.querySelectorAll('[data-count]').forEach(n=>{if(n.dataset.done)return;n.dataset.done=1;const t=+n.dataset.count,st=performance.now();
+    const step=now=>{const p=Math.min((now-st)/1200,1),e2=1-Math.pow(1-p,3);n.textContent=fr(Math.round(t*e2));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)});
+  io.unobserve(el)}),{threshold:.15});
+document.querySelectorAll('.rv,.card').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('nav.anchors a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));
+  const a=links.find(l=>l.classList.contains('on'));if(a){const nv=a.parentNode;nv.scrollTo({left:a.offsetLeft-nv.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section.block,footer').forEach(s=>so.observe(s));
+</script>
+</body>
+</html>
